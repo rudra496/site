@@ -8,9 +8,10 @@
 /* General styles for the body */
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f8f9fa; /* Light gray background */
+  background: #f0f4f8; /* Light background color */
   color: #333;
   line-height: 1.6;
+  padding-top: 60px; /* To avoid nav bar overlap */
 }
 
 /* Navigation Bar */
@@ -19,11 +20,11 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: #1e1e2f; /* Deep blue background */
-  padding: 10px 20px; /* Reduced padding for mobile */
+  background: linear-gradient(45deg, #ff6f61, #f7a072); /* Gradient color */
+  padding: 10px 20px;
   z-index: 100;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  height: 60px; /* Set a fixed height */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  height: 60px;
 }
 
 nav ul {
@@ -39,31 +40,31 @@ nav ul li {
 }
 
 nav a {
-  color: #fff; /* White text */
+  color: white;
   text-decoration: none;
   font-size: 1.1rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-  display: block; /* Ensures better hit-box for mobile */
-  padding: 10px 0; /* Added padding for clickable area */
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: color 0.3s ease, background 0.3s ease;
 }
 
 nav a:hover {
-  color: #f4a261; /* Soft orange color on hover */
-  transform: scale(1.1); /* Slight zoom effect */
+  background: rgba(255, 255, 255, 0.2);
+  color: #f4a261; /* Highlight color */
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #2d3142, #4f5d75); /* Gradient background */
+  background: linear-gradient(135deg, #2d3142, #4f5d75); /* Dark blue gradient */
   color: white;
-  padding: 100px 20px 60px 20px;
+  padding: 100px 20px 60px;
   text-align: center;
-  margin-top: 60px; /* Space for fixed nav bar */
 }
 
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero-content p {
@@ -94,10 +95,9 @@ nav a:hover {
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-transform: uppercase;
-  color: #f4a261; /* Bright orange for section titles */
+  color: #ff6f61; /* Main color */
 }
 
-/* Hidden content for collapsible sections */
 .hidden {
   display: none;
 }
@@ -123,6 +123,10 @@ nav a:hover {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .profile-img {
@@ -131,6 +135,7 @@ nav a:hover {
   border-radius: 50%;
   object-fit: cover;
   margin-right: 20px;
+  border: 5px solid #f7a072; /* Border color */
   animation: bounce 2s infinite;
 }
 
@@ -149,6 +154,8 @@ nav a:hover {
 
 .about-content ul li {
   margin: 5px 0;
+  font-size: 1.2rem;
+  color: #333;
 }
 
 /* Projects Section */
@@ -159,16 +166,17 @@ nav a:hover {
 .project h3 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #1e1e2f; /* Dark blue color for project titles */
+  color: #ff6f61; /* Highlight color */
 }
 
 .project p {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  color: #4f5d75; /* Subtle text color */
 }
 
 .video-placeholder {
-  background: #f4a261; /* Bright orange for video placeholder */
+  background: #f4a261;
   height: 200px;
   width: 100%;
   border-radius: 10px;
@@ -177,9 +185,9 @@ nav a:hover {
   justify-content: center;
   color: white;
   font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Animations for flipping elements */
 .animate-flip {
   animation: flipIn 1s ease-out;
 }
@@ -203,7 +211,7 @@ nav a:hover {
 }
 
 .certificate-slot {
-  background: #6c757d; /* Gray background for certificate slots */
+  background: linear-gradient(135deg, #2d3142, #4f5d75);
   height: 200px;
   border-radius: 10px;
   display: flex;
@@ -239,7 +247,7 @@ nav a:hover {
 .organization-list ul li {
   font-size: 1.2rem;
   margin: 5px 0;
-  color: #343a40; /* Dark gray color for list items */
+  color: #4f5d75;
 }
 
 /* Achievements Section */
@@ -257,13 +265,13 @@ nav a:hover {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 5px solid #f4a261; /* Bright orange border for achievements */
+  border: 5px solid #f7a072; /* Border color */
 }
 
 .achievement-slot p {
   font-size: 1.1rem;
   margin-top: 10px;
-  color: #1e1e2f; /* Dark blue for text */
+  color: #333;
 }
 
 /* Blog Section */
@@ -276,18 +284,18 @@ nav a:hover {
 .blog-post h3 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #1e1e2f; /* Dark blue for blog post titles */
+  color: #ff6f61;
 }
 
 .blog-post h4 {
   font-size: 1.5rem;
   margin: 10px 0;
+  color: #f7a072;
 }
 
 .blog-post ul {
   list-style-type: disc;
   margin-left: 20px;
-  color: #343a40; /* Dark gray color for blog lists */
 }
 
 /* Contact Me Section */
@@ -299,18 +307,20 @@ nav a:hover {
 .contact-links img {
   width: 50px;
   height: 50px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 50%;
 }
 
 .contact-links img:hover {
   transform: scale(1.1);
+  filter: brightness(1.2); /* Hover effect with brightness */
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: #343a40; /* Dark gray footer background */
+  background: #333;
   color: white;
 }
 
