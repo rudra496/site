@@ -8,10 +8,10 @@
 /* General styles for the body */
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f7f7f7; /* Soft light background to make content stand out */
+  background: #f0f4f8; /* Light background to add contrast */
   color: #333;
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Navigation Bar */
@@ -20,16 +20,16 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(45deg, #1e2a3a, #34495e); /* Gradient background */
+  background: linear-gradient(45deg, #1e1e2f, #3e4b63); /* Gradient background for depth */
   padding: 15px 20px;
   z-index: 100;
-  height: 80px; /* Adjusted height for a balanced look */
+  height: 70px; /* Increased height for better visual appeal */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
 nav:hover {
-  background: linear-gradient(45deg, #2d3142, #4f5d75); /* Deep gradient on hover */
+  background: linear-gradient(45deg, #2d3142, #1e2a3a); /* Hover effect with deep gradient */
 }
 
 nav ul {
@@ -45,44 +45,27 @@ nav ul li {
 }
 
 nav a {
-  color: #fff;
+  color: #fff; /* White text for navigation */
   text-decoration: none;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  padding: 12px 20px;
+  padding: 10px 20px;
   border-radius: 5px;
-  position: relative;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 3px;
-  background-color: #f4a261;
-  transition: width 0.3s ease;
 }
 
 nav a:hover {
-  color: #f4a261;
-  background-color: #2d3142;
-  transform: scale(1.1);
-}
-
-nav a:hover::after {
-  width: 100%;
+  color: #f4a261; /* Vibrant orange on hover */
+  background-color: #2d3142; /* Dark background for hover effect */
+  transform: scale(1.1); /* Slight zoom effect */
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #1e2a3a, #2d3142); /* More intense gradient for vibrance */
+  background: linear-gradient(135deg, #2d3142, #4f5d75); /* Gradient background */
   color: white;
-  padding: 120px 20px 80px 20px;
+  padding: 100px 20px 60px 20px;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 70px; /* Space for fixed nav bar */
   position: relative;
   animation: heroAnimation 1s ease-in-out;
 }
@@ -99,17 +82,14 @@ nav a:hover::after {
 }
 
 .hero h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
   animation: fadeInUp 1.5s ease-in-out;
 }
 
 .hero p {
   font-size: 1.5rem;
-  animation: fadeInUp 2s ease-in-out;
+  animation: fadeInUp 1.8s ease-in-out;
 }
 
 @keyframes fadeInUp {
@@ -125,21 +105,28 @@ nav a:hover::after {
 
 /* Section styles */
 .section {
-  padding: 100px 20px;
+  padding: 80px 20px;
   text-align: center;
   position: relative;
-  animation: fadeInUp 1.5s ease-in-out;
-  background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  margin: 40px 0;
-  border-radius: 10px;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .section-title {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #f4a261; /* Bold orange color for title */
   text-transform: uppercase;
+  color: #f4a261; /* Vibrant orange color */
   letter-spacing: 2px;
   animation: fadeIn 1s ease-in-out;
 }
@@ -162,23 +149,27 @@ nav a:hover::after {
 }
 
 .profile-img {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 20px;
-  transition: transform 0.3s ease;
+  animation: bounce 2s infinite;
 }
 
-.profile-img:hover {
-  transform: scale(1.1);
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
 .about-content ul {
   list-style-type: none;
   text-align: left;
   font-size: 1.1rem;
-  margin-left: 20px;
 }
 
 .about-content ul li {
@@ -195,9 +186,8 @@ nav a:hover::after {
 .project h3 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #34495e;
+  color: #1e1e2f; /* Dark blue */
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .project p {
@@ -206,8 +196,8 @@ nav a:hover::after {
 }
 
 .video-placeholder {
-  background: #f4a261;
-  height: 250px;
+  background: #f4a261; /* Bright orange for placeholder */
+  height: 200px;
   width: 100%;
   border-radius: 10px;
   display: flex;
@@ -215,12 +205,12 @@ nav a:hover::after {
   justify-content: center;
   color: white;
   font-size: 1.2rem;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .video-placeholder:hover {
-  background: #e76f51;
-  transform: scale(1.05);
+  background: #f29f42; /* Slightly darker orange on hover */
+  transform: scale(1.05); /* Zoom effect on hover */
 }
 
 /* Certificates Section */
@@ -228,11 +218,10 @@ nav a:hover::after {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-bottom: 40px;
 }
 
 .certificate-slot {
-  background: #6c757d;
+  background: #6c757d; /* Gray background */
   height: 200px;
   border-radius: 10px;
   display: flex;
@@ -260,6 +249,7 @@ nav a:hover::after {
   text-align: left;
   margin: 0 auto;
   max-width: 600px;
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
 .organization-list ul {
@@ -269,7 +259,7 @@ nav a:hover::after {
 .organization-list ul li {
   font-size: 1.2rem;
   margin: 5px 0;
-  color: #333;
+  color: #343a40; /* Dark gray */
 }
 
 /* Achievements Section */
@@ -311,7 +301,7 @@ nav a:hover::after {
 .achievement-slot p {
   font-size: 1.1rem;
   margin-top: 10px;
-  color: #34495e;
+  color: #1e1e2f;
 }
 
 /* Blog Section */
@@ -324,7 +314,7 @@ nav a:hover::after {
 .blog-post h3 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #34495e;
+  color: #1e1e2f;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -337,7 +327,7 @@ nav a:hover::after {
 .blog-post ul {
   list-style-type: disc;
   margin-left: 20px;
-  color: #333;
+  color: #343a40;
 }
 
 /* Contact Me Section */
@@ -345,7 +335,6 @@ nav a:hover::after {
   display: inline-block;
   margin: 0 10px;
   position: relative;
-  transition: transform 0.3s ease;
 }
 
 .contact-links a::after {
@@ -357,7 +346,7 @@ nav a:hover::after {
   width: 0;
   height: 3px;
   background-color: #f4a261;
-  transition: width 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-links a:hover::after {
@@ -365,8 +354,8 @@ nav a:hover::after {
 }
 
 .contact-links img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   transition: all 0.3s ease;
 }
 
@@ -378,16 +367,17 @@ nav a:hover::after {
 footer {
   text-align: center;
   padding: 20px;
-  background: #34495e;
+  background: #343a40;
   color: white;
   animation: fadeInUp 1.5s ease-in-out;
 }
 
 /* Media Queries for Mobile */
 @media only screen and (max-width: 768px) {
+  /* Adjusting navbar */
   nav {
     padding: 10px 15px;
-    height: 70px;
+    height: 60px;
   }
 
   nav ul {
@@ -398,11 +388,68 @@ footer {
 
   nav a {
     font-size: 1rem;
-    padding: 10px 15px;
+    padding: 8px 0;
+  }
+
+  /* Adjusting hero section */
+  .hero {
+    padding: 80px 20px 40px;
+  }
+
+  /* Adjusting about section */
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjusting project section */
+  .project {
+    margin-bottom: 30px;
+  }
+
+  /* Adjusting certificates */
+  .certificate-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Adjusting organizations */
+  .organization-list {
+    text-align: center;
+  }
+
+  /* Adjusting achievements */
+  .achievement-gallery {
+    flex-direction: column;
+  }
+
+  /* Adjusting blog */
+  .blog-container {
+    max-width: 100%;
+  }
+
+  /* Adjusting contact links */
+  .contact-links a {
+    margin: 10px;
+  }
+
+  .contact-links img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  nav {
+    padding: 10px;
+    height: 50px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
   }
 
   .hero {
-    padding: 100px 20px 50px;
+    padding: 70px 20px 40px;
   }
 
   .about-container {
@@ -412,35 +459,6 @@ footer {
 
   .project h3 {
     font-size: 1.8rem;
-  }
-
-  .certificate-gallery {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .achievement-gallery {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  nav {
-    padding: 10px;
-    height: 60px;
-  }
-
-  nav a {
-    font-size: 0.9rem;
-  }
-
-  .hero {
-    padding: 80px 20px 50px;
-  }
-
-  .about-container {
-    flex-direction: column;
-    align-items: center;
   }
 
   .certificate-gallery {
