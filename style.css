@@ -361,10 +361,11 @@ nav a:hover, nav a.active {
 /* VISITOR COUNTER */
 .visitor-counter {
   text-align: center;
-  margin: 24px 0 0 0;
-  color: #888;
-  font-size: 1.04rem;
-  letter-spacing: 1px;
+  margin: 12px 0 8px 0;
+}
+.visitor-counter img {
+  width: 110px; /* Adjust size as needed */
+  height: auto;
 }
 
 /* FOOTER */
