@@ -27,17 +27,3 @@ document.addEventListener('DOMContentLoaded', function () {
     section.style.transform = "translateY(50px)";
     revealObserver.observe(section);
   });
-
-  // Visitor counter (using countapi.xyz)
-  const counterEl = document.getElementById('visitorCount');
-  if(counterEl) {
-    fetch('https://api.countapi.xyz/hit/rudra-portfolio-2024/visits')
-      .then(res => res.json())
-      .then(res => {
-        counterEl.textContent = `Visitors: ${res.value}`;
-      })
-      .catch(() => {
-        counterEl.textContent = `Visitors: N/A`;
-      });
-  }
-});
