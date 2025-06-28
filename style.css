@@ -283,7 +283,6 @@ nav a.active, nav a:hover {
   flex-shrink: 0;
   object-fit: cover;
   border-radius: 10px;
-  margin: 0 2px;
   background: #fff;
   transition: transform .19s;
 }
