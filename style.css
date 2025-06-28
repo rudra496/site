@@ -264,11 +264,12 @@ nav a.active, nav a:hover {
   color: #fff;
 }
 .carousel-certificates {
+.carousel-certificates {
   display: flex;
   overflow: hidden;
   width: 100%;
   max-width: 320px;
-  min-height: 100px;
+  height: 240px;
   align-items: center;
   gap: 0;
   scroll-behavior: smooth;
@@ -276,15 +277,18 @@ nav a.active, nav a:hover {
   background: #fff;
   box-shadow: 0 2px 12px #8f5cf733;
   will-change: transform;
+  padding: 0;
 }
+
 .carousel-certificates img {
   width: 100%;
-  height: auto;
+  height: 240px;
   flex-shrink: 0;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
-  background: #fff;
   transition: transform .19s;
+  display: block;
+  background: #fff;
 }
 .carousel-cert-indicators {
   display: flex; justify-content: center; gap: 5px; margin-top: 11px;
