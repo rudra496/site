@@ -264,6 +264,7 @@ nav a.active, nav a:hover {
   color: #fff;
 }
 .carousel-certificates {
+.carousel-certificates {
   display: flex;
   overflow: hidden;
   width: 100%;
@@ -285,21 +286,13 @@ nav a.active, nav a:hover {
   aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: 10px;
-  margin: 0 2px;
   background: #fff;
   transition: transform .19s;
   flex-shrink: 0;
+  display: block;
 }
-.carousel-cert-indicators {
-  display: flex; justify-content: center; gap: 5px; margin-top: 11px;
-}
-.carousel-cert-indicators .dot {
-  width: 10px; height: 10px; border-radius: 50%; background: #f4a26144; cursor: pointer; transition: background .17s;
-}
-.carousel-cert-indicators .dot.active { background: #f4a261; }
 @media (max-width: 700px) {
   .carousel-certificates { max-width: 98vw; min-height: 80px;}
-  .carousel-cert-btn { font-size: 1.6rem; padding: 1px 8px;}
 }
 
 .organization-list { text-align: left; max-width: 700px; margin: 0 auto; padding: 0 8px;}
