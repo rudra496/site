@@ -270,24 +270,18 @@ nav a.active, nav a:hover {
   max-width: 320px;
   height: 240px;
   align-items: center;
-  gap: 0;
-  scroll-behavior: smooth;
-  border-radius: 14px;
+  position: relative;
   background: #fff;
-  box-shadow: 0 2px 12px #8f5cf733;
-  will-change: transform;
-  padding: 0;
 }
 
 .carousel-certificates img {
   width: 100%;
-  height: 240px;
+  height: 100%;
   flex-shrink: 0;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 10px;
-  transition: transform .19s;
   display: block;
-  background: #fff;
+  /* Remove margin, aspect-ratio, and background */
 }
 .carousel-cert-indicators {
   display: flex; justify-content: center; gap: 5px; margin-top: 11px;
