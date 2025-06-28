@@ -243,9 +243,15 @@ nav a.active, nav a:hover {
 
 /* CERTIFICATE CAROUSEL */
 .carousel-certificates-wrapper {
-  display: flex; align-items: center; justify-content: center;
-  max-width: 600px; margin: 0 auto; padding: 0 8px; gap: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 8px;
+  gap: 0;
 }
+
 .carousel-cert-btn {
   background: #fff;
   border: none;
@@ -256,47 +262,70 @@ nav a.active, nav a:hover {
   margin: 0 4px;
   cursor: pointer;
   padding: 2px 12px;
-  transition: background .13s, color .13s;
+  transition: background 0.13s, color 0.13s;
   z-index: 5;
 }
-.carousel-cert-btn:focus, .carousel-cert-btn:hover {
+
+.carousel-cert-btn:focus,
+.carousel-cert-btn:hover {
   background: #f4a261;
   color: #fff;
 }
+
+/* ✅ Fixed Carousel CSS */
 .carousel-certificates {
-  display: flex;
-  overflow: hidden;
+  position: relative;
   width: 100%;
   max-width: 320px;
-  min-height: 100px;
-  align-items: center;
-  gap: 0;
-  scroll-behavior: smooth;
+  min-height: 240px; /* Adjust this height as needed */
+  overflow: hidden;
   border-radius: 14px;
   background: #fff;
   box-shadow: 0 2px 12px #8f5cf733;
-  will-change: transform;
 }
+
 .carousel-certificates img {
-  min-width: 100%;
-  max-width: 100%;
-  aspect-ratio: 4/3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
   object-fit: cover;
   border-radius: 10px;
-  margin: 0 2px;
   background: #fff;
-  transition: transform .19s;
 }
+
 .carousel-cert-indicators {
-  display: flex; justify-content: center; gap: 5px; margin-top: 11px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 11px;
 }
+
 .carousel-cert-indicators .dot {
-  width: 10px; height: 10px; border-radius: 50%; background: #f4a26144; cursor: pointer; transition: background .17s;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f4a26144;
+  cursor: pointer;
+  transition: background 0.17s;
 }
-.carousel-cert-indicators .dot.active { background: #f4a261; }
+
+.carousel-cert-indicators .dot.active {
+  background: #f4a261;
+}
+
+/* Responsive adjustments */
 @media (max-width: 700px) {
-  .carousel-certificates { max-width: 98vw; min-height: 80px;}
-  .carousel-cert-btn { font-size: 1.6rem; padding: 1px 8px;}
+  .carousel-certificates {
+    max-width: 98vw;
+    min-height: 180px;
+  }
+  .carousel-cert-btn {
+    font-size: 1.6rem;
+    padding: 1px 8px;
+  }
 }
 
 .organization-list { text-align: left; max-width: 700px; margin: 0 auto; padding: 0 8px;}
