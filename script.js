@@ -168,7 +168,8 @@ document.addEventListener('DOMContentLoaded', function () {
       indicators.appendChild(dot);
     }
     function update() {
-      imgs.forEach((img,idx) => img.style.transform = `translateX(${(idx-current)*100}%)`);
+      // Move the container, not individual images!
+      carousel.style.transform = `translateX(-${current * 100}%)`;
       indicators.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===current));
     }
     function showCert(idx) {
