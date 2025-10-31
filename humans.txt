@@ -1,0 +1,17 @@
+/* TEAM */
+Developer: Rudra Sarker
+GitHub: https://github.com/rudra496
+LinkedIn: https://www.linkedin.com/in/rudra-sarker-573b15296
+Contact: rudrasarker130@gmail.com
+
+/* SITE */
+Site: Personal portfolio — Industrial Engineer | Robotics Enthusiast | Full-Stack Developer
+URL: https://rudra496.github.io/site/
+Technology: HTML, CSS, JavaScript, Three.js
+Hosting: GitHub Pages
+
+/* THANKS */
+Thanks: Visitors, collaborators, and the open-source community.
+
+/* LAST UPDATE */
+2025-10-31
