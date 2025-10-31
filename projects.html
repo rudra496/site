@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Projects — Rudra Sarker</title>
+  <meta name="description" content="Featured projects and achievements by Rudra Sarker: robotics, IoT, web development, and more." />
+  <link rel="canonical" href="https://rudra496.github.io/site/projects.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles_global.css" />
+  <link rel="icon" href="./favicon.ico" />
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="./index.html" class="nav-brand">RUDRA SARKER</a>
+
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="./index.html" class="nav-link">Home</a></li>
+        <li><a href="./about.html" class="nav-link">About &amp; Skills</a></li>
+        <li><a href="./projects.html" class="nav-link active" aria-current="page">Projects</a></li>
+        <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="./blog.html" class="nav-link">Blog</a></li>
+        <li><a href="./contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Projects Section -->
+    <section id="projects" class="content-section">
+      <h2 class="section-title reveal">Featured Projects</h2>
+      <div class="grid-container reveal">
+        <!-- Project Card 1 -->
+        <div class="card project-card">
+          <img
+            src="./project1.gif"
+            alt="SignTalk glove-based sign language translator animated preview"
+            class="card-image"
+            loading="lazy"
+          />
+          <h3 class="card-title">SignTalk: Glove-based Sign Language Translator</h3>
+          <p>Champion at Youth Startup Summit. An IoT device that translates sign language into speech in real-time.</p>
+          <a href="#" class="card-link">View Details</a>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="card project-card">
+          <img
+            src="./project3.gif"
+            alt="IoT WiFi-controlled rover animated preview"
+            class="card-image"
+            loading="lazy"
+          />
+          <h3 class="card-title">IoT WiFi-Controlled Car</h3>
+          <p>A web-controlled rover built with an ESP8266, motor drivers, and a custom JavaScript-based dashboard.</p>
+          <a href="#" class="card-link">See on GitHub</a>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="card project-card">
+          <img
+            src="./project5.gif"
+            alt="Advanced line-following robot animated preview"
+            class="card-image"
+            loading="lazy"
+          />
+          <h3 class="card-title">Advanced Line Following Robot</h3>
+          <p>High-speed, PID-controlled line follower with ultrasonic obstacle detection for complex tracks.</p>
+          <a href="#" class="card-link">Watch Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="content-section">
+      <h2 class="section-title reveal">Achievements</h2>
+      <div class="grid-container reveal">
+        <div class="card achievement-card">
+          <img src="./achievement1.png" alt="Achievement 1 — highlight badge or photo" class="card-image" loading="lazy" />
+          <h3 class="card-title">Achievement 1</h3>
+          <p>Highlight</p>
+        </div>
+        <div class="card achievement-card">
+          <img src="./achievement2.png" alt="Achievement 2 — highlight badge or photo" class="card-image" loading="lazy" />
+          <h3 class="card-title">Achievement 2</h3>
+          <p>Highlight</p>
+        </div>
+        <div class="card achievement-card">
+          <img src="./achievement3.png" alt="Achievement 3 — highlight badge or photo" class="card-image" loading="lazy" />
+          <h3 class="card-title">Achievement 3</h3>
+          <p>Highlight</p>
+        </div>
+        <div class="card achievement-card">
+          <img src="./achievement4.png" alt="Achievement 4 — highlight badge or photo" class="card-image" loading="lazy" />
+          <h3 class="card-title">Achievement 4</h3>
+          <p>Highlight</p>
+        </div>
+        <div class="card achievement-card">
+          <img src="./achievement5.png" alt="Achievement 5 — highlight badge or photo" class="card-image" loading="lazy" />
+          <h3 class="card-title">Achievement 5</h3>
+          <p>Highlight</p>
+        </div>
+        <div class="card achievement-card">
+          <img src="./achievement6.png" alt="Achievement 6 — highlight badge or photo" class="card-image" loading="lazy" />
+          <h3 class="card-title">Achievement 6</h3>
+          <p>Highlight</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Rudra Sarker. All rights reserved.</p>
+  </footer>
+
+  <!-- Global Menu & Animation Logic -->
+  <script defer src="./main.js"></script>
+</body>
+</html>

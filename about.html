@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me &amp; Skills — Rudra Sarker</title>
+  <meta name="description" content="About Rudra Sarker — Industrial and Production Engineering student passionate about robotics, IoT, web development, and industrial engineering." />
+  <link rel="canonical" href="https://rudra496.github.io/site/about.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles_global.css" />
+  <link rel="icon" href="./favicon.ico" />
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="./index.html" class="nav-brand">RUDRA SARKER</a>
+
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="./index.html" class="nav-link">Home</a></li>
+        <li><a href="./about.html" class="nav-link active" aria-current="page">About &amp; Skills</a></li>
+        <li><a href="./projects.html" class="nav-link">Projects</a></li>
+        <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="./blog.html" class="nav-link">Blog</a></li>
+        <li><a href="./contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Me Section -->
+    <section class="content-section">
+      <h2 class="section-title reveal">About Me</h2>
+      <div class="about-container reveal">
+        <img
+          src="./Profile.png"
+          alt="Portrait of Rudra Sarker"
+          class="profile-pic"
+          loading="lazy"
+        />
+        <div class="about-text">
+          <h3>Hello! I'm Rudra.</h3>
+          <p>I am a third-year Industrial and Production Engineering student at Shahjalal University of Science and Technology (SUST), Sylhet. I'm passionate about the intersection of technology, design, and efficiency.</p>
+          <p>From optimizing supply chains to building intelligent robots and crafting seamless web applications, I am driven by a relentless curiosity to learn and build. My goal is to leverage my skills in engineering and software to create innovative solutions to complex problems.</p>
+          <p>When I'm not coding or studying, I'm often found tinkering with electronics, exploring new cybersecurity concepts, or contributing to my robotics club.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="content-section">
+      <h2 class="section-title reveal">My Skillset</h2>
+      <div class="grid-container reveal">
+        <div class="card skill-card">
+          <i class="fas fa-robot card-icon" aria-hidden="true"></i>
+          <h3 class="card-title">Robotics &amp; IoT</h3>
+          <p>Arduino, ESP8266, PID Controllers, Sensor Integration, IoT-based systems.</p>
+        </div>
+        <div class="card skill-card">
+          <i class="fas fa-code card-icon" aria-hidden="true"></i>
+          <h3 class="card-title">Web Development</h3>
+          <p>HTML, CSS, JavaScript, React, Node.js, and Python (Flask/Django).</p>
+        </div>
+        <div class="card skill-card">
+          <i class="fas fa-shield-halved card-icon" aria-hidden="true"></i>
+          <h3 class="card-title">Cybersecurity</h3>
+          <p>Network Security fundamentals, Vulnerability Assessment, Digital Forensics basics.</p>
+        </div>
+        <div class="card skill-card">
+          <i class="fas fa-brain card-icon" aria-hidden="true"></i>
+          <h3 class="card-title">Machine Learning</h3>
+          <p>Data Analysis with Pandas, model building with Scikit-learn, and core ML concepts.</p>
+        </div>
+        <div class="card skill-card">
+          <i class="fas fa-drafting-compass card-icon" aria-hidden="true"></i>
+          <h3 class="card-title">CAD &amp; Design</h3>
+          <p>SolidWorks, AutoCAD for 3D modeling, prototyping, and visual graphics.</p>
+        </div>
+        <div class="card skill-card">
+          <i class="fas fa-industry card-icon" aria-hidden="true"></i>
+          <h3 class="card-title">Industrial Engineering</h3>
+          <p>Operations Research, Quality Control, Lean Manufacturing, Supply Chain.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Rudra Sarker. All rights reserved.</p>
+  </footer>
+
+  <!-- Global Menu & Animation Logic -->
+  <script defer src="./main.js"></script>
+</body>
+</html>

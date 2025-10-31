@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rudra Sarker — Home</title>
+  <meta name="description" content="Portfolio of Rudra Sarker — Industrial Engineer, Robotics Enthusiast, and Full-Stack Developer. Explore projects, skills, and achievements." />
+  <link rel="canonical" href="https://rudra496.github.io/site/" />
+  <meta name="theme-color" content="#0a0a1a" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rudra Sarker — Portfolio" />
+  <meta property="og:description" content="Industrial Engineer | Robotics Enthusiast | Full-Stack Developer" />
+  <meta property="og:url" content="https://rudra496.github.io/site/" />
+  <meta property="og:image" content="./Profile.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rudra Sarker — Portfolio" />
+  <meta name="twitter:description" content="Industrial Engineer | Robotics Enthusiast | Full-Stack Developer" />
+  <meta name="twitter:image" content="./Profile.png" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles_global.css" />
+  <link rel="icon" href="./favicon.ico" />
+</head>
+<body>
+  <!-- 3D Background Canvas -->
+  <canvas id="bg-3d"></canvas>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="./index.html" class="nav-brand">RUDRA SARKER</a>
+
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="./index.html" class="nav-link active" aria-current="page">Home</a></li>
+        <li><a href="./about.html" class="nav-link">About &amp; Skills</a></li>
+        <li><a href="./projects.html" class="nav-link">Projects</a></li>
+        <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="./blog.html" class="nav-link">Blog</a></li>
+        <li><a href="./contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home/Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-content reveal">
+        <h1 class="hero-title">RUDRA SARKER</h1>
+        <p class="hero-subtitle">Industrial Engineer | Robotics Enthusiast | Full-Stack Developer</p>
+        <a href="./projects.html" class="cta-button">View My Work</a>
+      </div>
+    </section>
+
+    <!-- Quick Intro Section -->
+    <section class="content-section">
+      <h2 class="section-title reveal">Welcome</h2>
+      <div class="about-container reveal">
+        <img
+          src="./Profile.png"
+          alt="Portrait of Rudra Sarker"
+          class="profile-pic"
+          loading="lazy"
+        />
+        <div class="about-text">
+          <p>Hello! I'm Rudra, a passionate engineer and developer. My fascination lies at the crossroads of manufacturing efficiency, robotic automation, and full-stack web development.</p>
+          <p>This portfolio is a showcase of my journey. Feel free to explore my projects, skills, and achievements.</p>
+          <a href="./about.html" class="cta-button">Learn More About Me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Rudra Sarker. All rights reserved. Built with passion and code.</p>
+  </footer>
+
+  <!-- JS Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="./home-3d.js"></script>
+  <script defer src="./main.js"></script>
+</body>
+</html>
