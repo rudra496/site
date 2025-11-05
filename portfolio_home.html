@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudra Sarker - Home</title>
+    
+    <!-- Google Fonts: Exo 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Shared Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-3d"></canvas>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="nav-brand">RUDRA SARKER</a>
+            
+            <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About & Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home/Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content reveal">
+                <h1 class="hero-title">RUDRA SARKER</h1>
+                <p class="hero-subtitle">Industrial Engineer | Robotics Enthusiast | Full-Stack Developer</p>
+                <a href="projects.html" class="cta-button">View My Work</a>
+            </div>
+        </section>
+
+        <!-- Quick Intro Section -->
+        <section class="content-section">
+            <h2 class="section-title reveal">Welcome</h2>
+            <div class="about-container reveal">
+                <img src="https://placehold.co/300x300/00ffff/0a0a1a?text=Rudra" 
+                     alt="Rudra Sarker Profile Picture" 
+                     class="profile-pic"
+                     onerror="this.src='https://placehold.co/300x300/00ffff/0a0a1a?text=RS'">
+                <div class="about-text">
+                    <p>Hello! I'm Rudra, a passionate engineer and developer. My fascination lies at the crossroads of manufacturing efficiency, robotic automation, and full-stack web development.</p>
+                    <p>This portfolio is a showcase of my journey. Feel free to explore my projects, skills, and achievements.</p>
+                    <a href="about.html" class="cta-button">Learn More About Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Rudra Sarker. All rights reserved. Built with passion and code.</p>
+    </footer>
+
+    <!-- JS Files -->
+    <!-- three.js (for 3D background) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Page-Specific 3D logic -->
+    <script src="home-3d.js"></script>
+    <!-- Global Menu & Animation Logic -->
+    <script src="main.js"></script>
+</body>
+</html>

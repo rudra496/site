@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Blog — Rudra Sarker</title>
+  <meta name="description" content="Blog posts by Rudra Sarker: RF-powered phone stickers of the 90s and the magic of PID controllers in robotics and automation." />
+  <meta name="keywords" content="blog, rf sticker, battery-free, phone, PID controller, robotics, automation, engineering" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles_global.css" />
+  <link rel="icon" href="./favicon.ico" />
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="./index.html" class="nav-brand">RUDRA SARKER</a>
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="./index.html" class="nav-link">Home</a></li>
+        <li><a href="./projects.html" class="nav-link">Projects</a></li>
+        <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="./blog.html" class="nav-link active" aria-current="page">Blog</a></li>
+        <li><a href="./contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Blog Section -->
+    <section id="blog" class="content-section">
+      <h2 class="section-title reveal">My Blog</h2>
+      <div class="blog-container reveal">
+        <!-- Blog Post 1 -->
+        <article class="card blog-post">
+          <img
+            src="./blog1.gif"
+            alt="Animation illustrating battery-free sticker light behavior"
+            class="card-image"
+            loading="lazy"
+          />
+          <div class="blog-post-content">
+            <h3 class="card-title">The Magic of '90s Bling: How Did Those Battery-Free Phone Stickers Actually Work?</h3>
+            <p class="blog-excerpt">Remember those glowing stickers on old Nokia phones? With no battery, they lit up when a call or text arrived. Discover how these tiny marvels harvested RF energy and glimpsed a battery-free future...</p>
+            <a href="./blog/the-magic-of-90s-bling-phone-sticker.html" class="card-link">Read More</a>
+          </div>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="card blog-post">
+          <img
+            src="https://placehold.co/600x300/00c6ff/0a0a1a?text=PID+Controller"
+            alt="Diagram representing a PID controller"
+            class="card-image"
+            loading="lazy"
+          />
+          <div class="blog-post-content">
+            <h3 class="card-title">The Unsung Hero of Automation: Why PID Controllers Are the "Magic" Inside Every Robot</h3>
+            <p class="blog-excerpt">Drones hovering, robots moving with perfect grace, even cruise control all rely on the hidden power of PID controllers. Learn how this elegant math enables precise, stable automation everywhere...</p>
+            <a href="./blog/pid-controllers-robotics-magic.html" class="card-link">Read More</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Rudra Sarker. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script defer src="./main.js"></script>
+  <script defer src="./background.js"></script>
+</body>
+</html>

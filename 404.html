@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Page Not Found — Rudra Sarker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="./styles_global.css" />
+  <link rel="icon" href="./favicon.ico" />
+  <style>
+    .not-found {
+      min-height: calc(100vh - var(--header-height));
+      display: grid;
+      place-items: center;
+      padding: 3rem 1.25rem;
+      text-align: center;
+    }
+    .not-found .card { max-width: 700px; margin: 0 auto; }
+    .code { font-size: 6rem; letter-spacing: 0.2rem; line-height: 1; margin-bottom: 1rem; color: var(--primary-color); text-shadow: 0 0 20px rgba(0,255,255,0.35); }
+    .desc { margin-bottom: 2rem; }
+    .actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="./index.html" class="nav-brand">RUDRA SARKER</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="./index.html" class="nav-link">Home</a></li>
+        <li><a href="./about.html" class="nav-link">About &amp; Skills</a></li>
+        <li><a href="./projects.html" class="nav-link">Projects</a></li>
+        <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="./blog.html" class="nav-link">Blog</a></li>
+        <li><a href="./contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="not-found">
+    <div class="card">
+      <div class="code">404</div>
+      <h1 class="section-title" style="margin-bottom:1rem;">Page not found</h1>
+      <p class="desc">The page you’re looking for doesn’t exist or may have moved.</p>
+      <div class="actions">
+        <a class="cta-button" href="./index.html">Go Home</a>
+        <a class="cta-button" href="./projects.html" style="background:transparent;color:var(--primary-color)">See Projects</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Rudra Sarker. All rights reserved.</p>
+  </footer>
+</body>
+</html>
