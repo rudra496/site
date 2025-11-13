@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main site pages -->
+  <url><loc>https://rudra496.github.io/site/</loc></url>
+  <url><loc>https://rudra496.github.io/site/projects.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/blog.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/achievements.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/gallery.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/about.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/contact.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/thankyou.html</loc></url>
+
+  <!-- Blog posts -->
+  <url><loc>https://rudra496.github.io/site/blog/the-magic-of-90s-bling-phone-sticker.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/blog/pid-controllers-robotics-magic.html</loc></url>
+
+  <!-- Project detail pages -->
+  <url><loc>https://rudra496.github.io/site/projects/line-following-robot.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/projects/smart-door-security.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/projects/led-matrix-notice-board.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/projects/dual-axis-solar-tracker.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/projects/team-signtalk.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/projects/team-esb4-bacteria-detection.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/projects/the-magic-of-90s-bling.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/projects/wifi-control-car.html</loc></url>
+  <url><loc>https://rudra496.github.io/site/projects/assistive-smart-eyeglass.html</loc></url>
+  <!-- Add any new blog/project pages as needed -->
+</urlset> 
