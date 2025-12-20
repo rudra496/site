@@ -51,6 +51,9 @@
 .project-card:hover {
   transform: translateY(-10px) scale(1.02);
 }
+[data-theme="light"] .project-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 136, 204, 0.25);
+}
 
 .project-card .card-title {
   font-size: 1.4rem;
@@ -81,9 +84,9 @@
   color: var(--primary-color);
 }
 [data-theme="light"] .project-card .card-tag {
-  background: rgba(0, 102, 204, 0.1);
-  border-color: var(--link-color);
-  color: var(--link-color);
+  background: rgba(0, 136, 204, 0.1);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* Individual Project Page Styles */
