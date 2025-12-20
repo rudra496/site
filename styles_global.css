@@ -341,3 +341,85 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
   .hero-subtitle { font-size: 1.2rem; }
   .section-title { font-size: 2rem; }
 }
+
+/* ========================================
+   CRITICAL FIX: Ensure ALL text is visible in light mode
+   These rules have high specificity to override any conflicts
+   ======================================== */
+
+/* Main content paragraphs */
+[data-theme="light"] main p,
+[data-theme="light"] section p,
+[data-theme="light"] article p,
+[data-theme="light"] .content-section p,
+[data-theme="light"] .about-text p,
+[data-theme="light"] .gallery-intro p,
+[data-theme="light"] .contact-container p {
+  color: var(--text-color) !important;
+}
+
+/* Div-wrapped text blocks */
+[data-theme="light"] div[style*="text-align"] p,
+[data-theme="light"] div[style*="max-width"] p {
+  color: var(--text-color) !important;
+}
+
+/* Card descriptions */
+[data-theme="light"] .card p,
+[data-theme="light"] .card-description,
+[data-theme="light"] .project-card p,
+[data-theme="light"] .blog-post p,
+[data-theme="light"] .blog-excerpt {
+  color: var(--text-color) !important;
+}
+
+/* List items */
+[data-theme="light"] main li,
+[data-theme="light"] section li,
+[data-theme="light"] article li {
+  color: var(--text-color) !important;
+}
+
+/* Span elements */
+[data-theme="light"] main span,
+[data-theme="light"] section span,
+[data-theme="light"] .card span {
+  color: var(--text-color) !important;
+}
+
+/* Section subtitles and descriptions */
+[data-theme="light"] .section-subtitle,
+[data-theme="light"] .gallery-intro,
+[data-theme="light"] .project-gallery p {
+  color: var(--text-color) !important;
+}
+
+/* Hero subtitle */
+[data-theme="light"] .hero-subtitle {
+  color: var(--text-color) !important;
+}
+
+/* Ensure inline styles don't override */
+[data-theme="light"] p[style],
+[data-theme="light"] div[style] p {
+  color: var(--text-color) !important;
+}
+
+/* Blog post content */
+[data-theme="light"] .blog-post-content,
+[data-theme="light"] .blog-post-content p {
+  color: var(--text-color) !important;
+}
+
+/* Project detail pages */
+[data-theme="light"] .project-detail p,
+[data-theme="light"] .project-content p {
+  color: var(--text-color) !important;
+}
+
+/* About page text blocks */
+[data-theme="light"] main h2 + p,
+[data-theme="light"] main h2 + div p,
+[data-theme="light"] main h3 + p {
+  color: var(--text-color) !important;
+}
