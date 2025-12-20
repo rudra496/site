@@ -82,8 +82,8 @@
 }
 [data-theme="light"] .project-card .card-tag {
   background: rgba(0, 102, 204, 0.1);
-  border-color: #0066cc;
-  color: #0066cc;
+  border-color: var(--link-color);
+  color: var(--link-color);
 }
 
 /* Individual Project Page Styles */

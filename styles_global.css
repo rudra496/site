@@ -113,8 +113,8 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
   box-shadow: 0 0 15px var(--primary-color);
 }
 .cta-button:hover { background-color: transparent; color: var(--primary-color); }
-[data-theme="light"] .cta-button { color: #fff; background-color: #0066cc; border-color: #0066cc; box-shadow: 0 0 10px rgba(0, 102, 204, 0.3); }
-[data-theme="light"] .cta-button:hover { background-color: transparent; color: #0066cc; }
+[data-theme="light"] .cta-button { color: #ffffff; background-color: var(--link-color); border-color: var(--link-color); box-shadow: 0 0 10px rgba(0, 102, 204, 0.3); }
+[data-theme="light"] .cta-button:hover { background-color: transparent; color: var(--link-color); }
 
 /* --- General Content Section (Shared) --- */
 .content-section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; position: relative; }
