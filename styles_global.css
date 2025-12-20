@@ -1,14 +1,10 @@
 /* Global Styles */
 :root {
-    --text-color: #2c3e50; /* Default text color for light mode */
+    --text-color: #2c3e50; /* Default text color */
 }
 
 [data-theme="dark"] {
     --text-color: #e0e0e0; /* Text color for dark mode */
-}
-
-[data-theme="light"] {
-    --text-color: #2c3e50; /* Text color for light mode */
 }
 
 * {
