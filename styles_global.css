@@ -6,6 +6,9 @@
   --secondary-color: #ff00ff; /* Neon Magenta */
   --tertiary-color: #00ff00; /* Neon Lime */
   --text-color: #e0e0e0;
+  --heading-color: #fff;
+  --link-color: #00ffff;
+  --link-hover-color: #ff00ff;
   --card-bg-color: rgba(26, 26, 58, 0.7);
   --card-border-color: rgba(0, 255, 255, 0.5);
   --header-height: 70px;
@@ -13,6 +16,9 @@
 [data-theme="light"] {
   --bg-color: #f6f8ff;
   --text-color: #111321;
+  --heading-color: #0a0a1a;
+  --link-color: #0066cc;
+  --link-hover-color: #cc0066;
   --card-bg-color: rgba(255, 255, 255, 0.8);
   --card-border-color: rgba(0, 200, 200, 0.35);
 }
@@ -30,12 +36,12 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 { color: #fff; text-shadow: 0 0 5px var(--primary-color); }
+h1, h2, h3, h4, h5, h6 { color: var(--heading-color); text-shadow: 0 0 5px var(--primary-color); }
 [data-theme="light"] h1, [data-theme="light"] h2, [data-theme="light"] h3, [data-theme="light"] h4, [data-theme="light"] h5, [data-theme="light"] h6 {
-  color: #0a0a1a; text-shadow: none;
+  color: var(--heading-color); text-shadow: none;
 }
-a { color: var(--primary-color); text-decoration: none; transition: color 0.3s ease; }
-a:hover { color: var(--secondary-color); }
+a { color: var(--link-color); text-decoration: none; transition: color 0.3s ease; }
+a:hover { color: var(--link-hover-color); }
 img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; }
 
 /* --- 3D Background (Homepage Only) --- */
@@ -102,11 +108,13 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
 [data-theme="light"] .hero-subtitle { color: #0a0a1a; }
 
 .cta-button {
-  display: inline-block; font-size: 1rem; font-weight: 700; color: var(--bg-color); background-color: var(--primary-color);
+  display: inline-block; font-size: 1rem; font-weight: 700; color: #0a0a1a; background-color: var(--primary-color);
   padding: 0.75rem 2rem; border: 2px solid var(--primary-color); border-radius: 5px; text-transform: uppercase; transition: all 0.3s ease;
   box-shadow: 0 0 15px var(--primary-color);
 }
 .cta-button:hover { background-color: transparent; color: var(--primary-color); }
+[data-theme="light"] .cta-button { color: #ffffff; background-color: var(--link-color); border-color: var(--link-color); box-shadow: 0 0 10px rgba(0, 102, 204, 0.3); }
+[data-theme="light"] .cta-button:hover { background-color: transparent; color: var(--link-color); }
 
 /* --- General Content Section (Shared) --- */
 .content-section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; position: relative; }
