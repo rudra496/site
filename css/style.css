@@ -80,6 +80,11 @@
   border-radius: 15px;
   color: var(--primary-color);
 }
+[data-theme="light"] .project-card .card-tag {
+  background: rgba(0, 102, 204, 0.1);
+  border-color: #0066cc;
+  color: #0066cc;
+}
 
 /* Individual Project Page Styles */
 .project-detail {

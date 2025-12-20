@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /thankyou.html
+Disallow: /404.html
+Disallow: /portfolio_home.html
 
 Sitemap: https://rudra496.github.io/site/sitemap.xml
