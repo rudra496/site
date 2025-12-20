@@ -142,13 +142,13 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
 .cta-button:hover { background-color: transparent; color: var(--primary-color); }
 [data-theme="light"] .cta-button {
   background: linear-gradient(135deg, #0088cc, #cc0088);
-  color: #ffffff !important;
+  color: #ffffff;
   box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
   border: none;
 }
 [data-theme="light"] .cta-button:hover {
   box-shadow: 0 6px 20px rgba(0, 136, 204, 0.5);
-  color: #ffffff !important;
+  color: #ffffff;
   background: linear-gradient(135deg, #0088cc, #cc0088);
 }
 
@@ -169,6 +169,7 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
 .content-section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; position: relative; }
 .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; color: var(--primary-color); text-transform: uppercase; }
 [data-theme="light"] .section-title {
+  color: #0088cc; /* Fallback for browsers that don't support gradient text */
   background: linear-gradient(90deg, #0088cc, #cc0088);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
