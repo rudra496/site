@@ -423,3 +423,30 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
 [data-theme="light"] main h3 + p {
   color: var(--text-color) !important;
 }
+
+/* Light mode content sections - add opaque backgrounds for better contrast */
+[data-theme="light"] .content-section,
+[data-theme="light"] .project-gallery,
+[data-theme="light"] .about-container,
+[data-theme="light"] .blog-container,
+[data-theme="light"] .contact-container,
+[data-theme="light"] .feedback-container {
+  background: var(--bg-color);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Ensure main content areas have proper background */
+[data-theme="light"] main {
+  background: var(--bg-color);
+}
+
+/* Specific intro text sections that need opaque backgrounds */
+[data-theme="light"] .gallery-intro,
+[data-theme="light"] .project-gallery > .gallery-intro,
+[data-theme="light"] main > section > div[style*="max-width"] {
+  background: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
