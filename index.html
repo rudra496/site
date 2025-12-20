@@ -15,13 +15,13 @@
   <meta property="og:title" content="Rudra Sarker — Portfolio Home" />
   <meta property="og:description" content="Industrial and Production Engineering student passionate about robotics, IoT, and web development." />
   <meta property="og:url" content="https://rudra496.github.io/site/" />
-  <meta property="og:image" content="./Profile.png" />
+  <meta property="og:image" content="./Profile.webp" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rudra Sarker — Portfolio Home" />
   <meta name="twitter:description" content="Industrial and Production Engineering student passionate about robotics, IoT, and web development." />
-  <meta name="twitter:image" content="./Profile.png" />
+  <meta name="twitter:image" content="./Profile.webp" />
 
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,12 +59,16 @@
     <section class="content-section">
       <h2 class="section-title reveal">About Me</h2>
       <div class="about-container reveal">
-        <img
-          src="./Profile.png"
-          alt="Portrait of Rudra Sarker"
-          class="profile-pic"
-          loading="lazy"
-        />
+        <picture>
+          <source srcset="./Profile.webp" type="image/webp" />
+          <source srcset="./Profile.png" type="image/png" />
+          <img
+            src="./Profile.png"
+            alt="Portrait of Rudra Sarker"
+            class="profile-pic"
+            loading="lazy"
+          />
+        </picture>
         <div class="about-text">
           <h3>Hello! I'm Rudra.</h3>
           <p>I am a third-year Industrial and Production Engineering student at Shahjalal University of Science and Technology (SUST), Sylhet, Bangladesh. My academic journey has been defined by a deep passion for the intersection of technology, engineering, and creativity. I thrive in environments where innovation meets practical application, and I'm constantly exploring how emerging technologies can solve real-world problems and improve people's lives.</p>
