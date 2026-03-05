@@ -5,3 +5,4 @@ Disallow: /404.html
 Disallow: /portfolio_home.html
 
 Sitemap: https://rudra496.github.io/site/sitemap.xml
+Host: https://rudra496.github.io
