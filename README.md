@@ -135,7 +135,7 @@ GitHub
 https://github.com/rudra496
 
 LinkedIn
-https://www.linkedin.com/in/rudra-sarker-573b15296
+https://www.linkedin.com/in/rudrasarker
 
 Portfolio
 https://rudra496.github.io/site
