@@ -1,8 +1,101 @@
+# =========================================================
+# robots.txt for Rudra Sarker Portfolio
+# https://rudra496.github.io/site/
+# =========================================================
+
+# ---------------------------------------------------------
+# Global rules for all crawlers
+# ---------------------------------------------------------
 User-agent: *
 Allow: /
-Disallow: /thankyou.html
-Disallow: /404.html
-Disallow: /portfolio_home.html
 
+# Block utility pages that should not appear in search
+Disallow: /site/404.html
+Disallow: /site/thankyou.html
+Disallow: /site/portfolio_home.html
+
+# Prevent crawling of duplicate query URLs
+Disallow: /*?*
+
+# Allow main content directories explicitly
+Allow: /site/
+Allow: /site/projects/
+Allow: /site/blog/
+Allow: /site/gallery/
+Allow: /site/about.html
+Allow: /site/contact.html
+
+# Sitemap declaration
 Sitemap: https://rudra496.github.io/site/sitemap.xml
-Host: https://rudra496.github.io
+
+
+# ---------------------------------------------------------
+# Google
+# ---------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+Disallow: /site/404.html
+Disallow: /site/thankyou.html
+Disallow: /site/portfolio_home.html
+
+
+# ---------------------------------------------------------
+# Bing
+# ---------------------------------------------------------
+User-agent: Bingbot
+Allow: /
+Disallow: /site/404.html
+Disallow: /site/thankyou.html
+
+
+# ---------------------------------------------------------
+# AI / LLM Crawlers
+# ---------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+
+# ---------------------------------------------------------
+# Other Search Crawlers
+# ---------------------------------------------------------
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+
+# ---------------------------------------------------------
+# Bad / aggressive crawlers (optional protection)
+# ---------------------------------------------------------
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+
+# =========================================================
+# End of file
+# =========================================================
