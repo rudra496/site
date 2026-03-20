@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Building MindWell: Lessons from Creating an Open-Source Mental Health Platform | Rudra Sarker</title>
+  <meta name="description" content="The full developer journey behind MindWell — architecture decisions, privacy-first design, building 393 condition guides, 20 assessment tools, and lessons learned from open-source healthcare development." />
+  <meta name="keywords" content="MindWell, mental health platform, open source, Next.js, TypeScript, developer journey, lessons learned, IndexedDB, Vercel" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/mindwell-open-source-mental-health-platform-update.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Building MindWell: Lessons from Creating an Open-Source Mental Health Platform" />
+  <meta property="og:description" content="The full developer journey behind MindWell — architecture decisions, privacy-first design, 393 condition guides, 20 assessment tools, and concrete lessons from open-source healthcare development." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/mindwell-open-source-mental-health-platform-update.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-03-20" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Building MindWell: Lessons from Open-Source Mental Health Development" />
+  <meta name="twitter:description" content="The full developer journey behind MindWell — Next.js, TypeScript, IndexedDB, privacy-first design, and what I learned building healthcare software as a student." />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Building MindWell: Lessons from Creating an Open-Source Mental Health Platform",
+    "description": "The full developer journey behind MindWell — architecture decisions, privacy-first design, building 393 condition guides, 20 assessment tools, and lessons learned from open-source healthcare development.",
+    "url": "https://rudra496.github.io/site/blog/mindwell-open-source-mental-health-platform-update.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-03-20",
+    "dateModified": "2026-03-20",
+    "author": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "keywords": ["MindWell", "mental health platform", "open source", "Next.js", "TypeScript", "developer journey", "IndexedDB", "Vercel"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rudra496.github.io/site/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rudra496.github.io/site/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "Open Source & Development", "item": "https://rudra496.github.io/site/blog.html#cat-opensource"},
+      {"@type": "ListItem", "position": 4, "name": "Building MindWell: Developer Journey", "item": "https://rudra496.github.io/site/blog/mindwell-open-source-mental-health-platform-update.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="../index.html" class="nav-brand">RUDRA SARKER</a>
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../projects.html" class="nav-link">Projects</a></li>
+        <li><a href="../gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="../blog.html" class="nav-link active" aria-current="page">Blog</a></li>
+        <li><a href="media-coverage-achievements-rudra-sarker.html" class="nav-link">In The Press</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article class="project-detail">
+      <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 8px; text-align: center;">
+        <h1 style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">Building MindWell: Lessons from Creating an Open-Source Mental Health Platform</h1>
+      </div>
+      <nav aria-label="Breadcrumb" style="font-size:0.9rem;margin-bottom:1.5rem;padding:0 1rem;">
+        <a href="../index.html">Home</a> » <a href="../blog.html">Blog</a> » <a href="../blog.html#cat-opensource">Open Source &amp; Development</a>
+      </nav>
+      <p style="font-size: 1rem; color: var(--text-color); margin: 0 1rem 2rem; font-style: italic;">
+        By Rudra Sarker • Published March 20, 2026
+      </p>
+      <section class="project-content" style="padding: 0 1rem;">
+
+        <p>
+          <em>Note: This post is about the developer journey behind MindWell — the architecture decisions, the
+          technical challenges, and what I learned. If you want a full overview of MindWell's features and how
+          to use it as a platform, see
+          <a href="https://rudra496.github.io/site/blog/mindwell-mental-health-platform.html" target="_blank" rel="noopener noreferrer">MindWell: A Free, Open-Source Mental Health Platform — Full Overview</a>.
+          The live platform is available at
+          <a href="https://mindwell-navy.vercel.app/" target="_blank" rel="noopener noreferrer">mindwell-navy.vercel.app</a>.</em>
+        </p>
+
+        <h2>Introduction</h2>
+        <p>
+          Building a mental health platform as a university student — with no clinical background, no funding,
+          and no team — sounds either very brave or very foolish. Looking back, it was probably both. But
+          <a href="https://mindwell-navy.vercel.app/" target="_blank" rel="noopener noreferrer">MindWell</a>
+          exists now, it is used by real people every day, and the lessons I learned building it have permanently
+          changed how I think about software architecture, privacy, content strategy, and the responsibility
+          that comes with building tools that people depend on emotionally.
+        </p>
+        <p>
+          This post is a candid account of that journey. I will talk about why I chose Next.js over simpler
+          frameworks, how I handled the genuinely hard problem of storing sensitive user data without a backend,
+          what it means to implement validated psychological assessment tools responsibly in a web application,
+          and the seven most important lessons I took away from the whole experience. I am writing this for
+          other developers — especially students — who want to build something meaningful in the health or
+          wellbeing space but are not sure where to start.
+        </p>
+
+        <h2>The Decision to Build Open Source</h2>
+        <p>
+          The first decision — and in many ways the most important one — was to make MindWell open source.
+          For a mental health platform, this was not an obvious choice. The traditional startup playbook says
+          you protect your code, monetise aggressively, and scale quickly. Open-sourcing means anyone can see
+          how the product works, fork it, and even compete with you.
+        </p>
+        <p>
+          But I think that reasoning is exactly backwards for a mental health tool. When someone is using a
+          mood tracker or reading about their anxiety disorder, they need to trust the platform. Trust in health
+          technology comes from transparency. If MindWell's code is public, any developer, researcher, or
+          security professional can audit it and verify that there is no covert data collection, no hidden
+          analytics, no dark patterns nudging users toward a paid plan. Open source is not just a development
+          model — it is a trust signal.
+        </p>
+        <p>
+          There are practical benefits too. Open source invites contributions. Other developers have submitted
+          pull requests fixing accessibility bugs, adding content, and improving performance in ways I would
+          not have thought of alone. The
+          <a href="https://projects.learning-planet.org/profile/rudra-sarker/summary" target="_blank" rel="noopener noreferrer">Learning Planet platform</a>
+          recognised MindWell as a community-relevant learning project specifically because of its open nature.
+          A closed-source wellness app is a product. An open-source one is a community.
+        </p>
+        <p>
+          Finally, there is the question of access. Mental health support is dramatically underresourced in
+          South Asia and across the Global South. A free, open-source platform can be forked and adapted by
+          local organisations for local languages and local cultural contexts. A proprietary one cannot.
+        </p>
+
+        <h2>Architecture Decisions</h2>
+        <h3>Why Next.js 15 with the App Router</h3>
+        <p>
+          I evaluated three framework options: plain React with Vite, Remix, and Next.js 15. The decisive
+          factor was the App Router's built-in support for React Server Components. MindWell's content layer —
+          393 mental health condition guides — is essentially a static knowledge base. Rendering that content
+          on the server means zero JavaScript payload for the content itself, faster initial load times, and
+          better SEO (critical for reaching people who search for mental health information). React Server
+          Components let me co-locate data fetching with rendering without the boilerplate of getServerSideProps
+          or useEffect fetch chains.
+        </p>
+        <p>
+          The App Router's file-based routing also makes the codebase navigable for contributors who are
+          familiar with Next.js conventions. A new contributor can find the code for any page by navigating
+          the <code>app/</code> directory — no need to read a custom router configuration.
+        </p>
+        <h3>TypeScript for Safety in Healthcare Applications</h3>
+        <p>
+          Using TypeScript was never a question. In a healthcare context, type safety is not about developer
+          comfort — it is about correctness. The assessment tools in MindWell implement validated clinical
+          scales (PHQ-9, GAD-7, and others). The scoring algorithms for these tools must be exactly right.
+          A bug that adds one to a score when it should not could change a "minimal" result to a "moderate"
+          one, with real consequences for how a user perceives their mental state.
+        </p>
+        <p>
+          TypeScript's strict mode caught several bugs during development that JavaScript would have silently
+          allowed: an <code>undefined</code> spreading into a numeric calculation, a string being compared to
+          a number, an optional field being accessed without a null check. These are the kinds of bugs that
+          pass unit tests and only surface in edge cases — exactly the edge cases you cannot afford in a
+          health application.
+        </p>
+        <h3>Client-Side IndexedDB for Privacy</h3>
+        <p>
+          The most architecturally unusual decision in MindWell was to store all personal user data — mood
+          logs, journal entries, assessment results — exclusively in the browser using IndexedDB, with no
+          server component. This means MindWell has no user accounts, no database, and no network requests
+          for personal data. Your mood data literally never leaves your device.
+        </p>
+        <p>
+          This was a hard constraint to design around. IndexedDB has a quirky asynchronous API; I abstracted
+          it behind a clean service layer using Promises and the <code>idb</code> library. The trade-off is
+          that data does not sync across devices, and clearing browser data deletes your history. I am
+          transparent about this limitation in the UI with a prominent export/backup feature.
+        </p>
+        <h3>Vercel Deployment and No Backend</h3>
+        <p>
+          Deploying on Vercel was a natural fit: Next.js is a Vercel project, the integration is seamless,
+          and the free tier covers MindWell's current traffic comfortably. With no backend server to manage,
+          there are no database credentials to secure, no server costs to worry about, and no attack surface
+          for server-side vulnerabilities. The content API routes in Next.js serve the condition guide data
+          from flat JSON files at build time, so even those routes add zero runtime cost.
+        </p>
+
+        <h2>Building the Content Layer</h2>
+        <p>
+          Three hundred and ninety-three mental health condition guides is a lot of content. My initial
+          approach — writing each guide manually from scratch — quickly became unsustainable. I settled on
+          a structured content model where each condition guide is a JSON file with a defined schema:
+          condition name, ICD-10 code, description, symptoms, causes, treatment approaches, self-help
+          strategies, crisis resources, and related conditions. This separation of content from presentation
+          means the JSON files are the single source of truth, and the Next.js pages render them through
+          a shared template.
+        </p>
+        <p>
+          Managing 393 JSON files without a CMS required discipline. I created a validation script that
+          runs as part of the build process, checking every guide against the schema and flagging missing
+          fields, excessively short descriptions (which usually indicate a placeholder), or broken internal
+          links to related conditions. This automated quality gate prevented dozens of partial or malformed
+          entries from reaching production.
+        </p>
+        <p>
+          For content accuracy, I cross-referenced every guide against the DSM-5, ICD-10, and peer-reviewed
+          secondary sources. I am not a clinician, and MindWell is explicit that it is an informational
+          resource, not a diagnostic tool or a substitute for professional care. That disclaimer is not just
+          legal boilerplate — it is a genuine design principle that shaped how every piece of content is
+          framed. Language like "you may experience" rather than "you have" and "consider discussing X with a
+          professional" rather than "you need X treatment" runs throughout the guides.
+        </p>
+
+        <h2>Privacy-First Development Challenges</h2>
+        <p>
+          Building a mood tracker with no server is conceptually elegant but technically fiddly. The IndexedDB
+          API is event-based and non-intuitive. The <code>idb</code> wrapper library helps enormously, but
+          there are still edge cases: what happens when the user's browser storage quota is exceeded? What
+          happens if they are using a private browsing window where IndexedDB is wiped at session end? What
+          if they clear their cookies thinking that clears storage?
+        </p>
+        <p>
+          I handled the storage quota issue by implementing a lightweight quota check on app start using the
+          Storage Manager API (<code>navigator.storage.estimate()</code>), which reports available and used
+          quota. If the user is within 10% of their quota, a non-intrusive notification suggests they export
+          their data. For private browsing, the app detects the reduced storage availability and shows an
+          informational banner. The cookie-clearing issue is addressed with prominent UI copy explaining that
+          mood data is stored separately from cookies.
+        </p>
+        <p>
+          Analytics was another privacy challenge. I needed some usage data to understand which features were
+          being used and which condition guides were most visited — this information helps prioritise
+          development effort. But traditional analytics (Google Analytics, Mixpanel) would send user
+          interaction data to a third-party server, which felt inconsistent with a privacy-first platform.
+          I solved this by using Vercel's built-in analytics, which reports only aggregate page view counts
+          with no user-level tracking and no cookies, and by explicitly documenting this choice in the
+          platform's privacy statement.
+        </p>
+
+        <h2>The Assessment Tools</h2>
+        <p>
+          MindWell includes 20 validated self-reflection tools adapted from clinically validated scales
+          including the PHQ-9 (depression), GAD-7 (anxiety), PSS (perceived stress), AUDIT (alcohol use),
+          and others. Implementing these responsibly required navigating several tensions.
+        </p>
+        <p>
+          The scoring algorithms are straightforward — each scale has a published scoring formula with
+          defined severity thresholds. The harder question is: what do you do with the result? A digital
+          tool that tells someone "your score suggests severe depression" without any clinical context or
+          follow-up pathway is potentially harmful. My approach was to always accompany assessment results
+          with three things: a clear explanation of what the score means and what the scale measures, a
+          list of recommended next steps (ranging from self-care strategies for mild scores to crisis
+          helpline numbers for severe scores), and a prominent disclaimer that the tool is not a clinical
+          diagnosis.
+        </p>
+        <p>
+          I also implemented a deliberate pause between completing an assessment and seeing the result —
+          two seconds during which the user sees a "processing" animation. This tiny UX detail matters:
+          it prevents impulsive sharing of raw scores before the user has read the context, and it creates
+          a moment of cognitive preparation before receiving a potentially difficult number.
+        </p>
+
+        <h2>UI/UX for Sensitive Contexts</h2>
+        <p>
+          Designing a mental health platform is a different challenge from designing a productivity app.
+          Users arrive in a wide range of emotional states. Some are curious and exploratory; others are
+          distressed. The design must work for both without either being clinical and cold or being
+          so cheerful it feels dismissive.
+        </p>
+        <p>
+          The colour palette for MindWell uses desaturated blues and soft teals — colours associated with
+          calm and trust in colour psychology research. I deliberately avoided high-saturation reds and
+          yellows, which create urgency and anxiety, except for genuinely urgent elements like crisis
+          resources. Typography uses generous line spacing (1.7 for body text) and a comfortable reading
+          width (around 65 characters per line) to reduce cognitive load during reading.
+        </p>
+        <p>
+          Accessibility received more attention than in any of my other projects. Every form element has
+          a visible focus indicator. Colour is never the sole carrier of meaning. The mood tracker calendar
+          uses both colour and a text label for each entry. Screen reader testing with NVDA revealed several
+          issues with the assessment flow that I would not have caught through visual inspection alone —
+          most notably, that the radio button groups for assessment questions were not being announced with
+          their question text, making them essentially unusable for blind users.
+        </p>
+
+        <h2>Testing and Quality Assurance</h2>
+        <p>
+          Testing a mental health platform has dimensions beyond code correctness. Code quality is tested
+          with Jest unit tests covering all scoring algorithms (each scale has tests verifying that known
+          input arrays produce expected scores and severity labels) and Playwright end-to-end tests covering
+          the critical user journeys: completing an assessment, adding a mood log, navigating to a condition
+          guide. The Lighthouse CI score for MindWell is consistently above 95 for performance and
+          accessibility — I run Lighthouse as part of the CI pipeline on every pull request.
+        </p>
+        <p>
+          Content accuracy was tested through manual review against primary sources and, where possible,
+          by asking colleagues with psychology backgrounds to read through guides for their area of
+          expertise. This process is ongoing — the content layer is never "done" because the clinical
+          literature evolves and new evidence emerges.
+        </p>
+
+        <h2>Community and Contributions</h2>
+        <p>
+          MindWell is genuinely open to external contributions. The most impactful contributions so far
+          have come from developers who noticed accessibility issues, UX inconsistencies, and broken links
+          — the kinds of things that are easy to miss when you are the sole developer and you have been
+          looking at the same codebase for months. The contribution guidelines in the repository explain
+          the preferred workflow: fork the repo, make changes in a feature branch, run the test suite,
+          and submit a pull request with a clear description of what changed and why.
+        </p>
+        <p>
+          If you are interested in contributing — whether with code, content, translations, or clinical
+          review — the repository is publicly available and all issues are labelled with difficulty and
+          domain tags to help you find a good starting point.
+        </p>
+
+        <h2>Key Developer Lessons</h2>
+        <p>
+          After months of building MindWell, here are the concrete lessons I would give to any developer
+          starting a health-focused application:
+        </p>
+        <ol>
+          <li>
+            <strong>Privacy is architecture, not a feature.</strong> You cannot bolt privacy on at the end.
+            The decision to use client-side storage rather than a backend was made on day one and it shaped
+            every subsequent technical decision. If you start with a server-side database and later decide
+            you want to "add privacy," you will face a complete rewrite.
+          </li>
+          <li>
+            <strong>TypeScript strict mode is not optional in healthcare.</strong> The number of subtle type
+            errors it caught during development justifies the upfront investment in type definitions many
+            times over.
+          </li>
+          <li>
+            <strong>Content is a first-class engineering problem.</strong> 393 JSON files is a codebase.
+            It needs version control, schema validation, automated testing, and a review process, just like
+            the application code.
+          </li>
+          <li>
+            <strong>Test with real assistive technology.</strong> Automated accessibility audits (Lighthouse,
+            axe) are necessary but not sufficient. Fire up NVDA or VoiceOver and actually navigate the
+            application with your eyes closed. You will find issues that no automated tool will catch.
+          </li>
+          <li>
+            <strong>Disclosures are UX, not legal cover.</strong> Every disclaimer on MindWell was written
+            to genuinely inform users, not to protect the developer from liability. Users can tell the
+            difference, and it changes how they trust the platform.
+          </li>
+          <li>
+            <strong>Build in a way you would be comfortable defending publicly.</strong> Because you are
+            building in healthcare, someone may eventually challenge your approach. Having written down
+            your reasoning for every significant decision — in commit messages, documentation, or posts
+            like this one — means you can explain yourself coherently.
+          </li>
+          <li>
+            <strong>Launch early and iterate.</strong> I waited far too long before making MindWell public
+            because I was worried about the content not being complete enough. In reality, users who found
+            the platform early provided invaluable feedback that accelerated the platform's development
+            more than any amount of pre-launch preparation would have.
+          </li>
+        </ol>
+
+        <h2>What's Next for MindWell</h2>
+        <p>
+          The roadmap for MindWell is shaped by user feedback and by the gaps I observe in the platform's
+          current coverage. The highest priorities are:
+        </p>
+        <ul>
+          <li>
+            <strong>Bengali language support:</strong> A significant proportion of the users who would benefit
+            most from MindWell are Bengali speakers who are not fully comfortable reading mental health
+            content in English. Translating the condition guides and UI strings into Bengali is the single
+            highest-impact thing I can do to increase the platform's reach.
+          </li>
+          <li>
+            <strong>Crisis chat integration:</strong> Connecting users in acute distress to trained counsellors
+            via a text chat interface — integrated with existing crisis hotline services — would dramatically
+            increase the platform's utility for the most vulnerable users.
+          </li>
+          <li>
+            <strong>Guided meditation and breathing exercises:</strong> These evidence-based self-regulation
+            techniques are highly requested by current users and can be implemented without clinical risk.
+          </li>
+          <li>
+            <strong>Optional cloud sync:</strong> For users who want data persistence across devices, an
+            opt-in encrypted cloud backup (using end-to-end encryption so the server never sees plaintext
+            data) would address the primary usability complaint about the current architecture.
+          </li>
+        </ul>
+        <p>
+          Building MindWell has been the most challenging and most rewarding software project of my life
+          so far. I hope this account of the journey is useful to other developers who want to build
+          something that matters. The world needs more thoughtful, privacy-respecting, open-source tools
+          in the mental health space. If this post inspires even one person to build one, it will have
+          been worth writing.
+        </p>
+
+        <h2>Related Posts</h2>
+        <ul>
+          <li><a href="mindwell-mental-health-platform.html">MindWell: A Free, Open-Source Mental Health Platform — Full Overview</a></li>
+          <li><a href="github-projects-showcase.html">My GitHub Projects: A Complete Guide</a></li>
+          <li><a href="sightlineai-assistive-eyewear-visually-impaired.html">SightlineAI: AI-Powered Assistive Eyewear</a></li>
+        </ul>
+
+        <h2>Connect With Me</h2>
+        <p>Follow my work and connect across platforms:</p>
+        <ul>
+          <li><a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X / Twitter</a></li>
+          <li><a href="https://www.facebook.com/rudrasarker130" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://www.instagram.com/rudrasarker/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer"><i class="fas fa-flask"></i> ResearchGate</a></li>
+        </ul>
+      </section>
+      <a href="../blog.html" class="back-to-gallery" aria-label="Back to Blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </article>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2026 Rudra Sarker. All rights reserved.</p>
+  </footer>
+  <script defer src="../main.js"></script>
+  <script defer src="../js/script.js"></script>
+</body>
+</html>
