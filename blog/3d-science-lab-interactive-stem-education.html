@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Science Lab: Building an Interactive 3D STEM Education Platform with Three.js and WebGL | Rudra Sarker</title>
+  <meta name="description" content="How I built 3D Science Lab — an interactive, browser-based STEM education platform using Three.js and WebGL to make science accessible and engaging for students worldwide." />
+  <meta name="keywords" content="3D Science Lab, Three.js, WebGL, STEM education, interactive, EdTech, JavaScript, 3D visualization, Bangladesh" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/3d-science-lab-interactive-stem-education.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="3D Science Lab: Building an Interactive 3D STEM Education Platform with Three.js and WebGL" />
+  <meta property="og:description" content="How I built 3D Science Lab — an interactive, browser-based STEM education platform using Three.js and WebGL to make science accessible and engaging for students worldwide." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/3d-science-lab-interactive-stem-education.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-03-20" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="3D Science Lab: Interactive STEM Education with Three.js &amp; WebGL" />
+  <meta name="twitter:description" content="How I built a browser-based 3D STEM education platform using Three.js and WebGL — no installation required, accessible for every student." />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "3D Science Lab: Building an Interactive 3D STEM Education Platform with Three.js and WebGL",
+    "description": "How I built 3D Science Lab — an interactive, browser-based STEM education platform using Three.js and WebGL to make science accessible and engaging for students worldwide.",
+    "url": "https://rudra496.github.io/site/blog/3d-science-lab-interactive-stem-education.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-03-20",
+    "dateModified": "2026-03-20",
+    "author": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "keywords": ["3D Science Lab", "Three.js", "WebGL", "STEM education", "interactive", "EdTech", "JavaScript", "3D visualization", "Bangladesh"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rudra496.github.io/site/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rudra496.github.io/site/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "Projects & Technology", "item": "https://rudra496.github.io/site/blog.html#cat-projects"},
+      {"@type": "ListItem", "position": 4, "name": "3D Science Lab: Interactive STEM Education", "item": "https://rudra496.github.io/site/blog/3d-science-lab-interactive-stem-education.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="../index.html" class="nav-brand">RUDRA SARKER</a>
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../projects.html" class="nav-link">Projects</a></li>
+        <li><a href="../gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="../blog.html" class="nav-link active" aria-current="page">Blog</a></li>
+        <li><a href="../blog/media-coverage-achievements-rudra-sarker.html" class="nav-link">In The Press</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article class="project-detail">
+      <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 8px; text-align: center;">
+        <h1 style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">3D Science Lab: Building an Interactive 3D STEM Education Platform with Three.js and WebGL</h1>
+      </div>
+      <nav aria-label="Breadcrumb" style="font-size:0.9rem;margin-bottom:1.5rem;padding:0 1rem;">
+        <a href="../index.html">Home</a> » <a href="../blog.html">Blog</a> » <a href="../blog.html#cat-projects">Projects &amp; Technology</a>
+      </nav>
+      <p style="font-size: 1rem; color: var(--text-color); margin: 0 1rem 2rem; font-style: italic;">
+        By Rudra Sarker • Published March 20, 2026
+      </p>
+      <section class="project-content" style="padding: 0 1rem;">
+
+        <h2>Introduction</h2>
+        <p>
+          When I first imagined 3D Science Lab, I was thinking about a single, simple problem: why do so many students
+          find science boring? Not because the subject itself is dull — science is the most astonishing thing humanity
+          has ever pursued — but because the way it is typically taught reduces living phenomena to flat diagrams on a
+          printed page. A DNA double-helix becomes two parallel lines with tick marks. An atom becomes a circled "Fe"
+          on a periodic table. A pendulum's motion becomes an equation nobody truly understands until they watch it
+          swing for the first time.
+        </p>
+        <p>
+          <a href="https://rudra496.github.io/science/" target="_blank" rel="noopener noreferrer">3D Science Lab</a>
+          is my answer to that problem. It is a fully browser-based, interactive 3D STEM education platform powered
+          by Three.js and WebGL. Students can visit the site on any modern device — no downloads, no plugins, no
+          accounts — and immediately begin exploring rotating molecular models, animated physics simulations, and
+          interactive chemistry experiments. The platform is designed to be as frictionless as possible, because every
+          extra click is a student who gives up and goes back to Instagram.
+        </p>
+        <p>
+          This post is the full technical story: why I built it, how it works under the hood, the challenges I
+          overcame, and where it is going. I also shared an early version of the project on LinkedIn and the response
+          from educators and developers was genuinely humbling — more on that later.
+        </p>
+
+        <h2>Why STEM Education Needs 3D</h2>
+        <p>
+          The global EdTech market is enormous and growing, yet the dominant paradigm remains surprisingly traditional:
+          recorded video lectures, PDF worksheets, and multiple-choice quizzes. These formats work well for some
+          learners, but they fundamentally cannot convey spatial relationships. Spatial reasoning is at the heart of
+          almost every STEM discipline. Chemistry is about how atoms are arranged in three-dimensional space. Physics
+          is about forces acting along vectors. Biology is about how protein conformations determine function. When we
+          flatten these subjects onto a page, we strip away the very dimension that makes them comprehensible.
+        </p>
+        <p>
+          Research in cognitive science consistently shows that interactive simulations outperform passive media for
+          STEM concept acquisition. A student who can rotate a methane molecule in her browser, zooming in on the
+          tetrahedral bond angles, develops a more durable mental model than one who reads "109.5 degrees" in a
+          textbook. The PhET Interactive Simulations project at the University of Colorado has demonstrated this
+          repeatedly, and their free simulations have been used by hundreds of millions of learners worldwide. But
+          PhET uses Flash (now deprecated) and later Java applets — technologies that are dying or already dead.
+        </p>
+        <p>
+          The new generation of browser 3D, powered by WebGL and abstraction libraries like Three.js, makes it
+          possible for a solo developer to build interactive 3D science tools that run everywhere without any
+          installation. That is the gap 3D Science Lab aims to fill: modern, performant, visually compelling 3D
+          science simulations that work in any browser, on any device, in any country — including those where
+          bandwidth is limited and hardware is modest.
+        </p>
+        <p>
+          In Bangladesh, where I study, the digital divide in education is real. Many students have a smartphone but
+          not a powerful laptop. They have mobile data but not fast broadband. Designing for that reality — while
+          still delivering compelling 3D visuals — shaped every technical decision I made.
+        </p>
+
+        <h2>Technology Stack Deep-Dive</h2>
+        <h3>Three.js and the WebGL Pipeline</h3>
+        <p>
+          Three.js is a JavaScript library that abstracts the raw WebGL API into a scene-graph model familiar to
+          anyone who has used Unity or Blender. At its core, you create a <code>Scene</code>, populate it with
+          <code>Mesh</code> objects (geometry + material), add one or more <code>Light</code> sources, set up a
+          <code>Camera</code>, and hand it all to a <code>WebGLRenderer</code> that drives the GPU. The renderer
+          executes vertex and fragment shaders compiled to GLSL, rasterises triangles, applies textures and lighting,
+          and outputs a pixel buffer to an HTML5 <code>&lt;canvas&gt;</code> element — all at up to 60 frames per
+          second.
+        </p>
+        <p>
+          For 3D Science Lab, I use Three.js r158 (the most recent stable release at development time). The rendering
+          pipeline for each scene looks like this: the user's input events are captured by JavaScript event listeners;
+          those events update scene-graph state (camera position, object transforms, simulation parameters); the
+          animation loop — driven by <code>requestAnimationFrame</code> — calls <code>renderer.render(scene, camera)</code>
+          on every frame; Three.js uploads updated uniform values to the GPU and issues draw calls.
+        </p>
+        <h3>3D Model Creation and Loading</h3>
+        <p>
+          For molecular models, I use procedurally generated geometry rather than loaded files. Each atom is a
+          <code>SphereGeometry</code> with a radius proportional to the element's van der Waals radius and a color
+          from the CPK color convention. Bonds are <code>CylinderGeometry</code> instances rotated and positioned
+          between atom centers using quaternion math. This approach means zero external file requests for the
+          molecular viewer — everything is generated in JavaScript from a compact data structure (atom positions
+          as XYZ coordinates plus element symbols).
+        </p>
+        <p>
+          For more complex objects — laboratory equipment, anatomical models — I author glTF 2.0 files in Blender
+          and load them via Three.js's built-in <code>GLTFLoader</code>. The glTF format is ideal for the web
+          because it is compact, supports PBR materials natively, and can be gzip-compressed by GitHub Pages for
+          additional bandwidth savings.
+        </p>
+        <h3>Physics Simulations</h3>
+        <p>
+          Rather than integrating a full physics engine like Cannon.js (which adds significant bundle weight),
+          I implement custom numerical integration for each simulation. The pendulum simulation uses a simple
+          Runge-Kutta 4th-order integrator for the equation of motion. The projectile motion demo uses Euler
+          integration (sufficient for a visual demonstration). The spring-mass oscillator uses Verlet integration
+          for better energy conservation. These are small, targeted implementations that keep bundle size minimal
+          while producing physically accurate behaviour.
+        </p>
+        <h3>User Interaction: Orbit Controls and Raycasting</h3>
+        <p>
+          Three.js's <code>OrbitControls</code> module provides mouse-drag rotation, scroll-wheel zoom, and
+          right-click pan out of the box. On mobile, it maps to touch events automatically. For object selection
+          (clicking on an atom to display its element information, for example), I use Three.js's
+          <code>Raycaster</code> class, which casts a ray from the camera through the screen-space click coordinate
+          and returns a list of intersected scene objects in depth order. The first hit is the selected object.
+        </p>
+        <h3>Performance Optimisation</h3>
+        <p>
+          Keeping frame rates acceptable on low-end Android phones required several techniques. I use
+          <code>InstancedMesh</code> for repeated geometry (all hydrogen atoms in a molecule share one draw call
+          rather than each issuing its own). Textures are compressed using the Basis Universal format where supported.
+          I implement a simple LOD (Level of Detail) system that reduces polygon count when the camera is far from
+          an object. The renderer's pixel ratio is capped at <code>Math.min(window.devicePixelRatio, 2)</code> to
+          avoid the massive overdraw penalty of 3× retina displays on mobile GPUs. Shadow maps are disabled on
+          scenes where they are not critically necessary for comprehension.
+        </p>
+
+        <h2>Key Features of 3D Science Lab</h2>
+        <p>
+          The platform currently covers three core subject areas: physics, chemistry, and biology. Each subject
+          area contains multiple interactive modules designed around specific curriculum concepts commonly taught
+          at secondary and early tertiary levels.
+        </p>
+        <p>
+          In the <strong>physics</strong> section, students can interact with simulations of projectile motion
+          (adjusting launch angle and initial velocity with sliders and watching the trajectory update in real time),
+          pendulum oscillation (varying length and initial angle to observe period changes), wave superposition
+          (adding two sinusoidal waves and observing constructive and destructive interference), and electromagnetic
+          field visualisation (point charges generating visible field lines in 3D space).
+        </p>
+        <p>
+          The <strong>chemistry</strong> section features a full 3D periodic table viewer where clicking any
+          element opens a panel with properties and a 3D electron shell model, a molecular viewer pre-loaded
+          with common compounds (water, ethanol, benzene, caffeine, aspirin), and a titration simulator showing
+          the colour change of an indicator as virtual acid and base mix.
+        </p>
+        <p>
+          The <strong>biology</strong> section includes a 3D cell model (plant and animal variants) with labelled
+          organelles that highlight on hover, a DNA replication animation showing the double helix unwinding and
+          complementary strands being synthesised, and a human skeletal system viewer with bone labelling.
+        </p>
+        <p>
+          Crucially, everything runs in the browser with no installation required. The entire platform is hosted
+          on GitHub Pages at <a href="https://rudra496.github.io/science/" target="_blank" rel="noopener noreferrer">rudra496.github.io/science/</a>.
+          The responsive design means it adapts from a 4-inch phone screen to a 4K desktop monitor without any
+          separate mobile site or app.
+        </p>
+
+        <h2>Development Challenges</h2>
+        <h3>Performance on Low-End Devices</h3>
+        <p>
+          The hardest problem was performance. Three.js is capable of stunning visuals, but it is easy to write
+          code that drops to 10 fps on a mid-range Android phone from 2020. My first prototype of the molecular
+          viewer created a new <code>Mesh</code> object for every atom and every bond, resulting in hundreds of
+          individual draw calls per frame for even small molecules like glucose. The fix was instancing: I replaced
+          per-atom meshes with a single <code>InstancedMesh</code> for each element type, updating only the
+          instance matrices when the molecule changes. This reduced draw calls from ~200 to ~10 for a typical
+          organic molecule and pushed frame rates from 15 fps to a stable 55 fps on the same budget device.
+        </p>
+        <h3>Cross-Browser Compatibility</h3>
+        <p>
+          WebGL support is near-universal in modern browsers, but edge cases exist. Safari on older iOS versions
+          has bugs with certain texture formats. Some Chromium-based browsers on Android throttle WebGL frame rates
+          when the browser is not in the foreground. Firefox on Windows sometimes misreports its WebGL capabilities.
+          I wrote a lightweight feature detection module that checks <code>gl.getParameter(gl.RENDERER)</code> and
+          <code>gl.getSupportedExtensions()</code> on startup and adjusts rendering settings accordingly — disabling
+          features like anisotropic filtering if they are not supported, and showing a graceful warning if WebGL
+          itself is unavailable.
+        </p>
+        <h3>Creating Accurate Scientific 3D Models</h3>
+        <p>
+          Scientific accuracy matters enormously in an educational context. Getting bond angles and atom radii
+          correct in the molecular viewer required cross-referencing the NIST Chemistry WebBook and the Cambridge
+          Crystallographic Data Centre's published coordinates. For the anatomical models, I referenced standard
+          medical illustration sources and had a biology student review the final models for accuracy before
+          publishing. This "accuracy review" step added time to the development process but is essential for
+          building trust with teachers who might otherwise dismiss the platform as a toy.
+        </p>
+        <h3>Mobile Optimisation</h3>
+        <p>
+          Touch interactions on mobile required careful design. Three.js's <code>OrbitControls</code> handles
+          single-finger rotation and pinch-to-zoom out of the box, but multi-finger gestures conflicted with the
+          browser's native scroll behaviour on some Android versions. I resolved this by calling
+          <code>event.preventDefault()</code> selectively — only when the touch event originates inside the canvas
+          element — while still allowing the browser to scroll the rest of the page normally.
+        </p>
+
+        <h2>How Teachers and Students Can Use It</h2>
+        <p>
+          3D Science Lab is designed for zero-friction classroom integration. A teacher with a projector can open
+          the site on a laptop and immediately start a demonstration — no account creation, no subscription, no
+          app store. Students with phones can follow along on their own screens in real time.
+        </p>
+        <p>
+          For homework and self-study, I recommend the following workflows: In chemistry, have students use the
+          molecular viewer to sketch bond angles before a class on VSEPR theory, then verify their guesses
+          by rotating the 3D model. In physics, have students use the pendulum simulator to discover the period
+          formula empirically before it is introduced formally. In biology, assign the cell organelle viewer as a
+          pre-class activity so that lecture time can be spent on higher-order analysis rather than vocabulary.
+        </p>
+        <p>
+          The platform is also useful for independent learners preparing for competitive exams. The visual
+          reinforcement of abstract concepts — seeing an electron shell model for every element rather than just
+          memorising a number — makes retrieval more reliable under exam conditions.
+        </p>
+        <p>
+          I have already received messages from teachers in Bangladesh, India, and Pakistan who have incorporated
+          3D Science Lab into their lesson plans. The platform is available in English and I plan to add Bengali
+          and Hindi language interfaces in a future release to serve these communities even better.
+        </p>
+
+        <h2>Impact and Reception</h2>
+        <p>
+          When I shared the project on LinkedIn, the response exceeded anything I had anticipated. The
+          <a href="https://www.linkedin.com/posts/rudrasarker_webdevelopment-threejs-edtech-activity-7427092031988015104-M9yE" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
+          reached thousands of impressions within the first 48 hours and generated substantive conversations with
+          educators, developers, and EdTech founders from across South Asia and beyond. Several teachers left
+          detailed comments describing how they planned to integrate specific simulations into their curricula.
+          A professor from a Bangladeshi university reached out to discuss a possible collaboration to extend the
+          platform with university-level content.
+        </p>
+        <p>
+          Beyond the social media response, the project has been a technical validation of the browser-3D-for-education
+          thesis. Every concern I had about performance on low-end devices turned out to be solvable with the
+          right engineering approach. The platform loads in under three seconds on a standard mobile connection and
+          maintains smooth frame rates on five-year-old Android hardware.
+        </p>
+
+        <h2>Technical Lessons Learned</h2>
+        <p>
+          Building 3D Science Lab taught me more about JavaScript performance, GPU rendering, and user experience
+          design than any tutorial or course I had taken previously. Here are the most important lessons:
+        </p>
+        <ol>
+          <li>
+            <strong>Profile before you optimise.</strong> I spent two days trying to optimise the wrong things
+            because I guessed at the bottleneck. Once I used Chrome DevTools' performance profiler and the
+            <code>Stats.js</code> overlay to measure actual frame times and draw call counts, the real
+            bottleneck (instancing) became obvious in minutes.
+          </li>
+          <li>
+            <strong>GLB over GLTF for production.</strong> The binary GLB format is roughly 30% smaller than
+            the JSON-based GLTF equivalent for the same asset, and it loads in a single HTTP request rather
+            than multiple separate requests for textures and buffers.
+          </li>
+          <li>
+            <strong>Dispose of everything.</strong> Three.js does not automatically garbage-collect GPU
+            resources. Every <code>Geometry</code>, <code>Material</code>, and <code>Texture</code> must be
+            explicitly disposed when no longer needed, or you will accumulate GPU memory leaks that crash
+            long browser sessions.
+          </li>
+          <li>
+            <strong>The animation loop is not free.</strong> Even an empty <code>requestAnimationFrame</code>
+            loop that just calls <code>renderer.render()</code> consumes CPU and GPU resources continuously.
+            Pause the loop when the canvas is not visible (using the Intersection Observer API) and resume
+            it only when the user scrolls back into view.
+          </li>
+          <li>
+            <strong>Accessibility matters in 3D.</strong> Users who rely on keyboard navigation or screen
+            readers cannot interact with a WebGL canvas through normal assistive technology. I added keyboard
+            controls for orbit (arrow keys) and simulation parameters (plus/minus keys), and provided
+            text descriptions of what each 3D scene contains via <code>aria-label</code> on the canvas element.
+          </li>
+        </ol>
+
+        <h2>Future Roadmap</h2>
+        <p>
+          3D Science Lab is a long-term project and the current version is genuinely just version one. The
+          roadmap is ambitious:
+        </p>
+        <ul>
+          <li>
+            <strong>More experiments across all subjects:</strong> I plan to add at least 15 new simulations
+            in the next six months, covering optics (ray tracing, lens refraction), thermodynamics (ideal gas
+            law visualisation), and advanced biology (protein folding, mitosis animation).
+          </li>
+          <li>
+            <strong>Multiplayer / collaborative mode:</strong> Using WebSockets (or WebRTC for peer-to-peer),
+            a teacher and a class of students could interact with the same simulation simultaneously —
+            the teacher manipulating parameters while students observe on their own devices. This feature
+            would transform 3D Science Lab from a solo tool into a true classroom platform.
+          </li>
+          <li>
+            <strong>WebXR / VR support:</strong> Three.js has built-in WebXR support. With a low-cost
+            Cardboard-style headset, students could enter a fully immersive virtual science lab. The
+            architecture of the platform (scenes, cameras, controllers) maps cleanly onto the WebXR device
+            API, so adding VR mode is more a question of UX design than a fundamental technical challenge.
+          </li>
+          <li>
+            <strong>Offline / PWA mode:</strong> A service worker cache would allow students in low-connectivity
+            environments to load the platform once and use it offline. This is particularly important for
+            rural schools in Bangladesh where internet access is intermittent.
+          </li>
+          <li>
+            <strong>Teacher dashboard:</strong> Assignment creation, student progress tracking, and curriculum
+            alignment guides would make the platform useful at an institutional level, not just for individual
+            teachers who happen to discover it.
+          </li>
+        </ul>
+        <p>
+          If you are a developer interested in contributing, an educator who wants to suggest new simulations,
+          or an institution interested in a partnership, please reach out through the contact page or connect
+          with me on LinkedIn. 3D Science Lab is built on the belief that every student deserves a world-class
+          science education regardless of where they live or what textbook their school can afford.
+        </p>
+
+        <h2>Related Posts</h2>
+        <ul>
+          <li><a href="sightlineai-assistive-eyewear-visually-impaired.html">SightlineAI: AI-Powered Assistive Eyewear</a></li>
+          <li><a href="sign-talk-smart-glove-sign-language-translation.html">Team SignTalk: Smart Glove Journey</a></li>
+          <li><a href="mindwell-open-source-mental-health-platform-update.html">Building MindWell: Open-Source Mental Health Platform</a></li>
+        </ul>
+
+        <h2>Connect With Me</h2>
+        <p>Follow my work and connect across platforms:</p>
+        <ul>
+          <li><a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X / Twitter</a></li>
+          <li><a href="https://www.facebook.com/rudrasarker130" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://www.instagram.com/rudrasarker/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer"><i class="fas fa-flask"></i> ResearchGate</a></li>
+        </ul>
+      </section>
+      <a href="../blog.html" class="back-to-gallery" aria-label="Back to Blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </article>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2026 Rudra Sarker. All rights reserved.</p>
+  </footer>
+  <script defer src="../main.js"></script>
+  <script defer src="../js/script.js"></script>
+</body>
+</html>

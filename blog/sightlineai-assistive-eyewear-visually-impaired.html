@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SightlineAI: AI-Powered Assistive Eyewear for the Visually Impaired — How We Built It | Rudra Sarker</title>
+  <meta name="description" content="A deep dive into SightlineAI — AI-powered smart eyewear using YOLO, Raspberry Pi, and bone conduction audio to help visually impaired users navigate the world independently." />
+  <meta name="keywords" content="SightlineAI, assistive eyewear, visually impaired, computer vision, AI, Arduino, Raspberry Pi, object detection, YOLO, accessibility, Bangladesh, Innovation Education LLC" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/sightlineai-assistive-eyewear-visually-impaired.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="SightlineAI: AI-Powered Assistive Eyewear for the Visually Impaired — How We Built It" />
+  <meta property="og:description" content="How SightlineAI uses YOLO object detection, OCR, and bone conduction audio feedback on a Raspberry Pi-powered wearable to give visually impaired users real-time awareness of their environment." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/sightlineai-assistive-eyewear-visually-impaired.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-03-20" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SightlineAI: AI-Powered Assistive Eyewear for the Visually Impaired" />
+  <meta name="twitter:description" content="A technical deep-dive into SightlineAI — real-time object detection, OCR, and audio feedback in a wearable device for visually impaired users built with Raspberry Pi and YOLO." />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "SightlineAI: AI-Powered Assistive Eyewear for the Visually Impaired — How We Built It",
+    "description": "How SightlineAI uses YOLO object detection, OCR, and bone conduction audio feedback on a Raspberry Pi-powered wearable to give visually impaired users real-time awareness of their environment.",
+    "url": "https://rudra496.github.io/site/blog/sightlineai-assistive-eyewear-visually-impaired.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-03-20",
+    "dateModified": "2026-03-20",
+    "author": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "keywords": ["SightlineAI", "assistive eyewear", "visually impaired", "computer vision", "YOLO", "Raspberry Pi", "object detection", "accessibility", "Bangladesh"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rudra496.github.io/site/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rudra496.github.io/site/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "Projects & Technology", "item": "https://rudra496.github.io/site/blog.html#cat-projects"},
+      {"@type": "ListItem", "position": 4, "name": "SightlineAI: AI-Powered Assistive Eyewear", "item": "https://rudra496.github.io/site/blog/sightlineai-assistive-eyewear-visually-impaired.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="../index.html" class="nav-brand">RUDRA SARKER</a>
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../projects.html" class="nav-link">Projects</a></li>
+        <li><a href="../gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="../blog.html" class="nav-link active" aria-current="page">Blog</a></li>
+        <li><a href="../blog/media-coverage-achievements-rudra-sarker.html" class="nav-link">In The Press</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article class="project-detail">
+      <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 8px; text-align: center;">
+        <h1 style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">SightlineAI: AI-Powered Assistive Eyewear for the Visually Impaired — How We Built It</h1>
+      </div>
+      <nav aria-label="Breadcrumb" style="font-size:0.9rem;margin-bottom:1.5rem;padding:0 1rem;">
+        <a href="../index.html">Home</a> » <a href="../blog.html">Blog</a> » <a href="../blog.html#cat-projects">Projects &amp; Technology</a>
+      </nav>
+      <p style="font-size: 1rem; color: var(--text-color); margin: 0 1rem 2rem; font-style: italic;">
+        By Rudra Sarker • Published March 20, 2026
+      </p>
+      <section class="project-content" style="padding: 0 1rem;">
+
+        <h2>Introduction</h2>
+        <p>What would it mean to give someone a second set of eyes — not biological eyes, but computational ones that could identify objects, read text, and warn of hazards, all delivered as a quiet stream of audio descriptions that let the wearer navigate the world with greater confidence and independence? That question is the origin point of <strong>SightlineAI</strong>: an AI-powered assistive eyewear platform designed for individuals with visual impairments.</p>
+        <p>SightlineAI is built on the conviction that computer vision, which has become extraordinarily capable in recent years largely through advances in deep learning, can be redirected from its most commercially prominent applications — facial recognition in smartphones, product recommendation in e-commerce — toward one of the most socially meaningful applications imaginable: restoring a degree of perceptual autonomy to people who have lost or never had it.</p>
+        <p>The live project is accessible at <a href="https://rudra496.github.io/sightlineai/" target="_blank" rel="noopener noreferrer">rudra496.github.io/sightlineai</a>, and full technical details are documented on the <a href="../projects/assistive-smart-eyeglass.html">project detail page</a>. This article goes deeper into the engineering decisions, the challenges we encountered, and what the project taught us about building technology for users whose experiences we do not share.</p>
+
+        <h2>The Problem: Visual Impairment and the Limits of Current Solutions</h2>
+        <p>The World Health Organization estimates that approximately 2.2 billion people globally live with some form of vision impairment, of whom at least 1 billion have a vision impairment that could have been prevented or addressed. In Bangladesh, estimates suggest over 750,000 people are blind, with a further several million experiencing significant low vision. These numbers are likely undercounts, given the challenges of comprehensive health surveillance in a lower-middle-income country with significant rural population.</p>
+        <p>The economic and social consequences of blindness are severe. In a country where much economic activity still involves physical navigation — markets, transportation, manual labor — the inability to see independently creates dependency that is both limiting and, for many individuals, deeply corrosive of dignity and self-determination. Educational and employment opportunities narrow dramatically; social isolation deepens.</p>
+        <p>The existing toolkit for visually impaired individuals is essentially unchanged in its fundamentals for decades. The white cane, while essential, provides only proximity information about obstacles and requires learned skill to use effectively. Guide dogs are extraordinarily valuable but expensive, unavailable in most of South Asia due to limited training infrastructure, and unsuitable for many living situations. Screen readers address digital content but not the physical world. Braille literacy enables reading but covers a narrow slice of the information environment.</p>
+        <p>More recent assistive technology products — primarily from companies in the United States and Europe — have begun to incorporate computer vision. Products like OrCam MyEye read text and recognize faces; Microsoft's Seeing AI app provides smartphone-based scene description. These represent genuine progress, but they share limitations that motivated SightlineAI's design: high price points (OrCam devices cost thousands of dollars), dependence on cloud connectivity, optimization for Western urban environments, and form factors designed around English-language text and familiar Western signage. In Bangladesh, where signage is primarily in Bengali, roads are differently organized, and average incomes are a fraction of Western levels, these products are inaccessible in both the literal and economic senses of the word.</p>
+
+        <h2>Technical Architecture: Building Intelligence Into a Wearable</h2>
+        <p>SightlineAI's architecture must solve a genuinely difficult engineering tension: computer vision at real-time speeds requires substantial computational resources, but a wearable device is constrained in size, weight, battery capacity, and therefore processing power. Our design resolves this tension through careful selection of hardware, algorithmic optimization, and hierarchical processing that prioritizes the most safety-critical outputs.</p>
+
+        <h3>Camera Module and Visual Capture</h3>
+        <p>The primary imaging sensor is a wide-angle camera module mounted at the center of the eyeglass frame, positioned to capture the scene directly in the user's line of intended travel. We selected a module with a wide field-of-view lens (approximately 120 degrees) to maximize peripheral obstacle detection coverage, particularly important for avoiding obstacles at the edges of the walking path. Frame rate is set at 30 fps for real-time analysis, with the ability to reduce to 15 fps to extend battery life in modes where reaction time is less critical.</p>
+
+        <h3>Processing Unit: Raspberry Pi and Edge AI</h3>
+        <p>The computing heart of SightlineAI is a Raspberry Pi 4B (4GB RAM variant) housed in a lightweight 3D-printed enclosure that can be worn on the body, connected to the eyeglass frame via a lightweight ribbon cable. The Pi was selected over purpose-built AI accelerator hardware for a combination of reasons: familiarity that lowers the barrier for future contributors, a large ecosystem of compatible libraries and pretrained models, and a price point consistent with our target cost structure.</p>
+        <p>For computationally intensive inference tasks, we supplemented the Pi with a Google Coral USB Accelerator — a small USB dongle containing Google's Edge TPU, a purpose-built chip for running TensorFlow Lite models at dramatically higher speeds than the Pi's CPU alone. The Coral Accelerator enables us to run our object detection model at inference speeds sufficient for real-time obstacle warning without the latency that would make the feedback loop frustratingly slow or, worse, safety-compromising.</p>
+
+        <h3>Object Detection with YOLO</h3>
+        <p>We implemented object detection using a quantized, compressed variant of YOLOv5 (You Only Look Once), optimized for edge deployment via TensorFlow Lite conversion and INT8 quantization. YOLO's single-shot architecture, which predicts bounding boxes and class probabilities in a single forward pass through the network, makes it significantly faster than two-stage detectors like Faster R-CNN, which is critical for our latency budget.</p>
+        <p>The base YOLOv5 model was trained on the COCO dataset, providing detection capability across 80 object categories including common obstacles (cars, bicycles, people, benches, hydrants) and navigation-relevant objects (traffic lights, stop signs, doors). We fine-tuned this base model on a supplementary dataset that includes objects particularly common in Bangladeshi urban and peri-urban environments — rickshaws, CNGs (auto-rickshaws), informal market stalls, and construction debris — improving detection performance in the specific deployment context.</p>
+        <p>Distance estimation uses monocular depth cues derived from the known average dimensions of common objects. When a person is detected, for example, an average adult height provides a scale reference from which the camera-to-subject distance can be estimated with reasonable accuracy using the pinhole camera model. Objects classified as "immediate hazard" (within approximately 1.5 meters of the walking path) trigger immediate audio warnings prioritized over all other output.</p>
+
+        <h3>Text Recognition with OCR</h3>
+        <p>Optical Character Recognition (OCR) is implemented using Tesseract with a trained Bengali language model, enabling the device to read Bengali text from signs, packaging, documents, and other surfaces. English text recognition is handled by Tesseract's standard English model, providing bilingual OCR capability. When the user activates text-reading mode (via a physical button or voice command), the system captures a high-resolution still image, preprocesses it with adaptive thresholding and deskewing algorithms, runs Tesseract, and synthesizes the recognized text as speech.</p>
+        <p>OCR in uncontrolled real-world conditions is significantly harder than in controlled document scanning contexts. Signage in Bangladesh often uses decorative or stylized fonts, appears on non-uniform backgrounds, is viewed at angles that distort the text geometry, and may be partially obscured or poorly lit. We implemented preprocessing pipelines that apply perspective correction, contrast enhancement, and noise reduction before Tesseract processing. Nevertheless, OCR accuracy in the field remains one of our active development areas.</p>
+
+        <h3>Audio Feedback via Bone Conduction</h3>
+        <p>One of the most deliberate design choices in SightlineAI is the use of bone conduction speakers rather than conventional earphones or earbuds. Standard earphones, while effective for audio delivery, occlude the ear canal — preventing the wearer from hearing ambient sounds like approaching vehicles, voices calling out, or the spatial audio cues that visually impaired individuals rely on heavily for orientation and navigation. Bone conduction speakers transmit sound through vibrations in the skull bones, bypassing the outer ear entirely, leaving the ear canal open and ambient sound unimpeded.</p>
+        <p>The audio feedback system uses a priority queue architecture: obstacle warnings are highest priority and interrupt all other audio; navigation prompts are second; object identification descriptions are third; text reading output is lowest priority. This queue ensures that safety-critical information is never delayed by lower-priority output. Voice synthesis uses a natural-sounding TTS engine configured to deliver Bengali and English output depending on the language of recognized content.</p>
+
+        <h2>Key Features of SightlineAI</h2>
+        <p>SightlineAI's feature set is organized around the specific scenarios that visually impaired users most frequently encounter and where technology assistance can make the greatest difference.</p>
+
+        <h3>Real-Time Obstacle Warning</h3>
+        <p>The system continuously monitors the forward field of view and issues directional warnings when obstacles enter the safety zone. Audio cues indicate both the type of obstacle ("person ahead," "vehicle to the left") and the relative urgency calibrated by distance. Users in testing reported that directional specificity — left/right/ahead — was more useful than simple proximity alerts, as it allowed them to take evasive action in the correct direction.</p>
+
+        <h3>Text-to-Speech for Environmental Text</h3>
+        <p>Triggered by a button press or voice command, the text reading mode captures and reads text from the user's current view. Practical applications include reading bus destination signs, product labels in shops, door numbers, menu boards, and documents. For a blind user navigating independently, the ability to read environmental text without assistance eliminates a class of dependency that typically requires asking strangers for help — a request that many users find uncomfortable.</p>
+
+        <h3>Scene Description Mode</h3>
+        <p>A more computationally intensive mode that provides a comprehensive spoken summary of the detected objects in the current scene. This is intended for use when the user wants situational awareness rather than continuous navigation — for example, upon entering a new space ("there is a table to your left, a door straight ahead, two people seated to your right").</p>
+
+        <h3>Face Recognition (Optional Module)</h3>
+        <p>An optional face recognition module allows registered faces to be identified and announced when detected. This is useful for recognizing family members, colleagues, and frequently encountered individuals without requiring verbal confirmation. Privacy implications of this feature required careful consideration; the module is disabled by default and all enrolled faces are stored locally on the device without cloud transmission.</p>
+
+        <h2>Development Process: From Concept to Prototype</h2>
+        <p>The initial concept for SightlineAI emerged from the same assistive technology research context that produced SignTalk. After working on sign language translation, the natural extension was to address the parallel communication and navigation barriers faced by visually impaired individuals. The two projects share an underlying philosophy: that democratized access to AI capabilities can provide life-changing assistance to communities that commercial technology has historically underserved.</p>
+        <p>Early prototypes used a Raspberry Pi Zero for minimal size and weight, but the Zero's limited processing capability could not run object detection at acceptable frame rates without the Coral accelerator. The transition to the Pi 4 substantially increased the size and weight of the electronics package, requiring us to rethink the enclosure design and mounting strategy. We went through three enclosure iterations, fabricated on a campus 3D printer, before settling on a design that distributed weight comfortably across a shoulder-worn configuration with a thin cable to the eyeglass frame.</p>
+        <p>The frame itself was custom-designed for lightweight electronics integration. Commercial eyeglass frames are designed to hold lenses, not cameras and cables. We worked with a local optical workshop to adapt a sturdy sports frame to accept a camera module housing at the bridge position, with cable channels routed along the temples. The resulting device is visually distinctive but not unwearably unusual — a consideration we take seriously, as assistive devices that stigmatize users through their appearance face adoption barriers regardless of their technical quality.</p>
+
+        <h2>User Testing and Feedback</h2>
+        <p>We conducted structured user testing with visually impaired participants in Sylhet, organized in collaboration with a local organization supporting the visually impaired community. Testing protocols were adapted from established assistive technology evaluation frameworks, measuring both functional performance (successful navigation, text reading accuracy) and subjective user experience (comfort, cognitive load, trust in device output).</p>
+        <p>Several consistent findings shaped our development roadmap. Participants responded most positively to obstacle detection, rating it as immediately practically useful even in the current prototype state. They responded most critically to OCR, reporting frustrating failure rates with handwritten text and heavily stylized print. Text-to-speech voice quality was flagged as too robotic in early versions — we subsequently invested in integrating a higher-quality neural TTS system that produces significantly more natural-sounding Bengali output.</p>
+        <p>The most valuable feedback came in the form of scenarios we had not anticipated. One participant described the challenge of navigating crowded markets, where the sheer number of detected objects generated so many audio alerts that the output became overwhelming — a problem of information overload rather than information absence. This led us to implement a "crowd mode" that suppresses individual object announcements and provides instead a simple directional suggestion based on the path of least resistance through the detected obstacle field.</p>
+
+        <h2>Innovation Education LLC Involvement</h2>
+        <p>SightlineAI's development benefited significantly from the mentorship and resources provided through <a href="https://www.facebook.com/p/Innovation-Education-LLC-100090577942024/" target="_blank" rel="noopener noreferrer">Innovation Education LLC</a>, an organization dedicated to supporting technology innovation with educational and social impact goals. Their involvement brought structured project management discipline to a development process that, as a student-led initiative, initially lacked formal milestone tracking and resource planning.</p>
+        <p>The LLC's network also provided access to disability rights advocates and assistive technology practitioners who helped us stress-test our user research methodology. Their input was direct and sometimes challenging: early versions of our testing protocol had us evaluating the device's performance on metrics we found technically interesting (detection precision and recall) rather than metrics that predicted real-world usefulness (task completion rate, user confidence scores, social acceptability). Redirecting evaluation toward user-centric metrics fundamentally improved the development priorities that emerged from testing.</p>
+
+        <h2>Technical Challenges: The Hard Problems</h2>
+        <p>Building SightlineAI surface-to-deployment required navigating a series of technical challenges that standard computer vision tutorials and academic papers rarely discuss, because they are the unsexy work of making things actually work in the real world.</p>
+
+        <h3>Latency Optimization</h3>
+        <p>Our latency budget for obstacle detection — the time from visual observation to audio alert — is under 300 milliseconds for objects within the immediate hazard zone. Exceeding this threshold creates a dangerous window where an obstacle has been detected but the user has not yet been warned, during which they may take a step or turn that brings them into contact with the obstacle. Meeting this budget required aggressive model quantization, inference pipeline optimization, and audio synthesis caching (pre-rendering common warning phrases rather than synthesizing them in real time).</p>
+
+        <h3>Battery Life</h3>
+        <p>Running a Raspberry Pi 4 with continuous camera capture and neural network inference is power-hungry. Our initial prototype achieved only about 90 minutes of operation on a compact LiPo battery — clearly insufficient for meaningful daily use. We implemented an adaptive power management system that reduces processing frequency when motion sensors indicate the user is stationary, and suspends all processing when an accelerometer indicates the device has been removed. These optimizations extended operational time to approximately 3.5 hours, still below our 6-hour target but functional for most daily scenarios.</p>
+
+        <h3>False Positives and User Trust</h3>
+        <p>Early versions of the obstacle detection system generated numerous false positive warnings — identifying shadows, reflections, or irrelevant background objects as obstacles. False positives are not merely an annoyance; in an assistive device context, they erode user trust and, if numerous enough, cause users to disable or ignore warnings, which defeats the device's purpose. We addressed this through confidence thresholding (only announcing detections above a calibrated confidence level), temporal filtering (requiring an object to be detected in multiple consecutive frames before triggering a warning), and zone-based filtering that ignores detections in regions of the frame that correspond to the sky or distant background.</p>
+
+        <h2>Academic Documentation via ResearchGate</h2>
+        <p>We are committed to the principle that projects with potential to benefit underserved communities should be documented and shared with the research community, not just kept as private intellectual property. Our project methodology, evaluation protocols, dataset characteristics, and performance results have been progressively documented and shared through the <a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer">ResearchGate profile</a>. This academic documentation serves multiple purposes: it creates accountability for our claims, enables other researchers to build on our work, and contributes to the growing body of literature on assistive technology for low-resource environments.</p>
+        <p>We are actively working toward submitting a formal conference or journal paper that presents SightlineAI's methodology and results within the academic literature on wearable assistive technology. This publication will include the Bengali OCR dataset we have compiled, which we believe is a contribution to the research community independent of the device itself, given the relative scarcity of high-quality Bengali text-in-the-wild datasets.</p>
+
+        <h2>Future Development: A Roadmap for Greater Impact</h2>
+        <p>SightlineAI's current prototype is functional and has demonstrated genuine utility in user testing. But our vision for the project reaches considerably further than the current state. The roadmap over the next two years is organized around hardware miniaturization, expanded AI capabilities, and a structured pathway to affordable deployment at scale.</p>
+
+        <h3>Hardware Miniaturization</h3>
+        <p>The most visible limitation of the current device is size. The body-worn compute unit, while discreet, is an additional piece of equipment that users must charge, maintain, and carry. Our target is to integrate all processing into the eyeglass frame itself — a goal that requires either a significant advance in available edge AI hardware (which the rapidly evolving market may provide) or a fundamental redesign around a custom system-on-chip that we specify ourselves. We are monitoring the development of ultra-compact AI inference chips from companies like Hailo, Syntiant, and Eta Compute, any of which may provide a path to frame-integrated processing within the project's development horizon.</p>
+
+        <h3>Expanded Bengali Language AI</h3>
+        <p>Bengali OCR accuracy, particularly for diverse real-world fonts and handwriting, remains a significant gap. We are investing in expanded training data collection for Bangla text-in-the-wild and exploring fine-tuning of larger transformer-based OCR architectures that have shown remarkable generalization in other languages. We are also developing Bengali-language scene description capabilities — moving from English-language output ("there is a person ahead") to natural Bengali output that is more comfortable for Bengali-speaking users and does not require them to process a second language under cognitive load.</p>
+
+        <h3>Cost Reduction for Accessibility</h3>
+        <p>Our current prototype cost is dominated by the Raspberry Pi 4 and Coral Accelerator, both of which are priced for the global hobbyist market rather than for volume deployment in South Asia. As the project matures and approaches production, we will evaluate alternatives from the Rockchip and MediaTek ecosystems that offer comparable AI performance at significantly lower cost. Our analysis suggests that a manufacturable version of SightlineAI can reach a unit cost below $80 USD at modest production volumes — a price point that, while still significant for individual consumers in Bangladesh, is accessible through institutional procurement and subsidy programs.</p>
+
+        <h2>Related Posts</h2>
+        <ul>
+          <li><a href="sign-talk-smart-glove-sign-language-translation.html">Team SignTalk: Smart Glove Journey</a></li>
+          <li><a href="3d-science-lab-interactive-stem-education.html">3D Science Lab: Interactive STEM Education</a></li>
+          <li><a href="mindwell-open-source-mental-health-platform-update.html">Building MindWell: Lessons from Creating an Open-Source Platform</a></li>
+        </ul>
+
+        <h2>Connect With Me</h2>
+        <p>Follow my work and connect across platforms:</p>
+        <ul>
+          <li><a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X / Twitter</a></li>
+          <li><a href="https://www.facebook.com/rudrasarker130" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://www.instagram.com/rudrasarker/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer"><i class="fas fa-flask"></i> ResearchGate</a></li>
+        </ul>
+      </section>
+      <a href="../blog.html" class="back-to-gallery" aria-label="Back to Blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </article>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2026 Rudra Sarker. All rights reserved.</p>
+  </footer>
+  <script defer src="../main.js"></script>
+  <script defer src="../js/script.js"></script>
+</body>
+</html>
