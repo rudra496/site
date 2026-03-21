@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: "Rudra Sarker — Engineering Portfolio"
+message: "If you reference this portfolio or its projects, please cite it as below."
+type: software
+authors:
+  - family-names: Sarker
+    given-names: Rudra
+    email: rudrasarker130@gmail.com
+    orcid: ""
+    affiliation: "Shahjalal University of Science and Technology (SUST)"
+repository-code: "https://github.com/rudra496/site"
+url: "https://rudra496.github.io/site/"
+abstract: >
+  Personal engineering portfolio of Rudra Sarker, featuring projects in Robotics,
+  IoT, AI, Assistive Technology, and Web Development. Includes flagship projects
+  SightlineAI (AI assistive eyewear), MindWell (open-source mental health platform),
+  and 3D Science Lab (interactive STEM education).
+keywords:
+  - robotics
+  - IoT
+  - artificial-intelligence
+  - assistive-technology
+  - engineering-portfolio
+  - web-development
+  - embedded-systems
+  - computer-vision
+license: MIT
+date-released: "2026-03-21"

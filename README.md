@@ -1,21 +1,22 @@
-Rudra Sarker — Engineering Portfolio
+# Rudra Sarker — Engineering Portfolio
 
 🚀 Official portfolio repository of Rudra Sarker
 
-This repository hosts the source code for my personal engineering portfolio website showcasing projects in Robotics, IoT, Artificial Intelligence, and Web Development.
+[![Live Website](https://img.shields.io/badge/Live%20Website-rudra496.github.io%2Fsite-blue?style=flat-square&logo=github)](https://rudra496.github.io/site/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-rudrasarker-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/rudrasarker)
+[![GitHub](https://img.shields.io/badge/GitHub-rudra496-181717?style=flat-square&logo=github)](https://github.com/rudra496)
 
-🌐 Live Website:
-https://rudra496.github.io/site/
+This repository hosts the source code for my personal engineering portfolio website — **[rudra496.github.io/site](https://rudra496.github.io/site/)** — showcasing projects in Robotics, IoT, Artificial Intelligence, and Web Development.
 
 ---
 
-👨‍💻 About Me
+## 👨‍💻 About Me
 
-I am Rudra Sarker, a Robotics and IoT developer and an Industrial & Production Engineering student at Shahjalal University of Science and Technology (SUST), Bangladesh.
+I am **[Rudra Sarker](https://rudra496.github.io/site/)**, a Robotics and IoT developer and an Industrial & Production Engineering student at Shahjalal University of Science and Technology (SUST), Bangladesh.
 
 My work focuses on building technology solutions that combine AI, automation, and engineering innovation to solve real-world problems.
 
-Key areas of interest:
+**Key areas of interest:**
 
 - Robotics Systems
 - Internet of Things (IoT)
@@ -26,126 +27,81 @@ Key areas of interest:
 
 ---
 
-🚀 Featured Projects
+## 🚀 Featured Projects
 
-1️⃣ SightlineAI
+### 1️⃣ [SightlineAI](https://rudra496.github.io/sightlineai)
 
 AI-powered assistive eyewear designed to help visually impaired individuals understand their surroundings using computer vision and real-time AI analysis.
 
-Project page
-https://rudra496.github.io/sightlineai
-
-Technologies:
-
-- Computer Vision
-- AI / Machine Learning
-- Embedded Systems
-- Assistive Technology
+**Technologies:** Computer Vision · AI / Machine Learning · Embedded Systems · Assistive Technology
 
 ---
 
-2️⃣ MindWell
+### 2️⃣ [MindWell](https://mindwell-navy.vercel.app)
 
 A mental health support platform designed to create safe digital spaces for peer support, mental health resources, and community-driven wellbeing.
 
-Platform
-https://mindwell-navy.vercel.app
-
-Technologies:
-
-- React
-- Next.js
-- Vercel
-- Web Platform
+**Technologies:** React · Next.js · Vercel · Web Platform
 
 ---
 
-3️⃣ 3D Science Lab
+### 3️⃣ [3D Science Lab](https://rudra496.github.io/science)
 
 An interactive 3D science learning platform enabling immersive STEM education through visual simulation.
 
-Demo
-https://rudra496.github.io/science
-
-Technologies:
-
-- Three.js
-- WebGL
-- JavaScript
+**Technologies:** Three.js · WebGL · JavaScript
 
 ---
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 
-Frontend
-
-- HTML5
-- CSS3
-- JavaScript
-
-Engineering & Development
-
-- Arduino
-- ESP8266
-- IoT Systems
-- Robotics Control
-
-AI / Data
-
-- Python
-- Machine Learning
-- Computer Vision
+| Category | Technologies |
+|---|---|
+| Frontend | HTML5, CSS3, JavaScript |
+| Engineering | Arduino, ESP8266, IoT Systems, Robotics Control |
+| AI / Data | Python, Machine Learning, Computer Vision |
 
 ---
 
-📂 Portfolio Sections
+## 📂 Portfolio Sections
 
-The portfolio website includes:
+The portfolio website — **[rudra496.github.io/site](https://rudra496.github.io/site/)** — includes:
 
-- About
-- Projects
-- Gallery
-- Engineering Blog
-- Contact
-
-Each section highlights engineering work, research ideas, and innovation projects.
+- [About](https://rudra496.github.io/site/#about)
+- [Projects](https://rudra496.github.io/site/projects.html)
+- [Achievements](https://rudra496.github.io/site/achievements.html)
+- [Gallery](https://rudra496.github.io/site/gallery.html)
+- [Engineering Blog](https://rudra496.github.io/site/blog.html)
+- [Contact](https://rudra496.github.io/site/contact.html)
 
 ---
 
-📖 Engineering Blog
+## 📖 Engineering Blog
 
-The portfolio also includes technical articles on:
+The portfolio includes technical articles at **[rudra496.github.io/site/blog.html](https://rudra496.github.io/site/blog.html)** on:
 
-- Robotics
-- Control Systems
-- IoT
+- Robotics & Control Systems
+- IoT & Embedded Systems
 - Artificial Intelligence
 - Engineering Design
 
-Example article:
-
-PID Controllers in Robotics
-https://rudra496.github.io/site/blog/pid-controllers-robotics-magic.html
+**Example article:** [PID Controllers in Robotics](https://rudra496.github.io/site/blog/pid-controllers-robotics-magic.html)
 
 ---
 
-🌍 Connect With Me
+## 🌍 Connect With Me
 
-GitHub
-https://github.com/rudra496
-
-LinkedIn
-https://www.linkedin.com/in/rudrasarker
-
-Portfolio
-https://rudra496.github.io/site
-
-Email
-rudrasarker130@gmail.com
+| Platform | Link |
+|---|---|
+| 🌐 Portfolio | [rudra496.github.io/site](https://rudra496.github.io/site/) |
+| 💼 LinkedIn | [linkedin.com/in/rudrasarker](https://www.linkedin.com/in/rudrasarker) |
+| 🐙 GitHub | [github.com/rudra496](https://github.com/rudra496) |
+| 🐦 X / Twitter | [x.com/Rudra496](https://x.com/Rudra496) |
+| 📧 Email | [rudrasarker130@gmail.com](mailto:rudrasarker130@gmail.com) |
 
 ---
 
-🎯 Mission
+## 🎯 Mission
 
 My goal is to develop impactful technologies in:
 
@@ -158,10 +114,10 @@ I believe engineering should solve meaningful problems and improve lives.
 
 ---
 
-⭐ Support
+## ⭐ Support
 
 If you find this project interesting, consider starring the repository to support future development.
 
 ---
 
-© Rudra Sarker
+© [Rudra Sarker](https://rudra496.github.io/site/)
