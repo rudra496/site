@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ScienceLab 3D: 40+ Interactive Science Experiments Built with Next.js 15 &amp; React Three Fiber</title>
+  <meta name="description" content="How I built ScienceLab 3D — a free, open-source, browser-based STEM platform with 40+ interactive 3D experiments in Physics, Chemistry, Biology, and Mathematics using Next.js 15, TypeScript, React Three Fiber, and Tailwind CSS." />
+  <meta name="keywords" content="ScienceLab 3D, sciencelab3d, Next.js 15, React Three Fiber, Three.js, interactive science experiments, STEM education, EdTech, TypeScript, Tailwind CSS, Framer Motion, open source, Rudra Sarker, SUST, Bangladesh, browser-based science lab, 3D visualization, physics simulation, chemistry experiments, biology, mathematics" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="ScienceLab 3D: 40+ Interactive Science Experiments Built with Next.js 15 &amp; React Three Fiber" />
+  <meta property="og:description" content="How I built ScienceLab 3D — a free, open-source STEM platform with 40+ interactive 3D experiments using Next.js 15, TypeScript, React Three Fiber, and Tailwind CSS." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-03-23" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <meta property="article:section" content="Projects &amp; Technology" />
+  <meta property="article:tag" content="Next.js" />
+  <meta property="article:tag" content="React Three Fiber" />
+  <meta property="article:tag" content="STEM Education" />
+  <meta property="article:tag" content="Open Source" />
+  <meta property="article:tag" content="EdTech" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ScienceLab 3D: 40+ Interactive 3D Science Experiments with Next.js 15" />
+  <meta name="twitter:description" content="Free, open-source browser-based STEM platform — 40+ interactive experiments in Physics, Chemistry, Biology & Mathematics. Built with Next.js 15, TypeScript &amp; React Three Fiber." />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta name="twitter:creator" content="@Rudra496" />
+
+  <!-- Fonts & Icons -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "ScienceLab 3D: Building 40+ Interactive 3D Science Experiments with Next.js 15 and React Three Fiber",
+    "description": "How I built ScienceLab 3D — a free, open-source, browser-based STEM platform with 40+ interactive 3D experiments in Physics, Chemistry, Biology, and Mathematics using Next.js 15, TypeScript, React Three Fiber, and Tailwind CSS.",
+    "url": "https://rudra496.github.io/site/blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-03-23",
+    "dateModified": "2026-03-23",
+    "author": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://rudra496.github.io/site/blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html"},
+    "keywords": ["ScienceLab 3D", "Next.js 15", "React Three Fiber", "Three.js", "STEM education", "EdTech", "TypeScript", "Tailwind CSS", "interactive experiments", "open source", "Rudra Sarker", "Bangladesh"],
+    "articleSection": "Projects & Technology",
+    "inLanguage": "en-US"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rudra496.github.io/site/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rudra496.github.io/site/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "Projects & Technology", "item": "https://rudra496.github.io/site/blog.html#cat-projects"},
+      {"@type": "ListItem", "position": 4, "name": "ScienceLab 3D: 40+ Interactive 3D Science Experiments", "item": "https://rudra496.github.io/site/blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ScienceLab 3D",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web Browser",
+    "url": "https://science-lab-3d.vercel.app",
+    "codeRepository": "https://github.com/rudra496/sciencelab3d",
+    "license": "https://opensource.org/licenses/MIT",
+    "author": {"@type": "Person", "name": "Rudra Sarker"},
+    "description": "A free, open-source, browser-based 3D science simulation platform with 40+ interactive experiments in Physics, Chemistry, Biology, and Mathematics.",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="../index.html" class="nav-brand">RUDRA SARKER</a>
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../projects.html" class="nav-link">Projects</a></li>
+        <li><a href="../gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="../blog.html" class="nav-link active" aria-current="page">Blog</a></li>
+        <li><a href="../blog/media-coverage-achievements-rudra-sarker.html" class="nav-link">In The Press</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="project-detail" itemscope itemtype="https://schema.org/BlogPosting">
+      <div style="background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 8px; text-align: center;">
+        <div style="margin-bottom: 1rem;">
+          <span style="display:inline-block;padding:4px 14px;background:rgba(79,143,255,0.25);color:#4f8fff;border:1px solid #4f8fff;border-radius:20px;font-size:0.8rem;letter-spacing:0.05em;text-transform:uppercase;">Open Source · EdTech · Next.js 15</span>
+        </div>
+        <h1 itemprop="headline" style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.6rem); margin: 0 0 1rem; line-height: 1.3;">ScienceLab 3D: Building 40+ Interactive 3D Science Experiments with Next.js 15 and React Three Fiber</h1>
+        <p style="color: rgba(255,255,255,0.8); font-size: 1.05rem; max-width: 700px; margin: 0 auto;">A deep dive into architecting a free, open-source STEM education platform — from tech stack decisions to experiment design, performance engineering, and open-source release.</p>
+      </div>
+
+      <nav aria-label="Breadcrumb" style="font-size:0.9rem;margin-bottom:1.5rem;padding:0 1rem;">
+        <a href="../index.html">Home</a> » <a href="../blog.html">Blog</a> » <a href="../blog.html#cat-projects">Projects &amp; Technology</a>
+      </nav>
+
+      <p style="font-size: 1rem; color: var(--text-color); margin: 0 1rem 0.5rem; font-style: italic;" itemprop="author" itemscope itemtype="https://schema.org/Person">
+        By <span itemprop="name">Rudra Sarker</span> •
+        <time itemprop="datePublished" datetime="2026-03-23">Published March 23, 2026</time>
+      </p>
+
+      <p style="font-size:0.9rem;color:var(--text-color);margin:0 1rem 2rem;opacity:0.7;">
+        <i class="fas fa-clock" aria-hidden="true"></i> 12 min read &nbsp;·&nbsp;
+        <a href="https://github.com/rudra496/sciencelab3d" target="_blank" rel="noopener noreferrer" style="color:var(--primary,#00c6ff);"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a> &nbsp;·&nbsp;
+        <a href="https://science-lab-3d.vercel.app" target="_blank" rel="noopener noreferrer" style="color:var(--primary,#00c6ff);"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a>
+      </p>
+
+      <section class="project-content" style="padding: 0 1rem;" itemprop="articleBody">
+
+        <!-- Table of Contents -->
+        <nav aria-label="Table of Contents" style="background:var(--card-bg-color,rgba(255,255,255,0.04));border:1px solid var(--card-border-color,rgba(255,255,255,0.1));border-radius:10px;padding:1.2rem 1.5rem;margin-bottom:2.5rem;">
+          <strong style="display:block;margin-bottom:0.6rem;font-size:1rem;">Table of Contents</strong>
+          <ol style="margin:0;padding-left:1.4rem;line-height:2;">
+            <li><a href="#introduction" style="color:var(--primary,#00c6ff);">Introduction: Why Another Science Simulator?</a></li>
+            <li><a href="#tech-stack" style="color:var(--primary,#00c6ff);">The Tech Stack — Every Choice Explained</a></li>
+            <li><a href="#architecture" style="color:var(--primary,#00c6ff);">Application Architecture</a></li>
+            <li><a href="#experiments" style="color:var(--primary,#00c6ff);">The Experiment Library: 40+ Simulations Across 4 Disciplines</a></li>
+            <li><a href="#ux-design" style="color:var(--primary,#00c6ff);">UX &amp; Accessibility Design</a></li>
+            <li><a href="#performance" style="color:var(--primary,#00c6ff);">Performance Engineering</a></li>
+            <li><a href="#open-source" style="color:var(--primary,#00c6ff);">Open Source &amp; Contributing</a></li>
+            <li><a href="#lessons" style="color:var(--primary,#00c6ff);">Lessons Learned</a></li>
+            <li><a href="#roadmap" style="color:var(--primary,#00c6ff);">What's Next</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="introduction">Introduction: Why Another Science Simulator?</h2>
+        <p>
+          If you have ever tried to explain quantum tunneling with a whiteboard sketch, or asked a student to imagine a DNA double helix
+          from a printed diagram, you already know the problem. STEM education is fundamentally spatial — it lives in three dimensions —
+          but almost every learning tool forces it onto a flat page or a low-resolution video frame.
+        </p>
+        <p>
+          I am Rudra Sarker, a third-year Industrial and Production Engineering student at Shahjalal University of Science and Technology
+          (SUST), Sylhet, Bangladesh. My engineering journey spans robotics, IoT, web development, and assistive technology, and it has
+          taught me one recurring lesson: the gap between understanding something intellectually and understanding it intuitively is often
+          just one good visualization away.
+        </p>
+        <p>
+          <strong>ScienceLab 3D</strong> is my attempt to close that gap for every student on the planet — for free, in a web browser,
+          with no installation and no account required. The project is fully open source on GitHub at
+          <a href="https://github.com/rudra496/sciencelab3d" target="_blank" rel="noopener noreferrer">github.com/rudra496/sciencelab3d</a>
+          and live at <a href="https://science-lab-3d.vercel.app" target="_blank" rel="noopener noreferrer">science-lab-3d.vercel.app</a>.
+        </p>
+        <p>
+          What makes this project different from the many science simulators that already exist? Three things: modern production-grade
+          tech stack (Next.js 15 + React 19 + TypeScript), genuine depth of experiment coverage (40+ simulations across four STEM
+          disciplines at multiple difficulty levels), and an obsessive focus on performance on the low-end Android devices that
+          most students in South Asia actually own.
+        </p>
+
+        <h2 id="tech-stack">The Tech Stack — Every Choice Explained</h2>
+        <p>
+          Before writing a single line of code, I spent several days evaluating the technology stack. The choices I made shaped
+          everything — from development speed to final bundle size to the quality of the 3D visuals. Here is every decision and the
+          reasoning behind it.
+        </p>
+
+        <h3>Next.js 15 with the App Router</h3>
+        <p>
+          I chose Next.js 15 over plain React for two reasons: the App Router's nested layout system allows me to share the
+          experiment shell (header, sidebar, controls panel) across all 40+ experiment routes with zero duplication, and the
+          built-in image optimisation and font subsetting give measurable improvements to Largest Contentful Paint without
+          any manual configuration. Next.js 15 also ships with React 19 support out of the box, unlocking the new concurrent
+          features described below.
+        </p>
+
+        <h3>React 19 and Concurrent Rendering</h3>
+        <p>
+          React 19's concurrent rendering is not just a marketing headline — for this project it has tangible benefits.
+          The 3D canvas is computationally expensive. With concurrent rendering, React can schedule state updates
+          (slider values, camera positions, simulation parameters) at lower priority than the animation loop, preventing
+          UI jank when the user rapidly adjusts controls. The new <code>useOptimistic</code> hook also makes the
+          "favorites" feature (bookmarking experiments) feel instant without any loading state.
+        </p>
+
+        <h3>TypeScript Throughout</h3>
+        <p>
+          Every file in the codebase is TypeScript. For a project with 40+ separate experiment modules, each with their
+          own parameter schemas and simulation state, type safety is not optional — it is essential. TypeScript caught
+          dozens of subtle bugs during development, including a particularly nasty one where a physics simulation was
+          receiving angle values in degrees when it expected radians. The type definitions for Three.js (via
+          <code>@types/three</code>) are exceptionally comprehensive and make working with 3D geometry feel safe and
+          self-documenting.
+        </p>
+
+        <h3>Three.js via React Three Fiber</h3>
+        <p>
+          I use <a href="https://docs.pmnd.rs/react-three-fiber" target="_blank" rel="noopener noreferrer">React Three Fiber</a>
+          (R3F) as the React renderer for Three.js rather than calling the Three.js API imperatively. R3F maps Three.js's
+          scene-graph objects to JSX components, which means a scene that would have required 40 lines of imperative
+          Three.js code becomes 10 lines of declarative JSX. It also integrates cleanly with React's reconciler, so
+          Three.js objects are created, updated, and disposed in sync with the React component lifecycle — a major
+          improvement over manually managing GPU resource cleanup.
+        </p>
+        <p>
+          The Drei library (R3F's companion utility library) provides ready-made components for common 3D patterns:
+          <code>OrbitControls</code>, <code>Html</code> overlays anchored to 3D positions, environment maps,
+          instanced meshes, and more. Using Drei reduced boilerplate in each experiment module by roughly 40%.
+        </p>
+
+        <h3>Framer Motion for UI Animations</h3>
+        <p>
+          The non-3D parts of the interface — the experiment grid, the sidebar, the control panels — use
+          Framer Motion for animations. Page transitions, staggered card reveal animations, and the experiment
+          selection drawer all use Framer Motion's <code>AnimatePresence</code> and spring physics. The
+          combination of smooth UI transitions and 60fps 3D scenes gives the platform a polished, app-like feel
+          that distinguishes it from the utilitarian aesthetic of most educational simulations.
+        </p>
+
+        <h3>Tailwind CSS</h3>
+        <p>
+          Tailwind CSS keeps the styling co-located with the components that use it, which matters enormously
+          in a project with 40+ experiment pages. Every experiment has a slightly different colour scheme and
+          layout; with Tailwind, customising a single experiment's appearance is a matter of changing class
+          names in that experiment's file rather than hunting through a global stylesheet. Tailwind's JIT
+          compiler also ensures the final CSS bundle contains only the classes actually used — resulting in
+          a stylesheet of just a few kilobytes.
+        </p>
+
+        <h3>Vercel Deployment</h3>
+        <p>
+          The platform is deployed on Vercel, which provides automatic preview deployments on every pull request,
+          edge caching for static assets, and zero-config HTTPS. Vercel's edge network means the platform loads
+          quickly from Dhaka, Mumbai, Jakarta, and Lagos — all regions where students without fast internet connections
+          are likely to access it.
+        </p>
+
+        <div style="background:var(--card-bg-color,rgba(255,255,255,0.04));border-left:4px solid #4f8fff;padding:1rem 1.5rem;border-radius:0 8px 8px 0;margin:1.5rem 0;">
+          <strong>Tech Stack Summary</strong>
+          <ul style="margin:0.5rem 0 0;padding-left:1.4rem;line-height:1.9;">
+            <li><strong>Framework:</strong> Next.js 15 (App Router) + React 19</li>
+            <li><strong>Language:</strong> TypeScript 5</li>
+            <li><strong>3D Engine:</strong> Three.js via React Three Fiber + Drei</li>
+            <li><strong>Animations:</strong> Framer Motion</li>
+            <li><strong>Styling:</strong> Tailwind CSS</li>
+            <li><strong>Icons:</strong> Lucide React</li>
+            <li><strong>Deployment:</strong> Vercel</li>
+            <li><strong>License:</strong> MIT (fully open source)</li>
+          </ul>
+        </div>
+
+        <h2 id="architecture">Application Architecture</h2>
+        <p>
+          The application follows a feature-based directory structure inside Next.js's <code>src/app</code> directory.
+          Each of the four science disciplines (Physics, Chemistry, Biology, Mathematics) has its own route segment,
+          and each experiment lives inside its discipline's segment as a dynamic route.
+        </p>
+        <p>
+          The core architectural pattern is a <strong>shared experiment shell</strong>: every experiment page renders
+          inside a layout component that provides the persistent sidebar (experiment browser), the top bar
+          (search, favorites, theme toggle), and the control panel drawer (sliders, buttons, readouts specific to
+          the current experiment). The experiment itself only needs to export three things: a React Three Fiber
+          scene component, a parameter definition object (which drives the control panel UI automatically), and
+          metadata (title, description, difficulty, tags).
+        </p>
+        <p>
+          This convention-over-configuration approach makes adding a new experiment fast. I can scaffold a complete
+          new experiment — 3D scene, controls, metadata — in roughly two hours. The system automatically registers
+          it in the experiment browser, generates its route, and includes it in the search index.
+        </p>
+        <p>
+          State management is intentionally minimal. Each experiment's simulation state lives in a local
+          <code>useReducer</code> hook. Globally shared state (theme, favorites list) lives in a React Context
+          backed by <code>localStorage</code> for persistence. There is no Redux, no Zustand, no external state
+          library — the built-in React primitives are sufficient for this use case and keep the bundle lean.
+        </p>
+
+        <h2 id="experiments">The Experiment Library: 40+ Simulations Across 4 Disciplines</h2>
+        <p>
+          ScienceLab 3D currently ships with over 40 interactive experiments, organized into four disciplines
+          at three difficulty levels (Beginner, Intermediate, Advanced). Every experiment is self-contained,
+          runnable in isolation, and designed to reinforce a specific concept from the standard secondary or
+          early tertiary science curriculum.
+        </p>
+
+        <h3>⚛️ Physics (10 Experiments)</h3>
+        <p>
+          The physics module covers mechanics, waves, optics, and electromagnetism. Standout experiments
+          include the <strong>Double-Slit Experiment</strong> (Advanced), which visualises quantum wave-particle
+          duality through an animated interference pattern that updates in real time as slit separation and
+          wavelength are adjusted; and <strong>Gravitational Orbits</strong> (Intermediate), a full
+          N-body simulation where students can place planets of arbitrary mass and watch the emergent orbital
+          dynamics. The <strong>Simple Pendulum</strong> (Beginner) uses a fourth-order Runge-Kutta integrator
+          for accurate period behaviour at large amplitudes — a detail that matters for students who are
+          explicitly studying the departure from simple harmonic motion.
+        </p>
+
+        <h3>🧪 Chemistry (10 Experiments)</h3>
+        <p>
+          The chemistry module spans atomic structure, chemical bonding, thermodynamics, and reactions. The
+          <strong>Crystal Lattice Structures</strong> experiment (Intermediate) renders the full unit cells
+          of common crystal systems (cubic, hexagonal, orthorhombic) with interactive atom labelling —
+          something genuinely difficult to convey on a 2D diagram. <strong>Acid-Base Titration</strong>
+          (Intermediate) simulates the indicator colour change and plots the titration curve in real time as
+          the student adds virtual titrant. The <strong>Periodic Table Trends</strong> experiment
+          (Beginner) lets students sweep across periods and groups while watching atomic radius, ionisation
+          energy, and electronegativity values animate on a live chart.
+        </p>
+
+        <h3>🧬 Biology (10 Experiments)</h3>
+        <p>
+          The biology module is the most visually demanding section of the platform, featuring fully modelled
+          3D cell organelles, animated DNA replication, and an ecosystem food-web simulation. The
+          <strong>DNA Replication</strong> experiment (Advanced) shows the double helix unwinding base by base,
+          with each complementary base pair snapping into place as the replication fork progresses —
+          animated at a speed and zoom level the student controls. The <strong>Immune System Response</strong>
+          experiment (Advanced) visualises antibody-antigen binding in 3D, with cartoon-style surface proteins
+          that make the lock-and-key model immediately intuitive. The <strong>Ecosystem Food Web</strong>
+          (Beginner) is an interactive node-graph simulation where students can add or remove species and
+          observe the cascade effects on population dynamics.
+        </p>
+
+        <h3>📐 Mathematics (10 Experiments)</h3>
+        <p>
+          The mathematics module is the most algorithmically complex. The <strong>Fourier Transform
+          Visualizer</strong> (Advanced) draws any user-sketched waveform and decomposes it into rotating
+          Fourier circles in real time — a visual proof of the decomposition theorem that consistently generates
+          the strongest reactions from students. The <strong>Mandelbrot Fractal</strong> (Intermediate) renders
+          the fractal on the GPU using a custom GLSL fragment shader, allowing deep zooms that run at full
+          frame rate. The <strong>Topology &amp; Surfaces</strong> experiment (Advanced) renders a Möbius strip,
+          Klein bottle, and torus, each with interactive cross-section cuts that reveal the surface's
+          non-orientable properties.
+        </p>
+
+        <h2 id="ux-design">UX &amp; Accessibility Design</h2>
+        <p>
+          Good science education requires that the interface gets out of the way of the learning. Every UX
+          decision in ScienceLab 3D is subordinate to one principle: minimise the steps between "student opens
+          the site" and "student has an aha moment."
+        </p>
+        <p>
+          The experiment browser on the home screen shows all 40+ experiments as a filterable, searchable grid
+          of cards. Each card shows the experiment title, discipline, difficulty badge, and a static preview
+          image. The smart search indexes experiment names, topics, concepts, and difficulty — a student who
+          searches "pendulum period" finds the Simple Pendulum immediately even though the word "period" does
+          not appear in the experiment's title.
+        </p>
+        <p>
+          The dark/light theme toggle is persistent across sessions and respects the user's OS-level
+          preference on first visit. The 3D renderer is colour-calibrated for both themes — atoms, bonds,
+          and labels are legible whether the background is near-black or near-white.
+        </p>
+        <p>
+          <strong>Accessibility</strong> is a non-negotiable constraint. Every 3D canvas element has an
+          <code>aria-label</code> describing the current scene state. All interactive controls are keyboard-navigable:
+          arrow keys rotate the orbit camera, plus/minus keys step through simulation parameter values, and
+          Tab moves focus through the control panel in logical order. For users who rely on screen readers,
+          a live region announces changes to key simulation outputs (e.g., "Period: 2.1 seconds") as they
+          update.
+        </p>
+
+        <h2 id="performance">Performance Engineering</h2>
+        <p>
+          Performance is the most unglamorous part of building a 3D web application — and the most important.
+          A simulation that stutters at 15 frames per second is not just unpleasant; it is actively confusing
+          for a student trying to observe a physical phenomenon. Here are the specific techniques that brought
+          ScienceLab 3D to a consistent 55–60fps on mid-range 2020 Android hardware.
+        </p>
+
+        <h3>Dynamic Import and Code Splitting</h3>
+        <p>
+          Each experiment's 3D scene is loaded only when the student navigates to that experiment. Next.js's
+          <code>dynamic()</code> import with <code>ssr: false</code> ensures Three.js is not bundled into
+          the initial page load at all. The home screen — the experiment grid — loads in under one second
+          on a standard 4G connection. The 3D engine loads only when needed, and each experiment's specific
+          assets load only when that experiment is opened.
+        </p>
+
+        <h3>Instanced Meshes and GPU Batching</h3>
+        <p>
+          Experiments with many identical 3D objects (atom spheres in a molecular viewer, stars in a
+          gravitational simulation, neurons in the synapse model) use Three.js's <code>InstancedMesh</code>
+          to batch all instances into a single draw call. This is the single biggest performance win in
+          the entire codebase — reducing per-frame draw calls from hundreds to single digits for several
+          experiments.
+        </p>
+
+        <h3>Animation Loop Management</h3>
+        <p>
+          The R3F render loop runs only when the 3D canvas is visible. An Intersection Observer pauses
+          the loop when the user scrolls the canvas out of view and resumes it instantly when it comes
+          back. This eliminates the background CPU and GPU drain of invisible canvases — critical on mobile
+          devices where thermal throttling is a real concern during extended study sessions.
+        </p>
+
+        <h3>Pixel Ratio Capping and Resolution Scaling</h3>
+        <p>
+          High-DPI displays are beautiful but punishing for the GPU. On a 3× retina phone, rendering at
+          native pixel ratio means the GPU must process 9× as many pixels as at 1× resolution. ScienceLab 3D
+          caps the renderer pixel ratio at <code>Math.min(devicePixelRatio, 2)</code> — visually
+          indistinguishable from native at normal viewing distance, but with a 44% reduction in GPU workload
+          on 3× devices.
+        </p>
+
+        <h3>Asset Optimisation</h3>
+        <p>
+          Geometric assets are authored as compact glTF/GLB files with Draco mesh compression where the polygon
+          count justifies it. Textures are converted to WebP and served through Vercel's edge CDN. The
+          <code>next/image</code> component handles responsive image sizing automatically — the experiment
+          grid thumbnails are served at the exact pixel dimensions the browser needs, not as large originals
+          scaled down in CSS.
+        </p>
+
+        <h2 id="open-source">Open Source &amp; Contributing</h2>
+        <p>
+          ScienceLab 3D is released under the <strong>MIT License</strong>, which means anyone can use, modify,
+          and redistribute it for any purpose. The full source code is on GitHub at
+          <a href="https://github.com/rudra496/sciencelab3d" target="_blank" rel="noopener noreferrer">github.com/rudra496/sciencelab3d</a>.
+        </p>
+        <p>
+          I believe the open-source nature of the project is part of its educational mission. Students who want
+          to understand how a pendulum simulation works can read the actual code. Teachers who want to customise
+          an experiment for their curriculum can fork the repository. Developers who want to contribute new
+          simulations can open a pull request — the CONTRIBUTING.md guide explains the process in detail.
+        </p>
+        <p>
+          Getting started locally takes three commands:
+        </p>
+        <pre style="background:var(--card-bg-color,rgba(255,255,255,0.06));border:1px solid var(--card-border-color,rgba(255,255,255,0.1));border-radius:8px;padding:1rem;overflow-x:auto;font-size:0.9rem;"><code>git clone https://github.com/rudra496/sciencelab3d.git
+cd sciencelab3d
+npm install &amp;&amp; npm run dev</code></pre>
+        <p>
+          Then open <code>http://localhost:3000</code> in your browser. No environment variables, no external
+          services, no paid accounts. The entire platform runs completely locally for development.
+        </p>
+        <p>
+          If you want to add a new experiment, the process is:
+        </p>
+        <ol>
+          <li>Create a new directory inside the appropriate discipline folder (<code>src/experiments/physics/</code>, etc.).</li>
+          <li>Export a React Three Fiber scene component, a parameter schema object, and an experiment metadata object.</li>
+          <li>The platform's automatic registration system picks up the new experiment and adds it to the browser, search, and routing — no configuration file to edit.</li>
+          <li>Submit a pull request with the new experiment and a brief description of the scientific concept it covers.</li>
+        </ol>
+
+        <h2 id="lessons">Lessons Learned</h2>
+        <p>Building ScienceLab 3D across many weeks of development produced lessons that no course or tutorial could have given me.</p>
+
+        <h3>Scientific Accuracy Is a Product Requirement</h3>
+        <p>
+          Early versions of the pendulum simulation used Euler integration, which accumulates energy error over time — the pendulum
+          gradually swings to a larger amplitude than physically correct. A physics student immediately notices this and loses
+          trust in the entire platform. Switching to RK4 took an afternoon, but the credibility gain was permanent. Every
+          simulation should be reviewed by someone with domain expertise before it is published.
+        </p>
+
+        <h3>The Right Abstraction for 3D</h3>
+        <p>
+          Starting with raw Three.js and migrating to React Three Fiber midway through development taught me the value of the
+          right abstraction. Imperative Three.js code is powerful but verbose; object lifecycle management is manual and
+          error-prone. R3F's declarative model lets me focus on what the scene should contain rather than how to construct it.
+          For any new 3D web project, I would start with R3F from day one.
+        </p>
+
+        <h3>Mobile-First Is Not Optional for Global EdTech</h3>
+        <p>
+          In Bangladesh and across South and Southeast Asia, the primary internet device for most students is a mid-range
+          Android phone, not a laptop. Designing for desktop first and then "optimising for mobile later" is a path to
+          a product that fails the students who most need it. Every performance decision, every layout choice, every
+          interaction pattern was evaluated first on a budget 2020 Android device.
+        </p>
+
+        <h3>Open Source Improves Quality</h3>
+        <p>
+          Within days of making the repository public, contributors caught a unit inconsistency in the Ohm's Law
+          simulation and a label placement bug in the animal cell model. Code that is visible to the world is code
+          that gets fixed faster. The accountability of public code is a feature.
+        </p>
+
+        <h2 id="roadmap">What's Next</h2>
+        <p>
+          ScienceLab 3D's current release is a foundation. Here is where it is going:
+        </p>
+        <ul>
+          <li><strong>More experiments:</strong> 15+ new simulations planned — optics (ray tracing, lens refraction), thermodynamics (Carnot cycle), and advanced mathematics (complex analysis, differential equations).</li>
+          <li><strong>Multilingual support:</strong> Bengali and Hindi interfaces to serve students in Bangladesh and India in their native languages. Contributions from native speakers are especially welcome.</li>
+          <li><strong>PWA / offline mode:</strong> A service worker cache so the platform works without internet after the first visit — essential for schools in areas with unreliable connectivity.</li>
+          <li><strong>Teacher dashboard:</strong> Assignment creation, progress tracking, and curriculum alignment features to make ScienceLab 3D viable as an institutional tool rather than just an individual study resource.</li>
+          <li><strong>WebXR / VR support:</strong> Three.js has first-class WebXR support. With an affordable VR headset, students could explore a fully immersive science lab — the architecture is already compatible.</li>
+          <li><strong>Collaborative mode:</strong> WebSocket-based real-time sharing so a teacher and class can interact with the same simulation simultaneously, turning the platform into a live classroom tool.</li>
+        </ul>
+        <p>
+          If you are a developer, educator, student, or institution interested in contributing, collaborating, or simply
+          using ScienceLab 3D — please reach out. The platform is built on the belief that every student deserves a
+          world-class science education regardless of where they live, what their school can afford, or what device they own.
+        </p>
+        <p>
+          <a href="https://science-lab-3d.vercel.app" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:0.7rem 1.5rem;background:linear-gradient(135deg,#0f2027,#2c5364);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;margin-right:1rem;margin-bottom:0.75rem;">🚀 Try ScienceLab 3D Live</a>
+          <a href="https://github.com/rudra496/sciencelab3d" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:0.7rem 1.5rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:var(--text-color);border-radius:8px;text-decoration:none;font-weight:600;margin-bottom:0.75rem;"><i class="fab fa-github" aria-hidden="true"></i> View Source on GitHub</a>
+        </p>
+
+        <h2>Related Posts</h2>
+        <ul>
+          <li><a href="3d-science-lab-interactive-stem-education.html">3D Science Lab: Building an Interactive STEM Education Platform</a></li>
+          <li><a href="sightlineai-assistive-eyewear-visually-impaired.html">SightlineAI: AI-Powered Assistive Eyewear for the Visually Impaired</a></li>
+          <li><a href="sign-talk-smart-glove-sign-language-translation.html">Team SignTalk: Translating Sign Language to Speech with a Smart Glove</a></li>
+          <li><a href="mindwell-open-source-mental-health-platform-update.html">Building MindWell: Open-Source Mental Health Platform</a></li>
+          <li><a href="github-projects-showcase.html">GitHub Projects Showcase: My Open-Source Work</a></li>
+        </ul>
+
+        <h2>Connect With Me</h2>
+        <p>Follow my work and reach out across platforms:</p>
+        <ul>
+          <li><a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub — rudra496</a></li>
+          <li><a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          <li><a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter" aria-hidden="true"></i> X / Twitter — @Rudra496</a></li>
+          <li><a href="https://www.facebook.com/rudrasarker130" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+          <li><a href="https://www.instagram.com/rudrasarker/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+          <li><a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        </ul>
+      </section>
+      <a href="../blog.html" class="back-to-gallery" aria-label="Back to Blog"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Blog</a>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Rudra Sarker. All rights reserved.</p>
+  </footer>
+  <script defer src="../main.js"></script>
+  <script defer src="../js/script.js"></script>
+</body>
+</html>
