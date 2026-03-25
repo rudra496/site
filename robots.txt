@@ -10,20 +10,20 @@ User-agent: *
 Allow: /
 
 # Block utility pages that should not appear in search
-Disallow: /site/404.html
-Disallow: /site/thankyou.html
-Disallow: /site/portfolio_home.html
+Disallow: /404.html
+Disallow: /thankyou.html
+Disallow: /portfolio_home.html
 
 # Prevent crawling of duplicate query URLs
 Disallow: /*?*
 
 # Allow main content directories explicitly
-Allow: /site/
-Allow: /site/projects/
-Allow: /site/blog/
-Allow: /site/gallery/
-Allow: /site/about.html
-Allow: /site/contact.html
+Allow: /
+Allow: /projects/
+Allow: /blog/
+Allow: /gallery/
+Allow: /about.html
+Allow: /contact.html
 
 # Sitemap declaration
 Sitemap: https://rudra496.github.io/site/sitemap.xml
@@ -34,9 +34,9 @@ Sitemap: https://rudra496.github.io/site/sitemap.xml
 # ---------------------------------------------------------
 User-agent: Googlebot
 Allow: /
-Disallow: /site/404.html
-Disallow: /site/thankyou.html
-Disallow: /site/portfolio_home.html
+Disallow: /404.html
+Disallow: /thankyou.html
+Disallow: /portfolio_home.html
 
 
 # ---------------------------------------------------------
@@ -44,8 +44,8 @@ Disallow: /site/portfolio_home.html
 # ---------------------------------------------------------
 User-agent: Bingbot
 Allow: /
-Disallow: /site/404.html
-Disallow: /site/thankyou.html
+Disallow: /404.html
+Disallow: /thankyou.html
 
 
 # ---------------------------------------------------------
