@@ -1,19 +1,53 @@
 # Security Policy
 
-If you believe you’ve found a security issue on this site or its repository, please report it responsibly.
-
 ## Reporting a Vulnerability
 
-- Email: rudrasarker130@gmail.com
-- GitHub: https://github.com/rudra496
+Found a security issue? Please report it responsibly.
 
-Please include a description of the issue, steps to reproduce, and any relevant screenshots or proofs of concept. I will acknowledge your report as soon as possible.
+### How to Report
 
-## Scope
+**DO NOT create a public issue.** Instead:
 
-- Repository: https://github.com/rudra496/site
-- Deployed site: https://rudra496.github.io/site/
+1. **Email:** rudrasarker130@gmail.com
+2. **Subject:** Security Vulnerability Report
+3. **Include:**
+   - Description of vulnerability
+   - Steps to reproduce
+   - Potential impact
+   - Suggested fix (if any)
 
-## Disclosure
+### What Happens Next
 
-I prefer coordinated disclosure. I will work with you to validate and fix the issue before public disclosure.
+| Step | Timeframe |
+|------|-----------|
+| Acknowledgment | 24-48 hours |
+| Investigation | 3-7 days |
+| Fix & Testing | 7-14 days |
+| Disclosure | After fix deployed |
+
+## Security Features
+
+This site includes:
+
+- ✅ HTTPS enforced (GitHub Pages)
+- ✅ No sensitive data exposure
+- ✅ Form spam protection (honeypot)
+- ✅ Secure external links (`rel="noopener noreferrer"`)
+
+## Best Practices
+
+When contributing or forking:
+
+- ❌ Never commit `.env` files
+- ✅ Use environment variables
+- ✅ Keep dependencies updated
+- ✅ Validate user inputs
+
+## Contact
+
+**Security:** rudrasarker130@gmail.com
+**GitHub:** [@rudra496](https://github.com/rudra496)
+
+---
+
+Thanks for keeping things secure! 🔒
