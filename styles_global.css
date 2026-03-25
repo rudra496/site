@@ -13,6 +13,23 @@
   --card-border-color: rgba(0, 255, 255, 0.5);
   --header-height: 70px;
 }
+
+/* --- Skip to Content Link (Accessibility) --- */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: #0a0a1a;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 700;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+.skip-link:focus {
+  top: 0;
+}
 [data-theme="light"] {
   --bg-color: #f0f4f8;
   --text-color: #1a1a2e;
