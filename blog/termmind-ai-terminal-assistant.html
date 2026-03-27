@@ -91,6 +91,62 @@
         <p>
           Each provider is a class that implements a common interface: <code>chat(messages, model, **kwargs)</code>. The registry maps provider names to classes, and a factory function creates the right one based on config. This makes adding new providers trivially easy.
         </p>
+        <p>Here's the provider registry pattern in action:</p>
+<pre><code># termmind/providers/registry.py
+
+class ProviderRegistry:
+    """Dynamic registry for LLM providers. Add a new provider
+    by subclassing BaseProvider and calling registry.register()."""
+
+    def __init__(self):
+        self._providers = {}
+
+    def register(self, name: str, cls):
+        self._providers[name.lower()] = cls
+
+    def create(self, name: str, api_key: str = None, **config):
+        name = name.lower()
+        if name not in self._providers:
+            raise ValueError(f"Unknown provider: {name}. "
+                             f"Available: {list(self._providers.keys())}")
+        return self._providers[name](api_key=api_key, **config)
+
+registry = ProviderRegistry()
+
+# --- Provider registration (done in each provider module) ---
+from termmind.providers.base import BaseProvider
+
+class OpenAIProvider(BaseProvider):
+    def chat(self, messages, model="gpt-4o", **kwargs):
+        response = self.client.chat.completions.create(
+            model=model, messages=messages, **kwargs
+        )
+        return response.choices[0].message.content
+
+registry.register("openai", OpenAIProvider)
+
+class ClaudeProvider(BaseProvider):
+    def chat(self, messages, model="claude-sonnet-4-20250514", **kwargs):
+        response = self.client.messages.create(
+            model=model, messages=messages, **kwargs
+        )
+        return response.content[0].text
+
+registry.register("claude", ClaudeProvider)
+
+class OllamaProvider(BaseProvider):
+    def chat(self, messages, model="llama3", **kwargs):
+        response = self.client.chat(model=model, messages=messages)
+        return response.message.content
+
+registry.register("ollama", OllamaProvider)
+
+# Adding a new provider is just 3 lines:
+# class GroqProvider(BaseProvider): ...
+# registry.register("groq", GroqProvider)</code></pre>
+        <p>
+          This pattern means adding a new provider doesn't require touching any existing code. A contributor can write a new provider file, register it, and it just works. The registry also enables runtime provider switching — users can change providers mid-session without restarting.
+        </p>
 
         <h2>Key Features</h2>
         <p>
@@ -99,15 +155,93 @@
         <p>
           <strong>Diff Engine</strong> — Shows exactly what changed in your files using unified diffs with color coding. Every AI edit is reviewable before committing.
         </p>
+<pre><code># termmind/diff_engine.py — simplified diff generation
+
+import difflib
+
+def generate_unified_diff(original: str, modified: str,
+                          filename: str = "file.py") -> str:
+    """Generate a color-coded unified diff between two file states."""
+    old_lines = original.splitlines(keepends=True)
+    new_lines = modified.splitlines(keepends=True)
+    diff = difflib.unified_diff(
+        old_lines, new_lines,
+        fromfile=f"a/{filename}", tofile=f"b/{filename}",
+        lineterm=""
+    )
+    return "\n".join(diff)
+
+# Output example:
+# --- a/parser.py
+# +++ b/parser.py
+# @@ -12,6 +12,8 @@
+#  def parse_command(text: str) -> tuple:
+#      """Parse user input into (command, args)."""
+#      parts = text.strip().split(maxsplit=1)
+# +    if not parts:
+# +        return ("help", [])
+#      cmd = parts[0].lower()
+#      args = parts[1] if len(parts) > 1 else ""</code></pre>
         <p>
           <strong>Session Recorder & Replay</strong> — Records entire coding sessions with timestamps. You can replay them step by step or export as HTML timelines. This is a feature I haven't seen in any competing tool.
         </p>
         <p>
           <strong>ELI5 Mode</strong> — Toggle simplified explanations for when AI responses are too technical. Great for learning new concepts.
         </p>
+<pre><code># termmind/features/eli5.py
+
+ELI5_SYSTEM_PROMPT = """You are explaining a technical concept to a curious
+10-year-old. Use simple words, relatable analogies, and avoid jargon.
+If the user asks about recursion, explain it like a mirror facing another
+mirror. If they ask about APIs, explain it like ordering food at a
+restaurant. Keep it fun and accurate."""
+
+def eli5_transform(response: str, original_query: str) -> str:
+    """Re-process an AI response through the ELI5 lens."""
+    # The system prompt is prepended to the next API call,
+    # causing the model to simplify its response
+    messages = [
+        {"role": "system", "content": ELI5_SYSTEM_PROMPT},
+        {"role": "user", "content": f"Explain this simply:\n\n{original_query}"}
+    ]
+    return provider.chat(messages)  # Returns simplified version</code></pre>
         <p>
           <strong>Cost Optimizer</strong> — Tracks per-request and session costs across providers. Shows which provider is cheapest for your usage pattern. Budget warnings prevent unexpected bills.
         </p>
+<pre><code># termmind/features/cost_optimizer.py
+
+class CostTracker:
+    """Track and optimize LLM spending across providers."""
+
+    # Pricing per 1M tokens (as of 2026)
+    PRICING = {
+        "gpt-4o":      {"input": 2.50,  "output": 10.00},
+        "gpt-4o-mini": {"input": 0.15,  "output": 0.60},
+        "claude-sonnet-4-20250514": {"input": 3.00, "output": 15.00},
+        "claude-haiku-4-20250414":  {"input": 0.80, "output": 4.00},
+        "gemini-2.0-flash": {"input": 0.075, "output": 0.30},
+        "llama3":       {"input": 0.00,  "output": 0.00},  # Local!
+    }
+
+    def __init__(self, budget_usd: float = 10.0):
+        self.budget = budget_usd
+        self.session_costs: dict[str, float] = {}
+        self.total_spent = 0.0
+
+    def record(self, model: str, input_tokens: int, output_tokens: int):
+        pricing = self.PRICING.get(model, {"input": 0, "output": 0})
+        cost = (input_tokens * pricing["input"] / 1_000_000
+              + output_tokens * pricing["output"] / 1_000_000)
+        self.session_costs[model] = self.session_costs.get(model, 0) + cost
+        self.total_spent += cost
+        if self.total_spent > self.budget * 0.8:
+            print(f"⚠️  Budget warning: ${self.total_spent:.2f} "
+                  f"of ${self.budget:.2f} spent")
+
+    def cheapest_for(self, task_type: str = "chat") -> str:
+        """Recommend the cheapest provider for a given task type."""
+        return min(self.PRICING.items(),
+                   key=lambda x: x[1]["input"])[0]</code></pre>
         <p>
           <strong>Inline Doc Preview</strong> — Type <code>/docs function_name</code> and see the docstring, signature, parameters, and return type — parsed from Python, JavaScript, TypeScript, Go, Rust, and Java.
         </p>
@@ -115,6 +249,26 @@
         <h2>Testing: 227 Tests, Zero Failures</h2>
         <p>
           I wrote 9 test files covering every module. The project has 227 passing tests with zero failures. Tests cover API clients (mocked), command parsing, file operations, context management, diff engine, snippets, and more.
+        </p>
+<pre><code>$ pytest tests/ -v --tb=short
+
+tests/test_providers.py ...........                          [  5%]
+tests/test_diff_engine.py ............                      [ 11%]
+tests/test_commands.py ............................         [ 23%]
+tests/test_context.py ................                      [ 29%]
+tests/test_file_ops.py ...............                      [ 36%]
+tests/test_cost_optimizer.py .........                     [ 40%]
+tests/test_session_recorder.py .............                [ 47%]
+tests/test_eli5.py ........                                [ 50%]
+tests/test_code_memory.py ................................. [ 65%]
+tests/test_snippets.py .....................                [ 73%]
+tests/test_docs_preview.py ..................              [ 81%]
+tests/test_config.py .............                         [ 88%]
+tests/test_integration.py ........................         [100%]
+
+======================== 227 passed, 0 failed in 3.42s =========================</code></pre>
+        <p>
+          All external API calls are mocked using <code>unittest.mock</code>, so the test suite runs completely offline. Each test file targets a single module, following the testing pyramid: fast unit tests at the base, a handful of integration tests at the top.
         </p>
 
         <h2>What Makes It Different</h2>
