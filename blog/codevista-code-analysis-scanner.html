@@ -128,3 +128,68 @@ codevista analyze ./your-project/</code></pre>
   <script defer src="../js/script.js"></script>
 </body>
 </html>
+        <h2>Sample Output</h2>
+        <p>
+          Here's what a typical CodeVista run looks like:
+        </p>
+        <pre><code>$ codevista analyze ./my-project/
+
+  📁 23 files analyzed
+  📝 14,046 lines of code
+  🧩 1 languages detected
+  ⚡ 466 functions
+  🔒 52 security issues
+  📦 0 dependencies
+  🏥 Health score: 15/100
+  ⏱️  Completed in 4.03s
+
+✅ Report generated: codevista_report.html</code></pre>
+        <p>
+          The HTML report includes interactive charts for complexity distribution, a file-by-file breakdown, security findings with severity levels, and actionable recommendations.
+        </p>
+
+        <h2>Architecture</h2>
+        <pre><code>┌─────────────┐    ┌──────────────┐    ┌──────────────┐
+│  CLI Entry  │───▶│  Analyzer    │───▶│  Report Gen  │
+│  (cli.py)   │    │  (analyzer.py)│   │  (report.py) │
+└─────────────┘    └──────┬───────┘    └──────────────┘
+                          │
+              ┌───────────┼───────────┐
+              ▼           ▼           ▼
+        ┌──────────┐ ┌────────┐ ┌──────────┐
+        │ Security │ │ Smells │ │ Decay    │
+        │ Scanner  │ │ Detect │ │ Detector │
+        └──────────┘ └────────┘ └──────────┘
+              │           │           │
+              └───────────┼───────────┘
+                          ▼
+                   ┌──────────────┐
+                   │  HTML Report │
+                   │  (single .html)│
+                   └──────────────┘</code></pre>
+
+        <h2>How CodeDNA Works</h2>
+        <p>
+          The CodeDNA fingerprinter generates a unique signature for any codebase by analyzing multiple dimensions: language distribution (percentage breakdown), complexity distribution (function complexity histogram), naming convention ratios (camelCase vs snake_case vs PascalCase), comment density, function size distribution, file size distribution, and dependency topology. Each dimension is hashed independently and combined into a final SHA-256 fingerprint. Two codebases with similar DNA fingerprints likely share common patterns or origins.
+        </p>
+
+        <h2>Decay Detection: The Math</h2>
+        <p>
+          The architectural decay detector uses linear regression on git history data. For each week, it calculates aggregate code quality metrics (complexity, coupling, duplication). It then fits a line: <code>y = mx + b</code> where y is quality score and x is time. A negative slope (m) indicates decay. The detector extrapolates this line 12 weeks into the future to predict quality scores, and identifies inflection points where the slope changed significantly.
+        </p>
+
+        <h2>Comparison: CodeVista vs Others</h2>
+        <table style="width:100%;border-collapse:collapse;">
+          <tr style="border-bottom:1px solid #333;"><th style="text-align:left;padding:8px;">Feature</th><th style="padding:8px;">CodeVista</th><th style="padding:8px;">SonarQube</th><th style="padding:8px;">Pylint</th></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Languages</td><td style="text-align:center;">80+</td><td style="text-align:center;">30+</td><td style="text-align:center;">1</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Setup Required</td><td style="text-align:center;">None</td><td style="text-align:center;">Server + DB</td><td style="text-align:center;">pip install</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Zero Dependencies</td><td style="text-align:center;">✅</td><td style="text-align:center;">❌</td><td style="text-align:center;">✅</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">CodeDNA Fingerprint</td><td style="text-align:center;">✅</td><td style="text-align:center;">❌</td><td style="text-align:center;">❌</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Decay Prediction</td><td style="text-align:center;">✅</td><td style="text-align:center;">❌</td><td style="text-align:center;">❌</td></tr>
+          <tr><td style="padding:8px;">Cost</td><td style="text-align:center;">Free</td><td style="text-align:center;">$150+/yr</td><td style="text-align:center;">Free</td></tr>
+        </table>
+
+        <h2>What's Next</h2>
+        <p>
+          Future plans include: GitHub Action integration for automated analysis on PRs, VS Code extension for in-editor feedback, historical trend dashboards, and team collaboration features with code ownership tracking.
+        </p>

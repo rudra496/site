@@ -136,3 +136,51 @@
   <script defer src="../js/script.js"></script>
 </body>
 </html>
+        <h2>Sample Dataset Entries</h2>
+        <p>Each entry in the catalog includes the language, modality, approximate sample count, and a direct link:</p>
+        <table style="width:100%;border-collapse:collapse;">
+          <tr style="border-bottom:1px solid #333;"><th style="text-align:left;padding:8px;">Dataset</th><th style="padding:8px;">Language</th><th style="padding:8px;">Modality</th><th style="text-align:left;padding:8px;">Samples</th></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">WLASL</td><td style="text-align:center;">ASL</td><td style="text-align:center;">Video</td><td style="padding:8px;">2,000+ glosses</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Phoenix-2014T</td><td style="text-align:center;">ASL</td><td style="text-align:center;">Video</td><td style="padding:8px;">1,329 classes</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">AUTSL</td><td style="text-align:center;">Turkish SL</td><td style="text-align:center;">Video</td><td style="padding:8px;">226 signs</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">RWTH-PHOENIX-Weather</td><td style="text-align:center;">German SL</td><td style="text-align:center;">Video</td><td style="padding:8px;">1,107 sentences</td></tr>
+          <tr><td style="padding:8px;">How2Sign</td><td style="text-align:center;">ASL</td><td style="text-align:center;">Video</td><td style="padding:8px;">80+ hours</td></tr>
+        </table>
+
+        <h2>The Verification Process</h2>
+        <p>Every dataset was verified in three steps: (1) URL check — confirming the link returns HTTP 200, (2) content check — confirming the page actually contains downloadable data (not a dead page), and (3) metadata check — confirming the language, modality, and sample counts match what's advertised. Any dataset that failed any check was removed. This is critical because many existing catalogs include entries that link to pages that no longer exist or have been moved.</p>
+
+        <h2>BibTeX Citation</h2>
+        <pre><code>@misc{sarker2026signlanguage,
+  author = {Sarker, Rudra},
+  title = {Sign Language Dataset Hub: A Verified Catalog of 73+ Datasets},
+  year = {2026},
+  publisher = {GitHub},
+  url = {https://github.com/rudra496/SignLanguage-Dataset-Hub}
+}</code></pre>
+
+        <h2>Why SLR Research Matters</h2>
+        <p>Over 70 million deaf people worldwide use sign language as their primary language. Automatic sign language recognition can bridge communication gaps, enable real-time translation, and improve accessibility in education, healthcare, and public services. The field spans computer vision (video-based recognition), NLP (gloss-to-text translation), and sensor-based computing (glove and accelerometer data). Having a centralized, verified dataset catalog accelerates research by reducing the time researchers spend finding and validating data sources.</p>
+
+        <h2>PyTorch Data Loader</h2>
+        <p>The repo includes a ready-to-use PyTorch data loader for the demo dataset:</p>
+        <pre><code>from torch.utils.data import DataLoader
+from datasets.bdsl_loader import BdSLDataset
+
+# Load the demo dataset
+train_dataset = BdSLDataset(
+    data_dir="data/bdsl/BdSL-Sensor-Glove/train",
+    normalize=True
+)
+
+train_loader = DataLoader(
+    train_dataset,
+    batch_size=32,
+    shuffle=True,
+    num_workers=2
+)
+
+# Each batch: (sensor_data, labels)
+for batch_x, batch_y in train_loader:
+    predictions = model(batch_x)
+    loss = criterion(predictions, batch_y)</code></pre>

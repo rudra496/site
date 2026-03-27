@@ -127,3 +127,61 @@
   <script defer src="../js/script.js"></script>
 </body>
 </html>
+        <h2>All 17 Roadmaps</h2>
+        <p>Here's every roadmap available in DevRoadmaps:</p>
+        <table style="width:100%;border-collapse:collapse;">
+          <tr style="border-bottom:1px solid #333;"><th style="text-align:left;padding:8px;">Roadmap</th><th style="padding:8px;">Emoji</th><th style="padding:8px;">Nodes</th><th style="text-align:left;padding:8px;">Focus</th></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Frontend</td><td style="text-align:center;">🎨</td><td style="text-align:center;">52</td><td style="padding:8px;">HTML, CSS, JS, React, Vue, Angular</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Backend</td><td style="text-align:center;">⚙️</td><td style="text-align:center;">50</td><td style="padding:8px;">APIs, databases, auth, caching</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Full Stack</td><td style="text-align:center;">🔗</td><td style="text-align:center;">50</td><td style="padding:8px;">Frontend + Backend integration</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">ML / AI</td><td style="text-align:center;">🧠</td><td style="text-align:center;">50</td><td style="padding:8px;">Machine learning, deep learning, NLP</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">DevOps</td><td style="text-align:center;">🚀</td><td style="text-align:center;">50</td><td style="padding:8px;">Docker, K8s, CI/CD, monitoring</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Mobile</td><td style="text-align:center;">📱</td><td style="text-align:center;">50</td><td style="padding:8px;">React Native, Flutter, Swift, Kotlin</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Cybersecurity</td><td style="text-align:center;">🔒</td><td style="text-align:center;">50</td><td style="padding:8px;">Networking, OWASP, pen testing</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Data Engineering</td><td style="text-align:center;">📊</td><td style="text-align:center;">50</td><td style="padding:8px;">ETL, data pipelines, warehousing</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Blockchain</td><td style="text-align:center;">⛓️</td><td style="text-align:center;">50</td><td style="padding:8px;">Solidity, DeFi, Web3 development</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Game Dev</td><td style="text-align:center;">🎮</td><td style="text-align:center;">50</td><td style="padding:8px;">Unity, Unreal, game design</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Embedded / IoT</td><td style="text-align:center;">🔌</td><td style="text-align:center;">50</td><td style="padding:8px;">Arduino, Raspberry Pi, RTOS</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Product Manager</td><td style="text-align:center;">📋</td><td style="text-align:center;">50</td><td style="padding:8px;">User research, roadmapping, metrics</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">DevSecOps</td><td style="text-align:center;">🛡️</td><td style="text-align:center;">42</td><td style="padding:8px;">Security in CI/CD, containers, cloud</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">QA Engineer</td><td style="text-align:center;">🧪</td><td style="text-align:center;">42</td><td style="padding:8px;">Testing strategies, automation, CI</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Technical Writer</td><td style="text-align:center;">✍️</td><td style="text-align:center;">41</td><td style="padding:8px;">Documentation, APIs, style guides</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Low-Code / No-Code</td><td style="text-align:center;">🧩</td><td style="text-align:center;">32</td><td style="padding:8px;">Bubble, Webflow, Zapier, Airtable</td></tr>
+          <tr><td style="padding:8px;">Cloud Architect</td><td style="text-align:center;">☁️</td><td style="text-align:center;">36</td><td style="padding:8px;">AWS, GCP, Azure, multi-cloud</td></tr>
+        </table>
+
+        <h2>The JSON Architecture</h2>
+        <p>Each roadmap is a single JSON file. A node looks like this:</p>
+        <pre><code>{
+  "id": "react-hooks",
+  "title": "React Hooks",
+  "icon": "⚛️",
+  "category": "intermediate",
+  "description": "useState, useEffect, useContext and custom hooks",
+  "difficulty": "Intermediate",
+  "resources": [
+    {
+      "title": "React Hooks Official Docs",
+      "url": "https://react.dev/reference/react",
+      "type": "docs",
+      "free": true
+    }
+  ],
+  "children": ["react-context", "use-reducer"]
+}</code></pre>
+        <p>This flat structure makes it trivially easy to add new topics — just add a JSON object with an ID, title, and resources. The rendering engine handles the rest.</p>
+
+        <h2>PWA: Offline Learning</h2>
+        <p>The service worker uses a cache-first strategy. On first visit, all roadmap JSONs, CSS, JS, and the manifest are cached. On subsequent visits (even offline), everything loads instantly. Users can install DevRoadmaps as a native app on their phone via "Add to Home Screen."</p>
+
+        <h2>Comparison vs roadmap.sh</h2>
+        <table style="width:100%;border-collapse:collapse;">
+          <tr style="border-bottom:1px solid #333;"><th style="text-align:left;padding:8px;">Feature</th><th style="padding:8px;">DevRoadmaps</th><th style="padding:8px;">roadmap.sh</th></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Roadmaps</td><td style="text-align:center;">17</td><td style="text-align:center;">~15</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Total Topics</td><td style="text-align:center;">800+</td><td style="text-align:center;">~300</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Free Resources per Topic</td><td style="text-align:center;">~2</td><td style="text-align:center;">0-1</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Offline Support</td><td style="text-align:center;">✅ PWA</td><td style="text-align:center;">❌</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Progress Tracking</td><td style="text-align:center;">✅</td><td style="text-align:center;">❌</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Certification Tracking</td><td style="text-align:center;">✅ 7 certs</td><td style="text-align:center;">❌</td></tr>
+          <tr><td style="padding:8px;">Cost</td><td style="text-align:center;">Free</td><td style="text-align:center;">Free</td></tr>
+        </table>
