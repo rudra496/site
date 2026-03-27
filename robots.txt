@@ -27,6 +27,7 @@ Allow: /contact.html
 
 # Sitemap declaration
 Sitemap: https://rudra496.github.io/site/sitemap.xml
+Crawl-delay: 1
 
 
 # ---------------------------------------------------------
@@ -87,13 +88,26 @@ Allow: /
 # Bad / aggressive crawlers (optional protection)
 # ---------------------------------------------------------
 User-agent: MJ12bot
-Disallow: /
+Crawl-delay: 10
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /.git/
 
 User-agent: AhrefsBot
-Disallow: /
+Crawl-delay: 5
+Disallow: /admin/
+Disallow: /.git/
 
 User-agent: SemrushBot
+Crawl-delay: 5
+Disallow: /admin/
+Disallow: /.git/
+
+User-agent: DotBot
 Disallow: /
+
+User-agent: Bytespider
+Crawl-delay: 5
 
 
 # =========================================================
