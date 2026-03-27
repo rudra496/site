@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TermMind: Building an AI Terminal Assistant with 7 LLM Providers</title>
+  <meta name="description" content="How I built TermMind — an open-source AI terminal assistant supporting OpenAI, Claude, Gemini, Groq, Ollama, and more. 40+ commands, code analysis, and 227 tests." />
+  <meta name="keywords" content="TermMind, AI terminal assistant, CLI tool, LLM, GPT, Claude, Gemini, Ollama, open source, Python, coding assistant, terminal AI" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/termmind-ai-terminal-assistant.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="TermMind: Building an AI Terminal Assistant with 7 LLM Providers" />
+  <meta property="og:description" content="How I built TermMind — an open-source AI terminal assistant supporting OpenAI, Claude, Gemini, Groq, Ollama, and more. 40+ commands, code analysis, and 227 tests." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/termmind-ai-terminal-assistant.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-03-27" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <meta property="article:tag" content="AI" />
+  <meta property="article:tag" content="Open Source" />
+  <meta property="article:tag" content="Python" />
+  <meta property="article:tag" content="Terminal" />
+  <meta property="article:tag" content="LLM" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TermMind: Building an AI Terminal Assistant with 7 LLM Providers" />
+  <meta name="twitter:description" content="How I built TermMind — an open-source AI terminal assistant supporting OpenAI, Claude, Gemini, Groq, Ollama, and more." />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "TermMind: Building an AI Terminal Assistant with 7 LLM Providers",
+    "description": "How I built TermMind — an open-source AI terminal assistant supporting OpenAI, Claude, Gemini, Groq, Ollama, Together.ai, and OpenRouter. 40+ commands, code analysis, session recording, and 227 passing tests.",
+    "url": "https://rudra496.github.io/site/blog/termmind-ai-terminal-assistant.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-03-27",
+    "dateModified": "2026-03-27",
+    "author": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "keywords": ["TermMind", "AI terminal assistant", "CLI tool", "LLM", "GPT", "Claude", "Gemini", "Ollama", "open source", "Python", "coding assistant"]
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav"><a href="../index.html" class="nav-logo">Rudra Sarker</a></nav>
+  </header>
+  <main style="min-height: 60vh;">
+    <article class="project-detail">
+      <section class="project-hero" style="background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0a0a1a 100%);">
+        <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem; text-align: center;">
+          <span class="project-tag" style="margin-bottom: 1rem;">🤖 Open Source · Python · AI</span>
+          <h1 style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">TermMind: Building an AI Terminal Assistant with 7 LLM Providers</h1>
+          <p style="color: #94a3b8; margin-top: 0.75rem; font-size: 1rem;">March 27, 2026 · 11 min read</p>
+        </div>
+      </section>
+      <section class="project-content" style="padding: 0 1rem;">
+        <h2>The Problem</h2>
+        <p>
+          As a developer who uses multiple AI providers daily, I was tired of switching between ChatGPT in the browser, Claude in another tab, and Ollama in a separate terminal. Each tool had its own interface, its own context limitations, and none of them understood my codebase the way I needed.
+        </p>
+        <p>
+          Existing tools like Aider and Continue.dev are great, but they're complex to set up, often require Node.js, and lock you into specific workflows. I wanted something simpler — a single CLI tool that works with any AI provider, understands my code, and doesn't require a PhD to configure.
+        </p>
+
+        <h2>Enter TermMind</h2>
+        <p>
+          <strong>TermMind</strong> is an open-source AI terminal assistant that lets you chat with 7 different LLM providers directly from your terminal. It's written in pure Python with zero external runtime dependencies, installs via pip, and works out of the box.
+        </p>
+        <p>
+          <a href="https://github.com/rudra496/termmind" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Check out TermMind on GitHub</a>
+        </p>
+
+        <h2>Architecture: Multi-Provider Design</h2>
+        <p>
+          The core design challenge was supporting 7 different API formats (OpenAI, Anthropic, Google, Groq, Together.ai, OpenRouter, Ollama) without creating a mess of if/else statements. I solved this with a provider registry pattern.
+        </p>
+        <p>
+          Each provider is a class that implements a common interface: <code>chat(messages, model, **kwargs)</code>. The registry maps provider names to classes, and a factory function creates the right one based on config. This makes adding new providers trivially easy.
+        </p>
+
+        <h2>Key Features</h2>
+        <p>
+          <strong>Code Memory Index</strong> — TermMind indexes your project's functions, classes, and imports. When you ask "what does this function do?", it has the context already. No copy-pasting code into chat.
+        </p>
+        <p>
+          <strong>Diff Engine</strong> — Shows exactly what changed in your files using unified diffs with color coding. Every AI edit is reviewable before committing.
+        </p>
+        <p>
+          <strong>Session Recorder & Replay</strong> — Records entire coding sessions with timestamps. You can replay them step by step or export as HTML timelines. This is a feature I haven't seen in any competing tool.
+        </p>
+        <p>
+          <strong>ELI5 Mode</strong> — Toggle simplified explanations for when AI responses are too technical. Great for learning new concepts.
+        </p>
+        <p>
+          <strong>Cost Optimizer</strong> — Tracks per-request and session costs across providers. Shows which provider is cheapest for your usage pattern. Budget warnings prevent unexpected bills.
+        </p>
+        <p>
+          <strong>Inline Doc Preview</strong> — Type <code>/docs function_name</code> and see the docstring, signature, parameters, and return type — parsed from Python, JavaScript, TypeScript, Go, Rust, and Java.
+        </p>
+
+        <h2>Testing: 227 Tests, Zero Failures</h2>
+        <p>
+          I wrote 9 test files covering every module. The project has 227 passing tests with zero failures. Tests cover API clients (mocked), command parsing, file operations, context management, diff engine, snippets, and more.
+        </p>
+
+        <h2>What Makes It Different</h2>
+        <p>
+          Unlike Aider (which requires Node.js and is Git-focused) or Continue.dev (which is VS Code specific), TermMind works in any terminal on any OS. It supports 7 providers out of the box. It has features like session recording and cost optimization that simply don't exist elsewhere.
+        </p>
+
+        <h2>Try It</h2>
+        <p>
+          Install with a single command:
+        </p>
+        <pre><code>pip install termmind
+termmind</code></pre>
+        <p>
+          Pick a provider, enter your API key (or use Ollama for free, local inference), and start coding with AI. That's it.
+        </p>
+        <p>
+          <a href="https://github.com/rudra496/termmind" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> github.com/rudra496/termmind</a>
+        </p>
+
+        <h2>Connect</h2>
+        <ul>
+          <li><a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X / Twitter</a></li>
+          <li><a href="https://www.facebook.com/rudrasarker130" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer"><i class="fas fa-flask"></i> ResearchGate</a></li>
+          <li><a href="https://dev.to/rudra_sarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-dev"></i> Dev.to</a></li>
+        </ul>
+      </section>
+      <a href="../blog.html" class="back-to-gallery" aria-label="Back to Blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </article>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2026 Rudra Sarker. All rights reserved.</p>
+  </footer>
+  <script defer src="../main.js"></script>
+  <script defer src="../js/script.js"></script>
+</body>
+</html>

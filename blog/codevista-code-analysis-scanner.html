@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CodeVista: Code Analysis & Security Scanner — 80+ Languages, Zero Dependencies</title>
+  <meta name="description" content="How I built CodeVista — an open-source code analysis tool with security scanning, DNA fingerprinting, architectural decay detection, 38 lint rules, and stunning HTML reports. 80+ languages supported." />
+  <meta name="keywords" content="CodeVista, code analysis, static analysis, security scanner, code quality, Python, open source, code metrics, DNA fingerprint, code smells" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/codevista-code-analysis-scanner.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="CodeVista: Code Analysis & Security Scanner — 80+ Languages, Zero Dependencies" />
+  <meta property="og:description" content="How I built CodeVista — an open-source code analysis tool with security scanning, DNA fingerprinting, architectural decay detection, and 38 lint rules across 5 languages." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/codevista-code-analysis-scanner.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-03-27" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <meta property="article:tag" content="Code Analysis" />
+  <meta property="article:tag" content="Security" />
+  <meta property="article:tag" content="Open Source" />
+  <meta property="article:tag" content="Python" />
+  <meta property="article:tag" content="Static Analysis" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CodeVista: Code Analysis & Security Scanner" />
+  <meta name="twitter:description" content="Open-source code analysis tool with 80+ language support, security scanning, DNA fingerprinting, and architectural decay detection." />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "CodeVista: Code Analysis & Security Scanner — 80+ Languages, Zero Dependencies",
+    "description": "How I built CodeVista — an open-source code analysis tool with security scanning, DNA fingerprinting, architectural decay detection, 38 lint rules, and stunning HTML reports.",
+    "url": "https://rudra496.github.io/site/blog/codevista-code-analysis-scanner.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-03-27",
+    "dateModified": "2026-03-27",
+    "author": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "keywords": ["CodeVista", "code analysis", "security scanner", "static analysis", "code quality", "Python", "open source"]
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav"><a href="../index.html" class="nav-logo">Rudra Sarker</a></nav>
+  </header>
+  <main style="min-height: 60vh;">
+    <article class="project-detail">
+      <section class="project-hero" style="background: linear-gradient(135deg, #0a0a1a 0%, #1a3e1a 50%, #0a0a1a 100%);">
+        <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem; text-align: center;">
+          <span class="project-tag" style="margin-bottom: 1rem;">🔍 Open Source · Python · Code Quality</span>
+          <h1 style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">CodeVista: Code Analysis & Security Scanner — 80+ Languages, Zero Dependencies</h1>
+          <p style="color: #94a3b8; margin-top: 0.75rem; font-size: 1rem;">March 27, 2026 · 9 min read</p>
+        </div>
+      </section>
+      <section class="project-content" style="padding: 0 1rem;">
+        <h2>Why Build Another Code Analysis Tool?</h2>
+        <p>
+          Existing tools like SonarQube require a server, a database, and a subscription. Pylint only handles Python. CodeClimate needs a CI pipeline. I wanted a single command that gives you a comprehensive analysis of any codebase, outputs a beautiful HTML report, and works locally with zero setup.
+        </p>
+        <p>
+          <strong>CodeVista</strong> is that tool. Written in pure Python with zero runtime dependencies, it analyzes 80+ languages and produces an interactive HTML report in seconds.
+        </p>
+
+        <h2>Features That Don't Exist Anywhere Else</h2>
+        <p>
+          <strong>CodeDNA Fingerprinter</strong> — Every codebase has a unique "DNA" based on its language distribution, complexity patterns, naming conventions, comment density, and dependency topology. CodeVista generates a SHA-based fingerprint and even an ASCII barcode. You can compare two codebases and see their similarity percentage. This is useful for detecting code clones or verifying that two projects are genuinely different.
+        </p>
+        <p>
+          <strong>Architectural Decay Detector</strong> — This feature uses git history to track how your code degrades over time. It calculates debt velocity, identifies the files degrading fastest, and predicts what your code quality will look like 12 weeks from now using linear regression. It even suggests when and what to refactor.
+        </p>
+        <p>
+          <strong>38 Language-Specific Lint Rules</strong> — Instead of just generic checks, CodeVista has rules tailored to each language: PEP 8 for Python, Airbnb for JavaScript, gofmt for Go, clippy-lite for Rust, and Google style for Java. Each rule has an ID, severity level, and specific regex or function-based detection.
+        </p>
+
+        <h2>Security Scanning</h2>
+        <p>
+          CodeVista detects 30+ security patterns including hardcoded API keys (Stripe, AWS, GitHub, Google), SQL injection patterns, XSS vulnerabilities, exposed credentials, and suspicious TODO/FIXME comments that mention secrets. It outputs results in SARIF format for GitHub Code Scanning integration.
+        </p>
+
+        <h2>The HTML Report</h2>
+        <p>
+          Run <code>codevista analyze ./your-project/</code> and it generates a single self-contained HTML file. The report includes interactive charts for complexity distribution, language breakdown, and dependency graphs. It's designed to be shared — just send the HTML file to your team.
+        </p>
+
+        <h2>117 Tests, All Passing</h2>
+        <p>
+          Every module is tested: the analyzer, security scanner, code smell detector, trend analyzer, team metrics, export module, and the new decay detector and DNA fingerprinter. The project has 117 tests with zero failures.
+        </p>
+
+        <h2>Try It</h2>
+        <pre><code>pip install codevista
+codevista analyze ./your-project/</code></pre>
+        <p>
+          <a href="https://github.com/rudra496/codevista" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> github.com/rudra496/codevista</a>
+        </p>
+
+        <h2>Connect</h2>
+        <ul>
+          <li><a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X / Twitter</a></li>
+          <li><a href="https://www.facebook.com/rudrasarker130" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer"><i class="fas fa-flask"></i> ResearchGate</a></li>
+          <li><a href="https://dev.to/rudra_sarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-dev"></i> Dev.to</a></li>
+        </ul>
+      </section>
+      <a href="../blog.html" class="back-to-gallery" aria-label="Back to Blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </article>
+  </main>
+  <footer class="footer"><p>&copy; 2026 Rudra Sarker. All rights reserved.</p></footer>
+  <script defer src="../main.js"></script>
+  <script defer src="../js/script.js"></script>
+</body>
+</html>

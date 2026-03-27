@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Language Dataset Hub: Curating 73+ Verified Datasets for 26 Sign Languages</title>
+  <meta name="description" content="How I built the Sign Language Dataset Hub — a verified catalog of 73+ publicly available sign language datasets covering 26 sign languages for researchers, developers, and the deaf community." />
+  <meta name="keywords" content="sign language dataset, ASL dataset, gesture recognition, deaf community, sign language recognition, SLR, open source, research, sensor-based" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/sign-language-dataset-hub.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Sign Language Dataset Hub: Curating 73+ Verified Datasets for 26 Sign Languages" />
+  <meta property="og:description" content="How I built the Sign Language Dataset Hub — a verified catalog of 73+ publicly available sign language datasets covering 26 sign languages." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/sign-language-dataset-hub.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-03-27" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <meta property="article:tag" content="Sign Language" />
+  <meta property="article:tag" content="Dataset" />
+  <meta property="article:tag" content="Research" />
+  <meta property="article:tag" content="Deaf Community" />
+  <meta property="article:tag" content="Open Source" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sign Language Dataset Hub: 73+ Verified Datasets" />
+  <meta name="twitter:description" content="A curated catalog of 73+ publicly available sign language datasets covering 26 sign languages for research and development." />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Sign Language Dataset Hub: Curating 73+ Verified Datasets for 26 Sign Languages",
+    "description": "How I built the Sign Language Dataset Hub — a verified catalog of 73+ publicly available sign language datasets covering 26 sign languages for researchers, developers, and the deaf community.",
+    "url": "https://rudra496.github.io/site/blog/sign-language-dataset-hub.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-03-27",
+    "dateModified": "2026-03-27",
+    "author": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "keywords": ["sign language dataset", "ASL", "gesture recognition", "deaf community", "SLR", "open source", "research", "sensor-based"]
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav"><a href="../index.html" class="nav-logo">Rudra Sarker</a></nav>
+  </header>
+  <main style="min-height: 60vh;">
+    <article class="project-detail">
+      <section class="project-hero" style="background: linear-gradient(135deg, #0a0a1a 0%, #3e3e1a 50%, #0a0a1a 100%);">
+        <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem; text-align: center;">
+          <span class="project-tag" style="margin-bottom: 1rem;">🤟 Open Source · Research · Deaf Community</span>
+          <h1 style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">Sign Language Dataset Hub: Curating 73+ Verified Datasets for 26 Sign Languages</h1>
+          <p style="color: #94a3b8; margin-top: 0.75rem; font-size: 1rem;">March 27, 2026 · 8 min read</p>
+        </div>
+      </section>
+      <section class="project-content" style="padding: 0 1rem;">
+        <h2>The Problem: Sign Language Research Needs Better Data Discovery</h2>
+        <p>
+          Sign language recognition (SLR) is a rapidly growing field in computer vision, NLP, and sensor-based computing. But finding the right dataset is shockingly difficult. Datasets are scattered across personal websites, academic pages, Kaggle, and GitHub. Many have broken links. Some have been taken down entirely. And crucially, many catalogs online contain fabricated entries — datasets that don't actually exist.
+        </p>
+        <p>
+          As someone working on sensor-based sign language recognition research, I needed a trustworthy, verified catalog. So I built one.
+        </p>
+
+        <h2>Verification: No Fabricated Data</h2>
+        <p>
+          This was the most important design decision. Every single dataset in the hub is verified: the link works, the data is actually downloadable, the language and modality are confirmed. I personally checked each URL and removed any dataset that was unavailable or had broken access.
+        </p>
+        <p>
+          The initial version of the repo (not by me) had inflated claims about dataset counts and some entries that didn't exist. I did a full audit: deleted everything unverified and rebuilt from scratch with proper citations and honest statistics.
+        </p>
+
+        <h2>Coverage: 26 Sign Languages</h2>
+        <p>
+          The hub covers 26 sign languages including ASL (American), BSL (British), ISL (Indian), BSL (Bengali), JSL (Japanese), DGS (German), LSF (French), and many more. Each entry includes the language, modality (video, sensor, image, skeleton), sample count (when verified), and proper academic citations.
+        </p>
+
+        <h2>The Demo Data: BdSL-Sensor-Glove</h2>
+        <p>
+          The repository includes a small demo dataset from the Bengali Sign Language Sensor Glove project (BdSL-Sensor-Glove) with 4,824 sensor samples split across train (3,528), validation (648), and test (648) sets. This is included specifically for learning and prototyping — not as a research dataset.
+        </p>
+
+        <h2>Beyond a Catalog: Tools for Researchers</h2>
+        <p>
+          The hub isn't just a list of links. It includes Jupyter notebooks for data exploration, a PyTorch data loader, visualization tools, and tutorials for beginners. The GitHub Pages site provides a searchable, filterable interface for finding datasets by language, modality, or type.
+        </p>
+
+        <h2>Academic Use</h2>
+        <p>
+          Every dataset has proper citation information. The hub itself includes a BibTeX entry for researchers who want to cite it. The REFERENCES.md file provides a curated bibliography of key papers in sign language recognition.
+        </p>
+
+        <h2>For the Deaf Community</h2>
+        <p>
+          This isn't just a research tool. It's also for developers building assistive technology — sign language translation apps, educational tools, and communication aids. Every dataset entry notes whether it's free, commercial, or academic, making it easy for indie developers to find usable data.
+        </p>
+
+        <h2>Try It</h2>
+        <p>
+          Browse the catalog: <a href="https://rudra496.github.io/SignLanguage-Dataset-Hub/" target="_blank" rel="noopener noreferrer">rudra496.github.io/SignLanguage-Dataset-Hub</a>
+        </p>
+        <p>
+          <a href="https://github.com/rudra496/SignLanguage-Dataset-Hub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> github.com/rudra496/SignLanguage-Dataset-Hub</a>
+        </p>
+
+        <h2>Connect</h2>
+        <ul>
+          <li><a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X / Twitter</a></li>
+          <li><a href="https://www.facebook.com/rudrasarker130" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer"><i class="fas fa-flask"></i> ResearchGate</a></li>
+          <li><a href="https://dev.to/rudra_sarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-dev"></i> Dev.to</a></li>
+        </ul>
+      </section>
+      <a href="../blog.html" class="back-to-gallery" aria-label="Back to Blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </article>
+  </main>
+  <footer class="footer"><p>&copy; 2026 Rudra Sarker. All rights reserved.</p></footer>
+  <script defer src="../main.js"></script>
+  <script defer src="../js/script.js"></script>
+</body>
+</html>
