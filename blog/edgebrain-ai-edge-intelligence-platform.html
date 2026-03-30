@@ -11,6 +11,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="author" content="Rudra Sarker" />
   <meta name="generator" content="GitHub Pages" />
+  <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Rudra Sarker Portfolio" />
   <meta property="og:locale" content="en_US" />
@@ -20,14 +21,7 @@
   <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
   <meta property="article:published_time" content="2026-03-31" />
   <meta property="article:author" content="Rudra Sarker" />
-  <meta property="article:tag" content="Edge Computing" />
-  <meta property="article:tag" content="IoT" />
-  <meta property="article:tag" content="AI" />
-  <meta property="article:tag" content="Open Source" />
-  <meta property="article:tag" content="Docker" />
-  <meta property="article:tag" content="Machine Learning" />
-  <meta property="article:tag" content="Smart Home" />
-  <meta property="article:tag" content="MQTT" />
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="EdgeBrain: Free Open-Source Edge AI Platform" />
   <meta name="twitter:description" content="Simulate 11 IoT devices, run anomaly detection with multi-agent AI, make autonomous decisions — all locally, all free. Built by @Rudra496" />
@@ -42,6 +36,7 @@
   <link rel="stylesheet" href="../styles_global.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="../favicon.ico" />
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,7 +51,6 @@
       "@type": "Person",
       "name": "Rudra Sarker",
       "url": "https://rudra496.github.io/site/",
-      "jobTitle": "Robotics and IoT Developer",
       "sameAs": [
         "https://github.com/rudra496",
         "https://www.linkedin.com/in/rudrasarker",
@@ -67,42 +61,62 @@
       ]
     },
     "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
-    "keywords": ["edge computing", "IoT platform", "AI", "anomaly detection", "smart home", "MQTT", "open source", "Docker", "multi-agent AI", "sensor simulation"],
-    "mainEntityOfPage": "https://rudra496.github.io/site/blog/edgebrain-ai-edge-intelligence-platform.html"
+    "keywords": ["EdgeBrain", "edge computing", "IoT platform", "AI", "anomaly detection", "smart home", "MQTT", "open source", "Docker", "multi-agent AI", "sensor simulation", "ESP32"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rudra496.github.io/site/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rudra496.github.io/site/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "Projects & Technology", "item": "https://rudra496.github.io/site/blog.html#cat-projects"},
+      {"@type": "ListItem", "position": 4, "name": "EdgeBrain: AI-Powered Edge Intelligence Platform", "item": "https://rudra496.github.io/site/blog/edgebrain-ai-edge-intelligence-platform.html"}
+    ]
   }
   </script>
 </head>
 <body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <header class="header">
-    <nav class="nav"><a href="../index.html" class="nav-logo">Rudra Sarker</a></nav>
+    <nav class="nav-container" aria-label="Primary">
+      <a href="../index.html" class="nav-brand">RUDRA SARKER</a>
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../projects.html" class="nav-link">Projects</a></li>
+        <li><a href="../gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="../blog.html" class="nav-link active" aria-current="page">Blog</a></li>
+        <li><a href="../blog/media-coverage-achievements-rudra-sarker.html" class="nav-link">In The Press</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  <main style="min-height: 60vh;">
+  <main id="main-content">
     <article class="project-detail">
-      <section class="project-hero" style="background: linear-gradient(135deg, #0a0a1a 0%, #1a1040 30%, #0a2a3a 60%, #0a0a1a 100%);">
-        <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem; text-align: center;">
-          <span class="project-tag" style="margin-bottom: 1rem;">🧠 Open Source · Edge Computing · IoT · AI</span>
-          <h1 style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">EdgeBrain: Building a Free, Open-Source AI-Powered Edge Intelligence Platform</h1>
-          <p style="color: #94a3b8; margin-top: 0.75rem; font-size: 1rem;">March 31, 2026 · 10 min read</p>
-        </div>
-      </section>
-
+      <div style="background: linear-gradient(135deg, #0a0a1a 0%, #1a1040 30%, #0a2a3a 60%, #0a0a1a 100%); padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 8px; text-align: center;">
+        <span class="project-tag" style="margin-bottom: 1rem;">🧠 Open Source · Edge Computing · IoT · AI</span>
+        <h1 style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">EdgeBrain: Building a Free, Open-Source AI-Powered Edge Intelligence Platform</h1>
+      </div>
+      <nav aria-label="Breadcrumb" style="font-size:0.9rem;margin-bottom:1.5rem;padding:0 1rem;">
+        <a href="../index.html">Home</a> » <a href="../blog.html">Blog</a> » <a href="../blog.html#cat-projects">Projects &amp; Technology</a>
+      </nav>
+      <p style="font-size: 1rem; color: var(--text-color); margin: 0 1rem 2rem; font-style: italic;">
+        By Rudra Sarker • Published March 31, 2026
+      </p>
       <section class="project-content" style="padding: 0 1rem;">
 
         <h2>Why I Built EdgeBrain</h2>
-        <p>
-          IoT platforms are everywhere. But almost all of them have the same problems: they require cloud subscriptions, send your data to someone else's servers, charge you monthly fees, and lock you into their ecosystem. If you're a student learning IoT, a researcher prototyping a system, or a developer who just wants to simulate smart devices — the existing options are either too expensive or too closed.
-        </p>
-        <p>
-          I wanted a platform where I could simulate IoT devices, process real-time data, run AI inference, make autonomous decisions, and control actuators — all <strong>on my laptop</strong>, without any cloud service, without any paid API, and without anyone else touching my data.
-        </p>
-        <p>
-          So I built EdgeBrain.
-        </p>
+        <p>IoT platforms are everywhere. But almost all of them have the same problems: they require cloud subscriptions, send your data to someone else's servers, charge you monthly fees, and lock you into their ecosystem. If you're a student learning IoT, a researcher prototyping a system, or a developer who just wants to simulate smart devices — the existing options are either too expensive or too closed.</p>
+        <p>I wanted a platform where I could simulate IoT devices, process real-time data, run AI inference, make autonomous decisions, and control actuators — all <strong>on my laptop</strong>, without any cloud service, without any paid API, and without anyone else touching my data.</p>
+        <p>So I built EdgeBrain.</p>
 
         <h2>What EdgeBrain Does</h2>
-        <p>
-          EdgeBrain is an <strong>AI-powered edge intelligence platform</strong> that runs 100% locally. Here's what it includes:
-        </p>
+        <p>EdgeBrain is an <strong>AI-powered edge intelligence platform</strong> that runs 100% locally. Here's what it includes:</p>
         <ul>
           <li><strong>11 virtual IoT devices</strong> across 3 rooms (Living Room, Bedroom, Kitchen) — temperature, motion, energy, humidity, and light sensors with realistic circadian patterns and Gaussian noise</li>
           <li><strong>Multi-agent AI system</strong> with three specialized agents: Data Agent (validates and stores), Decision Agent (evaluates strategies), and Action Agent (executes commands)</li>
@@ -115,9 +129,7 @@
         </ul>
 
         <h2>The Architecture</h2>
-        <p>
-          EdgeBrain follows an event-driven architecture where data flows through a clear pipeline:
-        </p>
+        <p>EdgeBrain follows an event-driven architecture where data flows through a clear pipeline:</p>
         <ol>
           <li><strong>IoT Sensors</strong> — 11 virtual devices stream data via MQTT topics</li>
           <li><strong>MQTT Broker</strong> — Mosquitto handles topic-based pub/sub routing</li>
@@ -127,48 +139,32 @@
           <li><strong>Actuators</strong> — lights, fans, and alarms respond in real-time</li>
           <li><strong>Dashboard</strong> — React frontend receives live updates via WebSocket</li>
         </ol>
-        <p>
-          Every component is modular, independently testable, and can be replaced or extended. The system uses Redis for caching and inter-agent communication, PostgreSQL for persistent storage, and Mosquitto MQTT for device messaging.
-        </p>
+        <p>Every component is modular, independently testable, and can be replaced or extended. The system uses Redis for caching and inter-agent communication, PostgreSQL for persistent storage, and Mosquitto MQTT for device messaging.</p>
 
         <h2>Anomaly Detection: Three Methods, One Consensus</h2>
-        <p>
-          One of the most interesting parts of EdgeBrain is how it detects anomalies. Instead of relying on a single algorithm, I implemented three independent statistical methods:
-        </p>
+        <p>One of the most interesting parts of EdgeBrain is how it detects anomalies. Instead of relying on a single algorithm, I implemented three independent statistical methods:</p>
         <ul>
           <li><strong>Z-Score Analysis</strong> — measures how many standard deviations a reading is from the rolling mean. Effective for detecting sudden spikes in stable environments.</li>
           <li><strong>IQR (Interquartile Range)</strong> — identifies outliers based on the 25th and 75th percentiles. Robust against extreme values that would skew standard deviation.</li>
           <li><strong>Gradient Detection</strong> — monitors the rate of change between consecutive readings. Catches rapid transitions even if absolute values are within normal range.</li>
         </ul>
-        <p>
-          The key insight: <strong>no single method is perfect</strong>. Z-Score fails with skewed distributions. IQR is slow to respond to gradual drifts. Gradient detection can be noisy. So I made them <em>vote</em> — an anomaly is only flagged when at least 2 out of 3 methods agree. This reduces false positives by approximately 70% compared to any single method alone.
-        </p>
+        <p>The key insight: <strong>no single method is perfect</strong>. Z-Score fails with skewed distributions. IQR is slow to respond to gradual drifts. Gradient detection can be noisy. So I made them <em>vote</em> — an anomaly is only flagged when at least 2 out of 3 methods agree. This reduces false positives by approximately 70% compared to any single method alone.</p>
 
         <h2>Multi-Agent AI: Specialized by Design</h2>
-        <p>
-          Rather than one monolithic AI component, EdgeBrain uses a <strong>multi-agent architecture</strong> where each agent has a single, clear responsibility:
-        </p>
+        <p>Rather than one monolithic AI component, EdgeBrain uses a <strong>multi-agent architecture</strong> where each agent has a single, clear responsibility:</p>
         <ul>
           <li><strong>Data Agent</strong> — receives raw MQTT messages, validates that values are within realistic ranges (e.g., temperature between -40°C and 80°C), and stores them in PostgreSQL with timestamps</li>
           <li><strong>Decision Agent</strong> — subscribes to stored data, runs all registered decision strategies (threshold rules, anomaly detection, prediction analysis), and publishes decision messages</li>
           <li><strong>Action Agent</strong> — consumes decisions and executes actions: turning on lights when motion is detected, activating fans when temperature exceeds thresholds, sending alerts for detected anomalies</li>
         </ul>
-        <p>
-          Agents communicate through an internal message bus. Each agent tracks its own performance (processing time, decisions made, errors), which is visible on the dashboard. The system also supports a <strong>plugin architecture</strong> — you can write custom strategies in Python, implement two methods (<code>evaluate()</code> and <code>name</code>), and they'll be evaluated alongside the built-in ones.
-        </p>
+        <p>Agents communicate through an internal message bus. Each agent tracks its own performance (processing time, decisions made, errors), which is visible on the dashboard. The system also supports a <strong>plugin architecture</strong> — you can write custom strategies in Python, implement two methods (<code>evaluate()</code> and <code>name</code>), and they'll be evaluated alongside the built-in ones.</p>
 
         <h2>Hysteresis: Solving the Flapping Problem</h2>
-        <p>
-          A common problem in IoT automation is <strong>actuator flapping</strong> — imagine a temperature hovering right at 30°C. Without hysteresis, the fan would turn on, then the temperature drops to 29.9°C and it turns off, then 30.1°C and it turns on again. Rapid cycling that wastes energy and wears out hardware.
-        </p>
-        <p>
-          EdgeBrain implements a <strong>hysteresis model</strong>: the fan turns on at 30°C, but doesn't turn off until the temperature drops below 25°C. Similarly, lights turn on with motion detection but only turn off after 5 minutes of no motion. This simple pattern makes the system behave like a real, practical home automation setup.
-        </p>
+        <p>A common problem in IoT automation is <strong>actuator flapping</strong> — imagine a temperature hovering right at 30°C. Without hysteresis, the fan would turn on, then the temperature drops to 29.9°C and it turns off, then 30.1°C and it turns on again. Rapid cycling that wastes energy and wears out hardware.</p>
+        <p>EdgeBrain implements a <strong>hysteresis model</strong>: the fan turns on at 30°C, but doesn't turn off until the temperature drops below 25°C. Similarly, lights turn on with motion detection but only turn off after 5 minutes of no motion. This simple pattern makes the system behave like a real, practical home automation setup.</p>
 
         <h2>The Dashboard: Real-Time and Informative</h2>
-        <p>
-          The React 18 frontend provides 5 main pages:
-        </p>
+        <p>The React 18 frontend provides 5 main pages:</p>
         <ul>
           <li><strong>Dashboard</strong> — live sensor readings, device status grid, and recent alerts</li>
           <li><strong>Analytics</strong> — historical charts, anomaly timeline, and prediction trends</li>
@@ -176,23 +172,17 @@
           <li><strong>Agents</strong> — visual pipeline showing how data flows through each agent with real-time performance metrics</li>
           <li><strong>Settings</strong> — system configuration for thresholds, simulation parameters, and notification preferences</li>
         </ul>
-        <p>
-          Everything updates in real-time via WebSocket — no page refreshes needed. The design uses a dark theme that's easy on the eyes for monitoring dashboards.
-        </p>
+        <p>Everything updates in real-time via WebSocket — no page refreshes needed. The design uses a dark theme that's easy on the eyes for monitoring dashboards.</p>
 
         <h2>ESP32 Hardware Support</h2>
-        <p>
-          While the default setup uses virtual devices, EdgeBrain includes <strong>ready-to-flash ESP32 firmware</strong> written in C++ for the Arduino framework. It supports:
-        </p>
+        <p>While the default setup uses virtual devices, EdgeBrain includes <strong>ready-to-flash ESP32 firmware</strong> written in C++ for the Arduino framework. It supports:</p>
         <ul>
           <li>DHT11 temperature and humidity sensor reading</li>
           <li>PIR motion detection</li>
           <li>LED (light) and buzzer (alarm) actuator control</li>
           <li>WiFi connectivity and MQTT messaging</li>
         </ul>
-        <p>
-          Just flash the firmware, connect your sensors, and the ESP32 will stream real sensor data into the same MQTT topics that virtual devices use. The rest of the pipeline — agents, AI, dashboard — works identically whether data comes from simulated or real hardware.
-        </p>
+        <p>Just flash the firmware, connect your sensors, and the ESP32 will stream real sensor data into the same MQTT topics that virtual devices use. The rest of the pipeline — agents, AI, dashboard — works identically whether data comes from simulated or real hardware.</p>
 
         <h2>Tech Stack</h2>
         <p>Every component is free and open-source:</p>
@@ -207,26 +197,18 @@
         </ul>
 
         <h2>Setup: 2 Minutes to Running</h2>
-        <p>
-          One of my design goals was that EdgeBrain should be <strong>trivially easy to start</strong>. No manual database setup, no environment variable configuration, no build steps. Just:
-        </p>
+        <p>One of my design goals was that EdgeBrain should be <strong>trivially easy to start</strong>. No manual database setup, no environment variable configuration, no build steps. Just:</p>
         <pre style="background:#0d1117;color:#c9d1d9;padding:1rem;border-radius:8px;overflow-x:auto;font-size:0.9rem;line-height:1.6;">git clone https://github.com/rudra496/EdgeBrain.git
 cd EdgeBrain
 docker compose up --build -d
 # Open http://localhost:3000</pre>
-        <p>
-          Docker Compose spins up all 5 services (backend, frontend, PostgreSQL, Redis, Mosquitto), initializes the database schema, and starts generating simulated device data. Within seconds, the dashboard is alive with moving charts and real-time data.
-        </p>
+        <p>Docker Compose spins up all 5 services (backend, frontend, PostgreSQL, Redis, Mosquitto), initializes the database schema, and starts generating simulated device data. Within seconds, the dashboard is alive with moving charts and real-time data.</p>
 
         <h2>Testing and CI</h2>
-        <p>
-          EdgeBrain has 37 automated tests covering the core components: AI strategies (threshold, anomaly, prediction), agent pipeline, API endpoints, and data validation. GitHub Actions CI runs the full test suite on every push to ensure nothing breaks. All 37 tests pass on the current codebase.
-        </p>
+        <p>EdgeBrain has 37 automated tests covering the core components: AI strategies (threshold, anomaly, prediction), agent pipeline, API endpoints, and data validation. GitHub Actions CI runs the full test suite on every push to ensure nothing breaks. All 37 tests pass on the current codebase.</p>
 
         <h2>What's Next</h2>
-        <p>
-          EdgeBrain is at v1.0.0 and the core platform is stable. Planned improvements include:
-        </p>
+        <p>EdgeBrain is at v1.0.0 and the core platform is stable. Planned improvements include:</p>
         <ul>
           <li>More decision strategies and a strategy marketplace</li>
           <li>Support for additional sensor types (air quality, water level, gas detection)</li>
@@ -236,37 +218,50 @@ docker compose up --build -d
         </ul>
 
         <h2>Get Started</h2>
-        <p>
-          EdgeBrain is fully open-source under the MIT License. You can find the code, documentation, and Docker setup guide on GitHub:
-        </p>
+        <p>EdgeBrain is fully open-source under the MIT License. You can find the code, documentation, and Docker setup guide on GitHub:</p>
         <ul>
-          <li><strong>GitHub:</strong> <a href="https://github.com/rudra496/EdgeBrain" target="_blank" rel="noopener">github.com/rudra496/EdgeBrain</a></li>
-          <li><strong>Live Demo:</strong> <a href="https://rudra496.github.io/EdgeBrain/" target="_blank" rel="noopener">rudra496.github.io/EdgeBrain</a></li>
-          <li><strong>Release:</strong> <a href="https://github.com/rudra496/EdgeBrain/releases/tag/v1.0.0" target="_blank" rel="noopener">v1.0.0 on GitHub</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/rudra496/EdgeBrain" target="_blank" rel="noopener noreferrer">github.com/rudra496/EdgeBrain</a></li>
+          <li><strong>Live Demo:</strong> <a href="https://rudra496.github.io/EdgeBrain/" target="_blank" rel="noopener noreferrer">rudra496.github.io/EdgeBrain</a></li>
+          <li><strong>Release:</strong> <a href="https://github.com/rudra496/EdgeBrain/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">v1.0.0 on GitHub</a></li>
         </ul>
-        <p>
-          If you're working on IoT, edge computing, or AI — or just curious about how autonomous decision systems work — I'd love to hear your thoughts. Feel free to open an issue, submit a PR, or reach out to me on any of my social channels.
-        </p>
+        <p>If you're working on IoT, edge computing, or AI — or just curious about how autonomous decision systems work — I'd love to hear your thoughts. Feel free to open an issue, submit a PR, or reach out to me on any of my social channels.</p>
 
         <div style="margin-top:2rem;padding:1.5rem;background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.15);border-radius:12px;">
           <p style="margin:0;font-size:0.9rem;color:#a78bfa;font-weight:600;margin-bottom:0.5rem;">🧠 EdgeBrain v1.0.0</p>
           <p style="margin:0;font-size:0.85rem;color:#94a3b8;line-height:1.7;">
             11 IoT devices · 3 AI agents · 37 tests · $0 cost · MIT License<br>
-            <a href="https://github.com/rudra496/EdgeBrain" target="_blank" rel="noopener">GitHub</a> ·
-            <a href="https://rudra496.github.io/EdgeBrain/" target="_blank" rel="noopener">Live Demo</a> ·
-            <a href="https://github.com/rudra496/EdgeBrain/issues" target="_blank" rel="noopener">Issues</a>
+            <a href="https://github.com/rudra496/EdgeBrain" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+            <a href="https://rudra496.github.io/EdgeBrain/" target="_blank" rel="noopener noreferrer">Live Demo</a> ·
+            <a href="https://github.com/rudra496/EdgeBrain/issues" target="_blank" rel="noopener noreferrer">Issues</a>
           </p>
         </div>
 
+        <h2>Related Posts</h2>
+        <ul>
+          <li><a href="sign-talk-smart-glove-sign-language-translation.html">Team SignTalk: Translating Sign Language to Speech with a Smart Glove</a></li>
+          <li><a href="sightlineai-assistive-eyewear-visually-impaired.html">SightlineAI: Building AI-Powered Assistive Eyewear for the Visually Impaired</a></li>
+          <li><a href="pid-controllers-robotics-magic.html">PID Controllers: The Magic Behind Every Robot</a></li>
+        </ul>
+
+        <h2>Connect With Me</h2>
+        <p>Follow my work and connect across platforms:</p>
+        <ul>
+          <li><a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X / Twitter</a></li>
+          <li><a href="https://www.facebook.com/rudrasarker130" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://www.instagram.com/rudrasarker/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer"><i class="fas fa-flask"></i> ResearchGate</a></li>
+        </ul>
       </section>
+      <a href="../blog.html" class="back-to-gallery" aria-label="Back to Blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
     </article>
   </main>
-
   <footer class="footer">
     <p>&copy; 2026 Rudra Sarker. All rights reserved.</p>
   </footer>
-
   <script defer src="../main.js"></script>
-  <script defer src="../background.js"></script>
+  <script defer src="../js/script.js"></script>
 </body>
 </html>
