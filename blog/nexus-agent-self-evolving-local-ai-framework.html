@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NexusAgent: The Zero-Config, Self-Evolving Local AI Agent Framework</title>
+  <meta name="description" content="An in-depth look at NexusAgent — a privacy-first, self-evolving local AI agent framework with GraphRAG memory, auto skill generation, multi-agent orchestration, voice interface, cloud sync, and IDE integration. Built with Python, LiteLLM, and Ollama." />
+  <meta name="keywords" content="NexusAgent, AI agent framework, local AI, self-evolving AI, GraphRAG, Ollama, LiteLLM, multi-agent, privacy-first, Python, open source, autonomous agent, skill generation, voice interface, IDE integration" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/nexus-agent-self-evolving-local-ai-framework.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="NexusAgent: The Zero-Config, Self-Evolving Local AI Agent Framework" />
+  <meta property="og:description" content="How NexusAgent combines GraphRAG memory, auto skill generation, multi-agent orchestration, voice, cloud sync, and IDE integration into a privacy-first local AI framework that runs entirely on your machine." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/nexus-agent-self-evolving-local-ai-framework.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-04-18" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NexusAgent: The Zero-Config, Self-Evolving Local AI Agent Framework" />
+  <meta name="twitter:description" content="A deep dive into NexusAgent — a privacy-first local AI agent with GraphRAG memory, auto skills, multi-agent orchestration, voice, and IDE integration." />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "NexusAgent: The Zero-Config, Self-Evolving Local AI Agent Framework",
+    "description": "How NexusAgent combines GraphRAG memory, auto skill generation, multi-agent orchestration, voice, cloud sync, and IDE integration into a privacy-first local AI framework.",
+    "url": "https://rudra496.github.io/site/blog/nexus-agent-self-evolving-local-ai-framework.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-04-18",
+    "dateModified": "2026-04-18",
+    "author": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "keywords": ["NexusAgent", "AI agent", "local AI", "GraphRAG", "Ollama", "LiteLLM", "self-evolving", "multi-agent", "privacy", "open source", "Python"]
+  }
+  </script>
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rudra496.github.io/site/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rudra496.github.io/site/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "Open Source & Development", "item": "https://rudra496.github.io/site/blog.html#cat-opensource"},
+      {"@type": "ListItem", "position": 4, "name": "NexusAgent: Self-Evolving Local AI Framework", "item": "https://rudra496.github.io/site/blog/nexus-agent-self-evolving-local-ai-framework.html"}
+    ]
+  }
+  </script>
+  <!-- JSON-LD: SoftwareSourceCode -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "NexusAgent",
+    "description": "The Zero-Config, Self-Evolving Local AI Agent Framework",
+    "programmingLanguage": "Python",
+    "codeRepository": "https://github.com/rudra496/nexus-agent",
+    "author": {"@type": "Person", "name": "Rudra Sarker"},
+    "license": "https://opensource.org/licenses/MIT"
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="../index.html" class="nav-brand">RUDRA SARKER</a>
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../projects.html" class="nav-link">Projects</a></li>
+        <li><a href="../gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="../blog.html" class="nav-link active" aria-current="page">Blog</a></li>
+        <li><a href="../blog/media-coverage-achievements-rudra-sarker.html" class="nav-link">In The Press</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <article class="project-detail">
+      <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 50%, #667eea 100%); padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 8px; text-align: center;">
+        <h1 style="color: #0a0a1a; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">NexusAgent: The Zero-Config, Self-Evolving Local AI Agent Framework</h1>
+      </div>
+      <nav aria-label="Breadcrumb" style="font-size:0.9rem;margin-bottom:1.5rem;padding:0 1rem;">
+        <a href="../index.html">Home</a> &raquo; <a href="../blog.html">Blog</a> &raquo; <a href="../blog.html#cat-opensource">Open Source &amp; Development</a>
+      </nav>
+      <p style="font-size: 1rem; color: var(--text-color); margin: 0 1rem 2rem; font-style: italic;">
+        By Rudra Sarker &bull; Published April 18, 2026
+      </p>
+      <section class="project-content" style="padding: 0 1rem;">
+
+        <h2>Introduction</h2>
+        <p>The AI agent landscape is booming — but most frameworks share the same problem: they send your data to the cloud, require complex configuration, and can't improve themselves over time. <strong>NexusAgent</strong> takes a fundamentally different approach. It's a <strong>zero-config, self-evolving local AI agent framework</strong> that runs entirely on your machine, learns from your workflows, and generates its own skills as it goes.</p>
+        <p>In this post, I'll walk through the architecture, design decisions, and technical implementation behind NexusAgent v1.0 — an open-source Python framework that combines <strong>GraphRAG memory</strong>, <strong>auto skill generation</strong>, <strong>multi-agent orchestration</strong>, <strong>voice interaction</strong>, <strong>encrypted cloud sync</strong>, <strong>IDE integration</strong>, and a <strong>skill marketplace</strong> into one cohesive system.</p>
+
+        <h2>Why Build Another AI Agent Framework?</h2>
+        <p>Existing tools like AutoGPT, CrewAI, and LangChain are powerful — but they each have trade-offs:</p>
+        <ul>
+          <li><strong>Cloud dependency:</strong> Most agents require API keys and send data to external services. For privacy-sensitive workflows (code review of proprietary repos, personal document analysis, healthcare data), this is a dealbreaker.</li>
+          <li><strong>Manual configuration:</strong> Setting up agents often involves YAML files, environment variables, and dependency chains that take hours to debug.</li>
+          <li><strong>Static behavior:</strong> Agents do what you tell them, but they don't learn from past interactions or improve their own capabilities.</li>
+          <li><strong>No memory:</strong> Context windows reset between sessions. There's no persistent understanding of your codebase, preferences, or workflow patterns.</li>
+        </ul>
+        <p>NexusAgent addresses all four: it runs 100% locally via <strong>Ollama</strong> or any LiteLLM-compatible provider, requires <strong>zero configuration</strong> to start, <strong>evolves its own skills</strong> based on usage patterns, and maintains a <strong>GraphRAG-powered memory graph</strong> that persists across sessions.</p>
+
+        <h2>Architecture Overview</h2>
+        <p>NexusAgent is built as a modular Python framework with 11 core modules:</p>
+        <ul>
+          <li><strong>agent.py</strong> — Core agent loop with LiteLLM integration</li>
+          <li><strong>memory.py</strong> — GraphRAG memory engine using NetworkX</li>
+          <li><strong>skills.py</strong> — Auto skill generation and skill tree management</li>
+          <li><strong>config.py</strong> — Zero-config setup with YAML configuration</li>
+          <li><strong>plugins.py</strong> — Plugin system with hook-based lifecycle</li>
+          <li><strong>sandbox.py</strong> — Sandboxed code execution for safe skill testing</li>
+          <li><strong>multi_agent.py</strong> — Multi-agent orchestration with role-based routing</li>
+          <li><strong>voice.py</strong> — Voice interface (Whisper STT + pyttsx3/edge-tts TTS)</li>
+          <li><strong>ast_memory.py</strong> — AST-aware code analysis for structural understanding</li>
+          <li><strong>context_manager.py</strong> — Token-aware context window management</li>
+          <li><strong>ide.py</strong> — IDE integration via JSON-RPC (VS Code, JetBrains)</li>
+          <li><strong>cloud_sync.py</strong> — Encrypted cloud sync (Fernet, S3, WebDAV)</li>
+          <li><strong>audit.py</strong> — Structured audit logging with RBAC</li>
+          <li><strong>marketplace.py</strong> — Skill and plugin marketplace</li>
+          <li><strong>benchmarks.py</strong> — Performance benchmark suite</li>
+          <li><strong>mobile.py</strong> — REST API with JWT auth for mobile access</li>
+        </ul>
+
+        <h2>GraphRAG Memory: How Your Agent Remembers</h2>
+        <p>Traditional agents use vector databases for retrieval. NexusAgent uses a <strong>graph-based approach</strong> built on NetworkX, where entities are nodes and relationships are edges. This means your agent doesn't just find similar text — it understands <em>connections</em> between concepts.</p>
+        <p>For example, if you ask about a function in your codebase, NexusAgent's memory graph can trace: <em>function → file → module → dependency → related bug → past fix</em>. This contextual retrieval produces far more relevant results than simple embedding similarity.</p>
+        <p>The graph persists to disk (<code>~/.nexus/memory/</code>) and grows with each interaction. Over time, it builds a rich structural understanding of your projects, preferences, and workflows.</p>
+
+        <h2>Auto Skill Generation: The Self-Evolving Engine</h2>
+        <p>Here's where NexusAgent gets genuinely interesting. When the agent encounters a task it can't handle, it doesn't just fail — it <strong>generates a new skill</strong>:</p>
+        <ol>
+          <li><strong>Task analysis:</strong> The LLM analyzes the task and determines what capability is needed</li>
+          <li><strong>Skill synthesis:</strong> A Python skill module is generated with the required logic</li>
+          <li><strong>Sandbox testing:</strong> The new skill is tested in an isolated sandbox before being added to the skill tree</li>
+          <li><strong>Skill registration:</strong> If tests pass, the skill is registered and available for future use</li>
+        </ol>
+        <p>This means your agent literally gets smarter the more you use it. After weeks of use, your NexusAgent instance will have a unique set of custom skills tailored to your specific workflows.</p>
+
+        <h2>Multi-Agent Orchestration</h2>
+        <p>Sometimes one agent isn't enough. NexusAgent v1.0 includes a full <strong>multi-agent orchestration engine</strong>:</p>
+        <ul>
+          <li><strong>6 built-in roles:</strong> coder, reviewer, tester, planner, researcher, and general</li>
+          <li><strong>Role-based routing:</strong> Tasks are automatically routed to the agent with the matching role</li>
+          <li><strong>Load balancing:</strong> When multiple agents can handle a task, the least-loaded one is selected</li>
+          <li><strong>Collaborative memory:</strong> Agents share a common memory graph and state</li>
+          <li><strong>Message bus:</strong> Agents can communicate via broadcast and direct messaging</li>
+          <li><strong>Priority queue:</strong> Tasks are processed by priority with retry logic</li>
+        </ul>
+        <p>Setup is simple — register agents with <code>nexus agents register --name coder --role coder</code> and submit tasks with <code>nexus agents submit "Fix the auth bug"</code>.</p>
+
+        <h2>Voice Interface</h2>
+        <p>NexusAgent supports full voice interaction through a modular voice engine:</p>
+        <ul>
+          <li><strong>Speech-to-Text:</strong> Whisper (local model or API) with configurable recording duration</li>
+          <li><strong>Text-to-Speech:</strong> pyttsx3 (fully offline) or edge-tts (high-quality cloud TTS)</li>
+          <li><strong>Mock engine:</strong> Default mode that works without any external dependencies — great for testing</li>
+        </ul>
+        <p>Run <code>nexus voice</code> to start a voice conversation loop with your agent. No cloud required if you use Whisper local + pyttsx3.</p>
+
+        <h2>IDE Integration</h2>
+        <p>The IDE module provides a JSON-RPC server that any editor extension can connect to. Currently supported:</p>
+        <ul>
+          <li><strong>VS Code:</strong> Extension manifest generator included — generates a ready-to-publish VS Code extension</li>
+          <li><strong>JetBrains:</strong> Architecture is language-agnostic, ready for IntelliJ/PyCharm plugin development</li>
+          <li><strong>Any LSP-compatible editor:</strong> Neovim, Vim, Emacs — via the generic IDEClient API</li>
+        </ul>
+        <p>Features include code completions, diagnostics, code actions, and natural language commands like "explain this function" or "fix this bug."</p>
+
+        <h2>Enterprise-Grade Features</h2>
+        <p>For teams and organizations, NexusAgent v1.0 includes:</p>
+        <ul>
+          <li><strong>Encrypted cloud sync:</strong> Sync skills, memory, and config across machines using Fernet symmetric encryption. Supports local, S3-compatible, and WebDAV targets with delta sync and conflict resolution.</li>
+          <li><strong>Audit logging:</strong> Every agent action is logged in structured JSON-lines format with severity levels (info, warning, error, security) and automatic rotation.</li>
+          <li><strong>RBAC:</strong> Role-based access control with admin, user, and viewer roles. Permission checks on sensitive operations ensure agents can't exceed their authorization.</li>
+          <li><strong>Benchmark suite:</strong> Measure performance of individual components — memory retrieval, skill execution, context building, AST parsing — and compare across runs.</li>
+        </ul>
+
+        <h2>Skill Marketplace</h2>
+        <p>Don't want to wait for auto-generation? The <strong>built-in marketplace</strong> lets you discover and install community skills:</p>
+        <ul>
+          <li><strong>6 categories:</strong> code-quality, data-processing, devops, research, web, security</li>
+          <li><strong>Search &amp; filter:</strong> Find skills by name, tag, or category</li>
+          <li><strong>Install &amp; rate:</strong> One-command install with community ratings</li>
+          <li><strong>Local cache:</strong> Installed skills work offline</li>
+        </ul>
+        <p>Commands: <code>nexus marketplace search docker</code>, <code>nexus marketplace install linter_plus</code></p>
+
+        <h2>CLI Reference</h2>
+        <p>NexusAgent exposes 20+ CLI commands organized in logical groups:</p>
+        <table style="width:100%;border-collapse:collapse;margin:1rem 0;">
+          <thead><tr style="border-bottom:2px solid var(--text-color);"><th style="text-align:left;padding:0.5rem;">Command</th><th style="text-align:left;padding:0.5rem;">Description</th></tr></thead>
+          <tbody>
+            <tr><td style="padding:0.4rem;"><code>nexus run "task"</code></td><td style="padding:0.4rem;">Run a single agent task</td></tr>
+            <tr><td style="padding:0.4rem;"><code>nexus evolve</code></td><td style="padding:0.4rem;">Trigger skill self-evolution</td></tr>
+            <tr><td style="padding:0.4rem;"><code>nexus status</code></td><td style="padding:0.4rem;">Show agent status and memory stats</td></tr>
+            <tr><td style="padding:0.4rem;"><code>nexus skills list</code></td><td style="padding:0.4rem;">List all registered skills</td></tr>
+            <tr><td style="padding:0.4rem;"><code>nexus analyze .</code></td><td style="padding:0.4rem;">AST-aware code analysis of a directory</td></tr>
+            <tr><td style="padding:0.4rem;"><code>nexus voice</code></td><td style="padding:0.4rem;">Start voice conversation loop</td></tr>
+            <tr><td style="padding:0.4rem;"><code>nexus agents register</code></td><td style="padding:0.4rem;">Register a new agent with a role</td></tr>
+            <tr><td style="padding:0.4rem;"><code>nexus sync push</code></td><td style="padding:0.4rem;">Encrypted sync to cloud target</td></tr>
+            <tr><td style="padding:0.4rem;"><code>nexus marketplace search</code></td><td style="padding:0.4rem;">Search the skill marketplace</td></tr>
+            <tr><td style="padding:0.4rem;"><code>nexus benchmark run</code></td><td style="padding:0.4rem;">Run performance benchmarks</td></tr>
+            <tr><td style="padding:0.4rem;"><code>nexus audit log</code></td><td style="padding:0.4rem;">View structured audit logs</td></tr>
+            <tr><td style="padding:0.4rem;"><code>nexus mobile serve</code></td><td style="padding:0.4rem;">Start mobile companion REST API</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Quick Start</h2>
+        <p>Getting started takes literally one command:</p>
+        <pre style="background:var(--bg-color,#1a1a2e);color:var(--text-color);padding:1rem;border-radius:6px;overflow-x:auto;font-size:0.9rem;"><code>pip install nexus-agent
+nexus run "Explain this codebase"</code></pre>
+        <p>That's it. No API keys, no config files, no setup wizard. NexusAgent auto-detects Ollama on localhost and starts building its memory graph immediately.</p>
+        <p>For more configuration options, create <code>~/.nexus/config.yaml</code>:</p>
+        <pre style="background:var(--bg-color,#1a1a2e);color:var(--text-color);padding:1rem;border-radius:6px;overflow-x:auto;font-size:0.9rem;"><code>llm:
+  model: ollama/llama3
+  temperature: 0.7
+
+memory:
+  backend: networkx
+  max_nodes: 10000
+
+plugins:
+  directory: ~/.nexus/plugins
+  auto_load: true</code></pre>
+
+        <h2>Running with Docker</h2>
+        <pre style="background:var(--bg-color,#1a1a2e);color:var(--text-color);padding:1rem;border-radius:6px;overflow-x:auto;font-size:0.9rem;"><code>docker compose up -d
+docker compose exec nexus nexus run "Analyze this project"</code></pre>
+        <p>A full <code>Dockerfile</code> and <code>docker-compose.yml</code> are included in the repository, configured for both CPU and GPU inference.</p>
+
+        <h2>Testing &amp; CI/CD</h2>
+        <p>NexusAgent takes quality seriously:</p>
+        <ul>
+          <li><strong>140+ tests</strong> covering all modules (agent, memory, skills, multi-agent, voice, AST, context, IDE, cloud sync, audit, marketplace, benchmarks, mobile)</li>
+          <li><strong>CI pipeline:</strong> Runs on Python 3.10, 3.11, 3.12 with linting (flake8) and full test suite</li>
+          <li><strong>CodeQL:</strong> GitHub's security analysis for vulnerability detection</li>
+          <li><strong>Dependabot:</strong> Automated dependency updates with weekly checks</li>
+          <li><strong>Release workflow:</strong> Automated PyPI publishing on version tags</li>
+        </ul>
+
+        <h2>How NexusAgent Compares</h2>
+        <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem;">
+          <thead><tr style="border-bottom:2px solid var(--text-color);"><th style="text-align:left;padding:0.5rem;">Feature</th><th style="text-align:center;padding:0.5rem;">NexusAgent</th><th style="text-align:center;padding:0.5rem;">AutoGPT</th><th style="text-align:center;padding:0.5rem;">CrewAI</th><th style="text-align:center;padding:0.5rem;">Continue.dev</th></tr></thead>
+          <tbody>
+            <tr><td style="padding:0.4rem;">100% Local</td><td style="text-align:center;padding:0.4rem;">✅</td><td style="text-align:center;padding:0.4rem;">⚠️</td><td style="text-align:center;padding:0.4rem;">⚠️</td><td style="text-align:center;padding:0.4rem;">✅</td></tr>
+            <tr><td style="padding:0.4rem;">Zero Config</td><td style="text-align:center;padding:0.4rem;">✅</td><td style="text-align:center;padding:0.4rem;">❌</td><td style="text-align:center;padding:0.4rem;">❌</td><td style="text-align:center;padding:0.4rem;">⚠️</td></tr>
+            <tr><td style="padding:0.4rem;">GraphRAG Memory</td><td style="text-align:center;padding:0.4rem;">✅</td><td style="text-align:center;padding:0.4rem;">⚠️</td><td style="text-align:center;padding:0.4rem;">❌</td><td style="text-align:center;padding:0.4rem;">❌</td></tr>
+            <tr><td style="padding:0.4rem;">Self-Evolving Skills</td><td style="text-align:center;padding:0.4rem;">✅</td><td style="text-align:center;padding:0.4rem;">❌</td><td style="text-align:center;padding:0.4rem;">❌</td><td style="text-align:center;padding:0.4rem;">❌</td></tr>
+            <tr><td style="padding:0.4rem;">Multi-Agent</td><td style="text-align:center;padding:0.4rem;">✅</td><td style="text-align:center;padding:0.4rem;">❌</td><td style="text-align:center;padding:0.4rem;">✅</td><td style="text-align:center;padding:0.4rem;">❌</td></tr>
+            <tr><td style="padding:0.4rem;">Voice Interface</td><td style="text-align:center;padding:0.4rem;">✅</td><td style="text-align:center;padding:0.4rem;">❌</td><td style="text-align:center;padding:0.4rem;">❌</td><td style="text-align:center;padding:0.4rem;">❌</td></tr>
+            <tr><td style="padding:0.4rem;">IDE Integration</td><td style="text-align:center;padding:0.4rem;">✅</td><td style="text-align:center;padding:0.4rem;">❌</td><td style="text-align:center;padding:0.4rem;">❌</td><td style="text-align:center;padding:0.4rem;">✅</td></tr>
+            <tr><td style="padding:0.4rem;">Encrypted Sync</td><td style="text-align:center;padding:0.4rem;">✅</td><td style="text-align:center;padding:0.4rem;">❌</td><td style="text-align:center;padding:0.4rem;">❌</td><td style="text-align:center;padding:0.4rem;">⚠️</td></tr>
+            <tr><td style="padding:0.4rem;">Skill Marketplace</td><td style="text-align:center;padding:0.4rem;">✅</td><td style="text-align:center;padding:0.4rem;">❌</td><td style="text-align:center;padding:0.4rem;">❌</td><td style="text-align:center;padding:0.4rem;">❌</td></tr>
+            <tr><td style="padding:0.4rem;">Open Source</td><td style="text-align:center;padding:0.4rem;">✅ MIT</td><td style="text-align:center;padding:0.4rem;">✅ MIT</td><td style="text-align:center;padding:0.4rem;">✅ MIT</td><td style="text-align:center;padding:0.4rem;">✅ Apache</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.85rem;color:var(--text-color,#666);font-style:italic;">Comparison based on publicly available documentation as of April 2026. ✅ = full support, ⚠️ = partial/support via plugins, ❌ = not available.</p>
+
+        <h2>What's Next</h2>
+        <p>NexusAgent v1.0 is a production release, but development continues. The roadmap includes:</p>
+        <ul>
+          <li>GPU-accelerated inference integration for faster local processing</li>
+          <li>Federated learning across multiple NexusAgent instances</li>
+          <li>Natural language skill creation — describe what you want in plain English</li>
+          <li>Autonomous project management capabilities</li>
+          <li>Custom fine-tuned models optimized for NexusAgent workflows</li>
+        </ul>
+
+        <h2>Contributing</h2>
+        <p>NexusAgent is open source under the MIT license. Contributions are welcome:</p>
+        <ul>
+          <li>⭐ Star the repo: <a href="https://github.com/rudra496/nexus-agent" target="_blank" rel="noopener">github.com/rudra496/nexus-agent</a></li>
+          <li>🐛 Report issues via GitHub issue templates (bug, feature, question)</li>
+          <li>🔧 Submit PRs — the codebase follows standard Python conventions with pytest and flake8</li>
+          <li>📝 Improve documentation in the <code>docs/</code> directory</li>
+          <li>🔌 Build and share skills through the marketplace</li>
+        </ul>
+
+        <h2>Links</h2>
+        <ul>
+          <li><strong>Repository:</strong> <a href="https://github.com/rudra496/nexus-agent" target="_blank" rel="noopener">github.com/rudra496/nexus-agent</a></li>
+          <li><strong>Documentation:</strong> <a href="https://rudra496.github.io/nexus-agent" target="_blank" rel="noopener">rudra496.github.io/nexus-agent</a></li>
+          <li><strong>Author:</strong> <a href="https://rudra496.github.io/site/" target="_blank" rel="noopener">Rudra Sarker</a></li>
+          <li><strong>Twitter:</strong> <a href="https://x.com/Rudra496" target="_blank" rel="noopener">@Rudra496</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener">Rudra Sarker</a></li>
+        </ul>
+
+      </section>
+    </article>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2026 Rudra Sarker. All rights reserved.</p>
+  </footer>
+  <script src="../main.js"></script>
+</body>
+</html>
