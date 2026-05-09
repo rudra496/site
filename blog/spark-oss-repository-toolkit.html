@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spark: A Zero-Dependency Open-Source Repository Health Toolkit</title>
+  <meta name="description" content="How I built Spark -- a pure Python stdlib CLI toolkit with zero runtime dependencies that scores open-source repository health from 0-100, supports plugins, and speaks three languages. Built for developers who care about maintainability." />
+  <meta name="keywords" content="Spark, repository health, open source toolkit, CLI tool, Python, zero dependencies, stdlib, maturity scoring, plugin system, developer tools, CI integration, mypy strict, repository assessment, Rudra Sarker, open source, Python 3.10" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/spark-oss-repository-toolkit.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Spark: A Zero-Dependency Repository Health Toolkit" />
+  <meta property="og:description" content="A pure Python stdlib CLI that scores OSS repository health 0-100 with zero runtime deps, plugin support, and i18n. Built by Rudra Sarker." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/spark-oss-repository-toolkit.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-05-09" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Spark: Zero-Dep Repository Health CLI" />
+  <meta name="twitter:description" content="Score OSS repos 0-100 with zero runtime deps, plugins, and 3 languages. Pure Python stdlib. By @Rudra496" />
+  <meta name="twitter:creator" content="@Rudra496" />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Spark: A Zero-Dependency Open-Source Repository Health Toolkit",
+    "description": "How I built Spark -- a pure Python stdlib CLI toolkit with zero runtime dependencies that scores open-source repository health from 0-100, supports plugins, and speaks three languages.",
+    "url": "https://rudra496.github.io/site/blog/spark-oss-repository-toolkit.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-05-09",
+    "dateModified": "2026-05-09",
+    "author": {
+      "@type": "Person",
+      "name": "Rudra Sarker",
+      "url": "https://rudra496.github.io/site/",
+      "sameAs": [
+        "https://github.com/rudra496",
+        "https://www.linkedin.com/in/rudrasarker",
+        "https://x.com/Rudra496",
+        "https://dev.to/rudra_sarker",
+        "https://www.researchgate.net/profile/Rudra-Sarker-3",
+        "https://youtube.com/@rudrasarker9732"
+      ]
+    },
+    "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "keywords": ["Spark", "repository health", "open source", "CLI tool", "Python", "zero dependencies", "stdlib", "developer tools", "maturity scoring", "plugin system"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rudra496.github.io/site/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rudra496.github.io/site/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "Developer Tools", "item": "https://rudra496.github.io/site/blog.html#cat-tools"},
+      {"@type": "ListItem", "position": 4, "name": "Spark: OSS Repository Toolkit", "item": "https://rudra496.github.io/site/blog/spark-oss-repository-toolkit.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="../index.html" class="nav-brand">RUDRA SARKER</a>
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../projects.html" class="nav-link">Projects</a></li>
+        <li><a href="../gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="../blog.html" class="nav-link active" aria-current="page">Blog</a></li>
+        <li><a href="../blog/media-coverage-achievements-rudra-sarker.html" class="nav-link">In The Press</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <article class="project-detail">
+      <div style="background: linear-gradient(135deg, #0a0a1a 0%, #1a1040 30%, #0a2a3a 60%, #0a0a1a 100%); padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 8px; text-align: center;">
+        <span class="project-tag" style="margin-bottom: 1rem;">Developer Tools · Open Source · Python</span>
+        <h1 style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">Spark: A Zero-Dependency Open-Source Repository Health Toolkit</h1>
+      </div>
+      <nav aria-label="Breadcrumb" style="font-size:0.9rem;margin-bottom:1.5rem;padding:0 1rem;">
+        <a href="../index.html">Home</a> &raquo; <a href="../blog.html">Blog</a> &raquo; <a href="../blog.html#cat-tools">Developer Tools</a>
+      </nav>
+      <p style="font-size: 1rem; color: var(--text-color); margin: 0 1rem 2rem; font-style: italic;">
+        By Rudra Sarker &bull; Published May 9, 2026
+      </p>
+      <section class="project-content" style="padding: 0 1rem;">
+
+        <h2>Why Repository Health Matters</h2>
+        <p>There are over 400 million repositories on GitHub. The vast majority are abandoned -- half-finished projects with no README, no license, no CI, and no documentation. Even among active projects, there is enormous variation in quality. Some repositories are exemplary: clean structure, comprehensive docs, automated testing, consistent contribution guidelines. Others are functional but opaque -- the code works, but onboarding a new contributor requires tribal knowledge that only exists in the maintainer's head.</p>
+        <p>Repository health is not just aesthetics. It directly affects adoption. A developer evaluating two libraries that solve the same problem will choose the one with better documentation, clearer licensing, and visible CI badges every time. Health scores also help maintainers prioritize -- if your project scores 45 out of 100, the report tells you exactly which improvements will move the needle the most.</p>
+        <p>Existing tools tackle pieces of this problem. There are linters, security scanners, documentation generators, and compliance checkers. But most of them require installing a dependency chain that pulls in dozens of packages. For a tool whose entire purpose is to assess whether your repository is well-organized, requiring a bloated dependency tree feels counterproductive. I wanted something lighter.</p>
+
+        <h2>Zero-Dependency Philosophy</h2>
+        <p>Spark has <strong>zero runtime dependencies</strong>. Every line of functionality is built on Python's standard library. No third-party packages, no pip install cascades, no version conflict nightmares. If you have Python 3.10 or later installed, Spark works.</p>
+        <pre style="background:#0d1117;color:#c9d1d9;padding:1rem;border-radius:8px;overflow-x:auto;font-size:0.9rem;line-height:1.6;">pip install spark-oss-repo-toolkit
+# That's it. Zero additional packages installed.</pre>
+        <p>This was a deliberate design choice with real tradeoffs. Using only stdlib means I had to implement things that libraries like <code>rich</code> or <code>click</code> would provide out of the box -- terminal formatting, argument parsing helpers, color output. But the benefit is significant: Spark will never break because a transitive dependency released a backwards-incompatible change. It will never conflict with your project's own dependencies. It will never surprise you with a supply-chain vulnerability in an indirect dependency.</p>
+        <p>The codebase is also <strong>mypy strict-compatible</strong>. Every function has explicit type annotations, and the entire project passes <code>mypy --strict</code> with zero errors. For a developer tool that assesses code quality, holding itself to the same standard is non-negotiable.</p>
+
+        <h2>How Scoring Works</h2>
+        <p>Spark provides <strong>8 CLI commands</strong>, each serving a distinct purpose in the repository assessment workflow:</p>
+        <ul>
+          <li><strong>validate</strong> -- Checks for required files: README, LICENSE, CONTRIBUTING guide, CODE_OF_CONDUCT, changelog</li>
+          <li><strong>assess</strong> -- Runs a comprehensive evaluation and produces a 0-100 maturity score</li>
+          <li><strong>discover</strong> -- Maps the repository structure and identifies missing conventions</li>
+          <li><strong>scaffold</strong> -- Generates missing standard files from templates</li>
+          <li><strong>health</strong> -- Quick health check with pass/fail indicators across key dimensions</li>
+          <li><strong>locales</strong> -- Manages internationalization strings</li>
+          <li><strong>integration-links</strong> -- Verifies links to CI services, documentation sites, and package registries</li>
+          <li><strong>version</strong> -- Displays version and environment information</li>
+        </ul>
+        <p>The <code>assess</code> command is the centerpiece. It evaluates the repository across multiple dimensions -- documentation completeness, license clarity, CI configuration, code organization, issue and PR templates, security policy, and community health files -- then produces a single numerical score from 0 to 100. The output includes both the aggregate score and a breakdown showing where points were gained and lost, along with specific recommendations for improvement.</p>
+        <pre style="background:#0d1117;color:#c9d1d9;padding:1rem;border-radius:8px;overflow-x:auto;font-size:0.9rem;line-height:1.6;">$ spark assess ./my-project
+
+Repository Assessment: my-project
+================================
+Overall Score: 72 / 100
+
+Strengths:
+  - README with installation and usage sections
+  - MIT License detected
+  - CI workflow present (GitHub Actions)
+
+Recommendations:
+  - Add CONTRIBUTING.md (score +8)
+  - Add SECURITY.md policy (score +5)
+  - Include issue templates (score +4)
+  - Add CODE_OF_CONDUCT.md (score +3)</pre>
+        <p>The scoring weights are designed to reflect what matters most for open-source adoption. Documentation and licensing carry the highest weight because they are the first things potential users and contributors check. CI configuration and community health files follow, because they signal active maintenance and a welcoming contributor experience.</p>
+
+        <h2>CI Integration</h2>
+        <p>Spark is designed to run in CI pipelines. Because it has zero dependencies, adding it to your GitHub Actions workflow is a single line -- no caching setup, no dependency installation step, no virtual environment management. The tool exits with a non-zero code when the health score falls below a configurable threshold, making it a natural gatekeeper in branch protection rules.</p>
+        <pre style="background:#0d1117;color:#c9d1d9;padding:1rem;border-radius:8px;overflow-x:auto;font-size:0.9rem;line-height:1.6;"># .github/workflows/spark-health.yml
+name: Repository Health Check
+on: [push, pull_request]
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: pip install spark-oss-repo-toolkit
+      - run: spark assess . --min-score 60</pre>
+        <p>This setup fails the CI build if the repository health drops below 60. You can adjust the threshold based on your standards. For mature projects, setting it to 80 or higher ensures that any PR that removes a community health file or breaks documentation structure gets caught automatically.</p>
+
+        <h2>Plugin System</h2>
+        <p>No single tool can anticipate every dimension of repository quality that every team cares about. Some teams prioritize accessibility compliance. Others care about containerization best practices. Some want to enforce specific documentation formats.</p>
+        <p>Spark addresses this with a plugin system built around the <strong>SparkPlugin</strong> base class. Writing a custom check is straightforward:</p>
+        <pre style="background:#0d1117;color:#c9d1d9;padding:1rem;border-radius:8px;overflow-x:auto;font-size:0.9rem;line-height:1.6;">from spark.plugin import SparkPlugin
+
+class AccessibilityCheck(SparkPlugin):
+    name = "accessibility"
+    description = "Checks for accessibility documentation"
+
+    def run(self, repo_path: str) -> dict:
+        # Custom logic here
+        return {
+            "score": 85,
+            "details": "Accessibility statement found",
+            "recommendations": ["Add ARIA labels documentation"]
+        }</pre>
+        <p>Plugins integrate seamlessly into the existing <code>assess</code> command. When Spark discovers a plugin, it extends its scoring rubric to include the plugin's dimensions. The final report merges the built-in scores with plugin scores, giving you a unified health assessment that reflects your organization's specific requirements.</p>
+
+        <h2>Internationalization</h2>
+        <p>Open source is global. Spark ships with built-in support for <strong>three languages: English, Spanish, and French</strong>. All user-facing strings -- CLI output, assessment reports, recommendations -- can be displayed in any of the supported languages. The i18n system uses standard Python gettext conventions, and the <code>locales</code> command manages translation files.</p>
+        <p>This matters because developer tooling should not assume English proficiency. A maintainer in Latin America should be able to run a repository assessment and get actionable recommendations in Spanish. The goal is to lower the barrier to good open-source practices for the widest possible audience.</p>
+
+        <h2>Get Started</h2>
+        <p>Spark is open-source under the MIT License. Install it, assess your repositories, and start improving your open-source health:</p>
+        <ul>
+          <li><strong>GitHub:</strong> <a href="https://github.com/rudra496/spark" target="_blank" rel="noopener noreferrer">github.com/rudra496/spark</a></li>
+          <li><strong>Documentation:</strong> <a href="https://rudra496.github.io/spark/" target="_blank" rel="noopener noreferrer">rudra496.github.io/spark</a></li>
+        </ul>
+
+        <div style="margin-top:2rem;padding:1.5rem;background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.15);border-radius:12px;">
+          <p style="margin:0;font-size:0.9rem;color:#a78bfa;font-weight:600;margin-bottom:0.5rem;">Spark OSS Repository Toolkit</p>
+          <p style="margin:0;font-size:0.85rem;color:#94a3b8;line-height:1.7;">
+            8 CLI Commands &middot; Zero Runtime Dependencies &middot; 0-100 Scoring &middot; Plugin System<br>
+            mypy Strict &middot; 3 Languages &middot; Python 3.10+ &middot; MIT License<br>
+            <a href="https://github.com/rudra496/spark" target="_blank" rel="noopener noreferrer">GitHub</a> &middot;
+            <a href="https://rudra496.github.io/spark/" target="_blank" rel="noopener noreferrer">Docs</a>
+          </p>
+        </div>
+
+        <h2>Related Posts</h2>
+        <ul>
+          <li><a href="edgebrain-ai-edge-intelligence-platform.html">EdgeBrain: Building a Free, Open-Source AI-Powered Edge Intelligence Platform</a></li>
+          <li><a href="codevista-code-analysis-scanner.html">CodeVista: Code Analysis and Scanner</a></li>
+          <li><a href="devroadmaps-free-developer-roadmaps.html">DevRoadmaps: Free Developer Roadmaps</a></li>
+        </ul>
+
+        <h2>Connect With Me</h2>
+        <p>Follow my work and connect across platforms:</p>
+        <ul>
+          <li><a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X / Twitter</a></li>
+          <li><a href="https://www.facebook.com/rudrasarker130" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://www.instagram.com/rudrasarker/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer"><i class="fas fa-flask"></i> ResearchGate</a></li>
+        </ul>
+      </section>
+      <a href="../blog.html" class="back-to-gallery" aria-label="Back to Blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </article>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2026 Rudra Sarker. All rights reserved.</p>
+  </footer>
+  <script defer src="../main.js"></script>
+  <script defer src="../js/script.js"></script>
+</body>
+</html>

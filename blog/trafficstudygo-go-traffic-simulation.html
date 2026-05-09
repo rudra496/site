@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TrafficStudyGo: Educational Network Traffic Analysis and Defensive Research in Go</title>
+  <meta name="description" content="How I built TrafficStudyGo -- an educational Go project for understanding network traffic behavior, rate limiting, WAF responses, and defensive security mechanisms. A Go port of TrafficStudy for offline learning." />
+  <meta name="keywords" content="TrafficStudyGo, network traffic analysis, Go, Golang, educational security, rate limiting, WAF behavior, defensive security research, network education, firewall responses, latency analysis, Rudra Sarker, open source, TEUL" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/trafficstudygo-go-traffic-simulation.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="TrafficStudyGo: Educational Network Traffic Analysis and Defensive Research in Go" />
+  <meta property="og:description" content="An educational Go project for understanding network traffic behavior, rate limiting, and WAF responses -- the Go port of TrafficStudy for defensive security learning." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/trafficstudygo-go-traffic-simulation.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-05-09" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TrafficStudyGo: Educational Network Traffic Analysis in Go" />
+  <meta name="twitter:description" content="A Go learning tool for understanding how networks handle traffic, rate limiting, and WAF responses. Defensive security research by @Rudra496" />
+  <meta name="twitter:creator" content="@Rudra496" />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "TrafficStudyGo: Educational Network Traffic Analysis and Defensive Research in Go",
+    "description": "How I built TrafficStudyGo -- an educational Go project for understanding network traffic behavior, rate limiting mechanisms, WAF responses, and defensive security research.",
+    "url": "https://rudra496.github.io/site/blog/trafficstudygo-go-traffic-simulation.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-05-09",
+    "dateModified": "2026-05-09",
+    "author": {
+      "@type": "Person",
+      "name": "Rudra Sarker",
+      "url": "https://rudra496.github.io/site/",
+      "sameAs": [
+        "https://github.com/rudra496",
+        "https://www.linkedin.com/in/rudrasarker",
+        "https://x.com/Rudra496",
+        "https://dev.to/rudra_sarker",
+        "https://www.researchgate.net/profile/Rudra-Sarker-3",
+        "https://youtube.com/@rudrasarker9732"
+      ]
+    },
+    "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "keywords": ["TrafficStudyGo", "Go", "Golang", "network traffic analysis", "educational security", "rate limiting", "WAF", "defensive security", "network education", "Rudra Sarker", "TEUL"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rudra496.github.io/site/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rudra496.github.io/site/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "Projects & Technology", "item": "https://rudra496.github.io/site/blog.html#cat-projects"},
+      {"@type": "ListItem", "position": 4, "name": "TrafficStudyGo: Educational Network Traffic Analysis in Go", "item": "https://rudra496.github.io/site/blog/trafficstudygo-go-traffic-simulation.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="../index.html" class="nav-brand">RUDRA SARKER</a>
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../projects.html" class="nav-link">Projects</a></li>
+        <li><a href="../gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="../blog.html" class="nav-link active" aria-current="page">Blog</a></li>
+        <li><a href="../blog/media-coverage-achievements-rudra-sarker.html" class="nav-link">In The Press</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <article class="project-detail">
+      <div style="background: linear-gradient(135deg, #0a0a1a 0%, #1a1040 30%, #0a2a3a 60%, #0a0a1a 100%); padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 8px; text-align: center;">
+        <span class="project-tag" style="margin-bottom: 1rem;">Educational Security Research · Network Analysis · Go</span>
+        <h1 style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">TrafficStudyGo: Educational Network Traffic Analysis and Defensive Research in Go</h1>
+      </div>
+      <nav aria-label="Breadcrumb" style="font-size:0.9rem;margin-bottom:1.5rem;padding:0 1rem;">
+        <a href="../index.html">Home</a> &raquo; <a href="../blog.html">Blog</a> &raquo; <a href="../blog.html#cat-projects">Projects &amp; Technology</a>
+      </nav>
+      <p style="font-size: 1rem; color: var(--text-color); margin: 0 1rem 2rem; font-style: italic;">
+        By Rudra Sarker &bull; Published May 9, 2026
+      </p>
+      <section class="project-content" style="padding: 0 1rem;">
+
+        <h2>From Python to Go: Why I Ported TrafficStudy</h2>
+        <p>After building <a href="trafficstudy-network-traffic-education.html">TrafficStudy</a> in Python, I found myself thinking about how the same educational concepts would translate to a fundamentally different language. Python is excellent for readability and rapid prototyping, but in production network infrastructure, Go is everywhere. Cloudflare, Uber, Twitch, and countless other companies that handle massive network traffic rely on Go for its concurrency model, compiled performance, and lightweight goroutines. If the goal of TrafficStudy is to prepare learners for real-world network defense, then understanding these concepts in Go is equally important.</p>
+        <p>TrafficStudyGo is that port. It carries the same educational goals, the same defensive research focus, and the same ethical framework -- but expressed in Go's concurrency primitives and compiled execution model.</p>
+
+        <div style="margin:2rem 0;padding:1.5rem;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:12px;">
+          <p style="margin:0;font-size:0.9rem;color:#f87171;font-weight:600;margin-bottom:0.5rem;">Important: Ethical and Legal Notice</p>
+          <p style="margin:0;font-size:0.85rem;color:#94a3b8;line-height:1.7;">
+            TrafficStudyGo is strictly for educational and defensive security research purposes. Running any traffic-generation tool against systems you do not own or have explicit written permission to test is illegal and unethical. The educational analysis component (<code>education.go</code>) is designed for offline learning. Always obtain proper authorization before conducting any network testing. This project is licensed under the TrafficStudy Educational Use License (TEUL), which specifically restricts usage to educational and research contexts. Misuse is entirely the responsibility of the user.
+          </p>
+        </div>
+
+        <h2>What TrafficStudyGo Contains</h2>
+        <p>The project mirrors the structure of the original TrafficStudy, adapted for Go's conventions:</p>
+        <ul>
+          <li><strong>main.go</strong> -- A historical implementation preserved unchanged from its original form. Like the Python counterpart's RSproject.py, this file serves as a reference artifact showing how traffic patterns are structured in Go. It is kept as-is for educational study, not for deployment against live systems.</li>
+          <li><strong>education.go</strong> -- The primary educational module. This is the core of TrafficStudyGo, designed for offline analysis and learning. It helps you understand flood traffic behavior, rate limiting mechanisms, WAF and firewall response patterns, and latency saturation signals -- all within a safe, controlled learning environment.</li>
+        </ul>
+        <p>The parallel structure between TrafficStudy (Python) and TrafficStudyGo (Go) is deliberate. Having both implementations available means you can compare the same concepts expressed in two very different programming paradigms -- an interpreted, dynamically-typed language versus a compiled, statically-typed one.</p>
+
+        <h2>The Educational Goals: Same Foundation, Different Language</h2>
+        <p>TrafficStudyGo shares the same four core learning objectives as its Python predecessor, but the way these concepts are expressed in Go offers distinct educational value:</p>
+
+        <h3>Understanding Flood Traffic Behavior</h3>
+        <p>In Go, traffic patterns are expressed through goroutines and channels rather than threads and queues. Observing how traffic behavior changes under load in a Go context teaches you about concurrency at a deeper level. Go's scheduler handles thousands of goroutines efficiently, and understanding how that maps to network behavior is valuable knowledge for anyone working with Go-based network infrastructure.</p>
+
+        <h3>Learning Rate Limiting Through Go's Primitives</h3>
+        <p>Go has native rate limiting support through its <code>time.Ticker</code> and channel-based patterns. Studying rate limiting in Go connects the theoretical concept directly to language-level primitives. The standard library's approach to throttling and backpressure is instructive precisely because it is so explicit -- you can see exactly how Go manages the flow of concurrent operations, which mirrors how production rate limiters work at scale.</p>
+
+        <h3>Identifying WAF and Firewall Responses</h3>
+        <p>Understanding WAF responses in Go exposes you to how compiled languages handle HTTP response parsing, connection management, and error propagation. Go's explicit error handling -- where every response must be checked -- makes the patterns in WAF responses more visible and teaches disciplined defensive programming practices that are essential in production network code.</p>
+
+        <h3>Studying Latency and Saturation Signals</h3>
+        <p>Go's runtime provides detailed metrics about goroutine counts, memory allocation, and scheduling latency through its built-in profiler. When studying network saturation in Go, you can observe not just the external signals (increased latency, timeouts) but also the internal runtime signals (goroutine backlog, GC pressure, scheduler contention). This dual perspective -- external network behavior and internal runtime behavior -- is something Go's tooling makes uniquely accessible.</p>
+
+        <h2>Why Go Matters for Network Education</h2>
+        <p>Go has become the de facto language for network infrastructure tooling. The standard library alone provides robust HTTP client and server implementations, DNS resolution, TLS handling, and connection pooling -- all without external dependencies. For someone learning network programming and security, Go offers a clean, opinionated environment where the standard patterns are also the correct patterns.</p>
+        <p>The compiled nature of Go also matters for educational understanding. In Python, the interpreter abstracts away many performance characteristics. In Go, the compilation step makes the relationship between code and machine behavior more transparent. You can observe how the binary actually performs, profile it with <code>pprof</code>, and understand the performance characteristics in concrete terms rather than theoretical ones.</p>
+
+        <h2>The TrafficStudy Educational Use License (TEUL)</h2>
+        <p>TrafficStudyGo is licensed under the TrafficStudy Educational Use License (TEUL). This license is specifically designed to reinforce the project's educational purpose. It permits use for learning, research, and defensive security education while explicitly prohibiting misuse. The TEUL reflects my commitment to ensuring these tools serve their intended purpose -- building knowledge and improving defensive capabilities -- without being misapplied.</p>
+
+        <h2>Comparing Python and Go Implementations</h2>
+        <p>Having both TrafficStudy and TrafficStudyGo available creates a unique learning opportunity. Here are the key differences that emerge when the same educational concepts are expressed in both languages:</p>
+        <ul>
+          <li><strong>Concurrency model:</strong> Python uses threading and asyncio; Go uses goroutines and channels. Both achieve concurrent network operations, but the mental models are fundamentally different.</li>
+          <li><strong>Error handling:</strong> Python uses exceptions; Go uses explicit return values. The Go approach makes every failure case visible in the code, which is educational for understanding where things go wrong in network operations.</li>
+          <li><strong>Performance characteristics:</strong> Python is interpreted with GIL constraints; Go is compiled with true parallelism. Observing the same traffic patterns through both lenses teaches you about the performance implications of language choice in network tools.</li>
+          <li><strong>Standard library:</strong> Python's <code>requests</code> and <code>socket</code> versus Go's <code>net/http</code> and <code>net</code> packages. Both are capable, but Go's standard library is more opinionated and consistent, which makes the learning curve smoother in some ways.</li>
+        </ul>
+
+        <h2>Ethical Framework and Responsible Use</h2>
+        <p>The same ethical principles that govern TrafficStudy apply to TrafficStudyGo. This is a learning tool built for defenders, not a weapon for attackers. The educational module operates offline. The historical implementation is preserved as a reference, not as a ready-to-run tool against live infrastructure. If you are a security student, a network engineer, or a researcher studying defensive mechanisms, this project is for you. If your goal is anything other than learning and defense, you are in the wrong place.</p>
+
+        <h2>Tech Stack</h2>
+        <ul>
+          <li><strong>Language:</strong> Go</li>
+          <li><strong>Core Files:</strong> main.go (historical reference), education.go (offline analysis)</li>
+          <li><strong>License:</strong> TrafficStudy Educational Use License (TEUL)</li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/rudra496/TrafficStudyGo" target="_blank" rel="noopener noreferrer">github.com/rudra496/TrafficStudyGo</a></li>
+        </ul>
+
+        <h2>Get Started</h2>
+        <p>TrafficStudyGo is available on GitHub. Clone the repository, study the Go implementation, and run the educational analysis module:</p>
+        <pre style="background:#0d1117;color:#c9d1d9;padding:1rem;border-radius:8px;overflow-x:auto;font-size:0.9rem;line-height:1.6;">git clone https://github.com/rudra496/TrafficStudyGo.git
+cd TrafficStudyGo
+go run education.go</pre>
+        <p>Compare it with the Python version. The differences between the two implementations are as educational as the concepts themselves.</p>
+
+        <div style="margin-top:2rem;padding:1.5rem;background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.15);border-radius:12px;">
+          <p style="margin:0;font-size:0.9rem;color:#a78bfa;font-weight:600;margin-bottom:0.5rem;">TrafficStudyGo -- Educational Network Traffic Analysis in Go</p>
+          <p style="margin:0;font-size:0.85rem;color:#94a3b8;line-height:1.7;">
+            Go · Offline Educational Analysis · Defensive Security Research · TEUL License<br>
+            <a href="https://github.com/rudra496/TrafficStudyGo" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </p>
+        </div>
+
+        <h2>Related Posts</h2>
+        <ul>
+          <li><a href="trafficstudy-network-traffic-education.html">TrafficStudy: Understanding Network Traffic Behavior Through Educational Analysis in Python</a></li>
+          <li><a href="edgebrain-ai-edge-intelligence-platform.html">EdgeBrain: Building an AI-Powered Edge Intelligence Platform</a></li>
+          <li><a href="sightlineai-assistive-eyewear-visually-impaired.html">SightlineAI: Building AI-Powered Assistive Eyewear for the Visually Impaired</a></li>
+        </ul>
+
+        <h2>Connect With Me</h2>
+        <p>Follow my work and connect across platforms:</p>
+        <ul>
+          <li><a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X / Twitter</a></li>
+          <li><a href="https://www.facebook.com/rudrasarker130" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://www.instagram.com/rudrasarker/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer"><i class="fas fa-flask"></i> ResearchGate</a></li>
+        </ul>
+      </section>
+      <a href="../blog.html" class="back-to-gallery" aria-label="Back to Blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </article>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2026 Rudra Sarker. All rights reserved.</p>
+  </footer>
+  <script defer src="../main.js"></script>
+  <script defer src="../js/script.js"></script>
+</body>
+</html>

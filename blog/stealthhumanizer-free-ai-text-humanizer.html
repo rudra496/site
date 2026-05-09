@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StealthHumanizer: Free Open-Source AI Text Humanizer with 13 Providers</title>
+  <meta name="description" content="StealthHumanizer is a free, open-source AI text humanizer with 13 AI providers, a 4-layer rewriting pipeline, multi-pass Ninja Mode, and no login required. Built with Next.js 16, TypeScript, and Tailwind CSS 4." />
+  <meta name="keywords" content="StealthHumanizer, AI text humanizer, AI detection bypass, free humanizer, open source, Next.js, TypeScript, Tailwind CSS, multi-model pipeline, undetectable AI text, writing tools" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/stealthhumanizer-free-ai-text-humanizer.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="StealthHumanizer: Free Open-Source AI Text Humanizer with 13 Providers" />
+  <meta property="og:description" content="A free, open-source AI text humanizer with a 4-layer rewriting pipeline, 13 AI providers, multi-pass Ninja Mode, and no login required." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/stealthhumanizer-free-ai-text-humanizer.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-05-09" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <meta property="article:tag" content="AI" />
+  <meta property="article:tag" content="Open Source" />
+  <meta property="article:tag" content="Next.js" />
+  <meta property="article:tag" content="TypeScript" />
+  <meta property="article:tag" content="Writing Tools" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="StealthHumanizer: Free Open-Source AI Text Humanizer with 13 Providers" />
+  <meta name="twitter:description" content="A free, open-source AI text humanizer with a 4-layer rewriting pipeline, 13 AI providers, multi-pass Ninja Mode, and no login required." />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <!-- Font/FA preconnects and stylesheets -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "StealthHumanizer: Free Open-Source AI Text Humanizer with 13 Providers",
+    "description": "A free, open-source AI text humanizer with a 4-layer rewriting pipeline, 13 AI providers, multi-pass Ninja Mode, and no login required.",
+    "url": "https://rudra496.github.io/site/blog/stealthhumanizer-free-ai-text-humanizer.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-05-09",
+    "dateModified": "2026-05-09",
+    "author": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "keywords": ["StealthHumanizer", "AI text humanizer", "AI detection", "open source", "Next.js", "TypeScript", "writing tools", "free"]
+  }
+  </script>
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rudra496.github.io/site/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rudra496.github.io/site/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "AI & Tools", "item": "https://rudra496.github.io/site/blog.html#cat-ai"},
+      {"@type": "ListItem", "position": 4, "name": "StealthHumanizer: Free AI Text Humanizer", "item": "https://rudra496.github.io/site/blog/stealthhumanizer-free-ai-text-humanizer.html"}
+    ]
+  }
+  </script>
+  <!-- JSON-LD: SoftwareSourceCode -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "StealthHumanizer",
+    "description": "Free, open-source AI text humanizer with 13 providers and a 4-layer rewriting pipeline",
+    "programmingLanguage": "TypeScript",
+    "codeRepository": "https://github.com/rudra496/StealthHumanizer",
+    "author": {"@type": "Person", "name": "Rudra Sarker"},
+    "license": "https://opensource.org/licenses/MIT"
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav"><a href="../index.html" class="nav-logo">Rudra Sarker</a></nav>
+  </header>
+  <main style="min-height: 60vh;">
+    <article class="project-detail">
+      <section class="project-hero" style="background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0a0a1a 100%);">
+        <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem; text-align: center;">
+          <span class="project-tag" style="margin-bottom: 1rem;">AI &middot; Open Source &middot; Next.js &middot; TypeScript</span>
+          <h1 style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">StealthHumanizer: The Free, Open-Source AI Text Humanizer</h1>
+          <p style="color: #94a3b8; margin-top: 0.75rem; font-size: 1rem;">May 9, 2026 &middot; 12 min read</p>
+        </div>
+      </section>
+      <section class="project-content" style="padding: 0 1rem;">
+
+        <h2>The Problem</h2>
+        <p>AI-generated text has a fingerprint. Tools like GPTZero, Originality.ai, and Turnitin's AI detector don't rely on guesswork -- they measure specific statistical properties that machine-written text exhibits almost universally:</p>
+        <ul>
+          <li><strong>Low perplexity:</strong> AI text is predictable. Each word follows the last with high probability, producing a low perplexity score. Human writing is noisier -- we jump between registers, use unexpected word choices, and break patterns naturally.</li>
+          <li><strong>Low burstiness:</strong> AI sentences tend to be uniform in length and complexity. Humans vary -- a short punchy sentence followed by a longer, more complex one. That variance (burstiness) is a strong signal.</li>
+          <li><strong>AI-typical phrases:</strong> Models default to certain constructions ("It is worth noting," "In today's rapidly evolving landscape," "A tapestry of") that appear disproportionately in generated text.</li>
+          <li><strong>Rigid structure:</strong> AI text often follows a predictable five-paragraph essay structure with evenly distributed transitions. Real writing is messier.</li>
+        </ul>
+        <p>The result: writers, researchers, and students who use AI for brainstorming or drafting find their work flagged, even when the final output is substantially their own. The existing tools to address this -- QuillBot, StealthWriter, Undetectable.ai -- charge $10-20/month, require accounts, and lock you into a single provider.</p>
+
+        <h2>Enter StealthHumanizer</h2>
+        <p>I built <strong>StealthHumanizer</strong> to solve this problem properly. It is a free, open-source AI text humanizer that runs entirely in your browser. No login. No usage limits. No data sent to any server beyond the AI provider API calls you configure yourself.</p>
+        <p>The core idea is simple: instead of relying on a single model to rewrite text, StealthHumanizer uses a <strong>4-layer pipeline</strong> that chains an LLM rewrite with deterministic post-processing, multi-model verification, and a final polish pass. The result is text that reads naturally and scores well on AI detection metrics.</p>
+        <p>Try it live at <a href="https://stealthhumanizer.vercel.app/" target="_blank" rel="noopener noreferrer">stealthhumanizer.vercel.app</a> or check the source at <a href="https://github.com/rudra496/StealthHumanizer" target="_blank" rel="noopener noreferrer">github.com/rudra496/StealthHumanizer</a>.</p>
+
+        <h2>The 4-Layer Pipeline</h2>
+        <p>The pipeline is what separates StealthHumanizer from a simple "rewrite this" prompt. Each layer addresses a different aspect of AI text detection:</p>
+
+        <h3>Layer 1: LLM Rewrite</h3>
+        <p>The first layer sends your text to the selected AI provider with carefully engineered prompts that instruct the model to humanize the content. The prompt adjusts based on your chosen rewrite level (Light, Medium, Aggressive, or Ninja), writing style (Humanize, Academic, Professional, Casual, Creative, Technical), and text purpose (Essay, Article, Blog, Email, Marketing, Report, Story, Social Media, General). This layer handles the bulk structural and vocabulary changes.</p>
+
+        <h3>Layer 2: Post-Processing</h3>
+        <p>This is where the deterministic heavy lifting happens. After the LLM rewrites the text, Layer 2 applies over <strong>500 synonym swaps</strong> and <strong>230 collocation replacements</strong> to further break AI patterns. Unlike LLM output, these replacements are rule-based and consistent:</p>
+        <ul>
+          <li><strong>Synonym swaps:</strong> Replace common AI-favored words with less predictable alternatives. For example, "utilize" becomes "use," "facilitate" becomes "help with," "comprehensive" might become "thorough" or "in-depth" depending on context.</li>
+          <li><strong>Collocation replacements:</strong> Swap entire phrases that AI models overuse. "It is important to note" becomes "Worth mentioning," "In conclusion" becomes "To wrap up" or "All told."</li>
+        </ul>
+        <p>These swaps are applied probabilistically -- not every occurrence is changed, which itself adds to the natural variation that detectors look for.</p>
+
+        <h3>Layer 3: Multi-Model Chain</h3>
+        <p>A single model has stylistic habits. Layer 3 addresses this by routing text through multiple AI providers in sequence. If you have API keys for more than one provider, the pipeline can use Gemini for the initial rewrite, then pass the result to Claude for a second pass, and finally through Groq for a quick structural cleanup. Each model leaves different fingerprints, and layering them produces output that doesn't match any single model's pattern.</p>
+        <p>Here is a simplified representation of the pipeline flow:</p>
+        <pre style="background:var(--bg-color,#1a1a2e);color:var(--text-color);padding:1rem;border-radius:6px;overflow-x:auto;font-size:0.9rem;"><code>// Simplified 4-layer pipeline architecture
+async function runPipeline(text: string, config: PipelineConfig) {
+  // Layer 1: LLM Rewrite
+  const rewritten = await llmRewrite(text, {
+    provider: config.primaryProvider,
+    level: config.rewriteLevel,     // Light | Medium | Aggressive | Ninja
+    style: config.writingStyle,     // Academic | Casual | Creative | ...
+    purpose: config.textPurpose,    // Essay | Blog | Report | ...
+  });
+
+  // Layer 2: Deterministic Post-Processing
+  const processed = postProcess(rewritten, {
+    synonymSwaps: SYNONYM_DB,       // 500+ entries
+    collocations: COLLOCATION_DB,   // 230+ entries
+    randomization: 0.7,             // Probabilistic application
+  });
+
+  // Layer 3: Multi-Model Chain (if configured)
+  const verified = config.multiModel
+    ? await multiModelChain(processed, config.providers)
+    : processed;
+
+  // Layer 4: Final Polish
+  const polished = finalPolish(verified, {
+    grammarCheck: true,
+    consistencyCheck: true,
+    burstinessInjection: true,
+  });
+
+  return polished;
+}</code></pre>
+
+        <h3>Layer 4: Final Polish</h3>
+        <p>The last layer runs a grammar check to catch any errors introduced during rewriting, verifies consistency in tone and terminology, and deliberately introduces controlled burstiness -- varying sentence length and structure to match natural human writing patterns. The result is clean, readable text that maintains the original meaning while shedding the statistical markers that detectors flag.</p>
+
+        <h2>Ninja Mode</h2>
+        <p>The <strong>Multi-Pass Ninja Mode</strong> is the most aggressive option StealthHumanizer offers. When you select Ninja as the rewrite level, the tool enters an automatic refinement loop:</p>
+        <ol>
+          <li><strong>Initial pass:</strong> The full 4-layer pipeline runs on your text.</li>
+          <li><strong>Scoring:</strong> The output is evaluated against 12 AI detection metrics (covering perplexity, burstiness, vocabulary diversity, sentence length variance, transition patterns, and more) to produce a human-likeness score with confidence intervals.</li>
+          <li><strong>Targeted refinement:</strong> If the score is below 90%, specific weaknesses identified by the metrics are targeted in another pass -- adjusting only the sections that need improvement rather than rewriting everything.</li>
+          <li><strong>Loop:</strong> Steps 2 and 3 repeat until the text scores 90% or higher on the internal human-scoring metric, or until a maximum iteration limit is reached.</li>
+        </ol>
+        <p>The key insight behind Ninja Mode is that blanket rewriting is inefficient. By scoring specific dimensions and targeting only weak areas, each iteration makes precise improvements instead of starting from scratch.</p>
+        <pre style="background:var(--bg-color,#1a1a2e);color:var(--text-color);padding:1rem;border-radius:6px;overflow-x:auto;font-size:0.9rem;"><code>// Ninja Mode auto-refinement loop
+async function ninjaMode(text: string, config: PipelineConfig) {
+  let current = text;
+  let score = 0;
+  const maxIterations = 5;
+  const targetScore = 0.90;
+
+  for (let i = 0; i < maxIterations && score < targetScore; i++) {
+    current = await runPipeline(current, config);
+
+    // 12-metric AI detection scoring
+    const metrics = scoreHumanLikeness(current);
+    score = metrics.overallScore;
+
+    if (score < targetScore) {
+      // Target weak dimensions in next pass
+      config.focusAreas = metrics.weakDimensions;
+    }
+  }
+
+  return { text: current, score, iterations: i };
+}</code></pre>
+
+        <h2>13 Providers, Zero Lock-In</h2>
+        <p>Most humanizer tools use a single backend model. StealthHumanizer supports 13 AI providers, giving you complete control over which model handles your text:</p>
+        <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem;">
+          <thead><tr style="border-bottom:2px solid var(--text-color);"><th style="text-align:left;padding:0.5rem;">Provider</th><th style="text-align:center;padding:0.5rem;">Free Tier</th></tr></thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Google Gemini</td><td style="text-align:center;padding:0.4rem;">Yes</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">OpenAI</td><td style="text-align:center;padding:0.4rem;">No</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Anthropic Claude</td><td style="text-align:center;padding:0.4rem;">No</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Groq</td><td style="text-align:center;padding:0.4rem;">Yes</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Mistral</td><td style="text-align:center;padding:0.4rem;">No</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Cohere</td><td style="text-align:center;padding:0.4rem;">No</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Together AI</td><td style="text-align:center;padding:0.4rem;">No</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">OpenRouter</td><td style="text-align:center;padding:0.4rem;">No</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Cerebras</td><td style="text-align:center;padding:0.4rem;">No</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">DeepInfra</td><td style="text-align:center;padding:0.4rem;">No</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">HuggingFace</td><td style="text-align:center;padding:0.4rem;">No</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Cloudflare Workers AI</td><td style="text-align:center;padding:0.4rem;">No</td></tr>
+            <tr><td style="padding:0.4rem;">ZAI</td><td style="text-align:center;padding:0.4rem;">No</td></tr>
+          </tbody>
+        </table>
+        <p>Three providers -- Gemini, Groq, and Cloudflare -- offer free tiers, meaning you can use StealthHumanizer at zero cost with no credit card. All API keys are stored in your browser's local storage only. Nothing is ever sent to StealthHumanizer's servers, because there are no StealthHumanizer servers.</p>
+
+        <h2>Key Features</h2>
+        <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem;">
+          <thead><tr style="border-bottom:2px solid var(--text-color);"><th style="text-align:left;padding:0.5rem;">Feature</th><th style="text-align:left;padding:0.5rem;">Details</th></tr></thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Rewrite Levels</td><td style="padding:0.4rem;">Light, Medium, Aggressive, Ninja</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Writing Styles</td><td style="padding:0.4rem;">Humanize, Academic, Professional, Casual, Creative, Technical</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Text Purposes</td><td style="padding:0.4rem;">Essay, Article, Blog, Email, Marketing, Report, Story, Social Media, General</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Tone Presets</td><td style="padding:0.4rem;">13 presets covering formal to conversational</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">AI Detection Scoring</td><td style="padding:0.4rem;">12-metric system with confidence intervals</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">File Upload</td><td style="padding:0.4rem;">PDF and DOCX input</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Batch Processing</td><td style="padding:0.4rem;">Process multiple documents at once</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Export Formats</td><td style="padding:0.4rem;">TXT, DOCX, PDF</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Grammar Check</td><td style="padding:0.4rem;">Built-in grammar verification</td></tr>
+            <tr style="border-bottom:1px solid #222;"><td style="padding:0.4rem;">Languages</td><td style="padding:0.4rem;">16+ languages supported</td></tr>
+            <tr><td style="padding:0.4rem;">Privacy</td><td style="padding:0.4rem;">100% browser-based, API keys stored locally</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Tech Stack</h2>
+        <p>StealthHumanizer is built with modern web technologies:</p>
+        <ul>
+          <li><strong>Next.js 16</strong> (App Router) -- Server components, API routes, and streaming responses for real-time rewriting feedback</li>
+          <li><strong>TypeScript</strong> -- Full type safety across the pipeline, provider adapters, and scoring engine</li>
+          <li><strong>Tailwind CSS 4</strong> -- Utility-first styling with the latest Tailwind engine</li>
+          <li><strong>Lucide React</strong> -- Consistent icon set throughout the interface</li>
+          <li><strong>Recharts</strong> -- Data visualization for the 12-metric AI detection scoring dashboard</li>
+          <li><strong>Vercel</strong> -- Deployment with edge functions for fast global access</li>
+        </ul>
+        <p>The entire codebase is TypeScript-first. Provider adapters follow a common interface, making it straightforward to add new providers. The scoring engine and post-processing modules are pure TypeScript with no external dependencies, keeping the bundle lean.</p>
+
+        <h2>How It Compares</h2>
+        <p>The paid humanizer market charges significant monthly fees for capabilities that StealthHumanizer provides for free:</p>
+        <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem;">
+          <thead><tr style="border-bottom:2px solid var(--text-color);"><th style="text-align:left;padding:0.5rem;">Feature</th><th style="text-align:center;padding:0.5rem;">StealthHumanizer</th><th style="text-align:center;padding:0.5rem;">QuillBot</th><th style="text-align:center;padding:0.5rem;">StealthWriter</th><th style="text-align:center;padding:0.5rem;">Undetectable.ai</th></tr></thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #222;">
+              <td style="padding:0.4rem;">Price</td>
+              <td style="text-align:center;padding:0.4rem;">Free</td>
+              <td style="text-align:center;padding:0.4rem;">$9.99/mo</td>
+              <td style="text-align:center;padding:0.4rem;">$19/mo</td>
+              <td style="text-align:center;padding:0.4rem;">$14.99/mo</td>
+            </tr>
+            <tr style="border-bottom:1px solid #222;">
+              <td style="padding:0.4rem;">Open Source</td>
+              <td style="text-align:center;padding:0.4rem;">Yes (MIT)</td>
+              <td style="text-align:center;padding:0.4rem;">No</td>
+              <td style="text-align:center;padding:0.4rem;">No</td>
+              <td style="text-align:center;padding:0.4rem;">No</td>
+            </tr>
+            <tr style="border-bottom:1px solid #222;">
+              <td style="padding:0.4rem;">Login Required</td>
+              <td style="text-align:center;padding:0.4rem;">No</td>
+              <td style="text-align:center;padding:0.4rem;">Yes</td>
+              <td style="text-align:center;padding:0.4rem;">Yes</td>
+              <td style="text-align:center;padding:0.4rem;">Yes</td>
+            </tr>
+            <tr style="border-bottom:1px solid #222;">
+              <td style="padding:0.4rem;">AI Providers</td>
+              <td style="text-align:center;padding:0.4rem;">13</td>
+              <td style="text-align:center;padding:0.4rem;">1</td>
+              <td style="text-align:center;padding:0.4rem;">1</td>
+              <td style="text-align:center;padding:0.4rem;">1</td>
+            </tr>
+            <tr style="border-bottom:1px solid #222;">
+              <td style="padding:0.4rem;">Rewrite Pipeline</td>
+              <td style="text-align:center;padding:0.4rem;">4 layers</td>
+              <td style="text-align:center;padding:0.4rem;">1 layer</td>
+              <td style="text-align:center;padding:0.4rem;">2 layers</td>
+              <td style="text-align:center;padding:0.4rem;">2 layers</td>
+            </tr>
+            <tr style="border-bottom:1px solid #222;">
+              <td style="padding:0.4rem;">Multi-Pass Refinement</td>
+              <td style="text-align:center;padding:0.4rem;">Yes (Ninja Mode)</td>
+              <td style="text-align:center;padding:0.4rem;">No</td>
+              <td style="text-align:center;padding:0.4rem;">No</td>
+              <td style="text-align:center;padding:0.4rem;">No</td>
+            </tr>
+            <tr style="border-bottom:1px solid #222;">
+              <td style="padding:0.4rem;">Usage Limits</td>
+              <td style="text-align:center;padding:0.4rem;">None</td>
+              <td style="text-align:center;padding:0.4rem;">125-∞ words</td>
+              <td style="text-align:center;padding:0.4rem;">Limited</td>
+              <td style="text-align:center;padding:0.4rem;">Limited</td>
+            </tr>
+            <tr style="border-bottom:1px solid #222;">
+              <td style="padding:0.4rem;">Browser Privacy</td>
+              <td style="text-align:center;padding:0.4rem;">100%</td>
+              <td style="text-align:center;padding:0.4rem;">Server-side</td>
+              <td style="text-align:center;padding:0.4rem;">Server-side</td>
+              <td style="text-align:center;padding:0.4rem;">Server-side</td>
+            </tr>
+            <tr>
+              <td style="padding:0.4rem;">File Upload</td>
+              <td style="text-align:center;padding:0.4rem;">PDF/DOCX</td>
+              <td style="text-align:center;padding:0.4rem;">No</td>
+              <td style="text-align:center;padding:0.4rem;">No</td>
+              <td style="text-align:center;padding:0.4rem;">No</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.85rem;color:var(--text-color,#666);font-style:italic;">Comparison based on publicly available pricing and feature pages as of May 2026.</p>
+
+        <h2>Why I Built This</h2>
+        <p>I kept running into the same problem. I would use AI to help brainstorm or draft sections of an essay, then spend more time manually rewriting the output to avoid detection than I saved by using AI in the first place. The existing tools were expensive, closed-source, and locked to a single model. When the model's writing style shifted (as it does with every update), the tool's effectiveness dropped.</p>
+        <p>The open-source angle was important to me. Users deserve to know exactly what is happening to their text. With StealthHumanizer, you can read every line of the pipeline, understand exactly what transformations are applied, and verify that your data stays in your browser. The MIT license means anyone can fork it, modify it, or self-host it.</p>
+        <p>The multi-provider architecture was a deliberate design choice. No single model is perfect for every type of text. Academic writing benefits from Claude's measured style. Casual blog posts work well with Gemini. Fast iterations are Groq's strength. By supporting 13 providers and letting the user choose, StealthHumanizer avoids the single-point-of-failure problem that plagues commercial tools.</p>
+
+        <h2>What's Next</h2>
+        <p>StealthHumanizer is actively maintained. The roadmap includes:</p>
+        <ul>
+          <li><strong>Browser extension:</strong> A Chrome/Firefox extension that lets you humanize text directly in Google Docs, email clients, and any textarea on the web -- no need to visit the app.</li>
+          <li><strong>CLI tool:</strong> A command-line interface for batch processing files from the terminal, integrating into CI/CD pipelines, or scripting workflows.</li>
+          <li><strong>Local models:</strong> Support for running models locally via Ollama or llama.cpp, eliminating the need for any API key at all. This would make StealthHumanizer fully offline-capable.</li>
+        </ul>
+        <p>Contributions are welcome. The repo is at <a href="https://github.com/rudra496/StealthHumanizer" target="_blank" rel="noopener noreferrer">github.com/rudra496/StealthHumanizer</a> -- star it, open issues, or submit pull requests. The codebase is clean TypeScript with a clear module structure, and adding a new provider adapter is a matter of implementing a single interface.</p>
+
+        <h2>Links</h2>
+        <ul>
+          <li><strong>Live app:</strong> <a href="https://stealthhumanizer.vercel.app/" target="_blank" rel="noopener noreferrer">stealthhumanizer.vercel.app</a></li>
+          <li><strong>Source code:</strong> <a href="https://github.com/rudra496/StealthHumanizer" target="_blank" rel="noopener noreferrer">github.com/rudra496/StealthHumanizer</a></li>
+          <li><strong>Author:</strong> <a href="https://rudra496.github.io/site/" target="_blank" rel="noopener noreferrer">Rudra Sarker</a></li>
+          <li><strong>Twitter:</strong> <a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer">@Rudra496</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer">Rudra Sarker</a></li>
+        </ul>
+
+      </section>
+    </article>
+  </main>
+  <footer class="footer"><p>&copy; 2026 Rudra Sarker. All rights reserved.</p></footer>
+  <script defer src="../main.js"></script>
+  <script defer src="../background.js"></script>
+</body>
+</html>

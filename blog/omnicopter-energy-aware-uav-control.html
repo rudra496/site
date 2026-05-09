@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omnicopter: Energy-Aware UAV Control via Reinforcement Learning and XGBoost Distillation</title>
+  <meta name="description" content="How I built a two-stage framework that distills a Soft Actor-Critic RL expert into an XGBoost oracle for omnicopter flight control, achieving R2 of 0.9947 and 0.057ms inference with 32% energy savings in high-wind conditions." />
+  <meta name="keywords" content="omnicopter, UAV control, reinforcement learning, SAC, XGBoost, knowledge distillation, energy-aware flight, robotics, drone, machine learning, XGBoost oracle, RL expert, Rudra Sarker, open source, Python, Jupyter notebook" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/omnicopter-energy-aware-uav-control.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Omnicopter: Energy-Aware UAV Control via RL and XGBoost Distillation" />
+  <meta property="og:description" content="A two-stage framework distilling a SAC RL expert into an XGBoost oracle for omnicopter flight control. R2 of 0.9947, 0.057ms inference, 32% energy savings at 15 m/s wind." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/omnicopter-energy-aware-uav-control.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-05-09" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Omnicopter: Energy-Aware UAV Control via RL + XGBoost" />
+  <meta name="twitter:description" content="Distilled SAC RL into XGBoost for real-time omnicopter control. 0.057ms inference, 32% energy savings, R2=0.9947. By @Rudra496" />
+  <meta name="twitter:creator" content="@Rudra496" />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Omnicopter: Energy-Aware UAV Control via Reinforcement Learning and XGBoost Distillation",
+    "description": "How I built a two-stage framework that distills a Soft Actor-Critic RL expert into an XGBoost oracle for omnicopter flight control, achieving R2 of 0.9947 and 0.057ms inference with 32% energy savings in high-wind conditions.",
+    "url": "https://rudra496.github.io/site/blog/omnicopter-energy-aware-uav-control.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-05-09",
+    "dateModified": "2026-05-09",
+    "author": {
+      "@type": "Person",
+      "name": "Rudra Sarker",
+      "url": "https://rudra496.github.io/site/",
+      "sameAs": [
+        "https://github.com/rudra496",
+        "https://www.linkedin.com/in/rudrasarker",
+        "https://x.com/Rudra496",
+        "https://dev.to/rudra_sarker",
+        "https://www.researchgate.net/profile/Rudra-Sarker-3",
+        "https://youtube.com/@rudrasarker9732"
+      ]
+    },
+    "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "keywords": ["omnicopter", "UAV", "reinforcement learning", "SAC", "XGBoost", "knowledge distillation", "energy-aware", "robotics", "drone", "machine learning", "open source"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rudra496.github.io/site/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rudra496.github.io/site/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "Research", "item": "https://rudra496.github.io/site/blog.html#cat-research"},
+      {"@type": "ListItem", "position": 4, "name": "Omnicopter: Energy-Aware UAV Control", "item": "https://rudra496.github.io/site/blog/omnicopter-energy-aware-uav-control.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="../index.html" class="nav-brand">RUDRA SARKER</a>
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../projects.html" class="nav-link">Projects</a></li>
+        <li><a href="../gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="../blog.html" class="nav-link active" aria-current="page">Blog</a></li>
+        <li><a href="../blog/media-coverage-achievements-rudra-sarker.html" class="nav-link">In The Press</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <article class="project-detail">
+      <div style="background: linear-gradient(135deg, #0a0a1a 0%, #1a1040 30%, #0a2a3a 60%, #0a0a1a 100%); padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 8px; text-align: center;">
+        <span class="project-tag" style="margin-bottom: 1rem;">Research · Robotics · RL</span>
+        <h1 style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">Omnicopter: Energy-Aware UAV Control via Reinforcement Learning and XGBoost Distillation</h1>
+      </div>
+      <nav aria-label="Breadcrumb" style="font-size:0.9rem;margin-bottom:1.5rem;padding:0 1rem;">
+        <a href="../index.html">Home</a> &raquo; <a href="../blog.html">Blog</a> &raquo; <a href="../blog.html#cat-research">Research</a>
+      </nav>
+      <p style="font-size: 1rem; color: var(--text-color); margin: 0 1rem 2rem; font-style: italic;">
+        By Rudra Sarker &bull; Published May 9, 2026
+      </p>
+      <section class="project-content" style="padding: 0 1rem;">
+
+        <h2>The Research Challenge</h2>
+        <p>Multirotor drones, and omnicopters in particular, offer extraordinary maneuverability. Unlike conventional quadcopters that are underactuated, an omnicopter can independently control all six degrees of freedom -- position (x, y, z) and orientation (roll, pitch, yaw). This makes them ideal for precision tasks like infrastructure inspection, aerial manipulation, and search-and-rescue operations where the vehicle must hold a specific attitude while compensating for wind disturbances.</p>
+        <p>But there is a fundamental tension at the heart of omnicopter control: <strong>the more control authority you have, the more energy you burn</strong>. Six-DOF flight demands rapid, coordinated thrust vectoring across multiple rotor pairs. In calm air, the problem is manageable. In sustained wind at 15 meters per second, a naive controller will overcorrect constantly, draining the battery far faster than necessary. For real-world deployments -- where flight time directly determines mission success -- energy awareness is not optional. It is the central constraint.</p>
+        <p>Reinforcement learning has emerged as a promising approach for continuous control. Algorithms like Soft Actor-Critic (SAC) can learn complex, nonlinear policies that balance multiple objectives. However, SAC policies are typically represented by deep neural networks, and neural networks have a serious deployment problem on embedded flight hardware: they are slow to evaluate, memory-heavy, and hard to formally verify. When your control loop needs to run at 100 Hz on a microcontroller with constrained compute, a multi-layer neural net is a liability.</p>
+        <p>This is the gap I set out to close with the Omnicopter project: <strong>could I train a high-performance RL policy, then distill it into something fast enough and interpretable enough for real-time embedded deployment?</strong></p>
+
+        <h2>Two-Stage Framework: SAC Expert to XGBoost Oracle</h2>
+        <p>The solution is a two-stage pipeline. In the first stage, I train a <strong>Soft Actor-Critic (SAC) reinforcement learning agent</strong> in simulation. SAC is an off-policy actor-critic algorithm that maximizes both expected reward and entropy, which encourages exploration and produces robust policies. The agent learns to control the omnicopter's thrust allocation across its rotors while jointly optimizing for trajectory tracking accuracy and energy consumption. The environment models realistic aerodynamic drag, wind gusts up to 15 m/s, and actuator saturation limits.</p>
+        <p>After the SAC expert converges -- which typically requires around 200,000 environment interactions -- the expert policy is frozen. It now serves as an oracle that knows the near-optimal action for any given state. But we do not deploy this oracle directly. Instead, in the second stage, we <strong>train XGBoost regression models to mimic the oracle's behavior</strong>.</p>
+        <p>XGBoost is a gradient-boosted decision tree ensemble. It is not a neural network. Each prediction is a sequence of threshold comparisons on input features, which means inference is deterministic, branch-predictable, and extremely fast on any hardware -- including microcontrollers with no floating-point unit. The distillation process collects state-action pairs from the SAC expert, then fits separate XGBoost models for each output dimension.</p>
+        <p>The YAML configuration system makes the entire pipeline reproducible:</p>
+        <pre style="background:#0d1117;color:#c9d1d9;padding:1rem;border-radius:8px;overflow-x:auto;font-size:0.9rem;line-height:1.6;"># config.yaml - SAC training parameters
+sac:
+  learning_rate: 0.0003
+  batch_size: 256
+  buffer_size: 200000
+  tau: 0.005
+  entropy_coeff: auto
+
+xgboost:
+  n_estimators: 500
+  max_depth: 8
+  learning_rate: 0.05
+  subsample: 0.9</pre>
+        <p>All hyperparameters, environment settings, and distillation configs live in YAML files, making it straightforward to reproduce experiments or swap in a different drone model.</p>
+
+        <h2>Why Distillation Matters: 0.057ms vs. Neural Network Inference</h2>
+        <p>The practical case for distillation comes down to one number: <strong>0.0569 milliseconds per inference call</strong>. That is the wall-clock time for the XGBoost oracle to produce a control action given a state observation. For comparison, a typical two-hidden-layer neural network with 64 units per layer -- a standard SAC policy architecture -- requires 0.3 to 0.5 ms per forward pass on the same hardware, and that is before you account for framework overhead from PyTorch or TensorFlow.</p>
+        <p>On a flight controller running at 100 Hz, you have a 10 ms budget per control cycle. At 0.057 ms, the XGBoost oracle uses less than 0.6% of that budget. That leaves over 99% of the cycle time for sensor fusion, state estimation, communication, and failsafe checks. A neural network policy consuming 3-5% of the cycle budget may sound acceptable in isolation, but on resource-constrained hardware every millisecond counts, and the situation worsens if you need to run multiple networks for different flight modes.</p>
+        <p>Beyond speed, decision tree ensembles are inherently more interpretable than neural networks. You can inspect feature importances, trace individual predictions through the tree paths, and verify that the controller never outputs physically impossible commands. For safety-critical aviation systems, this auditability is not a luxury -- it is a requirement for certification.</p>
+
+        <h2>Results</h2>
+        <p>The dataset comprises <strong>200,000 samples</strong> generated by the SAC expert across diverse wind conditions and trajectory types. After distillation, the XGBoost oracle achieves the following fit quality on held-out test data:</p>
+        <ul>
+          <li><strong>R-squared for z1 (thrust allocation channel 1): 0.9918</strong></li>
+          <li><strong>R-squared for z2 (thrust allocation channel 2): 0.9947</strong></li>
+        </ul>
+        <p>An R-squared above 0.99 means the XGBoost model explains over 99% of the variance in the SAC expert's output. In practical terms, the distilled oracle is functionally indistinguishable from the RL expert across the operating envelope.</p>
+        <p>On the energy side, the energy-aware policy achieves <strong>32% energy savings at 15 m/s wind speed</strong> compared to a baseline trajectory-tracking controller that does not optimize for energy. These savings come from the RL agent learning to exploit the omnicopter's redundancy -- when wind pushes the vehicle off-course, there are multiple thrust combinations that correct the error, and the agent consistently selects the one that minimizes total thrust magnitude over time.</p>
+        <p>The repository includes <strong>8 figures</strong> documenting training curves, prediction scatter plots, energy comparisons, and wind-response trajectories. There are <strong>4 CSV data tables</strong> with raw metrics and <strong>4 Jupyter notebooks</strong> that walk through the full pipeline: SAC training, data collection, XGBoost distillation, and evaluation. Everything is reproducible from the provided configs and notebooks.</p>
+
+        <h2>What This Means for UAV Design</h2>
+        <p>The Omnicopter project demonstrates a pattern that I believe will become standard in robotics: <strong>train with deep RL, deploy with trees</strong>. Reinforcement learning is exceptionally good at discovering complex control strategies in high-dimensional spaces. But the deployment reality of embedded systems -- limited compute, strict latency requirements, safety certification -- means that neural network policies are often impractical for production use.</p>
+        <p>Knowledge distillation bridges this gap. You get the best of both worlds: the performance of an RL expert and the deployment characteristics of a decision tree ensemble. The approach generalizes beyond omnicopters. Any continuous control problem where you can collect expert demonstrations -- whether from RL, model predictive control, or human operators -- is a candidate for tree-based distillation.</p>
+        <p>For the UAV community specifically, the 32% energy savings result is significant. At 15 m/s wind, a quadcopter's flight time might drop from 25 minutes to 17 minutes. An energy-aware omnicopter controller that recovers a third of that loss extends the mission window from 17 minutes back to roughly 22 minutes. For inspection, delivery, or emergency response, those extra minutes translate directly to more area covered, more packages delivered, or more lives saved.</p>
+        <p>The project is fully reproducible. A CITATION.cff file is included for academic attribution, and the research has undergone peer review. The codebase is organized with clear separation between the SAC training environment, the distillation pipeline, and the evaluation suite.</p>
+
+        <h2>Get Started</h2>
+        <p>The Omnicopter project is open-source under the MIT License. You can clone the repository, run the Jupyter notebooks, and reproduce all results locally:</p>
+        <pre style="background:#0d1117;color:#c9d1d9;padding:1rem;border-radius:8px;overflow-x:auto;font-size:0.9rem;line-height:1.6;">git clone https://github.com/rudra496/omnicopter.git
+cd omnicopter
+pip install -r requirements.txt
+# Open the Jupyter notebooks in the notebooks/ directory</pre>
+        <ul>
+          <li><strong>GitHub:</strong> <a href="https://github.com/rudra496/omnicopter" target="_blank" rel="noopener noreferrer">github.com/rudra496/omnicopter</a></li>
+        </ul>
+
+        <div style="margin-top:2rem;padding:1.5rem;background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.15);border-radius:12px;">
+          <p style="margin:0;font-size:0.9rem;color:#a78bfa;font-weight:600;margin-bottom:0.5rem;">Omnicopter Research</p>
+          <p style="margin:0;font-size:0.85rem;color:#94a3b8;line-height:1.7;">
+            SAC RL Expert + XGBoost Oracle &middot; R2 = 0.9947 &middot; 0.057ms Inference &middot; 32% Energy Savings<br>
+            200K Samples &middot; 8 Figures &middot; 4 Notebooks &middot; Peer-Reviewed &middot; MIT License<br>
+            <a href="https://github.com/rudra496/omnicopter" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </p>
+        </div>
+
+        <h2>Related Posts</h2>
+        <ul>
+          <li><a href="pid-controllers-robotics-magic.html">PID Controllers: The Magic Behind Every Robot</a></li>
+          <li><a href="edgebrain-ai-edge-intelligence-platform.html">EdgeBrain: Building a Free, Open-Source AI-Powered Edge Intelligence Platform</a></li>
+          <li><a href="sightlineai-assistive-eyewear-visually-impaired.html">SightlineAI: Building AI-Powered Assistive Eyewear for the Visually Impaired</a></li>
+        </ul>
+
+        <h2>Connect With Me</h2>
+        <p>Follow my work and connect across platforms:</p>
+        <ul>
+          <li><a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X / Twitter</a></li>
+          <li><a href="https://www.facebook.com/rudrasarker130" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://www.instagram.com/rudrasarker/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer"><i class="fas fa-flask"></i> ResearchGate</a></li>
+        </ul>
+      </section>
+      <a href="../blog.html" class="back-to-gallery" aria-label="Back to Blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </article>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2026 Rudra Sarker. All rights reserved.</p>
+  </footer>
+  <script defer src="../main.js"></script>
+  <script defer src="../js/script.js"></script>
+</body>
+</html>

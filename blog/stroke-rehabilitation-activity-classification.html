@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stroke Rehabilitation Activity Classification from Wearable IMU Data | Rudra Sarker</title>
+  <meta name="description" content="How I built a machine learning pipeline that classifies stroke rehabilitation activities from wearable IMU sensor data using Random Forest and LSTM models, achieving 92.5% accuracy under Leave-One-Subject-Out validation on the PrimSeq dataset." />
+  <meta name="keywords" content="stroke rehabilitation, activity classification, IMU sensors, wearable computing, Random Forest, LSTM, machine learning, PrimSeq, StrokeRehab dataset, feature engineering, LOSO validation, healthcare AI, assistive technology, Rudra Sarker" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/stroke-rehabilitation-activity-classification.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Stroke Rehabilitation Activity Classification from Wearable IMU Data" />
+  <meta property="og:description" content="How I built a machine learning pipeline that classifies stroke rehabilitation activities from wearable IMU sensor data using Random Forest and LSTM models, achieving 92.5% accuracy under LOSO validation." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/stroke-rehabilitation-activity-classification.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-05-09" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stroke Rehab Activity Classification with 92.5% LOSO Accuracy" />
+  <meta name="twitter:description" content="Classifying stroke rehabilitation exercises from wearable IMU data using Random Forest and LSTM. 92.5% LOSO accuracy on the PrimSeq dataset. By @Rudra496" />
+  <meta name="twitter:creator" content="@Rudra496" />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Stroke Rehabilitation Activity Classification from Wearable IMU Data",
+    "description": "How I built a machine learning pipeline that classifies stroke rehabilitation activities from wearable IMU sensor data using Random Forest and LSTM models, achieving 92.5% accuracy under Leave-One-Subject-Out validation on the PrimSeq dataset.",
+    "url": "https://rudra496.github.io/site/blog/stroke-rehabilitation-activity-classification.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-05-09",
+    "dateModified": "2026-05-09",
+    "author": {
+      "@type": "Person",
+      "name": "Rudra Sarker",
+      "url": "https://rudra496.github.io/site/",
+      "sameAs": [
+        "https://github.com/rudra496",
+        "https://www.linkedin.com/in/rudrasarker",
+        "https://x.com/Rudra496",
+        "https://dev.to/rudra_sarker",
+        "https://www.researchgate.net/profile/Rudra-Sarker-3",
+        "https://youtube.com/@rudrasarker9732"
+      ]
+    },
+    "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "keywords": ["stroke rehabilitation", "activity classification", "IMU sensors", "wearable computing", "Random Forest", "LSTM", "machine learning", "PrimSeq", "LOSO validation", "healthcare AI", "assistive technology"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rudra496.github.io/site/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rudra496.github.io/site/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "Projects & Technology", "item": "https://rudra496.github.io/site/blog.html#cat-projects"},
+      {"@type": "ListItem", "position": 4, "name": "Stroke Rehabilitation Activity Classification", "item": "https://rudra496.github.io/site/blog/stroke-rehabilitation-activity-classification.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="../index.html" class="nav-brand">RUDRA SARKER</a>
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../projects.html" class="nav-link">Projects</a></li>
+        <li><a href="../gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="../blog.html" class="nav-link active" aria-current="page">Blog</a></li>
+        <li><a href="../blog/media-coverage-achievements-rudra-sarker.html" class="nav-link">In The Press</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <article class="project-detail">
+      <div style="background: linear-gradient(135deg, #0a0a1a 0%, #1a1040 30%, #0a2a3a 60%, #0a0a1a 100%); padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 8px; text-align: center;">
+        <span class="project-tag" style="margin-bottom: 1rem;">Machine Learning · Healthcare · Wearable Sensors · Research</span>
+        <h1 style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">Stroke Rehabilitation Activity Classification from Wearable IMU Data</h1>
+      </div>
+      <nav aria-label="Breadcrumb" style="font-size:0.9rem;margin-bottom:1.5rem;padding:0 1rem;">
+        <a href="../index.html">Home</a> &raquo; <a href="../blog.html">Blog</a> &raquo; <a href="../blog.html#cat-projects">Projects &amp; Technology</a>
+      </nav>
+      <p style="font-size: 1rem; color: var(--text-color); margin: 0 1rem 2rem; font-style: italic;">
+        By Rudra Sarker &bull; Published May 9, 2026
+      </p>
+      <section class="project-content" style="padding: 0 1rem;">
+
+        <h2>The Challenge: Monitoring Stroke Rehabilitation</h2>
+        <p>Stroke is one of the leading causes of long-term disability worldwide. Recovery depends heavily on consistent, repetitive rehabilitation exercises. But here is the problem: once patients leave the clinic, therapists have almost no visibility into whether exercises are being performed correctly, how often, or for how long. Patients are given paper sheets with exercise instructions that are easy to ignore or perform incorrectly.</p>
+        <p>Wearable sensors, specifically Inertial Measurement Units (IMUs) that combine accelerometers and gyroscopes, offer a way to capture movement data unobtrusively. The challenge is building a classification system that can take raw IMU signals and determine which rehabilitation exercise a patient is performing. This is not a diagnosis problem. It is a pattern recognition problem. And it is one where machine learning can provide genuine value as an assistive tool for therapists.</p>
+        <p>I wanted to explore this space rigorously: take a real clinical dataset, build classification models, validate them properly, and produce interpretable results that a healthcare professional could actually understand and trust. This project is the result of that exploration, documented in a 67-page research paper with fully reproducible Jupyter notebooks.</p>
+
+        <h2>Dataset and Methods</h2>
+        <p>I worked with the <strong>PrimSeq (StrokeRehab) dataset</strong>, which contains IMU recordings from stroke patients performing standardized rehabilitation exercises. The dataset captures the reality of clinical data: varying numbers of repetitions, different movement quality levels, inter-subject variability in exercise execution, and sensor noise from everyday use.</p>
+        <p>Before any modeling, I applied <strong>stratified sampling</strong> to ensure that the class distribution was preserved across training and test splits. This matters because rehabilitation sessions do not contain equal numbers of every exercise. Some activities are overrepresented, and naive random splitting would produce misleadingly optimistic results.</p>
+        <p>The preprocessing pipeline included windowing the continuous IMU streams into fixed-length segments, computing statistical and frequency-domain features from each window, and normalizing the feature space. <strong>Feature engineering</strong> was a critical step. For each sensor axis, I extracted features like mean, standard deviation, variance, minimum, maximum, signal magnitude area, correlation between axes, and spectral energy. These hand-crafted features give traditional classifiers the information they need without requiring the massive parameter count of deep learning approaches.</p>
+
+        <h2>Model Architecture: Random Forest and LSTM</h2>
+        <p>I implemented two complementary modeling approaches to balance interpretability with raw classification performance.</p>
+        <p><strong>Random Forest</strong> was the first model. Decision tree ensembles are well-suited to tabular feature representations, handle mixed feature scales gracefully, and most importantly provide direct feature importance rankings. In a healthcare context, knowing <em>which</em> sensor features drive a classification decision is just as valuable as the decision itself. Therapists need to understand why the system thinks a patient performed a particular exercise, not just receive a label.</p>
+        <p><strong>LSTM (Long Short-Term Memory) networks</strong> were the second model. Unlike the Random Forest, which operates on engineered features, the LSTM processes raw sequential IMU data and learns temporal dependencies automatically. This makes it potentially more powerful for capturing subtle movement dynamics, at the cost of being harder to interpret.</p>
+        <p>Here is a simplified version of the training approach for the Random Forest classifier:</p>
+        <pre style="background:#0d1117;color:#c9d1d9;padding:1rem;border-radius:8px;overflow-x:auto;font-size:0.9rem;line-height:1.6;">from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import LeaveOneGroupOut
+from sklearn.metrics import classification_report, accuracy_score
+
+# LOSO validation: each fold leaves one subject out entirely
+logo = LeaveOneGroupOut()
+
+ accuracies = []
+for train_idx, test_idx in logo.split(X_features, y_labels, groups=subject_ids):
+    X_train, X_test = X_features[train_idx], X_features[test_idx]
+    y_train, y_test = y_labels[train_idx], y_labels[test_idx]
+
+    clf = RandomForestClassifier(
+        n_estimators=200,
+        max_depth=None,
+        min_samples_split=5,
+        class_weight='balanced',
+        random_state=42,
+        n_jobs=-1
+    )
+    clf.fit(X_train, y_train)
+    y_pred = clf.predict(X_test)
+    accuracies.append(accuracy_score(y_test, y_pred))
+
+print(f"LOSO Accuracy: {np.mean(accuracies)*100:.1f}% +/- {np.std(accuracies)*100:.1f}%")</pre>
+        <p>This code shows the core validation strategy: Leave-One-Subject-Out cross-validation. Every fold trains on all subjects except one, then tests on the held-out subject. This is the gold standard for wearable sensor studies because it measures generalization to entirely new patients, not just new data from patients the model has already seen.</p>
+
+        <h2>Results: 92.5% Accuracy Under LOSO Validation</h2>
+        <p>The primary result: the combined pipeline achieved <strong>92.5% accuracy under Leave-One-Subject-Out (LOSO) validation</strong>. This is a meaningful number because LOSO is a strict evaluation protocol. It means the system can correctly classify rehabilitation activities for a patient it has never encountered before, using only wearable sensor data.</p>
+        <p>Several factors contributed to this result:</p>
+        <ul>
+          <li><strong>Feature engineering quality</strong>: The hand-crafted statistical and frequency-domain features captured the discriminative characteristics of each exercise movement effectively. Not all features were equally informative, and the feature importance analysis helped identify the most useful ones.</li>
+          <li><strong>Stratified sampling</strong>: By preserving class distributions during data splitting, the models were trained and evaluated under realistic conditions, preventing inflated performance metrics from imbalanced data.</li>
+          <li><strong>Model selection</strong>: Random Forest provided a strong baseline with interpretable results. The LSTM complemented this by capturing temporal patterns in the raw signal that static features might miss.</li>
+        </ul>
+        <p>Beyond accuracy, I also generated <strong>ROC curves</strong> for each activity class. These curves show the trade-off between true positive rate and false positive rate for individual exercises, giving a more nuanced view of performance than a single accuracy number. Some exercises with very similar movement patterns (for example, different arm raise variations) naturally showed lower discrimination, which is an important finding for guiding future work.</p>
+
+        <h2>Feature Importance: What the Models Learned</h2>
+        <p>One of the most valuable outputs from this project was the <strong>feature importance ranking</strong> from the Random Forest model. Understanding which sensor features matter most for classification has practical implications:</p>
+        <ul>
+          <li>It tells us which sensor placements and axes are most informative, potentially allowing for fewer sensors and simpler wearable hardware.</li>
+          <li>It provides clinicians with interpretable evidence. If the model classifies an exercise based primarily on wrist rotation velocity and acceleration magnitude, a therapist can evaluate whether that aligns with their clinical understanding of the exercise.</li>
+          <li>It guides future data collection by highlighting which features to prioritize and which can be dropped without significant performance loss.</li>
+        </ul>
+        <p>The feature importance analysis revealed that signal magnitude area and variance across accelerometer axes were consistently among the top discriminators. This makes intuitive sense: different rehabilitation exercises involve distinct movement intensities and ranges of motion that are captured well by these aggregate statistics.</p>
+
+        <h2>Few-Shot Personalization</h2>
+        <p>A purely subject-independent classifier, while robust, does not account for individual movement patterns. Stroke patients in particular exhibit highly variable motor impairments. To address this, I explored <strong>few-shot personalization</strong>: fine-tuning the pre-trained model with just a small number of labeled examples from a new patient.</p>
+        <p>The idea is practical. A therapist records a patient performing each exercise a few times, labels them, and the system adapts. Even with limited per-patient data, personalization can improve classification accuracy for that individual beyond what the generic model achieves. This bridges the gap between a one-size-fits-all classifier and a fully personalized system that requires extensive data collection from every patient.</p>
+
+        <h2>Why This Matters for Healthcare</h2>
+        <p>This project is a research exploration, not a clinical tool. But the implications are worth discussing.</p>
+        <p>Stroke rehabilitation is resource-constrained. Therapists cannot be present for every exercise session. Home-based exercise programs are prescribed, but adherence and quality are difficult to monitor. An assistive classification system built on wearable IMU data could, with further validation and clinical trials, provide therapists with objective data about which exercises patients performed, how often, and whether movement patterns suggest correct or incorrect execution.</p>
+        <p>Key design principles that matter for real-world healthcare applications:</p>
+        <ul>
+          <li><strong>Interpretability over black-box accuracy</strong>: Healthcare professionals need to understand and trust system outputs. Feature importance rankings and ROC curves provide this transparency in a way that raw neural network predictions cannot.</li>
+          <li><strong>Subject-independent validation</strong>: LOSO evaluation ensures results generalize to new patients, which is essential for any deployable system. Reporting only within-subject accuracy would be misleading.</li>
+          <li><strong>Minimal sensor burden</strong>: Feature importance analysis helps identify the smallest set of sensors needed for reliable classification, reducing cost and improving patient comfort.</li>
+          <li><strong>Reproducibility</strong>: Every experiment in this project is reproducible through provided Jupyter notebooks. Transparent methodology is critical for healthcare research.</li>
+        </ul>
+
+        <h2>Reproducibility and Resources</h2>
+        <p>Full reproducibility was a core goal of this project. The repository includes:</p>
+        <ul>
+          <li><strong>67-page research document</strong> in the <code>/docs/</code> directory covering literature review, methodology, experimental setup, results, and discussion in depth</li>
+          <li><strong>Jupyter notebooks</strong> for every stage of the pipeline: data loading, preprocessing, feature extraction, model training, evaluation, and visualization</li>
+          <li><strong>Requirements</strong>: Python 3.8+, numpy, pandas, scikit-learn, tensorflow, matplotlib</li>
+        </ul>
+        <p>All code is open-source under the MIT License.</p>
+
+        <h2>Get Started</h2>
+        <p>The complete codebase, research documentation, and notebooks are available on GitHub:</p>
+        <ul>
+          <li><strong>GitHub:</strong> <a href="https://github.com/rudra496/Stroke" target="_blank" rel="noopener noreferrer">github.com/rudra496/Stroke</a></li>
+        </ul>
+        <p>If you are working on wearable computing, rehabilitation technology, or healthcare machine learning, I would welcome your feedback and collaboration. Feel free to open an issue, submit a pull request, or reach out to me on any of my social channels.</p>
+
+        <div style="margin-top:2rem;padding:1.5rem;background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.15);border-radius:12px;">
+          <p style="margin:0;font-size:0.9rem;color:#a78bfa;font-weight:600;margin-bottom:0.5rem;">Stroke Rehabilitation Activity Classification</p>
+          <p style="margin:0;font-size:0.85rem;color:#94a3b8;line-height:1.7;">
+            92.5% LOSO Accuracy &middot; Random Forest + LSTM &middot; PrimSeq Dataset &middot; MIT License<br>
+            <a href="https://github.com/rudra496/Stroke" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </p>
+        </div>
+
+        <h2>Related Posts</h2>
+        <ul>
+          <li><a href="sightlineai-assistive-eyewear-visually-impaired.html">SightlineAI: Building AI-Powered Assistive Eyewear for the Visually Impaired</a></li>
+          <li><a href="edgebrain-ai-edge-intelligence-platform.html">EdgeBrain: Building a Free, Open-Source AI-Powered Edge Intelligence Platform</a></li>
+          <li><a href="sign-talk-smart-glove-sign-language-translation.html">Team SignTalk: Translating Sign Language to Speech with a Smart Glove</a></li>
+        </ul>
+
+        <h2>Connect With Me</h2>
+        <p>Follow my work and connect across platforms:</p>
+        <ul>
+          <li><a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X / Twitter</a></li>
+          <li><a href="https://www.facebook.com/rudrasarker130" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://www.instagram.com/rudrasarker/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer"><i class="fas fa-flask"></i> ResearchGate</a></li>
+        </ul>
+      </section>
+      <a href="../blog.html" class="back-to-gallery" aria-label="Back to Blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </article>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2026 Rudra Sarker. All rights reserved.</p>
+  </footer>
+  <script defer src="../main.js"></script>
+  <script defer src="../js/script.js"></script>
+</body>
+</html>

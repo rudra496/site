@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Code Trust Validator: Detecting Security Flaws in AI-Generated Code</title>
+  <meta name="description" content="How I built AI Code Trust Validator — an open-source tool that detects security flaws, hallucinations, and logic errors in AI-generated code. Supports Python, JavaScript, and TypeScript with auto-fix from 4 AI providers." />
+  <meta name="keywords" content="AI code validator, AI-generated code security, code review tool, static analysis, AI hallucination detection, Python, JavaScript, TypeScript, open source, security scanner" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/ai-code-trust-validator-security-tool.html" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="AI Code Trust Validator: Detecting Security Flaws in AI-Generated Code" />
+  <meta property="og:description" content="How I built an open-source tool that detects security flaws, hallucinations, and logic errors in AI-generated code with auto-fix from OpenAI, Anthropic, Ollama, and custom providers." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/ai-code-trust-validator-security-tool.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-05-09" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <meta property="article:tag" content="AI Security" />
+  <meta property="article:tag" content="Code Validation" />
+  <meta property="article:tag" content="Open Source" />
+  <meta property="article:tag" content="Python" />
+  <meta property="article:tag" content="Static Analysis" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Code Trust Validator: Detecting Security Flaws in AI-Generated Code" />
+  <meta name="twitter:description" content="Open-source tool that detects security flaws, hallucinations, and logic errors in AI-generated code with auto-fix capabilities." />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "AI Code Trust Validator: Detecting Security Flaws in AI-Generated Code",
+    "description": "How I built AI Code Trust Validator — an open-source tool that detects security flaws, hallucinations, and logic errors in AI-generated code with auto-fix from 4 AI providers.",
+    "url": "https://rudra496.github.io/site/blog/ai-code-trust-validator-security-tool.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-05-09",
+    "dateModified": "2026-05-09",
+    "author": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "publisher": {"@type": "Person", "name": "Rudra Sarker", "url": "https://rudra496.github.io/site/"},
+    "keywords": ["AI code validator", "AI-generated code", "security scanner", "static analysis", "code review", "Python", "open source", "hallucination detection"]
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav"><a href="../index.html" class="nav-logo">Rudra Sarker</a></nav>
+  </header>
+  <main style="min-height: 60vh;">
+    <article class="project-detail">
+      <section class="project-hero" style="background: linear-gradient(135deg, #0a0a1a 0%, #1a2a3e 50%, #0a0a1a 100%);">
+        <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem; text-align: center;">
+          <span class="project-tag" style="margin-bottom: 1rem;">Open Source · Python · AI Security</span>
+          <h1 style="color: #fff; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 0; line-height: 1.3;">AI Code Trust Validator: Detecting Security Flaws in AI-Generated Code</h1>
+          <p style="color: #94a3b8; margin-top: 0.75rem; font-size: 1rem;">May 9, 2026 · 10 min read</p>
+        </div>
+      </section>
+      <section class="project-content" style="padding: 0 1rem;">
+        <h2>The Problem</h2>
+        <p>
+          AI coding tools have reshaped how software gets written. According to recent industry surveys, 84% of developers now use AI-powered code assistants in their daily workflow. The productivity gains are real. But here is the uncomfortable truth: only 29% of those developers actually trust the output.
+        </p>
+        <p>
+          And they are right to be cautious. AI models generate code that looks correct, follows proper syntax, and even includes comments explaining the logic. But beneath the surface, that code can contain subtle security vulnerabilities, logic errors that only manifest under edge cases, and outright hallucinations where the model invents APIs or parameters that do not exist. I have seen AI suggest authentication bypasses without flagging them, propose SQL queries vulnerable to injection, and confidently use deprecated library functions.
+        </p>
+        <p>
+          The existing static analysis tools were not designed with AI-generated code in mind. They catch generic issues but miss the specific patterns that characterize AI hallucinations and the subtle logic errors that language models tend to produce. That gap is what I set out to fill.
+        </p>
+
+        <h2>The Solution</h2>
+        <p>
+          <strong>AI Code Trust Validator</strong> is an open-source Python tool that validates AI-generated code for security flaws, hallucinations, and logic errors. It targets Python, JavaScript, and TypeScript, and it goes beyond simple pattern matching by combining multi-layer static analysis with optional AI-powered auto-fix.
+        </p>
+        <p>
+          Install it with a single command:
+        </p>
+        <pre><code>pip install ai-trust-validator</code></pre>
+        <p>
+          Then validate any file or directory:
+        </p>
+        <pre><code>ai-trust-validator validate ./src/ --format html --output report.html</code></pre>
+        <p>
+          The tool processes each file in 5 to 20 milliseconds, uses less than 50MB of memory, and achieves a 95%+ cache hit rate on subsequent runs. It is fast enough to run as a pre-commit hook or a save-triggered check in your IDE.
+        </p>
+
+        <h2>Architecture: Multi-Layer Validation</h2>
+        <p>
+          The validator uses a multi-layer approach where each layer catches different classes of problems:
+        </p>
+        <pre><code>┌─────────────┐    ┌──────────────┐    ┌──────────────┐
+│  CLI / API  │───▶│  Validation  │───▶│  Report Gen  │
+│  Entry      │    │  Pipeline    │    │  (JSON/HTML/  │
+│             │    │              │    │   SARIF/PDF) │
+└─────────────┘    └──────┬───────┘    └──────────────┘
+                          │
+            ┌─────────────┼─────────────┐
+            ▼             ▼             ▼
+      ┌──────────┐  ┌──────────┐  ┌──────────┐
+      │ Security │  │Halluci-  │  │  Logic   │
+      │ Scanner  │  │ nation   │  │  Error   │
+      │  Layer   │  │ Detector │  │ Detector │
+      └──────────┘  └──────────┘  └──────────┘
+            │             │             │
+            └─────────────┼─────────────┘
+                          ▼
+                   ┌──────────────┐
+                   │  AI Auto-Fix │
+                   │  (Optional)  │
+                   │  4 Providers │
+                   └──────────────┘</code></pre>
+        <p>
+          <strong>Layer 1: Security Scanner</strong> examines code for known vulnerability patterns including injection flaws, authentication bypasses, insecure deserialization, hardcoded credentials, and path traversal vectors. This layer uses pattern matching and AST analysis to identify concrete security issues.
+        </p>
+        <p>
+          <strong>Layer 2: Hallucination Detector</strong> looks for signs that an AI model invented something. It checks for references to non-existent APIs, fabricated function signatures, invented parameters, and libraries or modules that do not actually exist. This is the layer that most differentiates the tool from traditional linters.
+        </p>
+        <p>
+          <strong>Layer 3: Logic Error Detector</strong> identifies subtle bugs that pass syntax checks but produce incorrect behavior: unreachable code paths, contradictory conditionals, off-by-one errors in loops, and resource leaks.
+        </p>
+
+        <h2>Key Features</h2>
+        <p>
+          <strong>AI Auto-Fix with 4 Providers</strong> — When the validator finds an issue, it can optionally suggest or automatically apply a fix using one of four AI backends: OpenAI (gpt-4o-mini), Anthropic (claude-3-haiku), Ollama (llama3), or a custom provider endpoint. You choose the provider based on your latency, cost, and privacy requirements.
+        </p>
+        <pre><code>ai-trust-validator validate ./src/ \
+  --auto-fix \
+  --provider anthropic \
+  --model claude-3-haiku</code></pre>
+        <p>
+          <strong>Multiple Report Formats</strong> — Output validation results as JSON for programmatic consumption, as an interactive HTML dashboard for visual review, as SARIF for GitHub Security tab integration, or as PDF for compliance documentation.
+        </p>
+        <p>
+          <strong>Auto-Generated pytest Tests</strong> — The tool can generate pytest test files with edge case detection. It analyzes the code under validation and produces tests that target the boundary conditions and failure modes most likely to expose bugs.
+        </p>
+        <pre><code>ai-trust-validator generate-tests ./src/auth.py \
+  --framework pytest \
+  --edge-cases</code></pre>
+        <p>
+          <strong>REST API with OpenAPI Docs</strong> — Run the validator as a service with batch validation support and webhooks. This makes it straightforward to integrate into CI/CD pipelines or build custom tooling on top of it.
+        </p>
+        <p>
+          <strong>File Watch Mode</strong> — Monitor your project directory and re-validate on every file change, with results displayed on a live dashboard. This is designed for the workflow where you are iterating with an AI assistant and want continuous feedback.
+        </p>
+        <pre><code>ai-trust-validator watch ./src/ --dashboard</code></pre>
+        <p>
+          <strong>IDE Integration</strong> — A VS Code extension, JetBrains plugin, and LSP server are available so validation feedback appears inline as you write code.
+        </p>
+        <p>
+          <strong>Plugin System</strong> — Write and register custom analyzers for domain-specific validation rules. The plugin system lets you extend the validator without modifying its core.
+        </p>
+        <p>
+          <strong>Team Analytics</strong> — A dashboard with leaderboards and trend analysis helps teams track code quality over time and identify patterns in the types of issues being introduced.
+        </p>
+
+        <h2>Performance</h2>
+        <p>
+          Speed was a core design constraint. If validation takes longer than writing the code, no one will use it. The tool processes files at 5 to 20 milliseconds per file, holds memory under 50MB even for large projects, and achieves a 95%+ cache hit rate on unchanged files. This means the first run on a medium project takes a few seconds, and subsequent runs return near-instantly.
+        </p>
+        <p>
+          These numbers hold across all three supported languages. The AST parsing and pattern matching engines are optimized for minimal overhead, and the caching layer avoids re-parsing files that have not changed.
+        </p>
+
+        <h2>CLI Usage Examples</h2>
+        <p>
+          Basic validation of a single file:
+        </p>
+        <pre><code>$ ai-trust-validator validate ./app.py
+
+  Validating: app.py
+  Issues found: 3
+
+  [HIGH] SQL Injection vulnerability on line 42
+  [MED]  Hardcoded API key detected on line 18
+  [LOW]  Unreachable code after return on line 67</code></pre>
+        <p>
+          Validate a directory and output an HTML dashboard:
+        </p>
+        <pre><code>$ ai-trust-validator validate ./src/ \
+    --format html \
+    --output dashboard.html \
+    --severity high</code></pre>
+        <p>
+          Generate SARIF output for GitHub Security:
+        </p>
+        <pre><code>$ ai-trust-validator validate ./src/ \
+    --format sarif \
+    --output results.sarif</code></pre>
+        <p>
+          Use Docker:
+        </p>
+        <pre><code>$ docker run --rm -v $(pwd):/workspace \
+    rudra496/ai-trust-validator validate /workspace/src/</code></pre>
+
+        <h2>Tech Stack</h2>
+        <p>
+          The tool is written in Python (3.8+) and published on PyPI. It uses AST parsing for Python and tree-sitter-based parsing for JavaScript and TypeScript. The AI auto-fix layer communicates with provider APIs via their official SDKs, with Ollama support for fully local inference. The HTML dashboard is generated server-side with no JavaScript framework dependency. The REST API is built on a lightweight ASGI framework with automatic OpenAPI documentation. Docker images are published for containerized deployment, and a GitHub Action is available for CI/CD integration.
+        </p>
+        <p>
+          The project is at version 0.4.0, released under the MIT license.
+        </p>
+
+        <h2>Comparison: AI Code Trust Validator vs Existing Tools</h2>
+        <table style="width:100%;border-collapse:collapse;">
+          <tr style="border-bottom:1px solid #333;"><th style="text-align:left;padding:8px;">Feature</th><th style="padding:8px;">AI Trust Validator</th><th style="padding:8px;">Semgrep</th><th style="padding:8px;">SonarQube</th><th style="padding:8px;">CodeQL</th></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">AI Hallucination Detection</td><td style="text-align:center;">Yes</td><td style="text-align:center;">No</td><td style="text-align:center;">No</td><td style="text-align:center;">No</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">AI Auto-Fix</td><td style="text-align:center;">4 providers</td><td style="text-align:center;">No</td><td style="text-align:center;">Limited</td><td style="text-align:center;">No</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Test Generation</td><td style="text-align:center;">pytest + edge cases</td><td style="text-align:center;">No</td><td style="text-align:center;">No</td><td style="text-align:center;">No</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Setup Required</td><td style="text-align:center;">pip install</td><td style="text-align:center;">pip install</td><td style="text-align:center;">Server + DB</td><td style="text-align:center;">GitHub integration</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">SARIF Output</td><td style="text-align:center;">Yes</td><td style="text-align:center;">Yes</td><td style="text-align:center;">Yes</td><td style="text-align:center;">Yes</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">Local / Offline</td><td style="text-align:center;">Yes (Ollama)</td><td style="text-align:center;">Yes</td><td style="text-align:center;">No</td><td style="text-align:center;">No</td></tr>
+          <tr style="border-bottom:1px solid #222;"><td style="padding:8px;">REST API</td><td style="text-align:center;">Yes</td><td style="text-align:center;">Pro only</td><td style="text-align:center;">Yes</td><td style="text-align:center;">Limited</td></tr>
+          <tr><td style="padding:8px;">Cost</td><td style="text-align:center;">Free (MIT)</td><td style="text-align:center;">Free + paid tiers</td><td style="text-align:center;">Community + paid</td><td style="text-align:center;">Free for open source</td></tr>
+        </table>
+        <p>
+          Semgrep, SonarQube, and CodeQL are mature and excellent at what they do: general-purpose static analysis and security scanning. AI Code Trust Validator does not replace them. It complements them by targeting the specific failure modes of AI-generated code. The hallucination detection layer and the AI-powered auto-fix are capabilities that traditional tools simply do not address because they were designed for human-written code.
+        </p>
+
+        <h2>Why I Built This</h2>
+        <p>
+          I noticed a pattern in my own workflow and in conversations with other developers. We were all using AI assistants more and more, but the review step was becoming the bottleneck. You can generate 500 lines of code in seconds, but verifying that those 500 lines are correct, secure, and free of hallucinated APIs takes far longer. The trust gap was widening.
+        </p>
+        <p>
+          I wanted a tool that understood the specific ways AI models fail. Not just "this code has a bug" but "this code looks like an AI model invented an API that does not exist" or "this pattern is a common hallucination where the model confuses two similar libraries." That specificity is what makes the difference between a generic linter and something purpose-built for the AI coding era.
+        </p>
+        <p>
+          The decision to support multiple AI providers for auto-fix was deliberate. Not every team can send code to OpenAI or Anthropic. Some need to keep everything local with Ollama. Others have their own fine-tuned models behind a custom endpoint. The tool should meet you where you are, not force you into a specific provider.
+        </p>
+
+        <h2>What's Next</h2>
+        <p>
+          The roadmap includes expanding language support beyond Python, JavaScript, and TypeScript. I am also working on deeper integration with GitHub Copilot and Cursor to provide real-time validation as the AI generates code, rather than after the fact. The plugin system is designed to grow, and I am actively looking for community contributions of domain-specific analyzers for frameworks like Django, React, and FastAPI.
+        </p>
+        <p>
+          If you use AI to write code, you should have a tool that understands how AI writes code. Give it a try:
+        </p>
+        <pre><code>pip install ai-trust-validator
+ai-trust-validator validate ./your-project/</code></pre>
+        <p>
+          <a href="https://github.com/rudra496/ai-code-trust-validator" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> github.com/rudra496/ai-code-trust-validator</a>
+        </p>
+        <p>
+          <a href="https://rudra496.github.io/ai-code-trust-validator/" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Documentation</a>
+        </p>
+
+        <h2>Connect</h2>
+        <ul>
+          <li><a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X / Twitter</a></li>
+          <li><a href="https://www.facebook.com/rudrasarker130" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer"><i class="fas fa-flask"></i> ResearchGate</a></li>
+          <li><a href="https://dev.to/rudra_sarker" target="_blank" rel="noopener noreferrer"><i class="fab fa-dev"></i> Dev.to</a></li>
+        </ul>
+      </section>
+      <a href="../blog.html" class="back-to-gallery" aria-label="Back to Blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </article>
+  </main>
+  <footer class="footer"><p>&copy; 2026 Rudra Sarker. All rights reserved.</p></footer>
+  <script defer src="../main.js"></script>
+  <script defer src="../js/script.js"></script>
+</body>
+</html>
