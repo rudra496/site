@@ -148,7 +148,7 @@
           <li><strong>IQR (Interquartile Range)</strong> — identifies outliers based on the 25th and 75th percentiles. Robust against extreme values that would skew standard deviation.</li>
           <li><strong>Gradient Detection</strong> — monitors the rate of change between consecutive readings. Catches rapid transitions even if absolute values are within normal range.</li>
         </ul>
-        <p>The key insight: <strong>no single method is perfect</strong>. Z-Score fails with skewed distributions. IQR is slow to respond to gradual drifts. Gradient detection can be noisy. So I made them <em>vote</em> — an anomaly is only flagged when at least 2 out of 3 methods agree. This reduces false positives by approximately 70% compared to any single method alone.</p>
+        <p>The key insight: <strong>no single method is perfect</strong>. Z-Score fails with skewed distributions. IQR is slow to respond to gradual drifts. Gradient detection can be noisy. So I made them <em>vote</em> — an anomaly is only flagged when at least 2 out of 3 methods agree. This significantly reduces false positives compared to any single method alone.</p>
 
         <h2>Multi-Agent AI: Specialized by Design</h2>
         <p>Rather than one monolithic AI component, EdgeBrain uses a <strong>multi-agent architecture</strong> where each agent has a single, clear responsibility:</p>

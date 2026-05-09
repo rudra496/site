@@ -107,7 +107,7 @@
           Building a mental health platform as a university student — with no clinical background, no funding,
           and no team — sounds either very brave or very foolish. Looking back, it was probably both. But
           <a href="https://mindwell-navy.vercel.app/" target="_blank" rel="noopener noreferrer">MindWell</a>
-          exists now, it is used by real people every day, and the lessons I learned building it have permanently
+          exists now, the platform is live and publicly accessible, and the lessons I learned building it have permanently
           changed how I think about software architecture, privacy, content strategy, and the responsibility
           that comes with building tools that people depend on emotionally.
         </p>
@@ -306,8 +306,8 @@
           with Jest unit tests covering all scoring algorithms (each scale has tests verifying that known
           input arrays produce expected scores and severity labels) and Playwright end-to-end tests covering
           the critical user journeys: completing an assessment, adding a mood log, navigating to a condition
-          guide. The Lighthouse CI score for MindWell is consistently above 95 for performance and
-          accessibility — I run Lighthouse as part of the CI pipeline on every pull request.
+          guide. The Lighthouse CI score for MindWell typically remains above 95 for performance and
+          accessibility at the time of writing — I run Lighthouse as part of the CI pipeline on every pull request.
         </p>
         <p>
           Content accuracy was tested through manual review against primary sources and, where possible,
@@ -384,10 +384,7 @@
         </p>
         <ul>
           <li>
-            <strong>Bengali language support:</strong> A significant proportion of the users who would benefit
-            most from MindWell are Bengali speakers who are not fully comfortable reading mental health
-            content in English. Translating the condition guides and UI strings into Bengali is the single
-            highest-impact thing I can do to increase the platform's reach.
+            <strong>Bengali language improvements:</strong> The initial bilingual support (English and Bengali) has shipped. Ongoing work to expand Bengali condition guide translations and improve localization quality across all UI strings remains a priority.
           </li>
           <li>
             <strong>Crisis chat integration:</strong> Connecting users in acute distress to trained counsellors

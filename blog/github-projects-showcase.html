@@ -142,7 +142,7 @@
           The overhead of a JavaScript framework — larger bundles, more complex deployment, more attack surface —
           is not justified for a content-heavy site where server-side interactivity is not needed. The result
           is a site that loads in under one second on a fast connection, achieves Lighthouse scores above 95
-          across all categories, and will continue to work on any browser that renders HTML, indefinitely.
+          across all categories at the time of writing, and will continue to work on any browser that renders standard HTML without requiring framework-specific tooling.
         </p>
         <p>
           The SEO implementation is thorough: every page has a unique title and meta description, canonical
@@ -174,8 +174,8 @@
         <p>
           The technical stack combines Python for the core computer vision pipeline with a Raspberry Pi as
           the embedded computing platform. The computer vision layer uses OpenCV for image capture and
-          preprocessing, and a quantised MobileNet V2 model for object detection — the quantisation step
-          (converting from 32-bit float to 8-bit integer weights) reduces the model size by approximately
+          preprocessing, and a quantized YOLOv5 model for object detection — the quantization step
+          (converting from 32-bit float to 8-bit integer weights) typically reduces the model size by approximately
           75% while retaining most of its accuracy, making it practical to run inference at several frames
           per second on the Pi's ARM processor.
         </p>
@@ -191,7 +191,8 @@
           <code>models/</code> (quantised TFLite model files), <code>audio/</code> (text-to-speech integration),
           and <code>web/</code> (the GitHub Pages demo site that explains the system for sighted visitors).
           The <code>README.md</code> includes hardware assembly instructions, software setup steps, and a
-          bill of materials so that anyone can build their own SightlineAI device for under $50 in
+          bill of materials so that anyone can build their own SightlineAI device for approximately $50 in
+          component costs (at the time of writing, subject to component pricing and availability).
           component costs.
         </p>
         <p>
