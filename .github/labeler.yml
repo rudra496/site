@@ -1,0 +1,20 @@
+src:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.html"
+          - "**/*.css"
+          - "**/*.js"
+blog:
+  - changed-files:
+      - any-glob-to-any-file: "blog/**"
+projects:
+  - changed-files:
+      - any-glob-to-any-file: "projects/**"
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.md"
+          - "docs/**"
+ci:
+  - changed-files:
+      - any-glob-to-any-file: ".github/workflows/**"
