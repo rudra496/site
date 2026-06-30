@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUST Applied AI Hackathon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0f18;
+            --accent-primary: #00f2fe;
+            --accent-secondary: #4facfe;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #ffffff;
+            --text-muted: #a0aec0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(79, 172, 254, 0.15), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(0, 242, 254, 0.15), transparent 25%);
+        }
+
+        nav {
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .hero-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            animation: fadeInDown 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+        }
+
+        .cta-button {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3);
+        }
+
+        .status-badge {
+            margin-top: 2rem;
+            padding: 0.5rem 1.5rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            font-size: 0.9rem;
+            color: var(--accent-primary);
+            animation: fadeIn 1s ease 0.6s both;
+        }
+
+        section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-main);
+        }
+
+        .tracks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .track-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, background 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .track-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(0, 242, 254, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .track-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .track-card:hover::before {
+            opacity: 1;
+        }
+
+        .track-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .track-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .track-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .judging-criteria {
+            background: linear-gradient(135deg, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, 0.8));
+            border-radius: 20px;
+            padding: 3rem;
+            margin-top: 5rem;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+
+        .criteria-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .criteria-item h4 {
+            color: var(--accent-primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            border-top: 1px solid var(--glass-border);
+            margin-top: 5rem;
+            color: var(--text-muted);
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">SUST.ai</div>
+        <div style="color: var(--text-muted); font-size: 0.9rem;">Organized by IPE Batch</div>
+    </nav>
+
+    <header>
+        <h1 class="hero-title">Applied AI<br>Hackathon</h1>
+        <p class="hero-subtitle">Building localized, low-compute AI solutions to solve real problems in Bangladesh. Designed by developers, for developers.</p>
+        <a href="#tracks" class="cta-button">View Tracks</a>
+        <div class="status-badge">🟢 Phase 1: Internal Pilot Completed</div>
+    </header>
+
+    <section id="tracks">
+        <h2 class="section-title">Core Tracks</h2>
+        <div class="tracks-grid">
+            <div class="track-card">
+                <div class="track-icon">👁️</div>
+                <h3 class="track-title">AI for Accessibility</h3>
+                <p class="track-desc">Build lightweight tools (TTS, computer vision) for the visually or hearing impaired using low-compute models tailored for everyday hardware.</p>
+            </div>
+            <div class="track-card">
+                <div class="track-icon">📡</div>
+                <h3 class="track-title">Smart Campus & IoT</h3>
+                <p class="track-desc">Utilize sensor data and edge AI (EdgeBrain) to solve critical university infrastructure problems, optimizing resource usage in real-time.</p>
+            </div>
+            <div class="track-card">
+                <div class="track-icon">🧠</div>
+                <h3 class="track-title">Mental Health Tech</h3>
+                <p class="track-desc">Create private, localized AI applications (like MindWell) to help students manage academic stress without relying on expensive APIs.</p>
+            </div>
+        </div>
+
+        <div class="judging-criteria">
+            <h2 class="section-title" style="margin-bottom: 1rem;">Judging Criteria</h2>
+            <p style="text-align: center; color: var(--text-muted);">How we evaluated the internal pilot prototypes</p>
+            <ul class="criteria-list">
+                <li class="criteria-item">
+                    <h4>30% Practicality</h4>
+                    <p class="track-desc">Can this actually run on a standard student laptop or mobile device?</p>
+                </li>
+                <li class="criteria-item">
+                    <h4>30% Local Impact</h4>
+                    <p class="track-desc">Does this solve a problem specific to Bangladesh or SUST?</p>
+                </li>
+                <li class="criteria-item">
+                    <h4>20% Execution</h4>
+                    <p class="track-desc">How clean is the code, and how efficiently does it use APIs/local models?</p>
+                </li>
+                <li class="criteria-item">
+                    <h4>20% Presentation</h4>
+                    <p class="track-desc">Can the team clearly explain the human value of the product?</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Built with ❤️ by Rudra Sarker & IPE Batchmates</p>
+    </footer>
+
+    <script>
+        // Subtle hover effect for cards
+        document.querySelectorAll('.track-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.1), rgba(255,255,255,0.02))`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.background = 'var(--glass-bg)';
+            });
+        });
+    </script>
+</body>
+</html>
