@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUST Applied AI Hackathon | Internal Pilot</title>
+    <title>SUST x Z.ai | Applied AI Session & Competition</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -74,6 +74,18 @@
             font-size: 0.875rem;
             color: var(--text-secondary);
             font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .organizer-tag span {
+            color: var(--text-primary);
+            background: var(--bg-tertiary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
         }
 
         /* Hero Section */
@@ -108,13 +120,13 @@
         .hero-subtitle {
             font-size: 1.25rem;
             color: var(--text-secondary);
-            max-width: 700px;
+            max-width: 800px;
             margin-bottom: 2.5rem;
             font-weight: 300;
         }
 
-        /* Mission Section */
-        .mission-section {
+        /* Mission / Program Section */
+        .program-section {
             padding: 5rem 0;
             border-bottom: 1px solid var(--border-color);
         }
@@ -130,72 +142,90 @@
             margin-bottom: 1rem;
         }
 
-        .mission-text {
+        .program-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .program-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .program-text {
             color: var(--text-secondary);
             font-size: 1.125rem;
-            max-width: 800px;
+        }
+        
+        .program-text p {
+            margin-bottom: 1.5rem;
         }
 
-        /* Tracks Grid */
-        .tracks-section {
-            padding: 5rem 0;
-        }
-
-        .tracks-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .track-card {
+        .highlight-box {
             background-color: var(--bg-secondary);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 2.5rem;
-            transition: all 0.2s ease;
         }
 
-        .track-card:hover {
-            border-color: rgba(56, 189, 248, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .track-icon {
-            width: 48px;
-            height: 48px;
-            background-color: rgba(56, 189, 248, 0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
+        .highlight-box h3 {
             color: var(--accent-primary);
-        }
-
-        .track-title {
             font-size: 1.25rem;
-            font-weight: 600;
             margin-bottom: 1rem;
-            color: var(--text-primary);
         }
-
-        .track-desc {
+        
+        .highlight-box ul {
+            list-style: none;
+        }
+        
+        .highlight-box li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
             color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.7;
+        }
+        
+        .highlight-box li svg {
+            color: var(--accent-primary);
+            flex-shrink: 0;
+            margin-top: 0.2rem;
         }
 
         /* Judging Criteria */
         .criteria-section {
             background-color: var(--bg-secondary);
-            border-top: 1px solid var(--border-color);
             padding: 5rem 0;
+        }
+
+        .auto-calc-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
         }
 
         .criteria-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 3rem 2rem;
+        }
+
+        .criteria-item {
+            background: var(--bg-primary);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
         }
 
         .criteria-item h4 {
@@ -247,54 +277,88 @@
                 <svg viewBox="0 0 24 24">
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                 </svg>
-                SUST Applied AI Hackathon
+                SUST Applied AI Initiative
             </div>
-            <div class="organizer-tag">Organized by IPE Cohort</div>
+            <div class="organizer-tag">Organized by <span>Z.ai</span> & <span>IPE Dept. (21-22)</span></div>
         </div>
     </nav>
 
     <header>
         <div class="container">
-            <div class="status-badge">Phase 1: Internal Pilot Successfully Completed</div>
-            <h1 class="hero-title">Engineering localized<br>AI solutions.</h1>
-            <p class="hero-subtitle">An initiative dedicated to building practical, low-compute artificial intelligence applications to solve real infrastructure and accessibility challenges in Bangladesh.</p>
+            <div class="status-badge">Phase 1: Workshop & Internal Pilot Completed</div>
+            <h1 class="hero-title">Applied AI for<br>Daily Life.</h1>
+            <p class="hero-subtitle">An exclusive technical session and internal competition hosted for the SUST Industrial & Production Engineering (2021-22) cohort, organized in partnership with Z.ai.</p>
         </div>
     </header>
 
-    <section class="mission-section">
+    <section class="program-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Initiative Overview</h2>
+                <h2 class="section-title">Program Overview</h2>
             </div>
-            <p class="mission-text">
-                Designed initially as a campus-wide event, this initiative was strategically pivoted into an intensive internal pilot program. We developed a complete infrastructure—from problem statements to evaluation rubrics—focusing strictly on solutions that can operate effectively within the hardware and resource constraints typical of the Global South. The resulting prototypes demonstrated that profound social impact can be achieved without relying on expensive, high-tier compute clusters.
-            </p>
+            
+            <div class="program-grid">
+                <div class="program-text">
+                    <p>
+                        Sponsored and organized in collaboration with <strong>Z.ai</strong>, this initiative was specifically designed for students of the Industrial and Production Engineering (IPE) department at Shahjalal University of Science and Technology (SUST), Session 2021-22.
+                    </p>
+                    <p>
+                        The program kicked off with an intensive, hands-on technical session that I conducted for my batchmates. We explored practical, low-compute methodologies for integrating artificial intelligence into everyday workflows, focusing heavily on localization and hardware constraints.
+                    </p>
+                    <p>
+                        Following the instructional session, we seamlessly transitioned into an internal competition themed <strong>"AI for Daily Life"</strong>. Batchmates were challenged to architect and prototype highly functional AI tools designed to solve immediate, daily-life problems within our local ecosystem.
+                    </p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>Competition Theme: AI for Daily Life</h3>
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span><strong>Focus on Utility:</strong> Prototypes were strictly required to address mundane but critical daily tasks—ranging from localized academic scheduling to automated resource management.</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span><strong>Hardware Constraints:</strong> All solutions had to be executable on standard student laptops, proving that high-impact AI does not inherently require expensive cloud GPU access.</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span><strong>Collaborative Engineering:</strong> By running this exclusively within the IPE 2021-22 cohort, we fostered a highly competitive yet collaborative engineering environment.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
-
 
     <section class="criteria-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Evaluation Rubric</h2>
-                <p style="color: var(--text-secondary); max-width: 600px;">The official criteria used to evaluate engineering prototypes during the internal pilot phase.</p>
+                <h2 class="section-title">Automated Evaluation Rubric</h2>
+                <p style="color: var(--text-secondary); max-width: 600px;">To ensure absolute objectivity and rapid feedback, all engineering prototypes were evaluated using a custom-built, auto-calculated scoring algorithm across four strict dimensions.</p>
             </div>
+            
+            <div class="auto-calc-badge">
+                <svg viewBox="0 0 24 24" style="width: 18px; height: 18px;"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                System: Algorithmically Computed Scoring
+            </div>
+
             <div class="criteria-grid">
                 <div class="criteria-item">
-                    <h4><span>30%</span> Hardware Practicality</h4>
-                    <p>Can the proposed solution run efficiently on standard, low-tier student laptops or mobile devices without requiring cloud GPU access?</p>
+                    <h4><span>30%</span> Practical Viability</h4>
+                    <p>Calculated based on the solution's resource footprint. Does it run efficiently on a standard device without heavy reliance on external API calls?</p>
                 </div>
                 <div class="criteria-item">
                     <h4><span>30%</span> Localized Impact</h4>
-                    <p>Does the solution directly address a verified, specific challenge faced by the Bangladeshi demographic or the immediate university ecosystem?</p>
+                    <p>Scored on relevance to the "Daily Life" theme. How effectively does this solve a hyper-local problem faced by students in Bangladesh?</p>
                 </div>
                 <div class="criteria-item">
-                    <h4><span>20%</span> Technical Execution</h4>
-                    <p>Evaluation of code architecture, efficiency of API utilization, and intelligent implementation of local models to reduce latency and cost.</p>
+                    <h4><span>20%</span> Execution & Architecture</h4>
+                    <p>Algorithmic evaluation of code cleanliness, latency optimization, and the intelligent implementation of lightweight local models.</p>
                 </div>
                 <div class="criteria-item">
-                    <h4><span>20%</span> Value Proposition</h4>
-                    <p>The ability of the engineering team to clearly articulate the human value, scalability, and social return on investment of their prototype.</p>
+                    <h4><span>20%</span> Innovation Index</h4>
+                    <p>A metric evaluating the uniqueness of the approach—rewarding teams that bypassed conventional high-compute solutions for clever, scrappy engineering.</p>
                 </div>
             </div>
         </div>
@@ -302,7 +366,7 @@
 
     <footer>
         <div class="container">
-            <p>Designed and coordinated by Rudra Sarker and the SUST IPE Engineering Cohort.</p>
+            <p>Designed and coordinated by Rudra Sarker in collaboration with Z.ai and the SUST IPE (2021-22) cohort.</p>
         </div>
     </footer>
 </body>
