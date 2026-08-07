@@ -13,6 +13,6 @@ jobs:
     steps:
       - uses: actions/first-interaction@v3
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-message: "Thanks for opening your first issue! We'll review it soon."
-          pr-message: "Welcome! Thanks for your first PR. A maintainer will review it shortly."
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          issue_message: "Thanks for opening your first issue! We'll review it soon."
+          pr_message: "Welcome! Thanks for your first PR. A maintainer will review it shortly."
