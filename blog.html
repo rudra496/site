@@ -3,106 +3,294 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog &amp; Insights | Rudra Sarker — AI, Open Source, Robotics, Engineering</title>
-  <meta name="description" content="Engineering deep-dives, project stories, open-source tool reviews, and lessons from building AI tools, robotics, and assistive technology — by Rudra Sarker, engineering student at SUST, Bangladesh. 25+ posts covering StealthHumanizer, EdgeBrain, MindWell, SightlineAI, and more." />
-  <meta name="keywords" content="blog, engineering, SignTalk, sign language, assistive technology, IoT, robotics, MindWell, SightlineAI, 3D Science Lab, PID controllers, StealthHumanizer, AI humanizer, code trust validator, omnicopter, UAV, edge AI, open source, developer tools, Rudra Sarker, SUST, Bangladesh" />
+  <title>Blog &amp; Research Publications | Rudra Sarker</title>
+  <meta name="description" content="Peer-reviewed studies, CERN Zenodo open-science repositories, AI agent frameworks, and assistive engineering by Rudra Sarker (SUST, Bangladesh). 31 published articles." />
+  <meta name="keywords" content="blog, engineering, peer-reviewed, Q1 journal, Elsevier, CERN Zenodo, DOI, open science, WorldSim AI, HyperReason, NexusAgent, MindWell, ScienceLab 3D, SightlineAI, StealthHumanizer, Rudra Sarker" />
   <link rel="canonical" href="https://rudra496.github.io/site/blog.html" />
   <meta name="theme-color" content="#0a0a1a" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="author" content="Rudra Sarker" />
-  <meta name="generator" content="GitHub Pages" />
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rudra Sarker Portfolio" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="Blog &amp; Insights | Rudra Sarker" />
-  <meta property="og:description" content="Engineering deep-dives, project stories, media coverage, and lessons from building technology that matters — by Rudra Sarker." />
+  <meta property="og:title" content="Blog &amp; Research Publications | Rudra Sarker" />
+  <meta property="og:description" content="Peer-reviewed studies, CERN Zenodo open-science repositories, and AI systems by Rudra Sarker." />
   <meta property="og:url" content="https://rudra496.github.io/site/blog.html" />
   <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Blog &amp; Insights | Rudra Sarker" />
-  <meta name="twitter:description" content="Engineering deep-dives, project stories, media coverage, and lessons from building technology that matters." />
+  <meta name="twitter:title" content="Blog &amp; Research Publications | Rudra Sarker" />
+  <meta name="twitter:description" content="Peer-reviewed studies, CERN Zenodo open-science repositories, and AI systems." />
   <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
 
   <!-- Fonts & Icons -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
 
   <!-- Styles -->
   <link rel="stylesheet" href="./styles_global.css" />
   <link rel="icon" href="./favicon.ico" />
+  
+<style>
+/* --- Modernized Blog Hub Styles --- */
+.blog-hub-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+}
+.blog-hub-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #ffffff 0%, #00ffff 60%, #ff00ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.75rem;
+}
+.blog-hub-subtitle {
+  font-size: 1.15rem;
+  color: #a0aec0;
+  line-height: 1.6;
+}
 
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Blog & Insights — Rudra Sarker",
-    "description": "Engineering deep-dives, project stories, open-source tool reviews, and lessons from building AI tools, robotics, and assistive technology — by Rudra Sarker.",
-    "url": "https://rudra496.github.io/site/blog.html",
-    "author": {
-      "@type": "Person",
-      "name": "Rudra Sarker",
-      "url": "https://rudra496.github.io/site/"
-    },
-    "blogPost": [
-      {"@type": "BlogPosting", "headline": "Open Science in Action: Preserving 10 Flagship AI & Engineering Repositories on CERN Zenodo", "url": "https://rudra496.github.io/site/blog/open-science-cern-zenodo-10-flagship-ai-repositories.html"},
-      {"@type": "BlogPosting", "headline": "HyperReason: Autonomous Test-Time Compute Scaling & Dynamic KV-Cache Sparsification for Edge LLMs", "url": "https://rudra496.github.io/site/blog/hyper-reason-autonomous-test-time-compute-kv-cache.html"},
-      {"@type": "BlogPosting", "headline": "Ethnoveterinary Herbal Practices in Commercial Poultry in Bangladesh: A Multi-District Cross-Sectional Study (Journal of Ethnopharmacology)", "url": "https://rudra496.github.io/site/blog/ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html"},
-      {"@type": "BlogPosting", "headline": "Team SignTalk: Translating Sign Language to Speech with a Smart Glove", "url": "https://rudra496.github.io/site/blog/sign-talk-smart-glove-sign-language-translation.html"},
-      {"@type": "BlogPosting", "headline": "SightlineAI: Building AI-Powered Assistive Eyewear", "url": "https://rudra496.github.io/site/blog/sightlineai-assistive-eyewear-visually-impaired.html"},
-      {"@type": "BlogPosting", "headline": "EdgeBrain: Free Open-Source Edge AI Platform", "url": "https://rudra496.github.io/site/blog/edgebrain-ai-edge-intelligence-platform.html"},
-      {"@type": "BlogPosting", "headline": "WorldSim AI: Digital Twin Simulation Platform", "url": "https://rudra496.github.io/site/blog/worldsim-ai-digital-twin-simulation-platform.html"},
-      {"@type": "BlogPosting", "headline": "NexusAgent: Self-Evolving Local AI Agent Framework", "url": "https://rudra496.github.io/site/blog/nexus-agent-self-evolving-local-ai-framework.html"},
-      {"@type": "BlogPosting", "headline": "TermMind: AI Terminal Assistant with 7 LLM Providers", "url": "https://rudra496.github.io/site/blog/termmind-ai-terminal-assistant.html"},
-      {"@type": "BlogPosting", "headline": "CodeVista: Code Analysis & Security Scanner", "url": "https://rudra496.github.io/site/blog/codevista-code-analysis-scanner.html"},
-      {"@type": "BlogPosting", "headline": "DevRoadmaps: Free Developer Roadmaps with 17 Paths", "url": "https://rudra496.github.io/site/blog/devroadmaps-free-developer-roadmaps.html"},
-      {"@type": "BlogPosting", "headline": "Sign Language Dataset Hub: 73+ Verified Datasets", "url": "https://rudra496.github.io/site/blog/sign-language-dataset-hub.html"},
-      {"@type": "BlogPosting", "headline": "MindWell: Open-Source Mental Health Platform", "url": "https://rudra496.github.io/site/blog/mindwell-mental-health-platform.html"},
-      {"@type": "BlogPosting", "headline": "ScienceLab 3D: 40+ Interactive Science Experiments", "url": "https://rudra496.github.io/site/blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html"},
-      {"@type": "BlogPosting", "headline": "StealthHumanizer: Free Open-Source AI Text Humanizer", "url": "https://rudra496.github.io/site/blog/stealthhumanizer-free-ai-text-humanizer.html"},
-      {"@type": "BlogPosting", "headline": "AI Code Trust Validator: Security Tool for AI-Generated Code", "url": "https://rudra496.github.io/site/blog/ai-code-trust-validator-security-tool.html"},
-      {"@type": "BlogPosting", "headline": "Spark: Zero-Dependency OSS Project Foundation Toolkit", "url": "https://rudra496.github.io/site/blog/spark-oss-repository-toolkit.html"},
-      {"@type": "BlogPosting", "headline": "Omnicopter: Energy-Aware UAV Control via RL Distillation", "url": "https://rudra496.github.io/site/blog/omnicopter-energy-aware-uav-control.html"},
-      {"@type": "BlogPosting", "headline": "Stroke Rehabilitation Activity Classification with ML", "url": "https://rudra496.github.io/site/blog/stroke-rehabilitation-activity-classification.html"},
-      {"@type": "BlogPosting", "headline": "TrafficStudy: Educational Network Traffic Analysis in Python", "url": "https://rudra496.github.io/site/blog/trafficstudy-network-traffic-education.html"},
-      {"@type": "BlogPosting", "headline": "TrafficStudyGo: Educational Network Traffic Analysis in Go", "url": "https://rudra496.github.io/site/blog/trafficstudygo-go-traffic-simulation.html"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://rudra496.github.io/site/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "https://rudra496.github.io/site/blog.html"
-      }
-    ]
-  }
-  </script>
+/* Spotlights Hero Grid */
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+.spotlight-card {
+  border-radius: 12px;
+  padding: 1.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+.spotlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 255, 255, 0.15);
+}
+.spotlight-q1 {
+  background: linear-gradient(145deg, rgba(10, 37, 64, 0.85), rgba(19, 78, 94, 0.55));
+  border: 1px solid rgba(113, 178, 128, 0.45);
+}
+.spotlight-zenodo {
+  background: linear-gradient(145deg, rgba(10, 37, 64, 0.85), rgba(0, 114, 180, 0.45));
+  border: 1px solid rgba(0, 210, 255, 0.45);
+}
+.spotlight-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+.spotlight-q1 .spotlight-tag { color: #71b280; }
+.spotlight-zenodo .spotlight-tag { color: #00d2ff; }
+
+/* Filter & Search Bar */
+.blog-controls-wrapper {
+  max-width: 1200px;
+  margin: 0 auto 2.5rem;
+  background: rgba(18, 18, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 1.25rem;
+  backdrop-filter: blur(12px);
+}
+.search-box-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.search-input {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.8rem;
+  background: rgba(10, 10, 26, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.search-input:focus {
+  outline: none;
+  border-color: #00ffff;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.35);
+}
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  color: #00ffff;
+  font-size: 1rem;
+  pointer-events: none;
+}
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.filter-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e0;
+  padding: 0.45rem 0.95rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.filter-pill:hover {
+  background: rgba(0, 255, 255, 0.15);
+  border-color: #00ffff;
+  color: #fff;
+}
+.filter-pill.active {
+  background: linear-gradient(135deg, #00ffff, #0088cc);
+  border-color: #00ffff;
+  color: #0a0a1a;
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+}
+.results-indicator {
+  font-size: 0.8rem;
+  color: #718096;
+  margin-top: 0.75rem;
+  text-align: right;
+}
+
+/* Category Sections */
+.blog-category-section {
+  max-width: 1200px;
+  margin: 0 auto 3.5rem;
+}
+.category-heading-wrap {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.75rem;
+}
+.category-heading {
+  font-size: 1.45rem;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.category-subtext {
+  font-size: 0.9rem;
+  color: #a0aec0;
+  margin-top: 0.25rem;
+}
+
+/* Grid & Cards */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+.blog-card {
+  background: rgba(22, 22, 50, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+.blog-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 255, 255, 0.5);
+  box-shadow: 0 12px 24px rgba(0, 255, 255, 0.12);
+}
+.card-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+  width: fit-content;
+}
+.badge-q1 { background: linear-gradient(135deg, #134e5e, #71b280); color: #fff; }
+.badge-zenodo { background: linear-gradient(135deg, #0A2540, #00d2ff); color: #fff; }
+.badge-doi { background: linear-gradient(135deg, #1e3c72, #2a5298); color: #00ffff; border: 1px solid rgba(0, 255, 255, 0.3); }
+.badge-research { background: linear-gradient(135deg, #2b5876, #4e4376); color: #fff; }
+.badge-award { background: linear-gradient(135deg, #fa709a, #f5576c); color: #fff; }
+.badge-opensource { background: linear-gradient(135deg, #43e97b, #38f9d7); color: #0a0a1a; }
+.badge-tech { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; }
+
+.card-title-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+.card-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.78rem;
+  color: #718096;
+  margin-bottom: 0.75rem;
+}
+.card-excerpt-text {
+  font-size: 0.88rem;
+  color: #cbd5e0;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+.card-action-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #00ffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+.card-action-link:hover {
+  color: #ff00ff;
+  gap: 0.6rem;
+}
+
+/* No search results state */
+.no-results-box {
+  display: none;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+</style>
+
 </head>
 <body>
-  <!-- Skip to main content link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <!-- Header & Navigation -->
   <header class="header">
     <nav class="nav-container" aria-label="Primary">
       <a href="./index.html" class="nav-brand">RUDRA SARKER</a>
@@ -121,412 +309,606 @@
   </header>
 
   <main id="main-content">
-    <!-- Blog Hero -->
-    <section id="blog" class="content-section">
-      <h1 class="section-title reveal">Blog &amp; Insights</h1>
-      <p class="section-subtitle reveal">Engineering deep-dives, project stories, media coverage, and lessons from building technology that matters — by Rudra Sarker</p>
-
-      <div style="max-width: 900px; margin: 0 auto 3rem; text-align: left;" class="reveal">
-        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">This is where I document the journey behind the projects — the technical decisions, the competition wins, the lessons learned from failure, and the stories that never make it into a project README. From sign language translation hardware to open-source mental health platforms, each post is a window into how these ideas were built and why they matter.</p>
-        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">You'll find hands-on technical breakdowns, honest reviews of developer tools, coverage of media recognition for Team SignTalk, and reflections on building technology with real-world impact. Knowledge grows when shared — this blog is my contribution back to the engineering community that shaped me.</p>
-        <p style="font-size: 1.1rem; line-height: 1.8;">Browse by category below, or visit the <a href="./blog/index.html" style="color:var(--primary,#00c6ff);">full blog hub</a> for all posts.</p>
+    <section class="content-section">
+      <div class="blog-hub-header reveal">
+        <h1 class="blog-hub-title">Engineering &amp; Research Publications</h1>
+        <p class="blog-hub-subtitle">Peer-reviewed clinical &amp; agricultural studies, CERN Zenodo open-science repositories, autonomous AI agent architectures, and assistive technology deep-dives.</p>
       </div>
 
-      <!-- ═══════════════════════════════════════════════
-           CATEGORY 1: Projects & Technology
-      ═══════════════════════════════════════════════ -->
-      <section class="content-section" style="padding-top:0;" aria-labelledby="cat-projects">
-        <h2 class="section-title reveal" id="cat-projects" style="font-size:1.5rem;">🛠 Projects &amp; Technology</h2>
-        <div class="blog-container reveal">
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Projects &amp; Technology</span>
-              <h3 class="card-title">Team SignTalk: Translating Sign Language to Speech with a Smart Glove</h3>
-              <p class="card-date">Mar 20, 2026</p>
-              <p class="blog-excerpt">How our team from SUST built a smart glove that translates sign language to speech — and won national and international recognition including Rice360 and SUST Innovation Hub funding.</p>
-              <a href="./blog/sign-talk-smart-glove-sign-language-translation.html" class="card-link">Read More →</a>
+      
+      <!-- ⭐ Featured Research Spotlights -->
+      <div class="spotlight-grid reveal">
+        <div class="spotlight-card spotlight-q1">
+          <div>
+            <span class="spotlight-tag">⭐ Featured Peer-Reviewed Publication</span>
+            <span class="card-badge badge-q1" style="display:block;margin-bottom:0.6rem;">Q1 Journal · Elsevier</span>
+            <h3 class="card-title-text" style="font-size:1.25rem;">Ethnoveterinary Herbal Practices in Commercial Poultry: Our Q1 Study in the Journal of Ethnopharmacology</h3>
+            <div class="card-meta-row">
+              <span><i class="far fa-calendar-alt"></i> Aug 24, 2026</span>
+              <span><i class="far fa-clock"></i> 12 min read</span>
             </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Projects &amp; Technology</span>
-              <h3 class="card-title">Rice360 Global Health Tech Design Competition: Our SUST Team's Journey</h3>
-              <p class="card-date">Mar 20, 2026</p>
-              <p class="blog-excerpt">How Team SignTalk became semifinalists at the Rice360 International Health Technology Design Competition, competing against global teams with our assistive glove technology.</p>
-              <a href="./blog/rice360-global-health-tech-design-competition.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Projects &amp; Technology</span>
-              <h3 class="card-title">SightlineAI: Building AI-Powered Assistive Eyewear for the Visually Impaired</h3>
-              <p class="card-date">Mar 20, 2026</p>
-              <p class="blog-excerpt">A technical deep-dive into designing and building SightlineAI — AI-powered wearable eyewear that provides real-time environment awareness for people with visual impairments.</p>
-              <a href="./blog/sightlineai-assistive-eyewear-visually-impaired.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Projects &amp; Technology</span>
-              <h3 class="card-title">3D Science Lab: Building an Interactive STEM Education Platform</h3>
-              <p class="card-date">Mar 20, 2026</p>
-              <p class="blog-excerpt">How I built an interactive 3D science laboratory for STEM education using Three.js and WebGL — making complex scientific concepts explorable and engaging for students.</p>
-              <a href="./blog/3d-science-lab-interactive-stem-education.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#0f2027,#2c5364);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Projects &amp; Technology</span>
-              <h3 class="card-title">ScienceLab 3D: 40+ Interactive Science Experiments with Next.js 15 &amp; React Three Fiber</h3>
-              <p class="card-date">Mar 23, 2026</p>
-              <p class="blog-excerpt">How I built ScienceLab 3D — a free, open-source browser-based STEM platform with 40+ interactive 3D experiments in Physics, Chemistry, Biology &amp; Mathematics using Next.js 15, TypeScript, and React Three Fiber.</p>
-              <a href="./blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Projects &amp; Technology</span>
-              <h3 class="card-title">TrafficStudy: Understanding Network Traffic Behavior Through Educational Analysis in Python</h3>
-              <p class="card-date">May 9, 2026</p>
-              <p class="blog-excerpt">An educational Python project for understanding network traffic behavior, rate limiting mechanisms, WAF responses, and defensive security research -- built for learning, not attacking.</p>
-              <a href="./blog/trafficstudy-network-traffic-education.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Projects &amp; Technology</span>
-              <h3 class="card-title">TrafficStudyGo: Educational Network Traffic Analysis in Go</h3>
-              <p class="card-date">May 9, 2026</p>
-              <p class="blog-excerpt">A Go port of TrafficStudy using goroutine-based concurrency to explore how different language paradigms handle network traffic analysis and educational security research.</p>
-              <a href="./blog/trafficstudygo-go-traffic-simulation.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#0f2027,#2c5364);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Research · Robotics · RL</span>
-              <h3 class="card-title">Omnicopter: Distilling Energy-Aware UAV Control into a Real-Time Oracle</h3>
-              <p class="card-date">May 9, 2026</p>
-              <p class="blog-excerpt">A two-stage learning framework for energy-aware null-space control of omnidirectional UAVs -- from SAC RL expert to lightweight XGBoost oracle with R2=0.99 fidelity at 0.057ms inference.</p>
-              <a href="./blog/omnicopter-energy-aware-uav-control.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#0f2027,#2c5364);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Research · Healthcare · ML</span>
-              <h3 class="card-title">Stroke Rehabilitation Activity Classification with Random Forest and LSTM</h3>
-              <p class="card-date">May 9, 2026</p>
-              <p class="blog-excerpt">A machine learning framework classifying upper-extremity rehabilitation activities from wearable IMU data, achieving 92.5% accuracy under leave-one-subject-out validation.</p>
-              <a href="./blog/stroke-rehabilitation-activity-classification.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Projects &amp; Technology</span>
-              <h3 class="card-title">The Unsung Hero of Automation: Why PID Controllers Are the "Magic" Inside Every Robot</h3>
-              <p class="blog-excerpt">Drones hovering, robots moving with perfect grace, even cruise control all rely on the hidden power of PID controllers. Learn how this elegant math enables precise, stable automation everywhere.</p>
-              <a href="./blog/pid-controllers-robotics-magic.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#0f2027,#2c5364);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Projects &amp; Technology</span>
-              <h3 class="card-title">EdgeBrain: Building a Free, Open-Source AI-Powered Edge Intelligence Platform</h3>
-              <p class="card-date">Mar 31, 2026</p>
-              <p class="blog-excerpt">How I built an open-source edge AI platform that simulates 11 IoT devices, runs real-time anomaly detection with multi-agent AI, and makes autonomous decisions — all locally, zero cloud, zero cost.</p>
-              <a href="./blog/edgebrain-ai-edge-intelligence-platform.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#0f2027,#2c5364);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Projects &amp; Technology</span>
-              <h3 class="card-title">WorldSim AI: Building a Full Digital Twin Simulation Platform from Scratch</h3>
-              <p class="card-date">Mar 31, 2026</p>
-              <p class="blog-excerpt">How I built WorldSim AI — an open-source digital twin simulation platform with agent-based modeling, PyTorch ML, Three.js 3D visualization, IoT ingestion, distributed computing, and a plugin marketplace. 82 files, 9000+ lines, 6 versions shipped.</p>
-              <a href="./blog/worldsim-ai-digital-twin-simulation-platform.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Projects &amp; Technology</span>
-              <h3 class="card-title">The Magic of '90s Bling: How Did Those Battery-Free Phone Stickers Actually Work?</h3>
-              <p class="blog-excerpt">Remember those glowing stickers on old Nokia phones? With no battery, they lit up when a call arrived. Discover how these tiny marvels harvested RF energy and glimpsed a battery-free future.</p>
-              <a href="./blog/the-magic-of-90s-bling-phone-sticker.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ═══════════════════════════════════════════════
-           CATEGORY 2: Achievements & Recognition
-      ═══════════════════════════════════════════════ -->
-      <section class="content-section" style="padding-top:0;" aria-labelledby="cat-achievements">
-        <h2 class="section-title reveal" id="cat-achievements" style="font-size:1.5rem;">🏆 Achievements &amp; Recognition</h2>
-        <div class="blog-container reveal">
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#fa709a,#f5576c);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Achievements &amp; Recognition</span>
-              <h3 class="card-title">SUST Innovation Hub Awards Pre-Seed Funding to Team SignTalk</h3>
-              <p class="card-date">Mar 20, 2026</p>
-              <p class="blog-excerpt">SUST Innovation Hub selected Team SignTalk for pre-seed funding, marking our transition from a student project to a funded startup focused on assistive communication technology.</p>
-              <a href="./blog/sust-innovation-hub-pre-seed-funding-sign-talk.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#fa709a,#f5576c);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Achievements &amp; Recognition</span>
-              <h3 class="card-title">Media Coverage &amp; Achievements: SignTalk in the Press</h3>
-              <p class="card-date">Mar 20, 2026</p>
-              <p class="blog-excerpt">A roundup of all press coverage, media mentions, and recognition milestones for Team SignTalk and Rudra Sarker's engineering journey — from local media to international competitions.</p>
-              <a href="./blog/media-coverage-achievements-rudra-sarker.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ═══════════════════════════════════════════════
-           CATEGORY 3: Open Source & Development
-      ═══════════════════════════════════════════════ -->
-      <section class="content-section" style="padding-top:0;" aria-labelledby="cat-opensource">
-        <h2 class="section-title reveal" id="cat-opensource" style="font-size:1.5rem;">💻 Open Source &amp; Development</h2>
-        <div class="blog-container reveal" id="opensource-posts">
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#1e3c72,#2a5298);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;font-weight:600;">Edge AI &amp; Test-Time Compute</span>
-              <h3 class="card-title">HyperReason: Autonomous Test-Time Compute Scaling &amp; Dynamic KV-Cache Sparsification</h3>
-              <p class="card-date">Aug 26, 2026</p>
-              <p class="blog-excerpt">Bringing o1/DeepSeek-R1 style reasoning to commodity hardware: Monte Carlo Tree Search, dynamic KV-cache pruning, and INT8/INT4 quantization with verified CERN Zenodo DOI.</p>
-              <a href="./blog/hyper-reason-autonomous-test-time-compute-kv-cache.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#43e97b,#38f9d7);color:#0a0a1a;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Open Source &amp; Development</span>
-              <h3 class="card-title">StealthHumanizer: Free Open-Source AI Text Humanizer with 13 Providers</h3>
-              <p class="card-date">May 9, 2026</p>
-              <p class="blog-excerpt">A free, MIT-licensed AI text humanizer with a 4-layer pipeline, 13 AI providers, 500+ synonym swaps, 12-metric detection scoring, batch processing, and 16+ languages. No login required.</p>
-              <a href="./blog/stealthhumanizer-free-ai-text-humanizer.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#43e97b,#38f9d7);color:#0a0a1a;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Open Source &amp; Development</span>
-              <h3 class="card-title">AI Code Trust Validator: Trust Your AI-Generated Code Before Shipping</h3>
-              <p class="card-date">May 9, 2026</p>
-              <p class="blog-excerpt">A complete quality gate for AI-assisted development -- security scanning, hallucination detection, logic validation, AI auto-fix with 4 LLM providers, IDE plugins, and team analytics.</p>
-              <a href="./blog/ai-code-trust-validator-security-tool.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#43e97b,#38f9d7);color:#0a0a1a;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Open Source &amp; Development</span>
-              <h3 class="card-title">Spark: Zero-Dependency OSS Project Foundation Toolkit</h3>
-              <p class="card-date">May 9, 2026</p>
-              <p class="blog-excerpt">A pure Python toolkit for validating repository structure, scoring project maturity (0-100), scaffolding manifests, and auditing open-source health. Plugin system, i18n, and full type annotations.</p>
-              <a href="./blog/spark-oss-repository-toolkit.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#43e97b,#38f9d7);color:#0a0a1a;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Open Source &amp; Development</span>
-              <h3 class="card-title">NexusAgent: The Zero-Config, Self-Evolving Local AI Agent Framework</h3>
-              <p class="card-date">Apr 18, 2026</p>
-              <p class="blog-excerpt">A deep dive into NexusAgent v1.0 — a privacy-first local AI framework with GraphRAG memory, auto skill generation, multi-agent orchestration, voice, cloud sync, IDE integration, and marketplace.</p>
-              <a href="./blog/nexus-agent-self-evolving-local-ai-framework.html" class="card-link">Read More &rarr;</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#43e97b,#38f9d7);color:#0a0a1a;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Open Source &amp; Development</span>
-              <h3 class="card-title">Building MindWell: Dev Journey of an Open-Source Mental Health Platform</h3>
-              <p class="card-date">Mar 20, 2026</p>
-              <p class="blog-excerpt">The full development story behind MindWell — how we built a privacy-first, open-source mental health platform from scratch, the technical decisions made, and what's next.</p>
-              <a href="./blog/mindwell-open-source-mental-health-platform-update.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#43e97b,#38f9d7);color:#0a0a1a;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Open Source &amp; Development</span>
-              <h3 class="card-title">GitHub Projects Showcase: What I've Built and Open-Sourced</h3>
-              <p class="card-date">Mar 20, 2026</p>
-              <p class="blog-excerpt">A curated tour of my open-source GitHub projects — from IoT firmware to web apps — including what each project does, the tech stack, and how to contribute.</p>
-              <a href="./blog/github-projects-showcase.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Open Source · AI</span>
-              <h3 class="card-title">TermMind: AI Terminal Assistant with 7 LLM Providers</h3>
-              <p class="card-date">Mar 27, 2026</p>
-              <p class="blog-excerpt">How I built TermMind — an open-source AI terminal assistant supporting OpenAI, Claude, Gemini, Groq, Ollama, and more. 40+ commands, code analysis, session recording, and 227 tests.</p>
-              <a href="./blog/termmind-ai-terminal-assistant.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#4facfe,#00f2fe);color:#0a0a1a;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Open Source · Code Quality</span>
-              <h3 class="card-title">CodeVista: Code Analysis & Security Scanner for 65+ Languages</h3>
-              <p class="card-date">Mar 27, 2026</p>
-              <p class="blog-excerpt">An open-source code analysis tool with DNA fingerprinting, architectural decay detection, 38 lint rules across 5 languages, security scanning, and stunning HTML reports.</p>
-              <a href="./blog/codevista-code-analysis-scanner.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#a18cd1,#fbc2eb);color:#0a0a1a;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Open Source · Education</span>
-              <h3 class="card-title">DevRoadmaps: Free roadmap.sh Alternative with 17 Paths</h3>
-              <p class="card-date">Mar 27, 2026</p>
-              <p class="blog-excerpt">A free open-source developer roadmap platform with 17 paths, 800+ topics, 1700+ free resources, PWA offline support, certification tracking, and community features.</p>
-              <a href="./blog/devroadmaps-free-developer-roadmaps.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#ffecd2,#fcb69f);color:#0a0a1a;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Research · Deaf Community</span>
-              <h3 class="card-title">Sign Language Dataset Hub: 73+ Verified Datasets for 26 Languages</h3>
-              <p class="card-date">Mar 27, 2026</p>
-              <p class="blog-excerpt">A curated catalog of 73+ publicly available sign language datasets for researchers, developers, students, and the deaf community. Every link verified, no fabricated data.</p>
-              <a href="./blog/sign-language-dataset-hub.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#43e97b,#38f9d7);color:#0a0a1a;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Open Source &amp; Development</span>
-              <h3 class="card-title">MindWell: A Free, Open-Source Mental Health Platform for Everyone</h3>
-              <p class="card-date">Mar 15, 2026</p>
-              <p class="blog-excerpt">Explore MindWell — a privacy-first, open-source mental wellness platform offering 393 condition guides, 20 self-reflection assessments, offline mood tracking, therapy resources, and bilingual support.</p>
-              <a href="./blog/mindwell-mental-health-platform.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <!-- Load More posts (hidden by default) -->
-          <article class="card blog-post blog-post-hidden" style="display:none;" aria-hidden="true">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#43e97b,#38f9d7);color:#0a0a1a;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Open Source &amp; Development</span>
-              <h3 class="card-title">GLM Coding Plan &amp; GLM-5 Turbo Review 2026: Is It Worth It for Developers?</h3>
-              <p class="card-date">Mar 19, 2026</p>
-              <p class="blog-excerpt">An honest, hands-on review of Zhipu AI's GLM Coding Plan and GLM-5 Turbo model — tool compatibility, pricing tiers, real-world agentic coding performance, and who should subscribe.</p>
-              <a href="./blog/glm-5-turbo-coding-plan-review-2026.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post blog-post-hidden" style="display:none;" aria-hidden="true">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#43e97b,#38f9d7);color:#0a0a1a;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;">Open Source &amp; Development</span>
-              <h3 class="card-title">Evaluating GLM Coding Plan and GLM-5 Through Real-World System Design</h3>
-              <p class="card-date">Feb 20, 2026</p>
-              <p class="blog-excerpt">A technical evaluation of Zhipu AI's GLM Coding Plan and GLM-5 through real-world system design and coding workflows — when GLM-4.7 is enough and when GLM-5 is worth it.</p>
-              <a href="./blog/glm-coding-plan-evaluation.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-        </div>
-        <div style="text-align:center;margin-top:1.5rem;" class="reveal">
-          <button id="load-more-opensource" class="cta-button" aria-expanded="false">Load More Posts</button>
-        </div>
-      </section>
-
-      <!-- ═══════════════════════════════════════════════
-           CATEGORY 4: Publications & Research
-      ═══════════════════════════════════════════════ -->
-      <section class="content-section" style="padding-top:0;" aria-labelledby="cat-research">
-        <h2 class="section-title reveal" id="cat-research" style="font-size:1.5rem;">📄 Publications &amp; Research</h2>
-        <div class="blog-container reveal">
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#0A2540,#00d2ff);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;font-weight:600;">Open Science · CERN Zenodo</span>
-              <h3 class="card-title">Open Science in Action: Preserving 10 Flagship AI &amp; Engineering Frameworks on CERN Zenodo</h3>
-              <p class="card-date">Aug 26, 2026</p>
-              <p class="blog-excerpt">Ensuring scientific reproducibility across 10 flagship software repositories with persistent Concept DOIs, permanent archival storage at CERN, and DataCite-compliant research software citations.</p>
-              <a href="./blog/open-science-cern-zenodo-10-flagship-ai-repositories.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-          <article class="card blog-post">
-            <div class="blog-post-content">
-              <span style="display:inline-block;padding:2px 10px;background:linear-gradient(135deg,#134e5e,#71b280);color:#fff;border-radius:12px;font-size:0.75rem;margin-bottom:0.5rem;font-weight:600;">Q1 Journal · Elsevier</span>
-              <h3 class="card-title">Ethnoveterinary Herbal Practices in Commercial Poultry: Our Q1 Study in the Journal of Ethnopharmacology</h3>
-              <p class="card-date">Aug 24, 2026</p>
-              <p class="blog-excerpt">A nationwide empirical study across 795 poultry farms in 35 districts of Bangladesh published in Elsevier's Journal of Ethnopharmacology — revealing a 43.6% within-group reduction in antibiotic use, improved FCR, and key food safety insights.</p>
-              <a href="./blog/ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html" class="card-link">Read More →</a>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ═══════════════════════════════════════════════
-           CATEGORY 5: In The Press
-      ═══════════════════════════════════════════════ -->
-      <section class="content-section" style="padding-top:0;background:linear-gradient(135deg,rgba(102,126,234,0.08),rgba(118,75,162,0.08));border-radius:16px;padding:2rem;" aria-labelledby="cat-press">
-        <h2 class="section-title reveal" id="cat-press" style="font-size:1.5rem;">📰 In The Press</h2>
-        <div class="reveal" style="max-width:900px;margin:0 auto;">
-          <p style="font-size:1.05rem;line-height:1.8;margin-bottom:1.5rem;">Team SignTalk and Rudra Sarker's work has been featured in national and international media. From television coverage to newspaper articles, our assistive technology journey has reached audiences across Bangladesh and beyond.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:1.5rem;">
-            <span style="display:inline-block;padding:5px 14px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:20px;font-size:0.85rem;font-weight:600;">📺 Television Coverage</span>
-            <span style="display:inline-block;padding:5px 14px;background:linear-gradient(135deg,#fa709a,#f5576c);color:#fff;border-radius:20px;font-size:0.85rem;font-weight:600;">📰 Newspaper Features</span>
-            <span style="display:inline-block;padding:5px 14px;background:linear-gradient(135deg,#43e97b,#38f9d7);color:#0a0a1a;border-radius:20px;font-size:0.85rem;font-weight:600;">🌐 Online Media</span>
-            <span style="display:inline-block;padding:5px 14px;background:linear-gradient(135deg,#f7971e,#ffd200);color:#0a0a1a;border-radius:20px;font-size:0.85rem;font-weight:600;">🏆 Competition Recognition</span>
+            <p class="card-excerpt-text">Nationwide empirical study published in Elsevier's Journal of Ethnopharmacology (Impact Factor: 4.8, CiteScore: 9.3). Documents verified 43.6% reduction in synthetic antimicrobial dependence across 795 commercial poultry farms.</p>
           </div>
-          <a href="./blog/media-coverage-achievements-rudra-sarker.html" class="cta-button">Read Full Media Coverage &amp; Achievements →</a>
+          <a href="./blog/ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html" class="card-action-link" style="margin-top:1rem;color:#71b280;">Read Full Publication Breakdown →</a>
+        </div>
+
+        <div class="spotlight-card spotlight-zenodo">
+          <div>
+            <span class="spotlight-tag">⭐ Featured Open Science Milestone</span>
+            <span class="card-badge badge-zenodo" style="display:block;margin-bottom:0.6rem;">CERN Zenodo · 10 Flagship Frameworks</span>
+            <h3 class="card-title-text" style="font-size:1.25rem;">Open Science in Action: Preserving 10 Flagship AI &amp; Engineering Repositories on CERN Zenodo</h3>
+            <div class="card-meta-row">
+              <span><i class="far fa-calendar-alt"></i> Aug 26, 2026</span>
+              <span><i class="far fa-clock"></i> 10 min read</span>
+            </div>
+            <p class="card-excerpt-text">Permanent digital preservation of 10 flagship AI, edge computing, mental health, and educational frameworks on CERN Zenodo. Features immutable Concept DOIs, DataCite indexing, and verified FAIR software principles.</p>
+          </div>
+          <a href="./blog/open-science-cern-zenodo-10-flagship-ai-repositories.html" class="card-action-link" style="margin-top:1rem;color:#00d2ff;">Explore Open Science Matrix →</a>
+        </div>
+      </div>
+
+
+      
+      <!-- Controls Bar: Live Search & Category Pills -->
+      <div class="blog-controls-wrapper reveal">
+        <div class="search-box-row">
+          <i class="fas fa-search search-icon"></i>
+          <input type="search" id="blog-search" class="search-input" placeholder="Search 31 articles by title, method, DOI, or keyword (e.g. MCTS, Q1, Zenodo, Three.js)..." aria-label="Search articles" />
+        </div>
+        <div class="filter-pills">
+          <button class="filter-pill active" data-filter="all">All Articles (31)</button>
+          <button class="filter-pill" data-filter="peer-reviewed">📄 Peer-Reviewed (3)</button>
+          <button class="filter-pill" data-filter="zenodo">🏛️ CERN Zenodo (12)</button>
+          <button class="filter-pill" data-filter="assistive">🦾 Assistive &amp; Robotics (4)</button>
+          <button class="filter-pill" data-filter="tools">🛠️ Systems &amp; Dev Tools (8)</button>
+          <button class="filter-pill" data-filter="media">🏆 Media &amp; Awards (4)</button>
+        </div>
+        <div class="results-indicator">Showing <span id="visible-count">31</span> of 31 articles</div>
+      </div>
+
+
+      
+      <div id="no-results-box" class="no-results-box">
+        <i class="fas fa-search" style="font-size:2rem;color:#718096;margin-bottom:1rem;display:block;"></i>
+        <h3 style="color:#fff;margin-bottom:0.5rem;">No matching articles found</h3>
+        <p style="color:#a0aec0;font-size:0.9rem;">Try searching for a different keyword like "MCTS", "Zenodo", "Elsevier", or click "All Articles".</p>
+      </div>
+
+
+      
+      <section class="blog-category-section reveal" data-cat-id="peer-reviewed">
+        <div class="category-heading-wrap">
+          <h2 class="category-heading">📄 Peer-Reviewed Academic Journals & Studies <span style="font-size:0.9rem;font-weight:400;color:#718096;">(3)</span></h2>
+          <p class="category-subtext">Formally published empirical studies, clinical machine learning, and control theory papers in international Q1 journals and conferences.</p>
+        </div>
+        <div class="blog-grid">
+          
+            <article class="blog-card" data-cat-id="peer-reviewed">
+              <div>
+                <span class="card-badge badge-q1">Q1 Journal · Elsevier</span>
+                <h3 class="card-title-text">Ethnoveterinary Herbal Practices in Commercial Poultry: Our Q1 Study in the Journal of Ethnopharmacology</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Aug 24, 2026</span>
+                  <span><i class="far fa-clock"></i> 12 min read</span>
+                </div>
+                <p class="card-excerpt-text">A nationwide empirical study across 795 poultry farms in 35 districts of Bangladesh published in Elsevier's Journal of Ethnopharmacology — revealing a 43.6% within-group reduction in antibiotic use, improved FCR, and key food safety insights.</p>
+              </div>
+              <a href="./blog/ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="peer-reviewed">
+              <div>
+                <span class="card-badge badge-research">Research Study · Robotics & RL</span>
+                <h3 class="card-title-text">Omnicopter: Distilling Energy-Aware UAV Control into a Real-Time Oracle</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> May 9, 2026</span>
+                  <span><i class="far fa-clock"></i> 10 min read</span>
+                </div>
+                <p class="card-excerpt-text">A two-stage reinforcement learning framework for energy-aware null-space control of omnidirectional UAVs — from SAC RL expert to lightweight XGBoost oracle with R²=0.99 fidelity at 0.057ms inference.</p>
+              </div>
+              <a href="./blog/omnicopter-energy-aware-uav-control.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="peer-reviewed">
+              <div>
+                <span class="card-badge badge-research">Research Study · Healthcare ML</span>
+                <h3 class="card-title-text">Stroke Rehabilitation Activity Classification with Random Forest and LSTM</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> May 9, 2026</span>
+                  <span><i class="far fa-clock"></i> 8 min read</span>
+                </div>
+                <p class="card-excerpt-text">A clinical machine learning framework classifying upper-extremity rehabilitation activities from wearable IMU sensor data, achieving 92.5% accuracy under leave-one-subject-out validation.</p>
+              </div>
+              <a href="./blog/stroke-rehabilitation-activity-classification.html" class="card-action-link">Read Article →</a>
+            </article>
+
+        </div>
+      </section>
+
+      <section class="blog-category-section reveal" data-cat-id="zenodo">
+        <div class="category-heading-wrap">
+          <h2 class="category-heading">🏛️ CERN Zenodo Open Science & Software Depositions <span style="font-size:0.9rem;font-weight:400;color:#718096;">(12)</span></h2>
+          <p class="category-subtext">Flagship research software repositories permanently preserved with immutable Concept DOIs, DataCite schemas, and FAIR reproducibility standards.</p>
+        </div>
+        <div class="blog-grid">
+          
+            <article class="blog-card" data-cat-id="zenodo">
+              <div>
+                <span class="card-badge badge-zenodo">CERN Zenodo · Open Science Master Portfolio</span>
+                <h3 class="card-title-text">Open Science in Action: Preserving 10 Flagship AI & Engineering Repositories on CERN Zenodo</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Aug 26, 2026</span>
+                  <span><i class="far fa-clock"></i> 10 min read</span>
+                </div>
+                <p class="card-excerpt-text">Ensuring permanent software reproducibility across 10 flagship repositories with immutable Concept DOIs, CERN distributed archival storage, and DataCite-compliant academic citation schemas.</p>
+              </div>
+              <a href="./blog/open-science-cern-zenodo-10-flagship-ai-repositories.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="zenodo">
+              <div>
+                <span class="card-badge badge-doi">DOI: 10.5281/zenodo.22118810</span>
+                <h3 class="card-title-text">HyperReason: Autonomous Test-Time Compute Scaling & Dynamic KV-Cache Sparsification</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Aug 26, 2026</span>
+                  <span><i class="far fa-clock"></i> 8 min read</span>
+                </div>
+                <p class="card-excerpt-text">Bringing o1/DeepSeek-R1 style reasoning to commodity hardware: Monte Carlo Tree Search, dynamic KV-cache pruning, and INT8/INT4 quantization with verified CERN Zenodo Concept DOI.</p>
+              </div>
+              <a href="./blog/hyper-reason-autonomous-test-time-compute-kv-cache.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="zenodo">
+              <div>
+                <span class="card-badge badge-doi">DOI: 10.5281/zenodo.22118796</span>
+                <h3 class="card-title-text">WorldSim AI: Building a Full Digital Twin Simulation Platform from Scratch</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Mar 31, 2026</span>
+                  <span><i class="far fa-clock"></i> 11 min read</span>
+                </div>
+                <p class="card-excerpt-text">An open-source digital twin simulation platform with agent-based modeling, PyTorch ML, Three.js 3D visualization, IoT ingestion, distributed computing, and a plugin marketplace. 82 files, 9000+ lines.</p>
+              </div>
+              <a href="./blog/worldsim-ai-digital-twin-simulation-platform.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="zenodo">
+              <div>
+                <span class="card-badge badge-doi">DOI: 10.5281/zenodo.22118830</span>
+                <h3 class="card-title-text">NexusAgent: The Zero-Config, Self-Evolving Local AI Agent Framework</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Apr 18, 2026</span>
+                  <span><i class="far fa-clock"></i> 9 min read</span>
+                </div>
+                <p class="card-excerpt-text">An open-source Python framework combining local GraphRAG memory, auto skill generation, multi-agent orchestration, and sandboxed code execution via Ollama and LiteLLM.</p>
+              </div>
+              <a href="./blog/nexus-agent-self-evolving-local-ai-framework.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="zenodo">
+              <div>
+                <span class="card-badge badge-doi">DOI: 10.5281/zenodo.22118819</span>
+                <h3 class="card-title-text">AI Code Trust Validator: Security & Hallucination Auditing for AI-Generated Code</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Apr 18, 2026</span>
+                  <span><i class="far fa-clock"></i> 7 min read</span>
+                </div>
+                <p class="card-excerpt-text">A specialized developer tool that audits AI-generated code for security vulnerabilities, hallucinations, license compliance, and phantom dependencies before merging into production.</p>
+              </div>
+              <a href="./blog/ai-code-trust-validator-security-tool.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="zenodo">
+              <div>
+                <span class="card-badge badge-doi">DOI: 10.5281/zenodo.22118838</span>
+                <h3 class="card-title-text">DevRoadmaps: Free Open-Source Developer Roadmaps with 20 Career Paths</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Apr 18, 2026</span>
+                  <span><i class="far fa-clock"></i> 6 min read</span>
+                </div>
+                <p class="card-excerpt-text">An offline-capable Progressive Web App providing interactive career roadmaps, 870+ structured curriculum nodes, skill radars, and interview prep aligned with UN SDG 4.</p>
+              </div>
+              <a href="./blog/devroadmaps-free-developer-roadmaps.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="zenodo">
+              <div>
+                <span class="card-badge badge-doi">DOI: 10.5281/zenodo.22118705</span>
+                <h3 class="card-title-text">StealthHumanizer: Free Open-Source AI Text Humanizer with 13 AI Providers</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> May 9, 2026</span>
+                  <span><i class="far fa-clock"></i> 8 min read</span>
+                </div>
+                <p class="card-excerpt-text">An open-source AI text humanizer featuring a 4-layer linguistic pipeline, 13 AI providers, 500+ synonym swaps, 12-metric detection scoring, and 16+ supported languages.</p>
+              </div>
+              <a href="./blog/stealthhumanizer-free-ai-text-humanizer.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="zenodo">
+              <div>
+                <span class="card-badge badge-doi">DOI: 10.5281/zenodo.22118681</span>
+                <h3 class="card-title-text">MindWell: Building an Open-Source, Privacy-First Mental Health Platform</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Mar 20, 2026</span>
+                  <span><i class="far fa-clock"></i> 8 min read</span>
+                </div>
+                <p class="card-excerpt-text">How I built an open-source mental health platform with clinical psychometric assessments (PHQ-9, GAD-7), on-device sentiment tracking, zero telemetry, and multilingual support.</p>
+              </div>
+              <a href="./blog/mindwell-mental-health-platform.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="zenodo">
+              <div>
+                <span class="card-badge badge-opensource">Open Source Update · Health Tech</span>
+                <h3 class="card-title-text">MindWell: Scaling Open-Source Mental Health Architecture & Global Access</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Apr 18, 2026</span>
+                  <span><i class="far fa-clock"></i> 7 min read</span>
+                </div>
+                <p class="card-excerpt-text">A deep look into MindWell's updated architecture, client-side encryption protocols, community-contributed exercises, and offline-first PWA infrastructure.</p>
+              </div>
+              <a href="./blog/mindwell-open-source-mental-health-platform-update.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="zenodo">
+              <div>
+                <span class="card-badge badge-doi">DOI: 10.5281/zenodo.22118683</span>
+                <h3 class="card-title-text">EdgeBrain: Free Open-Source AI-Powered Edge Intelligence Platform</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Mar 31, 2026</span>
+                  <span><i class="far fa-clock"></i> 9 min read</span>
+                </div>
+                <p class="card-excerpt-text">An edge AI framework simulating 11 IoT devices, real-time statistical anomaly detection with multi-agent intelligence, and autonomous decisions — completely local, zero cloud.</p>
+              </div>
+              <a href="./blog/edgebrain-ai-edge-intelligence-platform.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="zenodo">
+              <div>
+                <span class="card-badge badge-doi">DOI: 10.5281/zenodo.22118690</span>
+                <h3 class="card-title-text">ScienceLab 3D: 40+ Interactive Science Experiments with Next.js 15 & React Three Fiber</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Mar 23, 2026</span>
+                  <span><i class="far fa-clock"></i> 9 min read</span>
+                </div>
+                <p class="card-excerpt-text">How I built ScienceLab 3D — a free, open-source browser STEM platform with 40+ interactive 3D laboratory simulations in Physics, Chemistry, Biology & Mathematics.</p>
+              </div>
+              <a href="./blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="zenodo">
+              <div>
+                <span class="card-badge badge-doi">DOI: 10.5281/zenodo.22118700</span>
+                <h3 class="card-title-text">SightlineAI: Building AI-Powered Assistive Eyewear for the Visually Impaired</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Mar 20, 2026</span>
+                  <span><i class="far fa-clock"></i> 8 min read</span>
+                </div>
+                <p class="card-excerpt-text">Technical deep-dive into SightlineAI — wearable smart glasses providing edge computer vision, real-time depth estimation, and spatial audio feedback for the visually impaired.</p>
+              </div>
+              <a href="./blog/sightlineai-assistive-eyewear-visually-impaired.html" class="card-action-link">Read Article →</a>
+            </article>
+
+        </div>
+      </section>
+
+      <section class="blog-category-section reveal" data-cat-id="assistive">
+        <div class="category-heading-wrap">
+          <h2 class="category-heading">🦾 Assistive Technology, IoT & Robotics <span style="font-size:0.9rem;font-weight:400;color:#718096;">(4)</span></h2>
+          <p class="category-subtext">Hardware systems, sensor gloves, smart eyewear, and control algorithms engineered for accessibility, healthcare, and education.</p>
+        </div>
+        <div class="blog-grid">
+          
+            <article class="blog-card" data-cat-id="assistive">
+              <div>
+                <span class="card-badge badge-award">Assistive Tech · Award Winner</span>
+                <h3 class="card-title-text">Team SignTalk: Translating Sign Language to Speech with a Smart Glove</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Mar 20, 2026</span>
+                  <span><i class="far fa-clock"></i> 7 min read</span>
+                </div>
+                <p class="card-excerpt-text">How our team from SUST built a sensor-instrumented smart glove translating sign language gestures to real-time speech — winning national recognition and SUST Innovation Hub funding.</p>
+              </div>
+              <a href="./blog/sign-talk-smart-glove-sign-language-translation.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="assistive">
+              <div>
+                <span class="card-badge badge-opensource">STEM Pedagogy · WebGL</span>
+                <h3 class="card-title-text">3D Science Lab: Building an Interactive STEM Education Platform</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Mar 20, 2026</span>
+                  <span><i class="far fa-clock"></i> 6 min read</span>
+                </div>
+                <p class="card-excerpt-text">Exploring interactive 3D science education with Three.js and WebGL — making abstract scientific phenomena, atomic structures, and physics mechanics tangible for students.</p>
+              </div>
+              <a href="./blog/3d-science-lab-interactive-stem-education.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="assistive">
+              <div>
+                <span class="card-badge badge-tech">Control Systems · Robotics</span>
+                <h3 class="card-title-text">The Unsung Hero of Automation: Why PID Controllers Are the 'Magic' Inside Every Robot</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Mar 20, 2026</span>
+                  <span><i class="far fa-clock"></i> 5 min read</span>
+                </div>
+                <p class="card-excerpt-text">From drones hovering in wind shear to robotic arm kinematics and industrial temperature loops: understanding the mathematical elegance and real-world implementation of PID control.</p>
+              </div>
+              <a href="./blog/pid-controllers-robotics-magic.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="assistive">
+              <div>
+                <span class="card-badge badge-opensource">Data Science · Open Dataset</span>
+                <h3 class="card-title-text">Sign Language Dataset Hub: 73+ Verified Datasets for Global Sign Recognition</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> May 9, 2026</span>
+                  <span><i class="far fa-clock"></i> 6 min read</span>
+                </div>
+                <p class="card-excerpt-text">A curated, open-access directory of 73+ verified sign language datasets covering 28 sign systems, complete with sensor modalities, camera setups, and benchmark baselines.</p>
+              </div>
+              <a href="./blog/sign-language-dataset-hub.html" class="card-action-link">Read Article →</a>
+            </article>
+
+        </div>
+      </section>
+
+      <section class="blog-category-section reveal" data-cat-id="tools">
+        <div class="category-heading-wrap">
+          <h2 class="category-heading">🛠️ Systems, Developer Tools & Open Source <span style="font-size:0.9rem;font-weight:400;color:#718096;">(8)</span></h2>
+          <p class="category-subtext">Production CLIs, static security analyzers, network simulators, and AI benchmarking tools built for the developer community.</p>
+        </div>
+        <div class="blog-grid">
+          
+            <article class="blog-card" data-cat-id="tools">
+              <div>
+                <span class="card-badge badge-tech">Developer Tools · CLI</span>
+                <h3 class="card-title-text">TermMind: Open-Source AI Terminal Assistant with 7 LLM Providers</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> May 9, 2026</span>
+                  <span><i class="far fa-clock"></i> 6 min read</span>
+                </div>
+                <p class="card-excerpt-text">A privacy-focused CLI assistant that translates natural language into verified shell commands, audits bash scripts for safety, and works across 7 major LLM backends.</p>
+              </div>
+              <a href="./blog/termmind-ai-terminal-assistant.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="tools">
+              <div>
+                <span class="card-badge badge-tech">Security · Static Analysis</span>
+                <h3 class="card-title-text">CodeVista: Lightweight Code Quality & Static Security Scanner</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> May 9, 2026</span>
+                  <span><i class="far fa-clock"></i> 6 min read</span>
+                </div>
+                <p class="card-excerpt-text">A fast, dependency-free static analysis scanner running in your terminal to catch security misconfigurations, credential leaks, and complexity hotspots across 12 languages.</p>
+              </div>
+              <a href="./blog/codevista-code-analysis-scanner.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="tools">
+              <div>
+                <span class="card-badge badge-tech">DevOps · Repository Health</span>
+                <h3 class="card-title-text">Spark: The All-in-One Open-Source Repository Automation Toolkit</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> May 9, 2026</span>
+                  <span><i class="far fa-clock"></i> 5 min read</span>
+                </div>
+                <p class="card-excerpt-text">Automating open-source repository maintenance: standardized issue templates, automated release drafting, contributor onboarding, and CI hygiene validation.</p>
+              </div>
+              <a href="./blog/spark-oss-repository-toolkit.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="tools">
+              <div>
+                <span class="card-badge badge-tech">Networking · Python</span>
+                <h3 class="card-title-text">TrafficStudy: Understanding Network Traffic Behavior Through Python Analysis</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> May 9, 2026</span>
+                  <span><i class="far fa-clock"></i> 6 min read</span>
+                </div>
+                <p class="card-excerpt-text">An educational project exploring packet inspection, TCP handshake dynamics, rate-limiting algorithms, and defensive cybersecurity research in Python.</p>
+              </div>
+              <a href="./blog/trafficstudy-network-traffic-education.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="tools">
+              <div>
+                <span class="card-badge badge-tech">Concurrency · Golang</span>
+                <h3 class="card-title-text">TrafficStudyGo: High-Throughput Network Traffic Simulation in Go</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> May 9, 2026</span>
+                  <span><i class="far fa-clock"></i> 6 min read</span>
+                </div>
+                <p class="card-excerpt-text">Rewriting traffic analysis in Go: leveraging goroutine-based concurrency and channels to simulate thousands of concurrent HTTP/TCP client requests with minimal overhead.</p>
+              </div>
+              <a href="./blog/trafficstudygo-go-traffic-simulation.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="tools">
+              <div>
+                <span class="card-badge badge-opensource">Portfolio · Open Source</span>
+                <h3 class="card-title-text">Full Open-Source Portfolio Showcase: From Assistive Devices to AI Engines</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> May 9, 2026</span>
+                  <span><i class="far fa-clock"></i> 7 min read</span>
+                </div>
+                <p class="card-excerpt-text">An expansive tour across 20+ active GitHub repositories: architectural rationales, tech stack choices, release milestones, and open-source contribution roadmaps.</p>
+              </div>
+              <a href="./blog/github-projects-showcase.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="tools">
+              <div>
+                <span class="card-badge badge-tech">LLM Evaluation · Benchmark</span>
+                <h3 class="card-title-text">GLM-5 Turbo Coding Plan Review: Evaluating Next-Gen Code Synthesis in 2026</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Mar 27, 2026</span>
+                  <span><i class="far fa-clock"></i> 7 min read</span>
+                </div>
+                <p class="card-excerpt-text">A deep benchmarking session evaluating GLM-5 Turbo on complex architectural refactoring, full-stack scaffolding, and edge-case resolution compared to Claude and GPT-4o.</p>
+              </div>
+              <a href="./blog/glm-5-turbo-coding-plan-review-2026.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="tools">
+              <div>
+                <span class="card-badge badge-tech">AI Analysis · Code Generation</span>
+                <h3 class="card-title-text">Evaluating GLM Coding Plans: Practical Tests Across Real-World Python Repos</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Mar 27, 2026</span>
+                  <span><i class="far fa-clock"></i> 6 min read</span>
+                </div>
+                <p class="card-excerpt-text">Hands-on findings from testing automated coding plans generated by frontier Chinese open-weights models on production multi-file Python and React repositories.</p>
+              </div>
+              <a href="./blog/glm-coding-plan-evaluation.html" class="card-action-link">Read Article →</a>
+            </article>
+
+        </div>
+      </section>
+
+      <section class="blog-category-section reveal" data-cat-id="media">
+        <div class="category-heading-wrap">
+          <h2 class="category-heading">🏆 Competitions, Media Coverage & Tech Stories <span style="font-size:0.9rem;font-weight:400;color:#718096;">(4)</span></h2>
+          <p class="category-subtext">Television interviews, national newspaper features, global competition journeys, and hardware retrospectives.</p>
+        </div>
+        <div class="blog-grid">
+          
+            <article class="blog-card" data-cat-id="media">
+              <div>
+                <span class="card-badge badge-award">Media Coverage · National Press</span>
+                <h3 class="card-title-text">Media Coverage & National Press Features: The Journey of Team SignTalk</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Mar 20, 2026</span>
+                  <span><i class="far fa-clock"></i> 8 min read</span>
+                </div>
+                <p class="card-excerpt-text">A curated archive of television broadcasts, national newspaper features, and online journalism documenting Team SignTalk's innovations and student engineering milestones.</p>
+              </div>
+              <a href="./blog/media-coverage-achievements-rudra-sarker.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="media">
+              <div>
+                <span class="card-badge badge-award">International Competition · Semifinalist</span>
+                <h3 class="card-title-text">Rice360 Global Health Tech Design Competition: Our International Journey</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Mar 20, 2026</span>
+                  <span><i class="far fa-clock"></i> 7 min read</span>
+                </div>
+                <p class="card-excerpt-text">How Team SignTalk represented SUST on the global stage as semifinalists at Rice University's prestigious international health technology design challenge.</p>
+              </div>
+              <a href="./blog/rice360-global-health-tech-design-competition.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="media">
+              <div>
+                <span class="card-badge badge-award">Grant Funding · SUST Hub</span>
+                <h3 class="card-title-text">Securing Pre-Seed Innovation Funding from SUST Innovation Hub for SignTalk</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Mar 20, 2026</span>
+                  <span><i class="far fa-clock"></i> 6 min read</span>
+                </div>
+                <p class="card-excerpt-text">Pitching to university leadership, proving technical feasibility, and securing competitive prototype funding to transition from lab breadboard to field-ready hardware.</p>
+              </div>
+              <a href="./blog/sust-innovation-hub-pre-seed-funding-sign-talk.html" class="card-action-link">Read Article →</a>
+            </article>
+
+            <article class="blog-card" data-cat-id="media">
+              <div>
+                <span class="card-badge badge-tech">Retro Tech · Hardware Nostalgia</span>
+                <h3 class="card-title-text">The Magic of 90s Bling Phone Stickers: Early Wireless Energy Harvesting</h3>
+                <div class="card-meta-row">
+                  <span><i class="far fa-calendar-alt"></i> Mar 20, 2026</span>
+                  <span><i class="far fa-clock"></i> 4 min read</span>
+                </div>
+                <p class="card-excerpt-text">Remember those retro phone stickers that flashed during incoming calls? An engineering breakdown of how passive RF induction and LC resonant circuits worked with zero batteries.</p>
+              </div>
+              <a href="./blog/the-magic-of-90s-bling-phone-sticker.html" class="card-action-link">Read Article →</a>
+            </article>
+
         </div>
       </section>
 
     </section>
   </main>
 
-  <!-- Shared Footer -->
-  <footer class="footer">
-    <p>&copy; 2026 Rudra Sarker. All rights reserved.</p>
+  <footer class="footer" style="padding:2.5rem 1rem;text-align:center;font-size:0.9rem;color:#718096;border-top:1px solid rgba(255,255,255,0.05);">
+    <p>&copy; 2026 Rudra Sarker. All rights reserved. &bull; <a href="./contact.html" style="color:#00ffff;">Contact</a></p>
   </footer>
 
-  <!-- Scripts -->
   <script defer src="./main.js"></script>
   <script defer src="./background.js"></script>
-  <script>
-    (function () {
-      var btn = document.getElementById('load-more-opensource');
-      if (!btn) return;
-      btn.addEventListener('click', function () {
-        var hidden = document.querySelectorAll('#opensource-posts .blog-post-hidden');
-        hidden.forEach(function (el) {
-          el.style.display = '';
-          el.removeAttribute('aria-hidden');
-          el.classList.remove('blog-post-hidden');
-        });
-        btn.style.display = 'none';
+  
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const searchInput = document.getElementById('blog-search');
+  const filterPills = document.querySelectorAll('.filter-pill');
+  const cards = document.querySelectorAll('.blog-card');
+  const sections = document.querySelectorAll('.blog-category-section');
+  const countIndicator = document.getElementById('visible-count');
+  const noResultsBox = document.getElementById('no-results-box');
+
+  let currentFilter = 'all';
+  let searchQuery = '';
+
+  function updateFilter() {
+    let visibleCount = 0;
+    const query = searchQuery.toLowerCase().trim();
+
+    sections.forEach(sec => {
+      const secCat = sec.getAttribute('data-cat-id');
+      const secCards = sec.querySelectorAll('.blog-card');
+      let secVisibleCards = 0;
+
+      secCards.forEach(card => {
+        const cardCat = card.getAttribute('data-cat-id');
+        const text = card.textContent.toLowerCase();
+
+        const matchesCat = (currentFilter === 'all' || currentFilter === cardCat);
+        const matchesQuery = (!query || text.includes(query));
+
+        if (matchesCat && matchesQuery) {
+          card.style.display = 'flex';
+          secVisibleCards++;
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
       });
-    })();
-  </script>
+
+      if (secVisibleCards > 0) {
+        sec.style.display = 'block';
+      } else {
+        sec.style.display = 'none';
+      }
+    });
+
+    if (countIndicator) {
+      countIndicator.textContent = visibleCount;
+    }
+
+    if (noResultsBox) {
+      noResultsBox.style.display = (visibleCount === 0) ? 'block' : 'none';
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function (e) {
+      searchQuery = e.target.value;
+      updateFilter();
+    });
+  }
+
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', function () {
+      filterPills.forEach(p => p.classList.remove('active'));
+      this.classList.add('active');
+      currentFilter = this.getAttribute('data-filter');
+      updateFilter();
+    });
+  });
+});
+</script>
+
 </body>
 </html>
