@@ -686,3 +686,562 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
     font-size: 1.4rem;
   }
 }
+
+/* ==========================================================================
+   COMPREHENSIVE LIGHT MODE CONTRAST & VISIBILITY ENGINE
+   Applied when [data-theme="light"] is active on <html> or <body>
+   ========================================================================== */
+
+[data-theme="light"] {
+  --bg-color: #f4f7fa;
+  --text-color: #1e293b;            /* Slate-800: high contrast against light bg */
+  --heading-color: #0f172a;         /* Slate-900: strong, crisp headings */
+  --link-color: #0284c7;
+  --link-hover-color: #be185d;
+  --primary-color: #0284c7;         /* Deep readable blue */
+  --secondary-color: #be185d;
+  --tertiary-color: #15803d;        /* Deep readable green */
+  --card-bg-color: #ffffff;
+  --card-border-color: rgba(203, 213, 225, 0.85);
+}
+
+/* 1. Global Typography in Light Mode */
+[data-theme="light"] body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: var(--heading-color) !important;
+  text-shadow: none !important;
+}
+
+[data-theme="light"] p,
+[data-theme="light"] li,
+[data-theme="light"] td,
+[data-theme="light"] th {
+  color: var(--text-color);
+}
+
+[data-theme="light"] .section-title {
+  color: var(--heading-color) !important;
+  text-shadow: none !important;
+}
+
+[data-theme="light"] .section-subtitle {
+  color: #475569 !important;
+}
+
+/* 2. Hero & Profile Section in Light Mode */
+[data-theme="light"] .about-text h1,
+[data-theme="light"] .about-text h2 {
+  color: var(--heading-color) !important;
+}
+
+[data-theme="light"] .about-text p {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .about-text strong {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .about-text > p:first-of-type {
+  color: #0284c7 !important;
+}
+
+[data-theme="light"] .profile-pic {
+  border-color: rgba(2, 132, 199, 0.4) !important;
+  box-shadow: 0 0 20px rgba(2, 132, 199, 0.15) !important;
+}
+
+/* Hero Badge Pills */
+[data-theme="light"] .pill-green {
+  background: rgba(16, 185, 129, 0.12) !important;
+  border-color: #059669 !important;
+  color: #047857 !important;
+}
+
+[data-theme="light"] .pill-cyan {
+  background: rgba(2, 132, 199, 0.12) !important;
+  border-color: #0284c7 !important;
+  color: #0369a1 !important;
+}
+
+[data-theme="light"] .pill-orcid {
+  background: rgba(132, 204, 22, 0.14) !important;
+  border-color: #65a30d !important;
+  color: #4d7c0f !important;
+}
+
+[data-theme="light"] .pill-purple {
+  background: rgba(168, 85, 247, 0.12) !important;
+  border-color: #9333ea !important;
+  color: #7e22ce !important;
+}
+
+/* 3. Stat Matrix in Light Mode */
+[data-theme="light"] .stat-card {
+  background: #ffffff !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] .stat-card:hover {
+  border-color: #0284c7 !important;
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.12) !important;
+}
+
+[data-theme="light"] .stat-num {
+  background: linear-gradient(135deg, #0284c7, #16a34a) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+[data-theme="light"] .stat-label {
+  color: #1e293b !important;
+}
+
+[data-theme="light"] .stat-card span {
+  color: #64748b !important;
+}
+
+/* 4. Research Spotlight Banner in Light Mode */
+[data-theme="light"] [id="research-spotlight"] > div,
+[data-theme="light"] [id="research-banner"] > div {
+  background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%) !important;
+  border-color: rgba(2, 132, 199, 0.35) !important;
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.08) !important;
+}
+
+[data-theme="light"] [id="research-spotlight"] h3,
+[data-theme="light"] [id="research-banner"] h3 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] [id="research-spotlight"] p,
+[data-theme="light"] [id="research-banner"] p {
+  color: #334155 !important;
+}
+
+[data-theme="light"] [id="research-spotlight"] span,
+[data-theme="light"] [id="research-banner"] span {
+  color: #047857 !important;
+}
+
+[data-theme="light"] [id="research-spotlight"] a.cta-button-small {
+  color: #ffffff !important;
+}
+
+/* 5. Core Technical Pillars in Light Mode */
+[data-theme="light"] .pillar-card {
+  background: #ffffff !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .pillar-card:hover {
+  border-color: #0284c7 !important;
+  box-shadow: 0 10px 28px rgba(2, 132, 199, 0.12) !important;
+}
+
+[data-theme="light"] .pillar-card h3 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .pillar-card p {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .tech-badge {
+  background: rgba(2, 132, 199, 0.08) !important;
+  border-color: rgba(2, 132, 199, 0.3) !important;
+  color: #0369a1 !important;
+}
+
+/* 6. Flagship Cards & Projects in Light Mode */
+[data-theme="light"] .featured-project-card {
+  background: #ffffff !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .featured-project-card:hover {
+  border-color: #0284c7 !important;
+  box-shadow: 0 10px 28px rgba(2, 132, 199, 0.12) !important;
+}
+
+[data-theme="light"] .featured-project-card h3 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .featured-project-card p,
+[data-theme="light"] .featured-project-card .project-description {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .project-status {
+  background: rgba(2, 132, 199, 0.1) !important;
+  border-color: #0284c7 !important;
+  color: #0369a1 !important;
+}
+
+[data-theme="light"] .category-badge {
+  background: rgba(2, 132, 199, 0.08) !important;
+  border-color: rgba(2, 132, 199, 0.3) !important;
+  color: #0369a1 !important;
+}
+
+[data-theme="light"] .featured-cta {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+  border-color: #0284c7 !important;
+}
+
+[data-theme="light"] .featured-cta:hover {
+  background: #0369a1 !important;
+  color: #ffffff !important;
+}
+
+/* Secondary ghost buttons inside cards */
+[data-theme="light"] .featured-cta[style*="rgba(255, 255, 255"],
+[data-theme="light"] a[style*="background:rgba(255,255,255,0.08)"],
+[data-theme="light"] a[style*="background: rgba(255, 255, 255, 0.08)"] {
+  background: #f1f5f9 !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .featured-cta[style*="rgba(255, 255, 255"]:hover,
+[data-theme="light"] a[style*="background:rgba(255,255,255,0.08)"]:hover,
+[data-theme="light"] a[style*="background: rgba(255, 255, 255, 0.08)"]:hover {
+  background: #e2e8f0 !important;
+  border-color: #0284c7 !important;
+  color: #0284c7 !important;
+}
+
+/* 7. Hardware Projects & Standard Cards in Light Mode */
+[data-theme="light"] .card,
+[data-theme="light"] .project-card {
+  background: #ffffff !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .card:hover,
+[data-theme="light"] .project-card:hover {
+  border-color: #0284c7 !important;
+  box-shadow: 0 10px 24px rgba(2, 132, 199, 0.12) !important;
+}
+
+[data-theme="light"] .card-title,
+[data-theme="light"] .project-card h3 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .card-description,
+[data-theme="light"] .project-card p {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .card-tag {
+  background: rgba(2, 132, 199, 0.08) !important;
+  border-color: rgba(2, 132, 199, 0.3) !important;
+  color: #0369a1 !important;
+}
+
+/* 8. Award Cards in Light Mode */
+[data-theme="light"] .award-card {
+  background: #ffffff !important;
+  border-color: rgba(217, 119, 6, 0.35) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .award-card:hover {
+  border-color: #d97706 !important;
+  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.12) !important;
+}
+
+[data-theme="light"] .award-card h3 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .award-card p {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .award-card span i.fa-trophy,
+[data-theme="light"] .award-card span i.fa-seedling,
+[data-theme="light"] .award-card span i.fa-medal {
+  color: #d97706 !important;
+}
+
+[data-theme="light"] .award-card span i.fa-newspaper {
+  color: #0284c7 !important;
+}
+
+/* 9. Blog Post Cards in Light Mode */
+[data-theme="light"] .blog-post {
+  background: #ffffff !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .blog-post:hover {
+  border-color: #0284c7 !important;
+  box-shadow: 0 10px 24px rgba(2, 132, 199, 0.12) !important;
+}
+
+[data-theme="light"] .blog-post .card-title {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .blog-post .card-date {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .blog-post .blog-excerpt {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .card-link {
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .card-link:hover {
+  color: #0369a1 !important;
+}
+
+/* 10. Contact & Footer in Light Mode */
+[data-theme="light"] [id="contact-overview"] > div {
+  background: #ffffff !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] [id="contact-overview"] h2 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] [id="contact-overview"] p {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .footer {
+  background: #e2e8f0 !important;
+  border-top-color: #cbd5e1 !important;
+}
+
+[data-theme="light"] .footer p {
+  color: #475569 !important;
+}
+
+/* 11. Interactive Buttons in Light Mode */
+[data-theme="light"] .cta-button {
+  background-color: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25) !important;
+}
+
+[data-theme="light"] .cta-button:hover {
+  background-color: #0369a1 !important;
+  border-color: #0369a1 !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35) !important;
+}
+
+[data-theme="light"] .cta-button-small {
+  background-color: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.2) !important;
+}
+
+[data-theme="light"] .cta-button-small:hover {
+  background-color: #0369a1 !important;
+  border-color: #0369a1 !important;
+  color: #ffffff !important;
+}
+
+/* 12. Blog Hub Components in Light Mode */
+[data-theme="light"] .grand-search-container {
+  background: #ffffff !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] .grand-search-container::after {
+  background: radial-gradient(circle at 85% 20%, rgba(2, 132, 199, 0.08), transparent 60%) !important;
+}
+
+[data-theme="light"] .grand-search-title {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .grand-search-stats {
+  color: #0369a1 !important;
+  background: rgba(2, 132, 199, 0.1) !important;
+  border-color: rgba(2, 132, 199, 0.25) !important;
+}
+
+[data-theme="light"] .grand-search-input {
+  background: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .grand-search-input:focus {
+  background: #ffffff !important;
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 14px rgba(2, 132, 199, 0.3) !important;
+}
+
+[data-theme="light"] .grand-search-icon {
+  color: #0284c7 !important;
+}
+
+[data-theme="light"] .quick-chip {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #334155 !important;
+}
+
+[data-theme="light"] .quick-chip:hover {
+  background: rgba(2, 132, 199, 0.15) !important;
+  border-color: #0284c7 !important;
+  color: #0284c7 !important;
+}
+
+[data-theme="light"] .topic-explorer-title {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .topic-nav-btn {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #1e293b !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .topic-nav-btn:hover {
+  border-color: #0284c7 !important;
+  background: #f8fafc !important;
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.12) !important;
+}
+
+[data-theme="light"] .topic-btn-title {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .topic-btn-desc {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .controls-inner-box {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .filter-badge {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #475569 !important;
+}
+
+[data-theme="light"] .filter-badge:hover,
+[data-theme="light"] .filter-badge.active {
+  background: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .keyword-chip {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #334155 !important;
+}
+
+[data-theme="light"] .keyword-chip:hover,
+[data-theme="light"] .keyword-chip.active {
+  background: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .sort-btn {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #475569 !important;
+}
+
+[data-theme="light"] .sort-btn:hover,
+[data-theme="light"] .sort-btn.active {
+  background: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .blog-card {
+  background: #ffffff !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .blog-card:hover {
+  border-color: #0284c7 !important;
+  box-shadow: 0 10px 24px rgba(2, 132, 199, 0.12) !important;
+}
+
+[data-theme="light"] .card-title-text {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .card-excerpt-text {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .card-meta-row {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .card-action-link {
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .card-tag-badge {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #334155 !important;
+}
+
+[data-theme="light"] .spotlight-card {
+  background: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] .spotlight-q1 {
+  background: linear-gradient(145deg, #f0fdf4 0%, #e0f2fe 100%) !important;
+  border-color: #86efac !important;
+}
+
+[data-theme="light"] .spotlight-zenodo {
+  background: linear-gradient(145deg, #f0f9ff 0%, #e0e7ff 100%) !important;
+  border-color: #93c5fd !important;
+}
+
+[data-theme="light"] .spotlight-card h3 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .spotlight-card p {
+  color: #334155 !important;
+}
