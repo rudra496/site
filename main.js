@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const THEME_KEY = 'theme';
   const saved = localStorage.getItem(THEME_KEY);
   const systemPref = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-  const startTheme = saved || systemPref || 'dark';
+  const startTheme = saved || 'light';
   root.setAttribute('data-theme', startTheme);
 
   // Inject a theme toggle into the nav
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.type = 'button';
     btn.title = 'Toggle theme';
     btn.setAttribute('aria-label', 'Toggle theme');
-    btn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    btn.innerHTML = startTheme === 'light' ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
     navContainer.appendChild(btn);
 
     const setTheme = (mode) => {

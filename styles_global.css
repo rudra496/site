@@ -5,9 +5,9 @@
 
 :root {
   /* --- Lighter Modern Dark Theme (#0f172a / Slate-900) --- */
-  --bg-color: #0f172a;
-  --bg-surface: #1e293b;
-  --bg-card: rgba(30, 41, 59, 0.85);
+  --bg-color: #172033;              /* Lighter Modern Slate-800 (#172033) */
+  --bg-surface: #222f46;
+  --bg-card: rgba(34, 47, 70, 0.90);
   --text-color: #f1f5f9;            /* Crisp off-white */
   --text-muted: #94a3b8;            /* Clear legible slate */
   --text-dim: #64748b;
@@ -17,7 +17,7 @@
   --tertiary-color: #00ff00;        /* Neon Lime */
   --link-color: #00ffff;
   --link-hover-color: #ff00ff;
-  --card-bg-color: rgba(30, 41, 59, 0.85);
+  --card-bg-color: rgba(34, 47, 70, 0.90);
   --card-border-color: rgba(0, 255, 255, 0.25);
   --header-height: 70px;
 
@@ -1440,4 +1440,68 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
 }
 .software-card-highlight {
   border-top: 3px solid var(--primary-color) !important;
+}
+
+
+/* ==========================================================================
+   BULLETPROOF LIGHT-MODE CONTRAST FOR BLOG SECTIONS & CARDS
+   ========================================================================== */
+[data-theme="light"] .blog-post,
+[data-theme="light"] .blog-card,
+[data-theme="light"] .featured-project-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .blog-post:hover,
+[data-theme="light"] .blog-card:hover,
+[data-theme="light"] .featured-project-card:hover {
+  border-color: #0284c7 !important;
+  box-shadow: 0 12px 28px rgba(2, 132, 199, 0.12) !important;
+}
+
+[data-theme="light"] .blog-post h3,
+[data-theme="light"] .blog-card h3,
+[data-theme="light"] .card-title,
+[data-theme="light"] .card-title-text,
+[data-theme="light"] .category-heading,
+[data-theme="light"] .project-content h2,
+[data-theme="light"] .project-content h3 {
+  color: #020617 !important;
+}
+
+[data-theme="light"] .blog-excerpt,
+[data-theme="light"] .card-excerpt-text,
+[data-theme="light"] .category-subtext,
+[data-theme="light"] .blog-post p,
+[data-theme="light"] .blog-card p,
+[data-theme="light"] .project-content p,
+[data-theme="light"] .project-content li {
+  color: #1e293b !important;
+}
+
+[data-theme="light"] .card-link,
+[data-theme="light"] .card-action-link,
+[data-theme="light"] .project-content a {
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .filter-pill {
+  background: #f1f5f9 !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #1e293b !important;
+}
+[data-theme="light"] .filter-pill:hover,
+[data-theme="light"] .filter-pill.active {
+  background: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .sort-select {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
 }

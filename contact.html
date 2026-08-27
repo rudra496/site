@@ -1,30 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — Rudra Sarker</title>
-  <meta name="description" content="Contact Rudra Sarker for collaborations, opportunities, or feedback." />
-  <meta name="keywords" content="Rudra Sarker, contact, email, LinkedIn, GitHub, Dev.to, collaboration, developer" />
+  <title>Contact Rudra Sarker | AI &amp; Robotics Engineer | SUST</title>
+  <meta name="description" content="Get in touch with Rudra Sarker for AI research collaborations, robotics engineering opportunities, academic inquiries, or technical consulting." />
+  <meta name="keywords" content="Contact Rudra Sarker, SUST, AI Engineer, Robotics Engineer, Open Science Collaborations, Sylhet, Bangladesh" />
   <link rel="canonical" href="https://rudra496.github.io/site/contact.html" />
-  <meta name="theme-color" content="#0a0a1a" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="index, follow" />
   <meta name="author" content="Rudra Sarker" />
-  <meta name="generator" content="GitHub Pages" />
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="Contact Rudra Sarker" />
-  <meta property="og:description" content="Get in touch with Rudra Sarker for collaborations, opportunities, or tech discussions. Connect via email or social media." />
+  <meta property="og:title" content="Contact Rudra Sarker | AI &amp; Robotics Engineer" />
+  <meta property="og:description" content="Direct contact and collaboration portal for research, software development, and robotics engineering." />
   <meta property="og:url" content="https://rudra496.github.io/site/contact.html" />
   <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contact Rudra Sarker" />
-  <meta name="twitter:description" content="Get in touch with Rudra Sarker for collaborations, opportunities, or tech discussions." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Contact Rudra Sarker | AI &amp; Robotics Engineer" />
+  <meta name="twitter:description" content="Reach out for research, robotics, and AI engineering inquiries." />
   <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
 
   <!-- Fonts & Icons -->
@@ -32,19 +29,105 @@
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
 
-  <!-- rel=me for social profile verification -->
-  <link rel="me" href="https://github.com/rudra496" />
-  <link rel="me" href="https://www.linkedin.com/in/rudrasarker" />
-  <link rel="me" href="https://x.com/Rudra496" />
-  <link rel="me" href="https://dev.to/rudra_sarker" />
-
-  <!-- Styles -->
+  <!-- Global Stylesheet -->
   <link rel="stylesheet" href="./styles_global.css" />
   <link rel="icon" href="./favicon.ico" />
+
+  <style>
+    .contact-grid-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 2.5rem;
+      max-width: 1100px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+    }
+    @media (max-width: 860px) {
+      .contact-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+    .contact-info-card {
+      background: var(--card-bg-color);
+      border: 1px solid var(--card-border-color);
+      border-radius: 16px;
+      padding: 2.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+    .contact-form-card {
+      background: var(--card-bg-color);
+      border: 1px solid var(--card-border-color);
+      border-radius: 16px;
+      padding: 2.2rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .info-icon {
+      font-size: 1.25rem;
+      color: var(--primary-color);
+      margin-top: 3px;
+      width: 24px;
+      text-align: center;
+    }
+    .info-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+    .info-value {
+      font-size: 0.98rem;
+      color: var(--text-color);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .info-value a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .info-value a:hover {
+      text-decoration: underline;
+    }
+    .social-pills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+    }
+    .social-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--card-border-color);
+      color: var(--text-color);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .social-pill-btn:hover {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+  </style>
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -52,49 +135,30 @@
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact Rudra Sarker",
-    "description": "Contact Rudra Sarker for collaborations, opportunities, or feedback.",
     "url": "https://rudra496.github.io/site/contact.html",
+    "description": "Direct contact information and message inquiry portal for Rudra Sarker.",
     "mainEntity": {
       "@type": "Person",
       "name": "Rudra Sarker",
       "email": "rudrasarker130@gmail.com",
-      "url": "https://rudra496.github.io/site/",
+      "jobTitle": "AI & Robotics Engineer, Open Science Researcher",
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "Shahjalal University of Science and Technology"
+      },
       "sameAs": [
+        "https://orcid.org/0009-0001-4545-0932",
         "https://github.com/rudra496",
-        "https://www.linkedin.com/in/rudrasarker",
-        "https://www.facebook.com/rudrasarker130",
-        "https://x.com/Rudra496",
-        "https://youtube.com/@rudrasarker9732",
-        "https://www.researchgate.net/profile/Rudra-Sarker-3",
-        "https://dev.to/rudra_sarker"
+        "https://www.linkedin.com/in/rudrasarker"
       ]
     }
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://rudra496.github.io/site/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Contact",
-        "item": "https://rudra496.github.io/site/contact.html"
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
-  <!-- Skip to main content link for accessibility -->
+  <!-- Accessibility Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Header & Navigation -->
   <header class="header">
     <nav class="nav-container" aria-label="Primary">
@@ -105,8 +169,8 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="./index.html" class="nav-link">Home</a></li>
         <li><a href="./projects.html" class="nav-link">Projects</a></li>
-        <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
-        <li><a href="./blog.html" class="nav-link">Blog</a></li>
+        <li><a href="./gallery.html" class="nav-link">Gallery &amp; Awards</a></li>
+        <li><a href="./blog.html" class="nav-link">Blog Hub (31)</a></li>
         <li><a href="./blog/media-coverage-achievements-rudra-sarker.html" class="nav-link">In The Press</a></li>
         <li><a href="./contact.html" class="nav-link active" aria-current="page">Contact</a></li>
       </ul>
@@ -114,72 +178,140 @@
   </header>
 
   <main id="main-content">
-    <!-- Contact Section -->
-    <section id="contact" class="content-section">
-      <h1 class="section-title reveal">Get In Touch</h1>
-      <div class="contact-container reveal">
-        <p>I'm always open to new opportunities, collaborations, or just a good tech chat. Feel free to reach out!</p>
-        <a href="mailto:rudrasarker130@gmail.com" class="cta-button">rudrasarker130@gmail.com</a>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer me" aria-label="GitHub">
-            <i class="fab fa-github" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.facebook.com/rudrasarker130" target="_blank" rel="noopener noreferrer me" aria-label="Facebook">
-            <i class="fab fa-facebook-f" aria-hidden="true"></i>
-          </a>
-          <a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer me" aria-label="X / Twitter">
-            <i class="fab fa-twitter" aria-hidden="true"></i>
-          </a>
-          <a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer me" aria-label="YouTube">
-            <i class="fab fa-youtube" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer me" aria-label="ResearchGate">
-            <i class="fas fa-flask" aria-hidden="true"></i>
-          </a>
-          <a href="https://orcid.org/0009-0001-4545-0932" target="_blank" rel="noopener noreferrer me" aria-label="ORCID">
-            <i class="fab fa-orcid" aria-hidden="true"></i>
-          </a>
-          <a href="https://dev.to/rudra_sarker" target="_blank" rel="noopener noreferrer me" aria-label="Dev.to">
-            <i class="fab fa-dev" aria-hidden="true"></i>
-          </a>
-        </div>
+    <section class="content-section" style="padding-top: 2rem;">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 1.5rem;" class="reveal">
+        <h1 class="section-title" style="margin-bottom: 0.5rem;">Get In Touch</h1>
+        <p class="section-subtitle" style="margin: 0;">
+          Let's discuss artificial intelligence research, robotics engineering, open-science collaborations, or engineering positions.
+        </p>
       </div>
-    </section>
 
-    <!-- Feedback Form Section -->
-    <section id="feedback" class="content-section">
-      <h2 class="section-title reveal">Give Me Feedback</h2>
-      <div class="feedback-container reveal">
-        <form id="feedback-form" class="card" action="https://formspree.io/f/xwpwrkvo" method="POST">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" autocomplete="name" required />
+      <!-- Modern 2-Column Contact Layout -->
+      <div class="contact-grid-layout reveal">
+        
+        <!-- Left: Direct Researcher Information Card -->
+        <div class="contact-info-card">
+          <div>
+            <span style="display:inline-flex;align-items:center;gap:0.4rem;padding:4px 12px;border-radius:20px;font-size:0.78rem;font-weight:700;background:rgba(16,185,129,0.12);border:1px solid #059669;color:#059669;margin-bottom:1rem;">
+              <span style="width:7px;height:7px;border-radius:50%;background-color:currentColor;"></span> Response Time: &lt; 24 Hours
+            </span>
+            <h2 style="font-size:1.4rem;font-weight:800;color:var(--heading-color);margin-bottom:0.5rem;">Direct Inquiries</h2>
+            <p style="font-size:0.92rem;color:var(--text-muted);line-height:1.6;margin:0;">
+              Whether you are an academic investigator, open-source contributor, or technical recruiter, feel free to reach out directly through email or verified research platforms.
+            </p>
           </div>
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" autocomplete="email" required />
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="info-label">Direct Email</div>
+              <div class="info-value">
+                <a href="mailto:rudrasarker130@gmail.com">rudrasarker130@gmail.com</a>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="message">Your Feedback</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-university"></i></div>
+            <div>
+              <div class="info-label">Academic Affiliation</div>
+              <div class="info-value">
+                Industrial &amp; Production Engineering<br />
+                <strong>Shahjalal University of Science and Technology (SUST)</strong><br />
+                Sylhet 3114, Bangladesh
+              </div>
+            </div>
           </div>
-          <input type="text" name="_gotcha" style="display:none">
-          <input type="hidden" name="_redirect" value="https://rudra496.github.io/site/thankyou.html">
-          <button type="submit" class="cta-button">Send Feedback</button>
-        </form>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fab fa-orcid"></i></div>
+            <div>
+              <div class="info-label">Permanent Researcher Identifier</div>
+              <div class="info-value">
+                <a href="https://orcid.org/0009-0001-4545-0932" target="_blank" rel="noopener noreferrer">
+                  ORCID: 0009-0001-4545-0932 &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="info-label" style="margin-bottom: 0.5rem;">Verified Profiles &amp; Networks</div>
+            <div class="social-pills-row">
+              <a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer me" class="social-pill-btn">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer me" class="social-pill-btn">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer me" class="social-pill-btn">
+                <i class="fas fa-flask"></i> ResearchGate
+              </a>
+              <a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer me" class="social-pill-btn">
+                <i class="fab fa-twitter"></i> X / Twitter
+              </a>
+              <a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer me" class="social-pill-btn">
+                <i class="fab fa-youtube"></i> YouTube
+              </a>
+              <a href="https://dev.to/rudra_sarker" target="_blank" rel="noopener noreferrer me" class="social-pill-btn">
+                <i class="fab fa-dev"></i> Dev.to
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Message & Feedback Inquiry Form -->
+        <div class="contact-form-card">
+          <h2 style="font-size:1.4rem;font-weight:800;color:var(--heading-color);margin-bottom:0.4rem;">Send a Direct Message</h2>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.5rem;">
+            Fill out the verified dispatch form below. Messages are delivered straight to my primary inbox.
+          </p>
+
+          <form id="feedback-form" action="https://formspree.io/f/xwpwrkvo" method="POST">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="Dr. John Doe / Jane Smith" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email Address</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="name@organization.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject / Inquiry Type</label>
+              <input type="text" id="subject" name="subject" placeholder="Research Collaboration / Robotics / General Inquiry" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Share project details, research collaboration ideas, or questions..." required></textarea>
+            </div>
+
+            <!-- Anti-Spam Honeypot & Redirect -->
+            <input type="text" name="_gotcha" style="display:none" />
+            <input type="hidden" name="_redirect" value="https://rudra496.github.io/site/thankyou.html" />
+
+            <button type="submit" class="cta-button" style="width: 100%; border: none; cursor: pointer; padding: 12px; font-weight: 700; border-radius: 8px;">
+              Send Direct Message <i class="fas fa-paper-plane" style="margin-left: 0.4rem;"></i>
+            </button>
+          </form>
+        </div>
+
       </div>
     </section>
   </main>
 
-  <!-- Shared Footer -->
+  <!-- Global Shared Footer -->
   <footer class="footer">
-    <p>&copy; 2026 Rudra Sarker. All rights reserved.</p>
+    <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+      <p style="margin: 0; color: var(--text-muted); font-size: 0.88rem;">
+        &copy; 2026 Rudra Sarker. All Rights Reserved. Permanent Academic Identifier: ORCID 0009-0001-4545-0932.
+      </p>
+    </div>
   </footer>
 
-  <!-- Global Menu & Animation Logic -->
+  <!-- Scripts -->
   <script defer src="./main.js"></script>
   <script defer src="./background.js"></script>
 </body>
