@@ -46,38 +46,71 @@
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Achievements — Rudra Sarker",
-    "description": "Achievements and recognitions by Rudra Sarker in engineering, robotics, and innovation competitions.",
-    "url": "https://rudra496.github.io/site/achievements.html",
-    "author": {
-      "@type": "Person",
-      "name": "Rudra Sarker",
-      "url": "https://rudra496.github.io/site/"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://rudra496.github.io/site/"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://rudra496.github.io/site/achievements.html#page",
+      "name": "Achievements, Awards & Recognitions \u2014 Rudra Sarker",
+      "description": "Verified international and national engineering honors, research grants, hackathon championships, and media features.",
+      "url": "https://rudra496.github.io/site/achievements.html",
+      "author": {
+        "@type": "Person",
+        "name": "Rudra Sarker",
+        "sameAs": "https://orcid.org/0009-0001-4545-0932"
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Achievements",
-        "item": "https://rudra496.github.io/site/achievements.html"
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Honors and Recognitions",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Rice360 Global Health Tech Design Competition",
+            "description": "Selected among top global innovators for assistive biomedical engineering design."
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "SUST Innovation Hub Pre-Seed Funding",
+            "description": "Secured pre-seed institutional grant for SignTalk smart assistive translation technology."
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Youth Innovation Challenge (YIC) 2024 Champion",
+            "description": "Awarded first place for sustainable assistive robotics innovation."
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "National Media Coverage (Prothom Alo & The Daily Star)",
+            "description": "Featured in premier national newspapers for assistive technology inventions."
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rudra496.github.io/site/achievements.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rudra496.github.io/site/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Achievements",
+          "item": "https://rudra496.github.io/site/achievements.html"
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>

@@ -43,38 +43,124 @@
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Engineering Projects — Rudra Sarker",
-    "description": "Innovative robotics, IoT, and automation projects including SignTalk smart gloves, assistive eyewear, solar trackers, and intelligent security systems.",
-    "url": "https://rudra496.github.io/site/projects.html",
-    "author": {
-      "@type": "Person",
-      "name": "Rudra Sarker",
-      "url": "https://rudra496.github.io/site/"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://rudra496.github.io/site/"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://rudra496.github.io/site/projects.html#collection",
+      "name": "Engineering & Open-Science Software Repositories \u2014 Rudra Sarker",
+      "description": "Comprehensive portfolio of 10 CERN Zenodo-archived software frameworks with persistent Concept DOIs alongside 6 physical robotics, IoT, and assistive hardware prototypes.",
+      "url": "https://rudra496.github.io/site/projects.html",
+      "author": {
+        "@type": "Person",
+        "name": "Rudra Sarker",
+        "url": "https://rudra496.github.io/site/",
+        "sameAs": "https://orcid.org/0009-0001-4545-0932"
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Projects",
-        "item": "https://rudra496.github.io/site/projects.html"
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Featured Engineering & Open-Science Projects",
+        "numberOfItems": 7,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "HyperReason",
+              "description": "Autonomous test-time compute scaling and dynamic key-value cache optimization framework.",
+              "codeRepository": "https://github.com/rudra496/HyperReason",
+              "identifier": "https://doi.org/10.5281/zenodo.18780183"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "WorldSim AI",
+              "description": "Distributed physics engine and synthetic multi-agent digital twin simulation platform.",
+              "codeRepository": "https://github.com/rudra496/WorldSim-AI",
+              "identifier": "https://doi.org/10.5281/zenodo.18780195"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "NexusAgent",
+              "description": "Self-evolving local AI agent framework with autonomous loop introspection.",
+              "codeRepository": "https://github.com/rudra496/NexusAgent",
+              "identifier": "https://doi.org/10.5281/zenodo.18780201"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "EdgeBrain AI",
+              "description": "Ultra-low-latency edge neural inference runtime for embedded ARM and RISC-V devices.",
+              "codeRepository": "https://github.com/rudra496/EdgeBrain-AI",
+              "identifier": "https://doi.org/10.5281/zenodo.18780205"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "MindWell",
+              "description": "Privacy-preserving open-source mental wellness companion and crisis support platform.",
+              "codeRepository": "https://github.com/rudra496/MindWell",
+              "identifier": "https://doi.org/10.5281/zenodo.18780209"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "Product",
+              "name": "SignTalk Smart Glove",
+              "description": "Assistive sensory wearable translating sign language gestures into real-time speech and text via flex sensors and Bluetooth.",
+              "url": "https://rudra496.github.io/site/projects/team-signtalk.html"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "Product",
+              "name": "SightlineAI Assistive Eyewear",
+              "description": "Intelligent sensory smart glasses offering real-time spatial obstacle detection and haptic feedback for visually impaired individuals.",
+              "url": "https://rudra496.github.io/site/projects/assistive-smart-eyeglass.html"
+            }
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rudra496.github.io/site/projects.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rudra496.github.io/site/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://rudra496.github.io/site/projects.html"
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>

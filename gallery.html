@@ -42,38 +42,45 @@
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ImageGallery",
-    "name": "Gallery & Achievements — Rudra Sarker",
-    "description": "Certificates, awards, and achievements from engineering competitions, robotics contests, and innovation programs.",
-    "url": "https://rudra496.github.io/site/gallery.html",
-    "author": {
-      "@type": "Person",
-      "name": "Rudra Sarker",
-      "url": "https://rudra496.github.io/site/"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://rudra496.github.io/site/"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ImageGallery",
+      "@id": "https://rudra496.github.io/site/gallery.html#gallery",
+      "name": "Certificates, Awards & Recognition Gallery \u2014 Rudra Sarker",
+      "description": "Verified credentials, award plaques, national competition certificates, and innovation honors earned by Rudra Sarker.",
+      "url": "https://rudra496.github.io/site/gallery.html",
+      "author": {
+        "@type": "Person",
+        "name": "Rudra Sarker",
+        "sameAs": "https://orcid.org/0009-0001-4545-0932"
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Gallery",
-        "item": "https://rudra496.github.io/site/gallery.html"
-      }
-    ]
-  }
+      "image": [
+        "https://rudra496.github.io/site/Certificate1.webp",
+        "https://rudra496.github.io/site/achievement1.webp"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rudra496.github.io/site/gallery.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rudra496.github.io/site/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Gallery & Awards",
+          "item": "https://rudra496.github.io/site/gallery.html"
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>

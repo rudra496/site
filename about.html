@@ -42,45 +42,74 @@
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "name": "About Rudra Sarker",
-    "description": "Learn about Rudra Sarker's background, skills in robotics and IoT, education at SUST, and passion for engineering innovation.",
-    "url": "https://rudra496.github.io/site/about.html",
-    "mainEntity": {
-      "@type": "Person",
-      "name": "Rudra Sarker",
-      "url": "https://rudra496.github.io/site/",
-      "image": "https://rudra496.github.io/site/Profile.webp",
-      "jobTitle": "Robotics and IoT Developer",
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Shahjalal University of Science and Technology",
-        "alternateName": "SUST"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://rudra496.github.io/site/about.html#profile",
+      "name": "About Rudra Sarker \u2014 Academic & Engineering Profile",
+      "description": "Biography, academic research profile, engineering competencies, and honors of Rudra Sarker at Shahjalal University of Science and Technology.",
+      "url": "https://rudra496.github.io/site/about.html",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://rudra496.github.io/site/#rudrasarker",
+        "name": "Rudra Sarker",
+        "url": "https://rudra496.github.io/site/",
+        "image": "https://rudra496.github.io/site/Profile.webp",
+        "jobTitle": "AI & Robotics Engineer, Open-Science Researcher",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Shahjalal University of Science and Technology",
+          "alternateName": "SUST",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Sylhet",
+            "addressCountry": "Bangladesh"
+          }
+        },
+        "sameAs": [
+          "https://orcid.org/0009-0001-4545-0932",
+          "https://github.com/rudra496",
+          "https://www.linkedin.com/in/rudrasarker",
+          "https://www.researchgate.net/profile/Rudra-Sarker-3",
+          "https://x.com/Rudra496"
+        ],
+        "knowsAbout": [
+          "Artificial Intelligence & Autonomous Agents",
+          "Robotics Kinematics & Embedded Firmware",
+          "Industrial & Production Engineering",
+          "Open Science & Research Data Management",
+          "Computer Vision & Edge Computing",
+          "CERN Zenodo Archiving"
+        ],
+        "award": [
+          "Rice360 Global Health Tech Design Competition Semi-Finalist",
+          "SUST Innovation Hub Pre-Seed Funding Winner (SignTalk)",
+          "Youth Innovation Challenge (YIC) 2024 Champion"
+        ]
       }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rudra496.github.io/site/about.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rudra496.github.io/site/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://rudra496.github.io/site/about.html"
+        }
+      ]
     }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://rudra496.github.io/site/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About",
-        "item": "https://rudra496.github.io/site/about.html"
-      }
-    ]
-  }
+  ]
+}
   </script>
 </head>
 <body>

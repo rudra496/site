@@ -7,253 +7,303 @@
   <url>
     <loc>https://rudra496.github.io/site/</loc>
     <lastmod>2026-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+    <image:image>
+      <image:loc>https://rudra496.github.io/site/Profile.webp</image:loc>
+      <image:title>Rudra Sarker — AI & Robotics Engineer Portfolio</image:title>
+      <image:caption>Rudra Sarker, AI & Robotics Researcher and Open-Science Contributor at SUST, Bangladesh.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://rudra496.github.io/site/projects.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://rudra496.github.io/site/blog.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/index.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://rudra496.github.io/site/about.html</loc>
     <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rudra496.github.io/site/Profile.webp</image:loc>
+      <image:title>Rudra Sarker Academic & Engineering Biography</image:title>
+      <image:caption>Biography, research pillars, and academic achievements of Rudra Sarker.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://rudra496.github.io/site/gallery.html</loc>
     <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rudra496.github.io/site/achievement1.webp</image:loc>
+      <image:title>Rudra Sarker Awards & Verified Credentials Gallery</image:title>
+      <image:caption>Global and national engineering awards, hackathon championships, and certifications.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://rudra496.github.io/site/achievements.html</loc>
     <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rudra496.github.io/site/achievement1.webp</image:loc>
+      <image:title>Achievements and Honors — Rudra Sarker</image:title>
+      <image:caption>Rice360 Global Health Tech Design Competition, SUST Innovation Hub Pre-Seed Funding, and YIC 2024.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://rudra496.github.io/site/contact.html</loc>
     <lastmod>2026-08-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/projects/team-signtalk.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/projects/assistive-smart-eyeglass.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/projects/dual-axis-solar-tracker.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/projects/smart-door-security.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/projects/wifi-control-car.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/projects/led-matrix-notice-board.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/projects/team-esb4-bacteria-detection.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/projects/line-following-robot.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/projects/the-magic-of-90s-bling.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/sign-talk-smart-glove-sign-language-translation.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/rice360-global-health-tech-design-competition.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/sust-innovation-hub-pre-seed-funding-sign-talk.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/sightlineai-assistive-eyewear-visually-impaired.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://rudra496.github.io/site/blog/3d-science-lab-interactive-stem-education.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://rudra496.github.io/site/blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html</loc>
+    <loc>https://rudra496.github.io/site/blog/ai-code-trust-validator-security-tool.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/mindwell-open-source-mental-health-platform-update.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/github-projects-showcase.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/media-coverage-achievements-rudra-sarker.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/mindwell-mental-health-platform.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/glm-5-turbo-coding-plan-review-2026.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/glm-coding-plan-evaluation.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/pid-controllers-robotics-magic.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/the-magic-of-90s-bling-phone-sticker.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/termmind-ai-terminal-assistant.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://rudra496.github.io/site/blog/codevista-code-analysis-scanner.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://rudra496.github.io/site/blog/devroadmaps-free-developer-roadmaps.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/sign-language-dataset-hub.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://rudra496.github.io/site/blog/edgebrain-ai-edge-intelligence-platform.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/nexus-agent-self-evolving-local-ai-framework.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/stealthhumanizer-free-ai-text-humanizer.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rudra496.github.io/site/blog/ai-code-trust-validator.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://rudra496.github.io/site/blog/ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://rudra496.github.io/site/blog/open-science-cern-zenodo-10-flagship-ai-repositories.html</loc>
+    <loc>https://rudra496.github.io/site/blog/github-projects-showcase.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/glm-5-turbo-coding-plan-review-2026.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/glm-coding-plan-evaluation.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://rudra496.github.io/site/blog/hyper-reason-autonomous-test-time-compute-kv-cache.html</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/media-coverage-achievements-rudra-sarker.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/mindwell-mental-health-platform.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/mindwell-open-source-mental-health-platform-update.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/nexus-agent-self-evolving-local-ai-framework.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/omnicopter-energy-aware-uav-control.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/open-science-cern-zenodo-10-flagship-ai-repositories.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/pid-controllers-robotics-magic.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/rice360-global-health-tech-design-competition.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/sightlineai-assistive-eyewear-visually-impaired.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/sign-language-dataset-hub.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/sign-talk-smart-glove-sign-language-translation.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/spark-oss-repository-toolkit.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/stealthhumanizer-free-ai-text-humanizer.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/stroke-rehabilitation-activity-classification.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/sust-innovation-hub-pre-seed-funding-sign-talk.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/termmind-ai-terminal-assistant.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/the-magic-of-90s-bling-phone-sticker.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/trafficstudy-network-traffic-education.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/trafficstudygo-go-traffic-simulation.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/worldsim-ai-digital-twin-simulation-platform.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/projects/assistive-smart-eyeglass.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/projects/dual-axis-solar-tracker.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/projects/led-matrix-notice-board.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/projects/line-following-robot.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/projects/smart-door-security.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/projects/team-esb4-bacteria-detection.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/projects/team-signtalk.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/projects/the-magic-of-90s-bling.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/projects/wifi-control-car.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
 </urlset>
