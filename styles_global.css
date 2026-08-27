@@ -907,8 +907,22 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
   color: #047857 !important;
 }
 
-[data-theme="light"] [id="research-spotlight"] a.cta-button-small {
+[data-theme="light"] [id="research-spotlight"] a.cta-button-small:not(.btn-ghost) {
   color: #ffffff !important;
+}
+
+[data-theme="light"] [id="research-spotlight"] a.cta-button-small.btn-ghost,
+[data-theme="light"] [id="research-spotlight"] .btn-ghost {
+  color: #0f172a !important;
+  background: #ffffff !important;
+  border: 1.5px solid #94a3b8 !important;
+}
+
+[data-theme="light"] [id="research-spotlight"] a.cta-button-small.btn-ghost:hover,
+[data-theme="light"] [id="research-spotlight"] .btn-ghost:hover {
+  color: #ffffff !important;
+  background: #0284c7 !important;
+  border-color: #0284c7 !important;
 }
 
 /* 5. Core Technical Pillars in Light Mode */
