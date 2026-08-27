@@ -246,18 +246,12 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
 .content-section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; position: relative; }
 .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; color: var(--primary-color); text-transform: uppercase; }
 [data-theme="light"] .section-title {
-  color: var(--primary-color);
-  background: linear-gradient(90deg, #0088cc, #cc0088);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-/* Fallback for browsers that don't support background-clip */
-@supports not (-webkit-background-clip: text) {
-  [data-theme="light"] .section-title {
-    color: var(--primary-color);
-    background: none;
-  }
+  color: #020617 !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #020617 !important;
+  text-shadow: none !important;
+  font-weight: 800 !important;
 }
 .section-subtitle { font-size: 1.2rem; text-align: center; color: var(--text-color); margin-top: -2rem; margin-bottom: 3rem; }
 
@@ -1787,4 +1781,59 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
 [data-theme="light"] div[style*="background:rgba(255,255,255"] h3 {
   color: #020617 !important;
   font-weight: 800 !important;
+}
+
+
+/* === Definitive Light Mode Contrast Enforcements === */
+[data-theme="light"] .hero-title {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #020617 !important;
+  color: #020617 !important;
+  text-shadow: none !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .hero-subtitle {
+  color: #1e293b !important;
+}
+
+[data-theme="light"] .btn-ghost,
+[data-theme="light"] .cta-button.btn-ghost,
+[data-theme="light"] .cta-button-small.btn-ghost,
+[data-theme="light"] .featured-cta.btn-ghost,
+[data-theme="light"] a.btn-ghost {
+  background: #f8fafc !important;
+  border: 1.5px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+[data-theme="light"] .btn-ghost:hover,
+[data-theme="light"] .cta-button.btn-ghost:hover,
+[data-theme="light"] .cta-button-small.btn-ghost:hover,
+[data-theme="light"] .featured-cta.btn-ghost:hover,
+[data-theme="light"] a.btn-ghost:hover {
+  background: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25) !important;
+}
+
+[data-theme="light"] .hardware-spec-badge {
+  background: #fef3c7 !important;
+  border: 1px solid #f59e0b !important;
+  color: #92400e !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .project-hero h1,
+[data-theme="light"] .project-hero p,
+[data-theme="light"] .project-hero span,
+[data-theme="light"] .project-detail > div[style*="linear-gradient"] h1,
+[data-theme="light"] .project-detail > div[style*="linear-gradient"] p,
+[data-theme="light"] .project-detail > div[style*="linear-gradient"] span {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }

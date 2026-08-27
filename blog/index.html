@@ -962,6 +962,151 @@
   color: #1e293b !important;
 }
 
+
+/* === Maximum Contrast Light Mode Overrides for Blog Hub === */
+[data-theme="light"] .blog-hub-title {
+  color: #020617 !important;
+  -webkit-text-fill-color: initial !important;
+  background: none !important;
+}
+[data-theme="light"] .blog-hub-subtitle {
+  color: #1e293b !important;
+  font-weight: 500 !important;
+}
+[data-theme="light"] .category-heading {
+  color: #020617 !important;
+  font-weight: 800 !important;
+}
+[data-theme="light"] .category-count {
+  color: #334155 !important;
+  font-weight: 600 !important;
+}
+[data-theme="light"] .category-subtext {
+  color: #1e293b !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+}
+[data-theme="light"] .card-title-text {
+  color: #020617 !important;
+  font-weight: 800 !important;
+}
+[data-theme="light"] .card-excerpt-text {
+  color: #1e293b !important;
+  font-size: 0.92rem !important;
+  line-height: 1.65 !important;
+}
+[data-theme="light"] .card-meta-row {
+  color: #334155 !important;
+  font-weight: 600 !important;
+}
+[data-theme="light"] .card-tag-pill {
+  background: #f1f5f9 !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+[data-theme="light"] .card-action-link {
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+}
+[data-theme="light"] .topic-btn-title,
+[data-theme="light"] .topic-btn-name {
+  color: #020617 !important;
+  font-weight: 700 !important;
+}
+[data-theme="light"] .topic-btn-desc {
+  color: #1e293b !important;
+}
+[data-theme="light"] .topic-btn-count {
+  background: #f1f5f9 !important;
+  color: #0369a1 !important;
+  border: 1px solid #cbd5e1 !important;
+  font-weight: 800 !important;
+}
+[data-theme="light"] .search-hints-row {
+  color: #1e293b !important;
+  font-weight: 600 !important;
+}
+[data-theme="light"] .quick-chip {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+[data-theme="light"] .filter-pill {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+[data-theme="light"] .filter-pill.active {
+  background: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+[data-theme="light"] .sort-select-wrap {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+[data-theme="light"] .sort-select {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
+
+.blog-hub-title {
+  font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff 10%, #00ffff 60%, #ff00ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.search-icon-accent { color: #00ffff; }
+.spotlight-link-q1 { color: #71b280; font-weight: 700; }
+.spotlight-link-zenodo { color: #00d2ff; font-weight: 700; }
+
+[data-theme="light"] .blog-hub-title {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #020617 !important;
+  color: #020617 !important;
+  font-weight: 800 !important;
+}
+[data-theme="light"] .search-icon-accent {
+  color: #0284c7 !important;
+}
+[data-theme="light"] .spotlight-link-q1 {
+  color: #047857 !important;
+  font-weight: 700 !important;
+}
+[data-theme="light"] .spotlight-link-zenodo {
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+}
+[data-theme="light"] .btn-ghost,
+[data-theme="light"] .cta-button-small.btn-ghost,
+[data-theme="light"] .featured-cta.btn-ghost,
+[data-theme="light"] .cta-button.btn-ghost {
+  background: #f8fafc !important;
+  border: 1.5px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+[data-theme="light"] .btn-ghost:hover,
+[data-theme="light"] .cta-button-small.btn-ghost:hover,
+[data-theme="light"] .featured-cta.btn-ghost:hover,
+[data-theme="light"] .cta-button.btn-ghost:hover {
+  background: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+
 </style>
 
 </head>
@@ -1007,8 +1152,8 @@
     <section class="content-section" style="padding-top:1.5rem;">
       <div class="blog-hub-hero reveal">
         <div class="blog-badge-tag"><i class="fas fa-graduation-cap"></i> Academic &amp; Engineering Publication Hub</div>
-        <h1 class="blog-hub-title" style="font-size:clamp(2.2rem, 5.5vw, 3.4rem);font-weight:800;letter-spacing:-0.025em;background:linear-gradient(135deg, #ffffff 10%, #00ffff 60%, #ff00ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1rem;text-align:center;">Engineering &amp; Research Publications</h1>
-        <p class="blog-hub-subtitle" style="font-size:1.15rem;color:#a0aec0;line-height:1.7;max-width:820px;margin:0 auto;text-align:center;">Peer-reviewed clinical &amp; agricultural studies, CERN Zenodo open-science repositories, autonomous AI agent architectures, and assistive technology deep-dives by Rudra Sarker.</p>
+        <h1 class="blog-hub-title">Engineering &amp; Research Publications</h1>
+        <p class="blog-hub-subtitle" style="font-size:1.15rem;color:var(--text-muted);line-height:1.7;max-width:820px;margin:0 auto;text-align:center;">Peer-reviewed clinical &amp; agricultural studies, CERN Zenodo open-science repositories, autonomous AI agent architectures, and assistive technology deep-dives by Rudra Sarker.</p>
       </div>
 
       
@@ -1017,7 +1162,7 @@
         <div class="grand-search-container">
           <div class="grand-search-header">
             <h2 class="grand-search-title">
-              <i class="fas fa-search-plus" style="color:#00ffff;"></i>
+              <i class="fas fa-search-plus search-icon-accent"></i>
               Search Publications &amp; Research Software
             </h2>
             <span id="search-stats-badge" class="grand-search-stats">31 of 31 Articles</span>
@@ -1037,9 +1182,9 @@
           </div>
 
           <div class="search-hints-row">
-            <span><i class="fas fa-keyboard"></i> Quick search: Press <kbd style="background:rgba(255,255,255,0.1);padding:2px 6px;border-radius:4px;color:#fff;">/</kbd> to focus</span>
+            <span><i class="fas fa-keyboard"></i> Quick search: Press <kbd style="background:var(--bg-surface);border:1px solid var(--card-border-color);padding:2px 6px;border-radius:4px;color:var(--heading-color);font-weight:700;">/</kbd> to focus</span>
             <div class="quick-search-chips">
-              <span style="font-size:0.76rem;color:#718096;">Try:</span>
+              <span style="font-size:0.78rem;color:var(--text-dim);font-weight:600;">Try:</span>
               <span class="quick-chip" data-query="Elsevier">Elsevier Q1</span>
               <span class="quick-chip" data-query="Zenodo">Zenodo DOIs</span>
               <span class="quick-chip" data-query="MCTS">MCTS Reasoner</span>
@@ -1066,7 +1211,7 @@
             </div>
             <p class="card-excerpt-text">Nationwide empirical study across 795 commercial poultry farms in 35 districts of Bangladesh published in Elsevier's Journal of Ethnopharmacology (Impact Factor: 4.8, CiteScore: 9.3). Documents verified 43.6% reduction in synthetic antimicrobial dependence.</p>
           </div>
-          <a href="./ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html" class="card-action-link" style="margin-top:1rem;color:#71b280;">Read Published Paper Breakdown &rarr;</a>
+          <a href="./ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html" class="card-action-link" class="card-action-link spotlight-link-q1" style="margin-top:1rem;">Read Published Paper Breakdown &rarr;</a>
         </div>
 
         <div class="spotlight-card spotlight-zenodo">
@@ -1080,7 +1225,7 @@
             </div>
             <p class="card-excerpt-text">Permanent digital preservation of 10 flagship AI, edge computing, mental health, and educational frameworks on CERN Zenodo. Features immutable Concept DOIs, DataCite indexing, and verified FAIR software principles.</p>
           </div>
-          <a href="./open-science-cern-zenodo-10-flagship-ai-repositories.html" class="card-action-link" style="margin-top:1rem;color:#00d2ff;">Explore Open Science Matrix &rarr;</a>
+          <a href="./open-science-cern-zenodo-10-flagship-ai-repositories.html" class="card-action-link" class="card-action-link spotlight-link-zenodo" style="margin-top:1rem;">Explore Open Science Matrix &rarr;</a>
         </div>
       </div>
 
@@ -1089,8 +1234,8 @@
       <!-- 🌟 TOPIC & DOMAIN EXPLORER (Secondary Navigation Bar) -->
       <section class="topic-explorer-section reveal" aria-label="Topic and Domain Navigation">
         <div class="topic-explorer-header">
-          <h2 class="topic-explorer-title"><i class="fas fa-compass" style="color:#00ffff;"></i> Select Topic Domain</h2>
-          <span style="font-size:0.82rem;color:#a0aec0;">Click a domain to filter or jump to that section</span>
+          <h2 class="topic-explorer-title"><i class="fas fa-compass search-icon-accent"></i> Select Topic Domain</h2>
+          <span style="font-size:0.84rem;color:var(--text-dim);font-weight:500;">Click a domain to filter or jump to that section</span>
         </div>
         <nav class="topic-nav-cards">
           
@@ -1164,16 +1309,16 @@
 
       
       <div id="no-results-box" class="no-results-box">
-        <i class="fas fa-search" style="font-size:2.2rem;color:#00ffff;margin-bottom:1rem;display:block;"></i>
-        <h3 style="color:#fff;margin-bottom:0.5rem;">No matching articles found</h3>
-        <p style="color:#a0aec0;font-size:0.9rem;">Try searching for a different keyword like "MCTS", "Zenodo", "Elsevier", "Three.js", or click "Clear Search".</p>
+        <i class="fas fa-search" style="font-size:2.2rem;color:var(--primary-color);margin-bottom:1rem;display:block;"></i>
+        <h3 style="color:var(--heading-color);margin-bottom:0.5rem;font-weight:800;">No matching articles found</h3>
+        <p style="color:var(--text-muted);font-size:0.92rem;">Try searching for a different keyword like "MCTS", "Zenodo", "Elsevier", "Three.js", or click "Clear Search".</p>
       </div>
 
 
       
       <section class="blog-category-section reveal" id="sec-peer-reviewed" data-cat-id="peer-reviewed">
         <div class="category-heading-wrap">
-          <h2 class="category-heading">📄 Peer-Reviewed Academic Journals & Studies <span style="font-size:0.9rem;font-weight:400;color:#718096;">(3)</span></h2>
+          <h2 class="category-heading">📄 Peer-Reviewed Academic Journals & Studies <span class="category-count">(3)</span></h2>
           <p class="category-subtext">Formally published empirical studies, clinical machine learning, and control theory papers in international Q1 journals and conferences.</p>
         </div>
         <div class="blog-grid">
@@ -1225,7 +1370,7 @@
 
       <section class="blog-category-section reveal" id="sec-zenodo" data-cat-id="zenodo">
         <div class="category-heading-wrap">
-          <h2 class="category-heading">🏛️ CERN Zenodo Open Science & Software Depositions <span style="font-size:0.9rem;font-weight:400;color:#718096;">(12)</span></h2>
+          <h2 class="category-heading">🏛️ CERN Zenodo Open Science & Software Depositions <span class="category-count">(12)</span></h2>
           <p class="category-subtext">Flagship research software repositories permanently preserved with immutable Concept DOIs, DataCite schemas, and FAIR reproducibility standards.</p>
         </div>
         <div class="blog-grid">
@@ -1403,7 +1548,7 @@
 
       <section class="blog-category-section reveal" id="sec-assistive" data-cat-id="assistive">
         <div class="category-heading-wrap">
-          <h2 class="category-heading">🦾 Assistive Technology, IoT & Robotics <span style="font-size:0.9rem;font-weight:400;color:#718096;">(4)</span></h2>
+          <h2 class="category-heading">🦾 Assistive Technology, IoT & Robotics <span class="category-count">(4)</span></h2>
           <p class="category-subtext">Hardware systems, sensor gloves, smart eyewear, and control algorithms engineered for accessibility, healthcare, and education.</p>
         </div>
         <div class="blog-grid">
@@ -1469,7 +1614,7 @@
 
       <section class="blog-category-section reveal" id="sec-tools" data-cat-id="tools">
         <div class="category-heading-wrap">
-          <h2 class="category-heading">🛠️ Systems, Developer Tools & Open Source <span style="font-size:0.9rem;font-weight:400;color:#718096;">(8)</span></h2>
+          <h2 class="category-heading">🛠️ Systems, Developer Tools & Open Source <span class="category-count">(8)</span></h2>
           <p class="category-subtext">Production CLIs, static security analyzers, network simulators, and AI benchmarking tools built for the developer community.</p>
         </div>
         <div class="blog-grid">
@@ -1591,7 +1736,7 @@
 
       <section class="blog-category-section reveal" id="sec-media" data-cat-id="media">
         <div class="category-heading-wrap">
-          <h2 class="category-heading">🏆 Competitions, Media Coverage & Tech Stories <span style="font-size:0.9rem;font-weight:400;color:#718096;">(4)</span></h2>
+          <h2 class="category-heading">🏆 Competitions, Media Coverage & Tech Stories <span class="category-count">(4)</span></h2>
           <p class="category-subtext">Television interviews, national newspaper features, global competition journeys, and hardware retrospectives.</p>
         </div>
         <div class="blog-grid">
@@ -1658,8 +1803,8 @@
     </section>
   </main>
 
-  <footer class="footer" style="padding:2.5rem 1rem;text-align:center;font-size:0.9rem;color:#718096;border-top:1px solid rgba(255,255,255,0.05);">
-    <p>&copy; 2026 Rudra Sarker. All rights reserved. &bull; <a href="../contact.html" style="color:#00ffff;">Contact</a></p>
+  <footer class="footer" style="padding:2.5rem 1rem;text-align:center;font-size:0.9rem;color:var(--text-muted);border-top:1px solid var(--card-border-color);">
+    <p>&copy; 2026 Rudra Sarker. All rights reserved. &bull; <a href="../contact.html" style="color:var(--primary-color);font-weight:700;">Contact</a></p>
   </footer>
 
   <script defer src="../main.js"></script>
