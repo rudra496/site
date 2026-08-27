@@ -2071,3 +2071,74 @@ pre code {
   border: 1.5px solid #64748b !important;
   color: #334155 !important;
 }
+
+/* Ultra-Refined Dynamic Aurora Shimmer Animation for Name */
+.hero-name-animate {
+  font-family: 'Exo 2', sans-serif;
+  font-size: clamp(2.3rem, 5.5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 0.65rem;
+  display: inline-block;
+  background: linear-gradient(
+    120deg,
+    #ffffff 0%,
+    #00ffff 25%,
+    #c084fc 50%,
+    #38ef7d 75%,
+    #ffffff 100%
+  );
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: heroNameShimmer 7s ease-in-out infinite;
+  text-shadow: 0 0 32px rgba(0, 255, 255, 0.28);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), letter-spacing 0.35s ease;
+  will-change: background-position;
+}
+.hero-name-animate:hover {
+  transform: translateY(-2px) scale(1.02);
+  letter-spacing: -0.005em;
+}
+
+[data-theme="light"] .hero-name-animate {
+  background: linear-gradient(
+    120deg,
+    #020617 0%,
+    #0284c7 25%,
+    #6d28d9 50%,
+    #059669 75%,
+    #020617 100%
+  ) !important;
+  background-size: 260% 100% !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: heroNameShimmer 7s ease-in-out infinite !important;
+  text-shadow: none !important;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.08));
+}
+[data-theme="light"] .hero-name-animate:hover {
+  filter: drop-shadow(0 4px 12px rgba(2, 132, 199, 0.22));
+}
+
+@keyframes heroNameShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-name-animate {
+    animation: none !important;
+    background-size: 100% !important;
+  }
+}
