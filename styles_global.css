@@ -1,46 +1,79 @@
-/* --- Global Styles & Variables --- */
+/* ==========================================================================
+   MASTER DESIGN SYSTEM & DESIGN TOKENS (DARK & LIGHT MODES)
+   High-contrast, accessible (WCAG AAA), pristine typography & backgrounds
+   ========================================================================== */
+
 :root {
-  /* Dark theme default */
-  --bg-color: #0a0a1a;
-  --primary-color: #00ffff; /* Neon Cyan */
-  --secondary-color: #ff00ff; /* Neon Magenta */
-  --tertiary-color: #00ff00; /* Neon Lime */
-  --text-color: #e0e0e0;
-  --heading-color: #fff;
+  /* --- Dark Theme Default --- */
+  --bg-color: #080c16;
+  --bg-surface: rgba(15, 23, 42, 0.85);
+  --bg-card: rgba(20, 22, 50, 0.85);
+  --text-color: #f1f5f9;            /* Crisp off-white */
+  --text-muted: #94a3b8;            /* Clear legible slate */
+  --text-dim: #64748b;
+  --heading-color: #ffffff;         /* Pure white */
+  --primary-color: #00ffff;         /* Neon Cyan */
+  --secondary-color: #ff00ff;       /* Neon Magenta */
+  --tertiary-color: #00ff00;        /* Neon Lime */
   --link-color: #00ffff;
   --link-hover-color: #ff00ff;
-  --card-bg-color: rgba(26, 26, 58, 0.7);
-  --card-border-color: rgba(0, 255, 255, 0.5);
+  --card-bg-color: rgba(20, 22, 50, 0.85);
+  --card-border-color: rgba(0, 255, 255, 0.25);
   --header-height: 70px;
+
+  /* Semantic Accents (Dark Mode) */
+  --accent-cyan: #00ffff;
+  --accent-green: #34d399;
+  --accent-orcid: #a3e635;
+  --accent-purple: #c084fc;
+  --accent-amber: #fbbf24;
+  --stat-num-gradient: linear-gradient(135deg, #00ffff 0%, #34d399 100%);
+  --hero-title-gradient: linear-gradient(135deg, #ffffff 0%, #00ffff 60%, #c084fc 100%);
+  --spotlight-bg: linear-gradient(135deg, rgba(10, 37, 64, 0.95), rgba(15, 23, 42, 0.95));
+  --spotlight-border: rgba(0, 255, 255, 0.35);
+  --spotlight-tag: #00ffff;
+  --spotlight-badge-bg: rgba(16, 185, 129, 0.2);
+  --spotlight-badge-border: #10b981;
+  --spotlight-badge-text: #34d399;
+  --btn-ghost-bg: rgba(255, 255, 255, 0.08);
+  --btn-ghost-border: rgba(255, 255, 255, 0.2);
+  --btn-ghost-text: #ffffff;
 }
 
-/* --- Skip to Content Link (Accessibility) --- */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--primary-color);
-  color: #0a0a1a;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-weight: 700;
-  z-index: 1000;
-  transition: top 0.3s ease;
-}
-.skip-link:focus {
-  top: 0;
-}
 [data-theme="light"] {
-  --bg-color: #f0f4f8;
-  --text-color: #1a1a2e;
-  --heading-color: #0f0f1e;
-  --link-color: #0066cc;
-  --link-hover-color: #cc0066;
-  --primary-color: #0088cc;
-  --secondary-color: #cc0088;
-  --tertiary-color: #00aa00;
+  /* --- Light Theme (Clean, Bright, Prestigious Academic & Engineering) --- */
+  --bg-color: #ffffff;              /* Pristine Pure White */
+  --bg-surface: #f8fafc;            /* Clean Slate Surface */
+  --bg-card: #ffffff;               /* Pure White Card */
+  --text-color: #0f172a;            /* Deep Slate-900 (High contrast) */
+  --text-muted: #334155;            /* Slate-700 (Very legible) */
+  --text-dim: #475569;              /* Slate-600 */
+  --heading-color: #020617;         /* Deepest Slate-950 */
+  --primary-color: #0284c7;         /* Sky-600 */
+  --secondary-color: #7c3aed;       /* Violet-600 */
+  --tertiary-color: #059669;        /* Emerald-600 */
+  --link-color: #0284c7;
+  --link-hover-color: #be185d;
   --card-bg-color: #ffffff;
-  --card-border-color: rgba(0, 136, 204, 0.25);
+  --card-border-color: #e2e8f0;
+
+  /* Semantic Accents (Light Mode) */
+  --accent-cyan: #0284c7;           /* Deep readable blue */
+  --accent-green: #047857;          /* Deep emerald green */
+  --accent-orcid: #4d7c0f;          /* Deep readable olive */
+  --accent-purple: #6d28d9;         /* Deep violet */
+  --accent-amber: #b45309;          /* Deep amber/gold */
+  --stat-num-gradient: linear-gradient(135deg, #0284c7 0%, #059669 100%);
+  --hero-title-gradient: linear-gradient(135deg, #0f172a 0%, #0284c7 60%, #6d28d9 100%);
+  --spotlight-bg: linear-gradient(135deg, #f0fdf4 0%, #f0f9ff 100%);
+  --spotlight-border: #bae6fd;
+  --spotlight-tag: #0369a1;
+  --spotlight-badge-bg: rgba(16, 185, 129, 0.12);
+  --spotlight-badge-border: #059669;
+  --spotlight-badge-text: #047857;
+  --btn-ghost-bg: #f8fafc;
+  --btn-ghost-border: #cbd5e1;
+  --btn-ghost-text: #0f172a;
 }
 
 *,
@@ -50,10 +83,26 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Exo 2', sans-serif;
   background-color: var(--bg-color);
+  background-image: radial-gradient(rgba(56, 189, 248, 0.07) 1.1px, transparent 1.1px);
+  background-size: 26px 26px;
+  background-attachment: fixed;
   color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="light"] body {
+  background-color: #ffffff;
+  background-image: radial-gradient(#cbd5e1 1.1px, transparent 1.1px);
+  background-size: 26px 26px;
+  background-attachment: fixed;
+  color: #0f172a;
+}
+
+/* Hide background canvas completely in Light Mode for 100% pristine bright clarity */
+[data-theme="light"] #starfield {
+  display: none !important;
 }
 
 h1, h2, h3, h4, h5, h6 { color: var(--heading-color); }
@@ -86,9 +135,10 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
   border-bottom: 1px solid var(--card-border-color);
 }
 [data-theme="light"] .header { 
-  background: rgba(255, 255, 255, 0.98);
-  border-bottom: 2px solid var(--card-border-color);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
 }
 .nav-container {
   max-width: 1200px; margin: 0 auto; padding: 0 2rem; height: var(--header-height);
@@ -96,8 +146,8 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
 }
 .nav-brand { font-size: 1.5rem; font-weight: 700; color: #fff; text-shadow: 0 0 8px var(--primary-color); }
 [data-theme="light"] .nav-brand { 
-  color: var(--primary-color);
-  text-shadow: none;
+  color: #0f172a !important;
+  text-shadow: none !important;
 }
 .nav-links { display: flex; list-style: none; gap: 1.5rem; }
 .nav-link { color: var(--text-color); font-weight: 600; padding: 0.5rem; position: relative; }
@@ -1034,8 +1084,8 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
 }
 
 [data-theme="light"] .footer {
-  background: #e2e8f0 !important;
-  border-top-color: #cbd5e1 !important;
+  background: #f8fafc !important;
+  border-top: 1px solid #e2e8f0 !important;
 }
 
 [data-theme="light"] .footer p {

@@ -306,11 +306,11 @@
             alt="Portrait of Rudra Sarker"
             class="profile-pic"
             loading="lazy"
-            style="border: 2px solid rgba(0, 255, 255, 0.4); box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);"
+            style="border: 3px solid var(--primary-color); box-shadow: 0 0 25px rgba(2, 132, 199, 0.2);"
           />
         </picture>
         <div class="about-text">
-          <p style="color: #00ffff; font-family: 'JetBrains Mono', monospace; font-size: 0.92rem; margin-bottom: 0.4rem; letter-spacing: 0.05em;">&gt; HELLO WORLD_</p>
+          <p style="color: var(--primary-color); font-family: 'JetBrains Mono', monospace; font-size: 0.92rem; margin-bottom: 0.4rem; letter-spacing: 0.05em;">&gt; HELLO WORLD_</p>
           <h1 style="font-size: 2.3rem; line-height: 1.2; margin-bottom: 0.6rem;">Rudra Sarker</h1>
           <h2 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 1rem;">
             AI &amp; Robotics Engineer · Open Science Researcher · IPE Student at SUST
@@ -337,8 +337,8 @@
 
           <div style="display: flex; gap: 0.85rem; flex-wrap: wrap;">
             <a href="#flagships" class="cta-button" style="text-decoration: none; padding: 10px 22px;">Explore Flagships &darr;</a>
-            <a href="./blog.html" class="cta-button" style="background: rgba(0, 210, 255, 0.15); border: 1.5px solid #00d2ff; color: #00d2ff; text-decoration: none; padding: 10px 22px;">Blog Hub (31 Posts) &rarr;</a>
-            <a href="./contact.html" class="cta-button" style="background: rgba(255, 255, 255, 0.08); border: 1.5px solid rgba(255, 255, 255, 0.2); text-decoration: none; padding: 10px 22px;">Get In Touch &rarr;</a>
+            <a href="./blog.html" class="cta-button" class="cta-button btn-ghost" style="text-decoration: none; padding: 10px 22px;">Blog Hub (31 Posts) &rarr;</a>
+            <a href="./contact.html" class="cta-button" class="cta-button btn-ghost" style="text-decoration: none; padding: 10px 22px;">Get In Touch &rarr;</a>
           </div>
         </div>
       </div>
@@ -489,7 +489,7 @@
       <div class="featured-work-grid">
         <!-- Flagship 1: HyperReason -->
         <article class="featured-project-card reveal">
-          <span class=\"project-status\">
+          <span class="project-status">
             CERN Zenodo DOI: 10.5281/zenodo.22118810
           </span>
           <h3>HyperReason</h3>
@@ -513,7 +513,7 @@
             <a href="https://github.com/rudra496/hyper-reason" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View HyperReason on GitHub">
               GitHub Repo <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href=\"./blog/hyper-reason-autonomous-test-time-compute-kv-cache.html\" class=\"featured-cta btn-ghost\" aria-label="Read HyperReason deep-dive">
+            <a href="./blog/hyper-reason-autonomous-test-time-compute-kv-cache.html" class="featured-cta btn-ghost" aria-label="Read HyperReason deep-dive">
               Deep-Dive &rarr;
             </a>
           </div>
@@ -521,7 +521,7 @@
 
         <!-- Flagship 2: WorldSim AI -->
         <article class="featured-project-card reveal">
-          <span class=\"project-status\">
+          <span class="project-status">
             CERN Zenodo DOI: 10.5281/zenodo.22118796
           </span>
           <h3>WorldSim AI</h3>
@@ -545,7 +545,7 @@
             <a href="https://github.com/rudra496/worldsim-ai" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View WorldSim AI on GitHub">
               GitHub Repo <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href=\"./blog/worldsim-ai-digital-twin-simulation-platform.html\" class=\"featured-cta btn-ghost\" aria-label="Read WorldSim AI article">
+            <a href="./blog/worldsim-ai-digital-twin-simulation-platform.html" class="featured-cta btn-ghost" aria-label="Read WorldSim AI article">
               Architecture &rarr;
             </a>
           </div>
@@ -553,7 +553,7 @@
 
         <!-- Flagship 3: SightlineAI -->
         <article class="featured-project-card reveal">
-          <span class=\"project-status\">
+          <span class="project-status">
             CERN Zenodo DOI: 10.5281/zenodo.22118700
           </span>
           <h3>SightlineAI</h3>
@@ -577,7 +577,7 @@
             <a href="https://rudra496.github.io/sightlineai" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View SightlineAI demo">
               Live Demo <i class="fas fa-external-link-alt" aria-hidden="true"></i>
             </a>
-            <a href=\"./blog/sightlineai-assistive-eyewear-visually-impaired.html\" class=\"featured-cta btn-ghost\" aria-label="Read SightlineAI deep-dive">
+            <a href="./blog/sightlineai-assistive-eyewear-visually-impaired.html" class="featured-cta btn-ghost" aria-label="Read SightlineAI deep-dive">
               Read Story &rarr;
             </a>
           </div>
@@ -585,7 +585,7 @@
 
         <!-- Flagship 4: MindWell -->
         <article class="featured-project-card reveal">
-          <span class=\"project-status\">
+          <span class="project-status">
             CERN Zenodo DOI: 10.5281/zenodo.22118681
           </span>
           <h3>MindWell</h3>
@@ -609,7 +609,7 @@
             <a href="https://mindwell-navy.vercel.app/" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="Visit MindWell platform">
               Live Platform <i class="fas fa-external-link-alt" aria-hidden="true"></i>
             </a>
-            <a href=\"./blog/mindwell-mental-health-platform.html\" class=\"featured-cta btn-ghost\" aria-label="Read MindWell article">
+            <a href="./blog/mindwell-mental-health-platform.html" class="featured-cta btn-ghost" aria-label="Read MindWell article">
               Design &rarr;
             </a>
           </div>
@@ -617,7 +617,7 @@
 
         <!-- Flagship 5: ScienceLab 3D -->
         <article class="featured-project-card reveal">
-          <span class=\"project-status\">
+          <span class="project-status">
             CERN Zenodo DOI: 10.5281/zenodo.22118690
           </span>
           <h3>ScienceLab 3D</h3>
@@ -641,7 +641,7 @@
             <a href="https://rudra496.github.io/science" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View 3D Science Lab demo">
               Live Lab <i class="fas fa-external-link-alt" aria-hidden="true"></i>
             </a>
-            <a href=\"./blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html\" class=\"featured-cta btn-ghost\" aria-label="Read ScienceLab 3D breakdown">
+            <a href="./blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html" class="featured-cta btn-ghost" aria-label="Read ScienceLab 3D breakdown">
               Breakdown &rarr;
             </a>
           </div>
@@ -649,7 +649,7 @@
 
         <!-- Flagship 6: DevRoadmaps -->
         <article class="featured-project-card reveal">
-          <span class=\"project-status\">
+          <span class="project-status">
             CERN Zenodo DOI: 10.5281/zenodo.22118838
           </span>
           <h3>DevRoadmaps</h3>
@@ -673,7 +673,7 @@
             <a href="https://github.com/rudra496/devroadmaps" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View DevRoadmaps on GitHub">
               GitHub Repo <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href=\"./blog/devroadmaps-free-developer-roadmaps.html\" class=\"featured-cta btn-ghost\" aria-label="Read DevRoadmaps article">
+            <a href="./blog/devroadmaps-free-developer-roadmaps.html" class="featured-cta btn-ghost" aria-label="Read DevRoadmaps article">
               Curriculum &rarr;
             </a>
           </div>
