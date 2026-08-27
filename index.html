@@ -3,33 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rudra Sarker | AI & Robotics Engineer | Open Science Researcher | SUST</title>
-  <meta name="description" content="Official engineering & research portfolio of Rudra Sarker. Industrial & Production Engineering at SUST. Author of Elsevier Q1 study (J. Ethnopharmacology), creator of HyperReason and 10 CERN Zenodo-preserved software frameworks, SightlineAI, MindWell, and ScienceLab 3D." />
-  <meta name="keywords" content="Rudra Sarker, SUST, Industrial Engineering, AI Researcher, HyperReason, CERN Zenodo, Journal of Ethnopharmacology, Elsevier Q1, SightlineAI, MindWell, ScienceLab 3D, Team SignTalk, Robotics, IoT, Computer Vision, MCTS, Next.js 15" />
+  <title>Rudra Sarker | AI &amp; Robotics Engineer | Open Science Researcher | SUST</title>
+  <meta name="description" content="Official engineering &amp; research portfolio of Rudra Sarker. Industrial &amp; Production Engineering at SUST. Author of Elsevier Q1 study (J. Ethnopharmacology), creator of HyperReason and 10 CERN Zenodo open-science repositories, SightlineAI, MindWell, and ScienceLab 3D." />
+  <meta name="keywords" content="Rudra Sarker, SUST, Industrial Engineering, AI Researcher, HyperReason, CERN Zenodo, Journal of Ethnopharmacology, Elsevier Q1, Team SignTalk, SightlineAI, WorldSim AI, EdgeBrain, DevRoadmaps, Robotics, IoT, Computer Vision, MCTS, Next.js 15" />
   <link rel="canonical" href="https://rudra496.github.io/site/" />
-  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="theme-color" content="#0f172a" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="author" content="Rudra Sarker" />
   <meta name="generator" content="GitHub Pages" />
   <meta name="google-site-verification" content="NE4MzR6NIdQYAoPS52dBxjRxvB8TWUTt4aGM2Uachik" />
   <meta name="msvalidate.01" content="c2fc8f0ce00e434d9c0090f93bc09a3a" />
 
+  <!-- Geographic Metadata for Global Discovery -->
+  <meta name="geo.region" content="BD-43" />
+  <meta name="geo.placename" content="Sylhet" />
+  <meta name="geo.position" content="24.9172;91.8319" />
+  <meta name="ICBM" content="24.9172, 91.8319" />
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rudra Sarker Portfolio" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="Rudra Sarker | AI & Robotics Engineer | Open Science Researcher" />
-  <meta property="og:description" content="Portfolio of Rudra Sarker: Published Q1 author in Elsevier, creator of 10 CERN Zenodo open-science repositories, SightlineAI, MindWell, and ScienceLab 3D." />
+  <meta property="og:title" content="Rudra Sarker | AI &amp; Robotics Engineer | Open Science Researcher" />
+  <meta property="og:description" content="Published Q1 author in Elsevier, creator of 10 CERN Zenodo open-science repositories, robotics, IoT, and AI flagships at SUST." />
   <meta property="og:url" content="https://rudra496.github.io/site/" />
   <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
 
-  <!-- Twitter -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rudra Sarker | AI & Robotics Engineer | SUST" />
+  <meta name="twitter:site" content="@Rudra496" />
+  <meta name="twitter:creator" content="@Rudra496" />
+  <meta name="twitter:title" content="Rudra Sarker | AI &amp; Robotics Engineer | SUST" />
   <meta name="twitter:description" content="Published Q1 author in Elsevier, creator of 10 CERN Zenodo open-science repositories, robotics, IoT, and AI flagships." />
   <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
 
-  <!-- rel=me for Social Verification -->
+  <!-- Verified Rel=me Identities -->
   <link rel="me" href="https://orcid.org/0009-0001-4545-0932" />
   <link rel="me" href="https://github.com/rudra496" />
   <link rel="me" href="https://www.linkedin.com/in/rudrasarker" />
@@ -46,12 +54,44 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
 
-  <!-- Styles -->
+  <!-- Global Stylesheet -->
   <link rel="stylesheet" href="./styles_global.css" />
   <link rel="icon" href="./favicon.ico" />
 
-  <!-- Inline Enhancements for Professional Overview & Stat Counter -->
+  <!-- Killer-Grade Portfolio Specific Styles -->
   <style>
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.85rem;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid #059669;
+      color: #059669;
+    }
+    :root:not([data-theme="light"]) .status-pill {
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid #10b981;
+      color: #34d399;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: currentColor;
+      box-shadow: 0 0 8px currentColor;
+      animation: pulse 2s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.6; }
+    }
+
     .stat-matrix {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -61,31 +101,31 @@
     .stat-card {
       background: var(--card-bg-color);
       border: 1px solid var(--card-border-color);
-      border-radius: 12px;
-      padding: 1.25rem 1rem;
+      border-radius: 14px;
+      padding: 1.35rem 1rem;
       text-align: center;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     }
     .stat-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
       border-color: var(--primary-color);
-      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.15);
+      box-shadow: 0 12px 28px rgba(2, 132, 199, 0.15);
     }
     .stat-num {
       font-family: 'Exo 2', sans-serif;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       font-weight: 800;
       line-height: 1;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.4rem;
       background: var(--stat-num-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      color: var(--primary-color); /* Reliable Fallback */
+      color: var(--primary-color);
     }
     .stat-label {
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       color: var(--text-color);
       font-weight: 700;
       letter-spacing: 0.03em;
@@ -101,7 +141,7 @@
     .hero-badges-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem;
+      gap: 0.65rem;
       margin: 1.25rem 0 1.75rem;
     }
     .hero-badge-pill {
@@ -142,21 +182,21 @@
       background: var(--card-bg-color);
       border: 1px solid var(--card-border-color);
       border-radius: 14px;
-      padding: 1.6rem;
+      padding: 1.75rem;
       transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
       height: 100%;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     }
     .pillar-card:hover {
       border-color: var(--primary-color);
       transform: translateY(-4px);
-      box-shadow: 0 10px 30px rgba(2, 132, 199, 0.12);
+      box-shadow: 0 12px 32px rgba(2, 132, 199, 0.14);
     }
     .pillar-icon {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
+      font-size: 2.3rem;
+      margin-bottom: 1.1rem;
       display: inline-block;
     }
     .pillar-tech-list {
@@ -164,113 +204,241 @@
       flex-wrap: wrap;
       gap: 0.4rem;
       margin-top: auto;
-      padding-top: 1rem;
+      padding-top: 1.25rem;
     }
     .award-card {
       background: var(--card-bg-color);
       border: 1px solid rgba(217, 119, 6, 0.35);
-      border-radius: 12px;
-      padding: 1.4rem;
+      border-radius: 14px;
+      padding: 1.5rem;
       transition: all 0.3s ease;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     }
     .award-card:hover {
       border-color: var(--accent-amber);
       transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(217, 119, 6, 0.15);
+      box-shadow: 0 10px 28px rgba(217, 119, 6, 0.16);
     }
   </style>
 
-  <!-- Structured Data (JSON-LD) for SEO -->
+  <!-- Structured Data (JSON-LD) for Global SEO -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://rudra496.github.io/site/#person",
-        "name": "Rudra Sarker",
-        "givenName": "Rudra",
-        "familyName": "Sarker",
-        "url": "https://rudra496.github.io/site/",
-        "image": "https://rudra496.github.io/site/Profile.webp",
-        "description": "Industrial & Production Engineering student and researcher at SUST, published author in Elsevier's Journal of Ethnopharmacology, creator of HyperReason and 10 CERN Zenodo-preserved open-science frameworks.",
-        "jobTitle": "AI & Robotics Engineer, Open Science Researcher",
-        "worksFor": {
-          "@type": "CollegeOrUniversity",
-          "name": "Shahjalal University of Science and Technology",
-          "alternateName": "SUST",
-          "url": "https://www.sust.edu"
-        },
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "Shahjalal University of Science and Technology",
-          "alternateName": "SUST",
-          "url": "https://www.sust.edu"
-        },
-        "knowsAbout": [
-          "Artificial Intelligence",
-          "Monte Carlo Tree Search",
-          "KV-Cache Optimization",
-          "Robotics",
-          "Internet of Things",
-          "Computer Vision",
-          "Industrial Engineering",
-          "Operations Research",
-          "Biostatistics",
-          "Next.js",
-          "Three.js",
-          "PyTorch"
-        ],
-        "sameAs": [
-          "https://orcid.org/0009-0001-4545-0932",
-          "https://github.com/rudra496",
-          "https://www.linkedin.com/in/rudrasarker",
-          "https://www.researchgate.net/profile/Rudra-Sarker-3",
-          "https://x.com/Rudra496",
-          "https://youtube.com/@rudrasarker9732",
-          "https://www.facebook.com/rudrasarker130"
-        ],
-        "email": "rudrasarker130@gmail.com",
-        "nationality": {
-          "@type": "Country",
-          "name": "Bangladesh"
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://rudra496.github.io/site/#person",
+      "name": "Rudra Sarker",
+      "givenName": "Rudra",
+      "familyName": "Sarker",
+      "url": "https://rudra496.github.io/site/",
+      "image": "https://rudra496.github.io/site/Profile.webp",
+      "description": "Industrial & Production Engineering student at SUST, researcher, and AI/Robotics engineer. Author of an Elsevier Q1 study in the Journal of Ethnopharmacology, creator of HyperReason and 10 CERN Zenodo-preserved software frameworks.",
+      "jobTitle": "AI & Robotics Engineer, Open Science Researcher",
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "Shahjalal University of Science and Technology",
+        "alternateName": "SUST",
+        "url": "https://www.sust.edu"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://rudra496.github.io/site/#website",
-        "name": "Rudra Sarker Portfolio",
-        "url": "https://rudra496.github.io/site/",
-        "description": "Official engineering, research, and robotics portfolio of Rudra Sarker.",
-        "publisher": {
-          "@id": "https://rudra496.github.io/site/#person"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://rudra496.github.io/site/blog.html?search={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Shahjalal University of Science and Technology",
+        "alternateName": "SUST",
+        "url": "https://www.sust.edu"
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://rudra496.github.io/site/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://rudra496.github.io/site/"
-          }
-        ]
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Test-Time Compute Scaling",
+        "Monte Carlo Tree Search",
+        "KV-Cache Sparsification",
+        "Robotics",
+        "Embedded Systems",
+        "Internet of Things",
+        "Computer Vision",
+        "Industrial Engineering",
+        "Operations Research",
+        "Phytotherapy",
+        "Next.js",
+        "React Three Fiber",
+        "Three.js",
+        "PyTorch"
+      ],
+      "sameAs": [
+        "https://orcid.org/0009-0001-4545-0932",
+        "https://github.com/rudra496",
+        "https://www.linkedin.com/in/rudrasarker",
+        "https://www.researchgate.net/profile/Rudra-Sarker-3",
+        "https://x.com/Rudra496",
+        "https://youtube.com/@rudrasarker9732",
+        "https://www.facebook.com/rudrasarker130",
+        "https://dev.to/rudra_sarker"
+      ],
+      "email": "rudrasarker130@gmail.com",
+      "nationality": {
+        "@type": "Country",
+        "name": "Bangladesh"
       }
-    ]
-  }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rudra496.github.io/site/#website",
+      "name": "Rudra Sarker Portfolio",
+      "url": "https://rudra496.github.io/site/",
+      "description": "Official engineering, research, and robotics portfolio of Rudra Sarker.",
+      "publisher": {
+        "@id": "https://rudra496.github.io/site/#person"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://rudra496.github.io/site/blog.html?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://rudra496.github.io/site/#webpage",
+      "url": "https://rudra496.github.io/site/",
+      "name": "Rudra Sarker | AI & Robotics Engineer | Open Science Researcher | SUST",
+      "isPartOf": {
+        "@id": "https://rudra496.github.io/site/#website"
+      },
+      "about": {
+        "@id": "https://rudra496.github.io/site/#person"
+      },
+      "dateCreated": "2024-01-01T00:00:00Z",
+      "dateModified": "2026-08-27T04:00:00Z"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://rudra496.github.io/site/#q1-article",
+      "name": "Ethnoveterinary herbal practices in commercial poultry in Bangladesh: A multi-district cross-sectional study",
+      "headline": "Ethnoveterinary herbal practices in commercial poultry in Bangladesh: A multi-district cross-sectional study",
+      "url": "https://rudra496.github.io/site/blog/ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html",
+      "sameAs": "https://doi.org/10.1016/j.jep.2024.118933",
+      "author": {
+        "@id": "https://rudra496.github.io/site/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Elsevier",
+        "url": "https://www.elsevier.com"
+      },
+      "publication": {
+        "@type": "PublicationEvent",
+        "name": "Journal of Ethnopharmacology"
+      },
+      "datePublished": "2024-10-18"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://rudra496.github.io/site/#software-repositories",
+      "name": "CERN Zenodo Open-Science Software Frameworks",
+      "itemListElement": [
+        {
+          "@type": "SoftwareApplication",
+          "position": 1,
+          "name": "HyperReason",
+          "url": "https://github.com/rudra496/hyper-reason",
+          "sameAs": "https://doi.org/10.5281/zenodo.22118810",
+          "applicationCategory": "AI, Machine Learning, Reasoning Engine"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 2,
+          "name": "WorldSim AI",
+          "url": "https://github.com/rudra496/worldsim-ai",
+          "sameAs": "https://doi.org/10.5281/zenodo.22118796",
+          "applicationCategory": "Digital Twin, Physics Simulation, AI Agents"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 3,
+          "name": "NexusAgent",
+          "url": "https://github.com/rudra496/nexus-agent",
+          "sameAs": "https://doi.org/10.5281/zenodo.22118830",
+          "applicationCategory": "AI Agent Framework, GraphRAG"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 4,
+          "name": "DevRoadmaps",
+          "url": "https://github.com/rudra496/devroadmaps",
+          "sameAs": "https://doi.org/10.5281/zenodo.22118838",
+          "applicationCategory": "PWA, Developer Education"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 5,
+          "name": "EdgeBrain",
+          "url": "https://github.com/rudra496/EdgeBrain",
+          "sameAs": "https://doi.org/10.5281/zenodo.22118683",
+          "applicationCategory": "Edge AI, IoT Anomaly Detection"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 6,
+          "name": "StealthHumanizer",
+          "url": "https://github.com/rudra496/StealthHumanizer",
+          "sameAs": "https://doi.org/10.5281/zenodo.22118705",
+          "applicationCategory": "NLP, Linguistic Transformations"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://rudra496.github.io/site/#hardware-systems",
+      "name": "Robotics, IoT & Embedded Laboratory Systems",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "position": 1,
+          "name": "Team SignTalk Smart Glove",
+          "url": "https://rudra496.github.io/site/projects/team-signtalk.html",
+          "category": "Assistive Wearable Technology, Sign-to-Speech Translation"
+        },
+        {
+          "@type": "Product",
+          "position": 2,
+          "name": "SightlineAI Wearable Assistive Eyewear",
+          "url": "https://rudra496.github.io/site/projects/assistive-smart-eyeglass.html",
+          "category": "Computer Vision Assistive Device"
+        },
+        {
+          "@type": "Product",
+          "position": 3,
+          "name": "Dual-Axis Automatic Solar Tracker",
+          "url": "https://rudra496.github.io/site/projects/dual-axis-solar-tracker.html",
+          "category": "Renewable Energy Automation"
+        },
+        {
+          "@type": "Product",
+          "position": 4,
+          "name": "Autonomous PID Line Following Mobile Robot",
+          "url": "https://rudra496.github.io/site/projects/line-following-robot.html",
+          "category": "Autonomous Ground Robotics"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rudra496.github.io/site/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rudra496.github.io/site/"
+        }
+      ]
+    }
+  ]
+}
   </script>
-  <script defer src="https://analytics.129-159-229-170.sslip.io/script.js" data-website-id="88510eab-ab65-4ee7-9f4f-614743f7f9a2"></script>
 </head>
 <body>
-  <!-- Skip to main content link for accessibility -->
+  <!-- Skip link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
   <!-- Header & Navigation -->
@@ -286,7 +454,7 @@
         <li><a href="./index.html" class="nav-link active" aria-current="page">Home</a></li>
         <li><a href="./projects.html" class="nav-link">Projects</a></li>
         <li><a href="./gallery.html" class="nav-link">Gallery &amp; Awards</a></li>
-        <li><a href="./blog.html" class="nav-link">Blog Hub</a></li>
+        <li><a href="./blog.html" class="nav-link">Blog Hub (31)</a></li>
         <li><a href="./blog/media-coverage-achievements-rudra-sarker.html" class="nav-link">In The Press</a></li>
         <li><a href="./contact.html" class="nav-link">Contact</a></li>
       </ul>
@@ -306,13 +474,16 @@
             alt="Portrait of Rudra Sarker"
             class="profile-pic"
             loading="lazy"
-            style="border: 3px solid var(--primary-color); box-shadow: 0 0 25px rgba(2, 132, 199, 0.2);"
+            style="border: 3px solid var(--primary-color); box-shadow: 0 0 25px rgba(2, 132, 199, 0.25);"
           />
         </picture>
         <div class="about-text">
+          <div class="status-pill">
+            <span class="pulse-dot"></span> Available for AI Research &amp; Robotics Engineering R&amp;D
+          </div>
           <p style="color: var(--primary-color); font-family: 'JetBrains Mono', monospace; font-size: 0.92rem; margin-bottom: 0.4rem; letter-spacing: 0.05em;">&gt; HELLO WORLD_</p>
-          <h1 style="font-size: 2.3rem; line-height: 1.2; margin-bottom: 0.6rem;">Rudra Sarker</h1>
-          <h2 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 1rem;">
+          <h1 style="font-size: 2.4rem; line-height: 1.2; margin-bottom: 0.6rem; font-weight: 800;">Rudra Sarker</h1>
+          <h2 style="font-size: 1.15rem; font-weight: 600; color: var(--text-muted); margin-bottom: 1rem;">
             AI &amp; Robotics Engineer · Open Science Researcher · IPE Student at SUST
           </h2>
 
@@ -331,19 +502,19 @@
             </span>
           </div>
 
-          <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.25rem;">
-            Building at the convergence of <strong>autonomous AI reasoning, edge intelligence, robotics, and empirical scientific research</strong>. Currently pursuing Industrial &amp; Production Engineering at <strong>Shahjalal University of Science and Technology (SUST)</strong>, focusing on scalable optimization, computer vision, and open-source scientific infrastructure.
+          <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-color); margin-bottom: 1.35rem;">
+            Building at the intersection of <strong>autonomous AI reasoning, edge intelligence, robotics kinematics, and empirical scientific research</strong>. Currently studying Industrial &amp; Production Engineering at <strong>Shahjalal University of Science and Technology (SUST)</strong>, focusing on process optimization, computer vision pipelines, and permanent open-science software infrastructure.
           </p>
 
           <div style="display: flex; gap: 0.85rem; flex-wrap: wrap;">
-            <a href="#flagships" class="cta-button" style="text-decoration: none; padding: 10px 22px;">Explore Flagships &darr;</a>
-            <a href="./blog.html" class="cta-button" class="cta-button btn-ghost" style="text-decoration: none; padding: 10px 22px;">Blog Hub (31 Posts) &rarr;</a>
-            <a href="./contact.html" class="cta-button" class="cta-button btn-ghost" style="text-decoration: none; padding: 10px 22px;">Get In Touch &rarr;</a>
+            <a href="#flagships" class="cta-button" style="text-decoration: none; padding: 10px 22px;">Explore Software &darr;</a>
+            <a href="#hardware-lab" class="cta-button btn-ghost" style="text-decoration: none; padding: 10px 22px;">Hardware &amp; Robotics &darr;</a>
+            <a href="./blog.html" class="cta-button btn-ghost" style="text-decoration: none; padding: 10px 22px;">Blog Hub (31 Articles) &rarr;</a>
           </div>
         </div>
       </div>
 
-      <!-- Live Verified Stat Matrix -->
+      <!-- Live Verified Metric Stat Matrix -->
       <div class="stat-matrix reveal">
         <div class="stat-card">
           <div class="stat-num">1</div>
@@ -353,7 +524,7 @@
         <div class="stat-card">
           <div class="stat-num">10</div>
           <div class="stat-label">CERN Zenodo DOIs</div>
-          <span class="stat-sub">Persistent Software DOIs</span>
+          <span class="stat-sub">Persistent Concept DOIs</span>
         </div>
         <div class="stat-card">
           <div class="stat-num">31</div>
@@ -414,7 +585,7 @@
       <h2 class="section-title reveal">Core Technical Pillars</h2>
       <p class="section-subtitle reveal">Interdisciplinary domain expertise spanning frontier artificial intelligence, embedded systems, full-stack architectures, and industrial optimization</p>
 
-      <div class="grid-container reveal" style="grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.5rem;">
+      <div class="grid-container reveal" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
         <!-- Pillar 1 -->
         <div class="pillar-card">
           <span class="pillar-icon" style="color: #00ffff;"><i class="fas fa-brain"></i></span>
@@ -481,10 +652,17 @@
       </div>
     </section>
 
-    <!-- SECTION 3: Flagship Research Software & Systems -->
+    <!-- SECTION 3: Flagship Research Software (CERN Zenodo Frameworks) -->
     <section id="flagships" class="content-section">
-      <h2 class="section-title reveal">Flagship Research &amp; Engineering Systems</h2>
-      <p class="section-subtitle reveal">Core open-source software frameworks permanently preserved on CERN Zenodo with permanent Concept DOIs</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+        <div>
+          <h2 class="section-title reveal" style="text-align:left;margin-bottom:0.4rem;">Open-Science Software &amp; AI Frameworks</h2>
+          <p class="section-subtitle reveal" style="text-align:left;margin:0;">6 flagship open-source repositories permanently preserved on CERN Zenodo with permanent Concept DOIs</p>
+        </div>
+        <a href="./projects.html" class="hero-badge-pill pill-cyan" style="font-size:0.85rem;padding:6px 16px;">
+          View All 10 Repositories &rarr;
+        </a>
+      </div>
       
       <div class="featured-work-grid">
         <!-- Flagship 1: HyperReason -->
@@ -496,25 +674,18 @@
           <p class="project-description">
             Autonomous Test-Time Compute Scaling &amp; Dynamic KV-Cache Sparsification for Edge &amp; Local LLMs. Pure PyTorch/Ollama Monte Carlo Tree Search reasoning engine delivering frontier o1-level reasoning with -65% VRAM consumption.
           </p>
-          
-          <div class="featured-category-tags">
-            <span class="category-badge">MCTS Reasoning</span>
-            <span class="category-badge">Test-Time Compute</span>
-            <span class="category-badge">KV-Cache</span>
-          </div>
-          
           <div class="tech-stack" aria-label="Technologies used">
             <span class="tech-badge">PyTorch</span>
+            <span class="tech-badge">MCTS</span>
+            <span class="tech-badge">KV-Cache</span>
             <span class="tech-badge">Ollama</span>
-            <span class="tech-badge">Python</span>
           </div>
-          
           <div style="display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap;">
             <a href="https://github.com/rudra496/hyper-reason" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View HyperReason on GitHub">
               GitHub Repo <i class="fab fa-github" aria-hidden="true"></i>
             </a>
             <a href="./blog/hyper-reason-autonomous-test-time-compute-kv-cache.html" class="featured-cta btn-ghost" aria-label="Read HyperReason deep-dive">
-              Deep-Dive &rarr;
+              Architecture &rarr;
             </a>
           </div>
         </article>
@@ -526,123 +697,92 @@
           </span>
           <h3>WorldSim AI</h3>
           <p class="project-description">
-            Autonomous Digital Twin Simulation Platform featuring agent-based modeling, PyTorch ML, Three.js 3D spatial visualization, IoT sensor ingestion, distributed simulation nodes, and an extensible plugin marketplace (9000+ lines).
+            Autonomous Digital Twin Simulation Platform featuring agent-based reinforcement learning, PyTorch ML models, Three.js 3D physics rendering, and real-time distributed IoT telemetry for complex physical environments.
           </p>
-          
-          <div class="featured-category-tags">
-            <span class="category-badge">Digital Twin</span>
-            <span class="category-badge">Simulation</span>
-            <span class="category-badge">PyTorch</span>
-          </div>
-          
           <div class="tech-stack" aria-label="Technologies used">
-            <span class="tech-badge">Three.js</span>
-            <span class="tech-badge">FastAPI</span>
+            <span class="tech-badge">Python</span>
             <span class="tech-badge">PyTorch</span>
+            <span class="tech-badge">Three.js</span>
+            <span class="tech-badge">Digital Twin</span>
           </div>
-          
           <div style="display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap;">
             <a href="https://github.com/rudra496/worldsim-ai" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View WorldSim AI on GitHub">
               GitHub Repo <i class="fab fa-github" aria-hidden="true"></i>
             </a>
             <a href="./blog/worldsim-ai-digital-twin-simulation-platform.html" class="featured-cta btn-ghost" aria-label="Read WorldSim AI article">
+              Deep-Dive &rarr;
+            </a>
+          </div>
+        </article>
+
+        <!-- Flagship 3: NexusAgent -->
+        <article class="featured-project-card reveal">
+          <span class="project-status">
+            CERN Zenodo DOI: 10.5281/zenodo.22118830
+          </span>
+          <h3>NexusAgent</h3>
+          <p class="project-description">
+            Zero-config, self-evolving local AI agent framework with GraphRAG knowledge structures, dynamic tool generation, and sandboxed safe execution via Ollama for privacy-preserving local agent workflows.
+          </p>
+          <div class="tech-stack" aria-label="Technologies used">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">GraphRAG</span>
+            <span class="tech-badge">Autonomous Agents</span>
+          </div>
+          <div style="display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap;">
+            <a href="https://github.com/rudra496/nexus-agent" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View NexusAgent on GitHub">
+              GitHub Repo <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="./blog/nexus-agent-self-evolving-local-ai-framework.html" class="featured-cta btn-ghost" aria-label="Read NexusAgent deep-dive">
               Architecture &rarr;
             </a>
           </div>
         </article>
 
-        <!-- Flagship 3: SightlineAI -->
+        <!-- Flagship 4: EdgeBrain -->
         <article class="featured-project-card reveal">
           <span class="project-status">
-            CERN Zenodo DOI: 10.5281/zenodo.22118700
+            CERN Zenodo DOI: 10.5281/zenodo.22118683
           </span>
-          <h3>SightlineAI</h3>
+          <h3>EdgeBrain</h3>
           <p class="project-description">
-            AI-powered assistive smart eyewear for visually impaired individuals, providing real-time environment awareness through edge computer vision, monocular depth estimation, obstacle classification, and spatial audio feedback.
+            Lightweight Edge AI inference engine simulating 11 IoT sensor devices with statistical anomaly detection and zero-cloud autonomous control for microcontrollers and edge hardware nodes.
           </p>
-          
-          <div class="featured-category-tags">
-            <span class="category-badge">Assistive Tech</span>
-            <span class="category-badge">Edge Vision</span>
-            <span class="category-badge">Accessibility</span>
-          </div>
-          
           <div class="tech-stack" aria-label="Technologies used">
-            <span class="tech-badge">OpenCV</span>
-            <span class="tech-badge">Embedded AI</span>
-            <span class="tech-badge">Spatial Audio</span>
+            <span class="tech-badge">Edge AI</span>
+            <span class="tech-badge">IoT Telemetry</span>
+            <span class="tech-badge">Anomaly Detection</span>
           </div>
-          
           <div style="display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap;">
-            <a href="https://rudra496.github.io/sightlineai" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View SightlineAI demo">
-              Live Demo <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            <a href="https://github.com/rudra496/EdgeBrain" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View EdgeBrain on GitHub">
+              GitHub Repo <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href="./blog/sightlineai-assistive-eyewear-visually-impaired.html" class="featured-cta btn-ghost" aria-label="Read SightlineAI deep-dive">
-              Read Story &rarr;
+            <a href="./blog/edgebrain-ai-edge-intelligence-platform.html" class="featured-cta btn-ghost" aria-label="Read EdgeBrain breakdown">
+              Deep-Dive &rarr;
             </a>
           </div>
         </article>
 
-        <!-- Flagship 4: MindWell -->
+        <!-- Flagship 5: StealthHumanizer -->
         <article class="featured-project-card reveal">
           <span class="project-status">
-            CERN Zenodo DOI: 10.5281/zenodo.22118681
+            CERN Zenodo DOI: 10.5281/zenodo.22118705
           </span>
-          <h3>MindWell</h3>
+          <h3>StealthHumanizer</h3>
           <p class="project-description">
-            Open-source, privacy-first mental health support platform with validated clinical psychometric assessments (PHQ-9, GAD-7), on-device sentiment journaling, zero telemetry, peer support hubs, and multilingual accessibility.
+            Open-source NLP text humanizer with 4-layer linguistic transformations, 13 AI provider backends, and 12-metric detection scoring for natural text generation without watermarking artifacts.
           </p>
-          
-          <div class="featured-category-tags">
-            <span class="category-badge">Mental Health</span>
-            <span class="category-badge">Psychometrics</span>
-            <span class="category-badge">Privacy-First</span>
-          </div>
-          
           <div class="tech-stack" aria-label="Technologies used">
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">Next.js</span>
-            <span class="tech-badge">PWA</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">NLP</span>
+            <span class="tech-badge">FastAPI</span>
           </div>
-          
           <div style="display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap;">
-            <a href="https://mindwell-navy.vercel.app/" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="Visit MindWell platform">
-              Live Platform <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            <a href="https://github.com/rudra496/StealthHumanizer" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View StealthHumanizer on GitHub">
+              GitHub Repo <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href="./blog/mindwell-mental-health-platform.html" class="featured-cta btn-ghost" aria-label="Read MindWell article">
-              Design &rarr;
-            </a>
-          </div>
-        </article>
-
-        <!-- Flagship 5: ScienceLab 3D -->
-        <article class="featured-project-card reveal">
-          <span class="project-status">
-            CERN Zenodo DOI: 10.5281/zenodo.22118690
-          </span>
-          <h3>ScienceLab 3D</h3>
-          <p class="project-description">
-            Free, browser-based interactive 3D science laboratory featuring 40+ simulations across Physics, Chemistry, Biology, and Mathematics built with Next.js 15, TypeScript, Tailwind CSS, and React Three Fiber.
-          </p>
-          
-          <div class="featured-category-tags">
-            <span class="category-badge">Next.js 15</span>
-            <span class="category-badge">React Three Fiber</span>
-            <span class="category-badge">STEM Education</span>
-          </div>
-          
-          <div class="tech-stack" aria-label="Technologies used">
-            <span class="tech-badge">Three.js</span>
-            <span class="tech-badge">TypeScript</span>
-            <span class="tech-badge">WebGL</span>
-          </div>
-          
-          <div style="display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap;">
-            <a href="https://rudra496.github.io/science" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View 3D Science Lab demo">
-              Live Lab <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-            </a>
-            <a href="./blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html" class="featured-cta btn-ghost" aria-label="Read ScienceLab 3D breakdown">
-              Breakdown &rarr;
+            <a href="./blog/stealthhumanizer-free-ai-text-humanizer.html" class="featured-cta btn-ghost" aria-label="Read StealthHumanizer breakdown">
+              Article &rarr;
             </a>
           </div>
         </article>
@@ -654,21 +794,13 @@
           </span>
           <h3>DevRoadmaps</h3>
           <p class="project-description">
-            Offline-capable Progressive Web App providing interactive developer roadmaps across 20 specialized engineering career tracks, 870+ structured curriculum nodes, and skill radars aligned with UN SDG 4 quality education.
+            Offline Progressive Web App providing 20 interactive developer career roadmaps, 870+ curriculum nodes, and skill radars aligned with UN SDG 4 for equitable global tech education.
           </p>
-          
-          <div class="featured-category-tags">
-            <span class="category-badge">PWA</span>
-            <span class="category-badge">20 Career Paths</span>
-            <span class="category-badge">UN SDG 4</span>
-          </div>
-          
           <div class="tech-stack" aria-label="Technologies used">
             <span class="tech-badge">JavaScript</span>
             <span class="tech-badge">PWA / Offline</span>
-            <span class="tech-badge">SVG Graphs</span>
+            <span class="tech-badge">UN SDG 4</span>
           </div>
-          
           <div style="display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap;">
             <a href="https://github.com/rudra496/devroadmaps" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View DevRoadmaps on GitHub">
               GitHub Repo <i class="fab fa-github" aria-hidden="true"></i>
@@ -679,63 +811,89 @@
           </div>
         </article>
       </div>
-
-      <div style="text-align: center; margin-top: 2rem;">
-        <a href="./projects.html" class="cta-button" style="text-decoration: none; padding: 12px 28px; display: inline-block;">
-          View All Engineering &amp; Robotics Projects &rarr;
-        </a>
-      </div>
     </section>
 
-    <!-- SECTION 4: Robotics, Hardware & IoT Prototypes -->
-    <section id="hardware-projects" class="content-section">
-      <h2 class="section-title reveal">Robotics &amp; IoT Hardware Prototypes</h2>
-      <p class="section-subtitle reveal">Physical computing, autonomous systems, and sensor-driven hardware innovations engineered at SUST</p>
+    <!-- SECTION 4: Robotics, Hardware & IoT Laboratory Systems -->
+    <section id="hardware-lab" class="content-section">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+        <div>
+          <h2 class="section-title reveal" style="text-align:left;margin-bottom:0.4rem;">Robotics &amp; Hardware Laboratory</h2>
+          <p class="section-subtitle reveal" style="text-align:left;margin:0;">Physical computing, sensor fusion networks, servo kinematics, and assistive devices engineered at SUST</p>
+        </div>
+        <a href="./projects.html" class="hero-badge-pill pill-green" style="font-size:0.85rem;padding:6px 16px;">
+          Explore Hardware Hub &rarr;
+        </a>
+      </div>
 
       <div class="projects-grid">
-        <!-- Project 1: Team SignTalk -->
-        <div class="project-card reveal">
+        <!-- Hardware 1: Team SignTalk -->
+        <div class="card project-card hardware-card-highlight reveal">
           <div class="card-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; height: 100px; width: 100%;">
             <i class="fas fa-hand-paper" aria-label="SignTalk Gloves"></i>
           </div>
-          <h3 class="card-title">Team SignTalk</h3>
-          <p class="card-description">Smart glove translating sign language gestures to real-time text &amp; audio using flex sensors and an on-board IMU.</p>
+          <h3 class="card-title">Team SignTalk Smart Sensory Glove</h3>
+          <p class="card-description">Smart glove translating sign language gestures to real-time text &amp; audio using flex sensor arrays and MPU6050 6-DOF IMU. Divisional champion at Youth Innovation Challenge.</p>
           <div class="card-meta">
-            <span class="card-tag">IoT</span>
-            <span class="card-tag">Accessibility</span>
-            <span class="card-tag" style="color: #ffd700; border-color: #ffd700;">Award Winner</span>
+            <span class="hardware-spec-badge">Arduino Nano</span>
+            <span class="hardware-spec-badge">Flex Sensors</span>
+            <span class="hardware-spec-badge">MPU-6050</span>
+            <span class="hardware-spec-badge">Bluetooth HC-05</span>
           </div>
-          <a href="./projects/team-signtalk.html" class="cta-button-small" style="margin-top: 10px; text-decoration: none;">Explore Project &rarr;</a>
+          <div style="display:flex;gap:0.5rem;margin-top:10px;flex-wrap:wrap;">
+            <a href="./projects/team-signtalk.html" class="cta-button-small" style="text-decoration: none;">Specs &rarr;</a>
+            <a href="./blog/sign-talk-smart-glove-sign-language-translation.html" class="cta-button-small btn-ghost" style="text-decoration: none;">Case Study &rarr;</a>
+          </div>
         </div>
 
-        <!-- Project 2: Assistive Smart Eyeglass -->
-        <div class="project-card reveal">
+        <!-- Hardware 2: Assistive Smart Eyeglass -->
+        <div class="card project-card hardware-card-highlight reveal">
           <div class="card-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; height: 100px; width: 100%;">
             <i class="fas fa-glasses" aria-label="Assistive Smart Eyeglass"></i>
           </div>
-          <h3 class="card-title">Assistive Smart Eyeglass</h3>
-          <p class="card-description">AI-enhanced wearable offering obstacle detection and spatial environment awareness for the visually impaired.</p>
+          <h3 class="card-title">SightlineAI Assistive Wearable Eyewear</h3>
+          <p class="card-description">Embedded vision-assisted headset equipped with camera module and ultrasonic sensors for obstacle detection, signage reading, and spatial audio feedback for the visually impaired.</p>
           <div class="card-meta">
-            <span class="card-tag">AI/ML</span>
-            <span class="card-tag">Wearable Tech</span>
-            <span class="card-tag">Edge Vision</span>
+            <span class="hardware-spec-badge">Raspberry Pi</span>
+            <span class="hardware-spec-badge">Camera Module</span>
+            <span class="hardware-spec-badge">Ultrasonic</span>
+            <span class="hardware-spec-badge">Bone Conduction</span>
           </div>
-          <a href="./projects/assistive-smart-eyeglass.html" class="cta-button-small" style="margin-top: 10px; text-decoration: none;">Explore Project &rarr;</a>
+          <div style="display:flex;gap:0.5rem;margin-top:10px;flex-wrap:wrap;">
+            <a href="./projects/assistive-smart-eyeglass.html" class="cta-button-small" style="text-decoration: none;">Specs &rarr;</a>
+            <a href="./blog/sightlineai-assistive-eyewear-visually-impaired.html" class="cta-button-small btn-ghost" style="text-decoration: none;">Deep-Dive &rarr;</a>
+          </div>
         </div>
 
-        <!-- Project 3: Dual-Axis Solar Tracker -->
-        <div class="project-card reveal">
+        <!-- Hardware 3: Dual-Axis Solar Tracker -->
+        <div class="card project-card hardware-card-highlight reveal">
           <div class="card-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; justify-content: center; color: #333; font-size: 2.5rem; height: 100px; width: 100%;">
             <i class="fas fa-solar-panel" aria-label="Solar Tracker"></i>
           </div>
-          <h3 class="card-title">Dual-Axis Solar Tracker</h3>
-          <p class="card-description">Servo-optimized solar panel positioning system that tracks light intensity in real-time via differential LDR sensing.</p>
+          <h3 class="card-title">Dual-Axis Intelligent Solar Tracker</h3>
+          <p class="card-description">Microcontroller-driven solar tracker featuring differential cross-quadrant LDR sensor array with dual MG996R servo actuators, achieving +38% energy harvesting efficiency.</p>
           <div class="card-meta">
-            <span class="card-tag">Renewable</span>
-            <span class="card-tag">Automation</span>
-            <span class="card-tag">Arduino</span>
+            <span class="hardware-spec-badge">Arduino Uno</span>
+            <span class="hardware-spec-badge">4x LDR Array</span>
+            <span class="hardware-spec-badge">Dual Servos</span>
+            <span class="hardware-spec-badge">PV Telemetry</span>
           </div>
-          <a href="./projects/dual-axis-solar-tracker.html" class="cta-button-small" style="margin-top: 10px; text-decoration: none;">Explore Project &rarr;</a>
+          <a href="./projects/dual-axis-solar-tracker.html" class="cta-button-small" style="margin-top: 10px; text-decoration: none;">Hardware Specs &rarr;</a>
+        </div>
+
+        <!-- Hardware 4: Autonomous PID Robot -->
+        <div class="card project-card hardware-card-highlight reveal">
+          <div class="card-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; height: 100px; width: 100%;">
+            <i class="fas fa-robot" aria-label="PID Robot"></i>
+          </div>
+          <h3 class="card-title">Autonomous PID Line Following Robot</h3>
+          <p class="card-description">High-speed ground robotic rover equipped with an 8-channel infrared reflectance sensor bar and closed-loop proportional-integral-derivative (PID) differential steering control.</p>
+          <div class="card-meta">
+            <span class="hardware-spec-badge">PID Closed-Loop</span>
+            <span class="hardware-spec-badge">8-Ch IR Array</span>
+            <span class="hardware-spec-badge">H-Bridge L298N</span>
+            <span class="hardware-spec-badge">High-RPM Motors</span>
+          </div>
+          <a href="./projects/line-following-robot.html" class="cta-button-small" style="margin-top: 10px; text-decoration: none;">Hardware Specs &rarr;</a>
         </div>
       </div>
     </section>
@@ -743,149 +901,124 @@
     <!-- SECTION 5: Honors, Awards & Media Coverage -->
     <section id="honors" class="content-section">
       <h2 class="section-title reveal">Honors, Awards &amp; In The Press</h2>
-      <p class="section-subtitle reveal">Recognitions from international engineering design challenges, startup summits, and national press features</p>
+      <p class="section-subtitle reveal">Verified competition qualifiers, institutional research funding grants, and national press features</p>
 
-      <div class="grid-container reveal" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
-        <!-- Honor 1 -->
+      <div class="grid-container reveal" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem;">
         <div class="award-card">
-          <span style="color: #ffd700; font-size: 1.8rem; margin-bottom: 0.5rem; display: inline-block;"><i class="fas fa-trophy"></i></span>
-          <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem; font-weight: 700;">Rice360 Global Health Tech Semifinalist</h3>
-          <p style="font-size: 0.88rem; line-height: 1.5;">
-            Selected as semifinalist representing SUST in the international health technology design challenge hosted by Rice University, Houston, Texas.
-          </p>
+          <span style="color: #ffd700; font-size: 1.8rem; margin-bottom: 0.5rem; display: inline-block;">
+            <i class="fas fa-trophy"></i>
+          </span>
+          <h3>Rice360 Global Health Qualifier</h3>
+          <p>Qualified as SUST team semifinalist in the international Rice360 Global Health Tech Design Competition for low-cost healthcare innovations.</p>
         </div>
 
-        <!-- Honor 2 -->
         <div class="award-card">
-          <span style="color: #ffd700; font-size: 1.8rem; margin-bottom: 0.5rem; display: inline-block;"><i class="fas fa-seedling"></i></span>
-          <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem; font-weight: 700;">SUST Innovation Hub Pre-Seed Grant</h3>
-          <p style="font-size: 0.88rem; line-height: 1.5;">
-            Awarded official pre-seed incubation funding for Team SignTalk's assistive communication smart glove technology.
-          </p>
+          <span style="color: #ffd700; font-size: 1.8rem; margin-bottom: 0.5rem; display: inline-block;">
+            <i class="fas fa-seedling"></i>
+          </span>
+          <h3>SUST Innovation Hub Grant</h3>
+          <p>Awarded institutional pre-seed innovation funding for Team SignTalk's assistive communication smart glove technology.</p>
         </div>
 
-        <!-- Honor 3 -->
         <div class="award-card">
-          <span style="color: #ffd700; font-size: 1.8rem; margin-bottom: 0.5rem; display: inline-block;"><i class="fas fa-medal"></i></span>
-          <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem; font-weight: 700;">Youth Innovation Challenge Sylhet Champion</h3>
-          <p style="font-size: 0.88rem; line-height: 1.5;">
-            Divisional winner at the Youth Startup Summit 2025 for breakthrough assistive wearable hardware design.
-          </p>
+          <span style="color: #ffd700; font-size: 1.8rem; margin-bottom: 0.5rem; display: inline-block;">
+            <i class="fas fa-medal"></i>
+          </span>
+          <h3>Youth Innovation Champion</h3>
+          <p>Secured Divisional Championship at the Youth Innovation Challenge Sylhet (Youth Startup Summit 2025) for assistive hardware.</p>
         </div>
 
-        <!-- Honor 4 -->
-        <div class="award-card" style="border-color: rgba(0, 210, 255, 0.4);">
-          <span style="color: #00d2ff; font-size: 1.8rem; margin-bottom: 0.5rem; display: inline-block;"><i class="fas fa-newspaper"></i></span>
-          <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem; font-weight: 700;">National Press &amp; Media Coverage</h3>
-          <p style="font-size: 0.88rem; line-height: 1.5;">
-            Featured in leading national dailies including <em>The Daily Star, Daily Sun, Prothom Alo,</em> and <em>Samakal</em> for social impact robotics.
-          </p>
-          <a href="./blog/media-coverage-achievements-rudra-sarker.html" style="color: #00ffff; font-size: 0.82rem; font-weight: 700; text-decoration: none; display: inline-block; margin-top: 0.4rem;">
-            Read Media Coverage &rarr;
+        <div class="award-card">
+          <span style="color: var(--primary-color); font-size: 1.8rem; margin-bottom: 0.5rem; display: inline-block;">
+            <i class="fas fa-newspaper"></i>
+          </span>
+          <h3>National Press Features</h3>
+          <p>Featured in leading national dailies including <em>Prothom Alo</em> and <em>The Daily Star</em> for engineering and innovation projects.</p>
+          <a href="./blog/media-coverage-achievements-rudra-sarker.html" style="color: var(--primary-color); font-size: 0.82rem; font-weight: 700; text-decoration: none; display: inline-block; margin-top: 0.4rem;">
+            Read Press Coverage &rarr;
           </a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 6: Latest Insights from Grand Blog Hub -->
+    <!-- SECTION 6: Latest Research & Engineering Publications -->
     <section id="latest-posts" class="content-section">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;" class="reveal">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
         <div>
-          <h2 class="section-title" style="margin-bottom: 0.25rem; text-align: left;">Latest Publications &amp; Blog Insights</h2>
-          <p class="section-subtitle" style="text-align: left; margin: 0;">31 indexed deep-dives covering peer-reviewed research, CERN Zenodo DOIs, and robotics</p>
+          <h2 class="section-title reveal" style="text-align: left; margin-bottom: 0.4rem;">Featured Research Articles</h2>
+          <p class="section-subtitle reveal" style="text-align: left; margin: 0;">Explore peer-reviewed findings, UAV energy models, and technical architectural reviews</p>
         </div>
-        <a href="./blog.html" class="cta-button-small" style="background: rgba(0, 210, 255, 0.15); border: 1.5px solid #00d2ff; color: #00d2ff; text-decoration: none; padding: 8px 18px; border-radius: 8px; font-weight: 700;">
-          Explore Grand Blog Hub &rarr;
+        <a href="./blog.html" class="hero-badge-pill pill-cyan reveal" style="font-size: 0.85rem; padding: 6px 16px;">
+          View All 31 Articles &rarr;
         </a>
       </div>
 
-      <div class="blog-container reveal">
-        <!-- Post 1 -->
+      <div class="grid-container reveal" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <!-- Post 1: Q1 Study -->
         <article class="card blog-post">
           <div class="blog-post-content">
             <span style="display: inline-block; padding: 3px 10px; background: linear-gradient(135deg, #134e5e, #71b280); color: #fff; border-radius: 12px; font-size: 0.75rem; margin-bottom: 0.5rem; font-weight: 700;">
-              Q1 Journal · Elsevier
+              Elsevier Q1 Study
             </span>
-            <h3 class="card-title">Ethnoveterinary Herbal Practices in Commercial Poultry: Our Q1 Study in the Journal of Ethnopharmacology</h3>
-            <p class="card-date">Aug 24, 2026</p>
-            <p class="blog-excerpt">A nationwide study of 795 poultry farms in Bangladesh published in Elsevier's Journal of Ethnopharmacology — revealing a 43.6% within-group reduction in antibiotic use and improved farm performance.</p>
-            <a href="./blog/ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html" class="card-link">Read More →</a>
+            <h3 class="card-title" style="font-size: 1.1rem; line-height: 1.4;">Ethnoveterinary Herbal Practices in Poultry</h3>
+            <p class="blog-excerpt" style="font-size: 0.88rem;">Our published field study covering 795 farms in 35 districts, demonstrating synthetic antimicrobial reduction in poultry production.</p>
+            <a href="./blog/ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html" class="card-link">Read Paper Breakdown &rarr;</a>
           </div>
         </article>
 
-        <!-- Post 2 -->
+        <!-- Post 2: Omnicopter -->
         <article class="card blog-post">
           <div class="blog-post-content">
             <span style="display: inline-block; padding: 3px 10px; background: linear-gradient(135deg, #0A2540, #00d2ff); color: #fff; border-radius: 12px; font-size: 0.75rem; margin-bottom: 0.5rem; font-weight: 700;">
-              Open Science · CERN Zenodo
+              UAV Robotics
             </span>
-            <h3 class="card-title">Open Science in Action: Preserving 10 Flagship AI &amp; Engineering Repositories on CERN Zenodo</h3>
-            <p class="card-date">Aug 26, 2026</p>
-            <p class="blog-excerpt">Ensuring permanent software reproducibility across 10 flagship software repositories with persistent Concept DOIs, permanent archival storage at CERN, and DataCite-compliant research software citations.</p>
-            <a href="./blog/open-science-cern-zenodo-10-flagship-ai-repositories.html" class="card-link">Read More →</a>
+            <h3 class="card-title" style="font-size: 1.1rem; line-height: 1.4;">Omnicopter: Energy-Aware UAV Control</h3>
+            <p class="blog-excerpt" style="font-size: 0.88rem;">Distilling complex nonlinear aerodynamic drone simulation dynamics into a real-time edge embedded control oracle.</p>
+            <a href="./blog/omnicopter-energy-aware-uav-control.html" class="card-link">Read Technical Breakdown &rarr;</a>
           </div>
         </article>
 
-        <!-- Post 3 -->
+        <!-- Post 3: Stroke Rehab -->
         <article class="card blog-post">
           <div class="blog-post-content">
             <span style="display: inline-block; padding: 3px 10px; background: linear-gradient(135deg, #1e3c72, #2a5298); color: #fff; border-radius: 12px; font-size: 0.75rem; margin-bottom: 0.5rem; font-weight: 700;">
-              Edge AI · Test-Time Compute
+              Clinical AI / ML
             </span>
-            <h3 class="card-title">HyperReason: Autonomous Test-Time Compute Scaling &amp; Dynamic KV-Cache Sparsification</h3>
-            <p class="card-date">Aug 26, 2026</p>
-            <p class="blog-excerpt">Bringing o1/DeepSeek-R1 style reasoning to commodity hardware: Monte Carlo Tree Search, dynamic KV-cache pruning, and INT8/INT4 quantization with verified CERN Zenodo DOI.</p>
-            <a href="./blog/hyper-reason-autonomous-test-time-compute-kv-cache.html" class="card-link">Read More →</a>
+            <h3 class="card-title" style="font-size: 1.1rem; line-height: 1.4;">Stroke Rehabilitation Activity Classification</h3>
+            <p class="blog-excerpt" style="font-size: 0.88rem;">Evaluating wearable sensory accelerometry data with Random Forest and LSTM architectures for stroke patient recovery tracking.</p>
+            <a href="./blog/stroke-rehabilitation-activity-classification.html" class="card-link">Read Clinical Model &rarr;</a>
           </div>
         </article>
 
-        <!-- Post 4 -->
+        <!-- Post 4: CERN Zenodo -->
         <article class="card blog-post">
           <div class="blog-post-content">
             <span style="display: inline-block; padding: 3px 10px; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; border-radius: 12px; font-size: 0.75rem; margin-bottom: 0.5rem; font-weight: 700;">
-              Assistive Hardware · IoT
+              Open Science
             </span>
-            <h3 class="card-title">Team SignTalk: Translating Sign Language to Speech with a Smart Glove</h3>
-            <p class="card-date">Mar 20, 2026</p>
-            <p class="blog-excerpt">How our team from SUST built a smart glove that translates sign language to speech — and won national and international recognition.</p>
-            <a href="./blog/sign-talk-smart-glove-sign-language-translation.html" class="card-link">Read More →</a>
+            <h3 class="card-title" style="font-size: 1.1rem; line-height: 1.4;">Preserving 10 Repositories on CERN Zenodo</h3>
+            <p class="blog-excerpt" style="font-size: 0.88rem;">Comprehensive overview of minting Concept DOIs and archiving software frameworks on CERN Zenodo for research reproducibility.</p>
+            <a href="./blog/open-science-cern-zenodo-10-flagship-ai-repositories.html" class="card-link">Read Open Science Guide &rarr;</a>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- SECTION 7: Get In Touch & Collaboration -->
-    <section id="contact-overview" class="content-section" style="padding-bottom: 3rem;">
-      <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(0, 255, 255, 0.25); border-radius: 16px; padding: 2.5rem 1.5rem; max-width: 900px; margin: 0 auto; text-align: center;" class="reveal">
-        <h2 style="font-size: 1.85rem; margin-bottom: 0.75rem; font-weight: 800;">Let's Build Something Impactful</h2>
-        <p style="font-size: 1rem; line-height: 1.6; max-width: 650px; margin: 0 auto 1.75rem;">
-          Whether you are interested in collaborating on academic research, open-source AI frameworks, robotics prototypes, or prospective engineering opportunities, I would love to connect.
+    <!-- SECTION 7: Contact / Collaboration Callout -->
+    <section id="contact-overview" class="content-section" style="padding-top: 1rem;">
+      <div class="card reveal" style="border-radius: 16px; padding: 2.5rem 1.5rem; max-width: 900px; margin: 0 auto; text-align: center;">
+        <h2 style="font-size: 1.85rem; color: var(--heading-color); margin-bottom: 0.75rem; font-weight: 800;">
+          Let's Collaborate on Research &amp; Engineering
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6; max-width: 650px; margin: 0 auto 1.75rem;">
+          Whether you are an academic researcher, an open-source contributor, or an engineering recruiter looking for high-impact AI, robotics, or industrial optimization expertise, I am eager to connect.
         </p>
-
-        <div style="margin-bottom: 1.75rem;">
-          <a href="mailto:rudrasarker130@gmail.com" class="cta-button" style="text-decoration: none; padding: 12px 26px; font-size: 1.05rem;">
-            <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> rudrasarker130@gmail.com
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="mailto:rudrasarker130@gmail.com" class="cta-button" style="text-decoration: none; padding: 12px 28px;">
+            Send Direct Email <i class="fas fa-envelope" style="margin-left: 0.4rem;"></i>
           </a>
-        </div>
-
-        <div class="social-links" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-          <a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer me" aria-label="GitHub">
-            <i class="fab fa-github" aria-hidden="true"></i>
-          </a>
-          <a href="https://orcid.org/0009-0001-4545-0932" target="_blank" rel="noopener noreferrer me" aria-label="ORCID">
-            <i class="fab fa-orcid" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer me" aria-label="ResearchGate">
-            <i class="fas fa-flask" aria-hidden="true"></i>
-          </a>
-          <a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer me" aria-label="X / Twitter">
-            <i class="fab fa-twitter" aria-hidden="true"></i>
-          </a>
-          <a href="https://youtube.com/@rudrasarker9732" target="_blank" rel="noopener noreferrer me" aria-label="YouTube">
-            <i class="fab fa-youtube" aria-hidden="true"></i>
+          <a href="./contact.html" class="cta-button btn-ghost" style="text-decoration: none; padding: 12px 28px;">
+            Interactive Contact Form &rarr;
           </a>
         </div>
       </div>
@@ -893,18 +1026,30 @@
 
   </main>
 
-  <!-- Shared Footer -->
+  <!-- Global Footer -->
   <footer class="footer">
-    <div style="max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 0 1rem;">
-      <p style="margin: 0; color: #94a3b8; font-size: 0.88rem;">&copy; 2026 Rudra Sarker. All rights reserved.</p>
-      <p style="margin: 0; font-size: 0.85rem; color: #64748b;">
-        Industrial &amp; Production Engineering · Shahjalal University of Science and Technology (SUST)
+    <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+      <div class="social-links" style="margin: 0; gap: 1.5rem;">
+        <a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer me" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://orcid.org/0009-0001-4545-0932" target="_blank" rel="noopener noreferrer me" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+        <a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.researchgate.net/profile/Rudra-Sarker-3" target="_blank" rel="noopener noreferrer me" aria-label="ResearchGate"><i class="fas fa-flask"></i></a>
+        <a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer me" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p style="margin: 0; color: var(--text-muted); font-size: 0.88rem;">
+        &copy; 2026 Rudra Sarker. All Rights Reserved. Built with Open Science Principles &amp; Hosted on GitHub Pages.
+      </p>
+      <p style="margin: 0; font-size: 0.82rem; color: var(--text-dim);">
+        Permanent Identifier: <a href="https://orcid.org/0009-0001-4545-0932" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">ORCID 0009-0001-4545-0932</a> · Affiliation: Shahjalal University of Science and Technology (SUST)
       </p>
     </div>
   </footer>
 
-  <!-- Global Menu & Animation Logic -->
-  <script defer src="./main.js"></script>
+  <!-- Background Canvas Animation (Theme-Aware, Featherweight) -->
   <script defer src="./background.js"></script>
+
+  <!-- Global Navigation & Logic -->
+  <script defer src="./main.js"></script>
+
 </body>
 </html>

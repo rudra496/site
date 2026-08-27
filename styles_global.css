@@ -4,10 +4,10 @@
    ========================================================================== */
 
 :root {
-  /* --- Dark Theme Default --- */
-  --bg-color: #080c16;
-  --bg-surface: rgba(15, 23, 42, 0.85);
-  --bg-card: rgba(20, 22, 50, 0.85);
+  /* --- Lighter Modern Dark Theme (#0f172a / Slate-900) --- */
+  --bg-color: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-card: rgba(30, 41, 59, 0.85);
   --text-color: #f1f5f9;            /* Crisp off-white */
   --text-muted: #94a3b8;            /* Clear legible slate */
   --text-dim: #64748b;
@@ -17,7 +17,7 @@
   --tertiary-color: #00ff00;        /* Neon Lime */
   --link-color: #00ffff;
   --link-hover-color: #ff00ff;
-  --card-bg-color: rgba(20, 22, 50, 0.85);
+  --card-bg-color: rgba(30, 41, 59, 0.85);
   --card-border-color: rgba(0, 255, 255, 0.25);
   --header-height: 70px;
 
@@ -29,7 +29,7 @@
   --accent-amber: #fbbf24;
   --stat-num-gradient: linear-gradient(135deg, #00ffff 0%, #34d399 100%);
   --hero-title-gradient: linear-gradient(135deg, #ffffff 0%, #00ffff 60%, #c084fc 100%);
-  --spotlight-bg: linear-gradient(135deg, rgba(10, 37, 64, 0.95), rgba(15, 23, 42, 0.95));
+  --spotlight-bg: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(30, 41, 59, 0.95));
   --spotlight-border: rgba(0, 255, 255, 0.35);
   --spotlight-tag: #00ffff;
   --spotlight-badge-bg: rgba(16, 185, 129, 0.2);
@@ -83,7 +83,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Exo 2', sans-serif;
   background-color: var(--bg-color);
-  background-image: radial-gradient(rgba(56, 189, 248, 0.07) 1.1px, transparent 1.1px);
+  background-image: radial-gradient(rgba(56, 189, 248, 0.12) 1.2px, transparent 1.2px);
   background-size: 26px 26px;
   background-attachment: fixed;
   color: var(--text-color);
@@ -100,9 +100,21 @@ body {
   color: #0f172a;
 }
 
-/* Hide background canvas completely in Light Mode for 100% pristine bright clarity */
+/* Featherweight, elegant background animation in Light Mode (visible, lively, but never heavy) */
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.45;
+  transition: opacity 0.3s ease;
+}
 [data-theme="light"] #starfield {
-  display: none !important;
+  display: block !important;
+  opacity: 0.35 !important;
 }
 
 h1, h2, h3, h4, h5, h6 { color: var(--heading-color); }
@@ -1362,4 +1374,70 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
   color: #0284c7 !important;
   border-color: #0284c7 !important;
   background: rgba(2, 132, 199, 0.1) !important;
+}
+
+/* ==========================================================================
+   PROJECT CATEGORY TABS & HARDWARE / SOFTWARE SHOWCASE
+   ========================================================================== */
+.project-filter-toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 2rem auto 3rem;
+  flex-wrap: wrap;
+}
+.project-filter-tab {
+  padding: 0.65rem 1.4rem;
+  border-radius: 25px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--bg-surface);
+  border: 1.5px solid var(--card-border-color);
+  color: var(--text-muted);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.project-filter-tab:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+.project-filter-tab.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25);
+}
+[data-theme="dark"] .project-filter-tab.active,
+:root:not([data-theme="light"]) .project-filter-tab.active {
+  color: #080c16 !important;
+  box-shadow: 0 4px 18px rgba(0, 255, 255, 0.3);
+}
+
+.hardware-spec-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #d97706;
+  font-weight: 600;
+}
+:root:not([data-theme="light"]) .hardware-spec-badge {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+.hardware-card-highlight {
+  border-top: 3px solid #f59e0b !important;
+}
+.software-card-highlight {
+  border-top: 3px solid var(--primary-color) !important;
 }

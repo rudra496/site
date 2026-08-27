@@ -16,7 +16,7 @@
   const ctx = canvas.getContext('2d');
   let width, height;
   let particles = [];
-  const numParticles = 42; // Optimized count: 4x faster than 100, zero frame-drops
+  const numParticles = 32; // Optimized count: 4x faster than 100, zero frame-drops
   let animationId;
   let time = 0;
 
@@ -120,7 +120,7 @@
     // Theme-specific trailing clearing
     // Light mode: clear with translucent light background so it doesn't darken the page
     // Dark mode: clear with translucent dark background
-    ctx.fillStyle = light ? 'rgba(244, 247, 250, 0.22)' : 'rgba(10, 10, 26, 0.20)';
+    ctx.fillStyle = light ? 'rgba(255, 255, 255, 0.22)' : 'rgba(15, 23, 42, 0.20)';
     ctx.fillRect(0, 0, width, height);
 
     for (let i = 0; i < particles.length; i++) {

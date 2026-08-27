@@ -100,46 +100,53 @@
     </nav>
   </header>
 
-  <main id="main-content">
+    <main id="main-content">
     <!-- Project Gallery Section -->
     <section class="project-gallery">
       <div class="gallery-intro reveal">
-        <h1>Engineering & Robotics Projects</h1>
-        <p style="margin-bottom: 2rem;">A showcase of innovative projects spanning IoT, robotics, automation, and smart systems. Each project represents a unique solution to real-world challenges.</p>
-        
-        <div style="max-width: 900px; margin: 2rem auto; text-align: left;">
-          <p>Welcome to my engineering portfolio—a collection of projects that represent my journey through the exciting worlds of robotics, Internet of Things, automation, and intelligent systems. Each project you see here is more than just a technical achievement; it's a story of problem-solving, learning, iteration, and sometimes, creative improvisation when things don't go as planned.</p>
-          
-          <p>My project philosophy is rooted in practical problem-solving and user-centered design. I don't build technology for technology's sake—every project starts with identifying a real need or challenge, whether it's improving accessibility for people with disabilities, optimizing energy capture from renewable sources, enhancing security systems, or simply making everyday tasks more efficient through automation. This approach ensures that my work remains grounded in real-world applications rather than purely theoretical exercises.</p>
-          
-          <p>The projects showcased here span multiple technical domains. You'll find award-winning assistive technologies like Team SignTalk, which translates sign language into text and audio to bridge communication gaps. You'll discover IoT-powered systems that leverage wireless connectivity and cloud integration to create smart, responsive environments. There are robotics projects implementing sophisticated control algorithms like PID controllers for precise autonomous navigation. And you'll see renewable energy solutions that demonstrate the practical application of sensors and servo systems for maximizing solar panel efficiency.</p>
-          
-          <p>What ties all these projects together is my interdisciplinary approach—combining knowledge from industrial engineering, computer science, electronics, and mechanical design to create holistic solutions. I believe the best innovations happen at the intersection of different fields, where traditional boundaries blur and new possibilities emerge. My background in Industrial and Production Engineering gives me a unique perspective on not just how to build things, but how to build them efficiently, sustainably, and at scale.</p>
-          
-          <p>Each project page provides detailed information about the problem addressed, the technical approach taken, the challenges overcome, and the results achieved. Many of these projects have been recognized in national and international competitions, validated through user testing, or implemented in real-world scenarios. I've documented them comprehensively not just to showcase my work, but to contribute to the maker and engineering community—sharing knowledge, insights, and perhaps inspiring others to tackle similar challenges.</p>
-          
-          <p>I invite you to explore these projects, learn about the technologies and methodologies employed, and see how engineering creativity can address diverse challenges. Whether you're a fellow student, a potential collaborator, an educator, or simply someone curious about engineering and technology, I hope you find these projects interesting and perhaps even inspiring for your own work.</p>
+        <h1>Engineering, Robotics &amp; Software Systems</h1>
+        <p style="margin-bottom: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+          An interdisciplinary engineering portfolio bridging <strong>CERN Zenodo open-science AI software repositories</strong> and <strong>award-winning robotics, IoT, and embedded hardware prototypes</strong> developed at SUST.
+        </p>
+
+        <!-- Category Filter Toolbar -->
+        <div class="project-filter-toolbar reveal">
+          <button class="project-filter-tab active" data-filter="all" onclick="filterProjects('all', this)">
+            <i class="fas fa-layer-group"></i> All Projects (16)
+          </button>
+          <button class="project-filter-tab" data-filter="software" onclick="filterProjects('software', this)">
+            <i class="fas fa-code-branch"></i> Open-Science Software (10)
+          </button>
+          <button class="project-filter-tab" data-filter="hardware" onclick="filterProjects('hardware', this)">
+            <i class="fas fa-microchip"></i> Hardware &amp; Robotics (6)
+          </button>
         </div>
       </div>
 
-      
-      <!-- 🏛️ CERN Zenodo Open Science Software Frameworks (Permanent Concept DOIs) -->
-      <div class="reveal" style="max-width:1200px;margin:2rem auto 3rem;padding:0 1rem;">
-        <div style="border-bottom:1.5px solid var(--card-border-color);padding-bottom:0.75rem;margin-bottom:1.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;">
-          <h2 style="font-size:1.55rem;font-weight:800;display:flex;align-items:center;gap:0.6rem;letter-spacing:-0.01em;">
-            <i class="fas fa-archive" style="color:var(--primary-color);"></i> CERN Zenodo Open-Science Software Repositories
-          </h2>
-          <span class="hero-badge-pill pill-cyan" style="font-size:0.82rem;padding:4px 12px;">10 Verified Concept DOIs</span>
+      <!-- ================================================================= -->
+      <!-- CATEGORY 1: CERN Zenodo Open Science Software Frameworks (10)     -->
+      <!-- ================================================================= -->
+      <div id="section-software" class="project-category-group reveal" style="max-width:1240px;margin:1rem auto 3.5rem;padding:0 1rem;">
+        <div style="border-bottom:2px solid var(--primary-color);padding-bottom:0.75rem;margin-bottom:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;">
+          <div>
+            <h2 style="font-size:1.6rem;font-weight:800;display:flex;align-items:center;gap:0.6rem;letter-spacing:-0.01em;margin-bottom:0.25rem;">
+              <i class="fas fa-archive" style="color:var(--primary-color);"></i> Software &amp; AI Engineering Repositories
+            </h2>
+            <p style="font-size:0.92rem;color:var(--text-muted);margin:0;">
+              Archived on CERN Zenodo, permanently minted with Concept DOIs, validated for computational reproducibility
+            </p>
+          </div>
+          <span class="hero-badge-pill pill-cyan" style="font-size:0.82rem;padding:5px 14px;">10 Concept DOIs</span>
         </div>
         
-        <div class="projects-grid" style="margin-bottom:3rem;">
-          <!-- Framework 1: HyperReason -->
-          <article class="card project-card reveal" >
+        <div class="projects-grid" style="margin-bottom:2rem;">
+          <!-- Software 1: HyperReason -->
+          <article class="card project-card software-card-highlight reveal" data-category="software">
             <div class="card-image" style="background:linear-gradient(135deg,#1e3c72 0%,#2a5298 100%);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">
               <i class="fas fa-brain"></i>
             </div>
             <h3 class="card-title">HyperReason</h3>
-            <p class="card-description">Autonomous Test-Time Compute Scaling &amp; Dynamic KV-Cache Sparsification for Edge LLMs (-65% VRAM). Pure PyTorch MCTS reasoning engine.</p>
+            <p class="card-description">Autonomous Test-Time Compute Scaling &amp; Dynamic KV-Cache Sparsification for Edge LLMs (-65% VRAM). Pure PyTorch MCTS reasoning engine delivering frontier reasoning.</p>
             <div class="card-meta">
               <span class="card-tag doi-tag">DOI: 10.5281/zenodo.22118810</span>
               <span class="card-tag">PyTorch</span>
@@ -151,13 +158,13 @@
             </div>
           </article>
 
-          <!-- Framework 2: WorldSim AI -->
-          <article class="card project-card reveal" >
+          <!-- Software 2: WorldSim AI -->
+          <article class="card project-card software-card-highlight reveal" data-category="software">
             <div class="card-image" style="background:linear-gradient(135deg,#0A2540 0%,#00d2ff 100%);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">
               <i class="fas fa-globe-americas"></i>
             </div>
             <h3 class="card-title">WorldSim AI</h3>
-            <p class="card-description">Autonomous Digital Twin Simulation Platform with agent-based modeling, PyTorch ML, Three.js 3D visualization, and distributed IoT computing.</p>
+            <p class="card-description">Autonomous Digital Twin Simulation Platform featuring multi-agent reinforcement learning, PyTorch ML engines, Three.js 3D physics rendering, and real-time telemetry.</p>
             <div class="card-meta">
               <span class="card-tag doi-tag">DOI: 10.5281/zenodo.22118796</span>
               <span class="card-tag">Digital Twin</span>
@@ -169,13 +176,13 @@
             </div>
           </article>
 
-          <!-- Framework 3: NexusAgent -->
-          <article class="card project-card reveal" >
+          <!-- Software 3: NexusAgent -->
+          <article class="card project-card software-card-highlight reveal" data-category="software">
             <div class="card-image" style="background:linear-gradient(135deg,#2b5876 0%,#4e4376 100%);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">
               <i class="fas fa-network-wired"></i>
             </div>
             <h3 class="card-title">NexusAgent</h3>
-            <p class="card-description">Zero-config, self-evolving local AI agent framework with GraphRAG knowledge graphs, auto-skill generation, and sandboxed execution via Ollama.</p>
+            <p class="card-description">Zero-config, self-evolving local AI agent framework with GraphRAG knowledge graphs, auto-skill generation, and sandboxed execution via Ollama models.</p>
             <div class="card-meta">
               <span class="card-tag doi-tag">DOI: 10.5281/zenodo.22118830</span>
               <span class="card-tag">GraphRAG</span>
@@ -187,13 +194,13 @@
             </div>
           </article>
 
-          <!-- Framework 4: DevRoadmaps -->
-          <article class="card project-card reveal" >
+          <!-- Software 4: DevRoadmaps -->
+          <article class="card project-card software-card-highlight reveal" data-category="software">
             <div class="card-image" style="background:linear-gradient(135deg,#11998e 0%,#38ef7d 100%);display:flex;align-items:center;justify-content:center;color:#0a0a1a;font-size:3rem;">
               <i class="fas fa-map-signs"></i>
             </div>
             <h3 class="card-title">DevRoadmaps</h3>
-            <p class="card-description">Offline Progressive Web App providing 20 interactive developer career tracks, 870+ curriculum nodes, and skill radars aligned with UN SDG 4.</p>
+            <p class="card-description">Offline Progressive Web App providing 20 interactive developer career roadmaps, 870+ curriculum nodes, and skill radars aligned with UN SDG 4 for free global tech education.</p>
             <div class="card-meta">
               <span class="card-tag doi-tag">DOI: 10.5281/zenodo.22118838</span>
               <span class="card-tag">PWA</span>
@@ -205,13 +212,13 @@
             </div>
           </article>
 
-          <!-- Framework 5: EdgeBrain -->
-          <article class="card project-card reveal" >
+          <!-- Software 5: EdgeBrain -->
+          <article class="card project-card software-card-highlight reveal" data-category="software">
             <div class="card-image" style="background:linear-gradient(135deg,#ff416c 0%,#ff4b2b 100%);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">
               <i class="fas fa-microchip"></i>
             </div>
             <h3 class="card-title">EdgeBrain</h3>
-            <p class="card-description">Lightweight Edge AI inference engine simulating 11 IoT devices with statistical anomaly detection and zero-cloud autonomous control.</p>
+            <p class="card-description">Lightweight Edge AI inference engine simulating 11 IoT devices with statistical anomaly detection and zero-cloud autonomous control for embedded sensor networks.</p>
             <div class="card-meta">
               <span class="card-tag doi-tag">DOI: 10.5281/zenodo.22118683</span>
               <span class="card-tag">Edge AI</span>
@@ -223,13 +230,13 @@
             </div>
           </article>
 
-          <!-- Framework 6: StealthHumanizer -->
-          <article class="card project-card reveal" >
+          <!-- Software 6: StealthHumanizer -->
+          <article class="card project-card software-card-highlight reveal" data-category="software">
             <div class="card-image" style="background:linear-gradient(135deg,#8e2de2 0%,#4a00e0 100%);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">
               <i class="fas fa-user-secret"></i>
             </div>
             <h3 class="card-title">StealthHumanizer</h3>
-            <p class="card-description">Open-source NLP text humanizer with 4-layer linguistic transformations, 13 AI provider backends, and 12-metric detection scoring.</p>
+            <p class="card-description">Open-source NLP text humanizer with 4-layer linguistic transformations, 13 AI provider backends, and 12-metric detection scoring for natural text generation.</p>
             <div class="card-meta">
               <span class="card-tag doi-tag">DOI: 10.5281/zenodo.22118705</span>
               <span class="card-tag">NLP</span>
@@ -240,224 +247,265 @@
               <a href="./blog/stealthhumanizer-free-ai-text-humanizer.html" class="cta-button-small btn-ghost" style="text-decoration:none;">Deep-Dive &rarr;</a>
             </div>
           </article>
-        </div>
 
-        <div style="border-bottom:1.5px solid var(--card-border-color);padding-bottom:0.75rem;margin-bottom:1.75rem;">
-          <h2 style="font-size:1.4rem;font-weight:700;display:flex;align-items:center;gap:0.6rem;">
-            <i class="fas fa-cogs" style="color:var(--primary-color);"></i> Hardware, Robotics &amp; Interactive Engineering Prototypes
-          </h2>
-        </div>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Project 1: Team SignTalk -->
-        <a href="./projects/team-signtalk.html" class="project-card-link">
-          <article class="card project-card reveal">
-            <div class="card-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-              <i class="fas fa-hand-paper"></i>
+          <!-- Software 7: AI Code Trust Validator -->
+          <article class="card project-card software-card-highlight reveal" data-category="software">
+            <div class="card-image" style="background:linear-gradient(135deg,#30cfd0 0%,#330867 100%);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">
+              <i class="fas fa-shield-alt"></i>
             </div>
-            <h3 class="card-title">Team SignTalk</h3>
-            <p class="card-description">A Smart Hand Gloves that can Convert Sign Language into Text and Audio</p>
+            <h3 class="card-title">AI Code Trust Validator</h3>
+            <p class="card-description">Automated security and hallucination auditor for AI-generated code, validating package hallucination, dependency hijacking, AST syntax errors, and supply chain threats.</p>
             <div class="card-meta">
-              <span class="card-tag">IoT</span>
-              <span class="card-tag">Award Winner</span>
-              <span class="card-tag">Accessibility</span>
+              <span class="card-tag doi-tag">DOI: 10.5281/zenodo.22118788</span>
+              <span class="card-tag">AppSec</span>
+              <span class="card-tag">AST Security</span>
+            </div>
+            <div style="display:flex;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;">
+              <a href="https://github.com/rudra496/ai-code-trust-validator" target="_blank" rel="noopener noreferrer" class="cta-button-small" style="text-decoration:none;">GitHub &rarr;</a>
+              <a href="./blog/ai-code-trust-validator-security-tool.html" class="cta-button-small btn-ghost" style="text-decoration:none;">Deep-Dive &rarr;</a>
             </div>
           </article>
-        </a>
 
-        <!-- Project 2: Assistive Smart Eyeglass -->
-        <a href="./projects/assistive-smart-eyeglass.html" class="project-card-link">
-          <article class="card project-card reveal">
-            <div class="card-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-              <i class="fas fa-glasses"></i>
+          <!-- Software 8: ScienceLab 3D -->
+          <article class="card project-card software-card-highlight reveal" data-category="software">
+            <div class="card-image" style="background:linear-gradient(135deg,#fa709a 0%,#fee140 100%);display:flex;align-items:center;justify-content:center;color:#333;font-size:3rem;">
+              <i class="fas fa-flask"></i>
             </div>
-            <h3 class="card-title">Assistive Smart Eyeglass for the Visually Impaired</h3>
-            <p class="card-description">AI-Enhanced Wearable for Real-Time Environment Awareness and Communication</p>
+            <h3 class="card-title">ScienceLab 3D</h3>
+            <p class="card-description">Next.js 15 &amp; React Three Fiber interactive STEM education platform with 40+ real-time 3D physics, chemistry, and biology laboratory simulations with WebGL rendering.</p>
             <div class="card-meta">
-              <span class="card-tag">AI/ML</span>
-              <span class="card-tag">Accessibility</span>
-              <span class="card-tag">Wearable Tech</span>
+              <span class="card-tag doi-tag">DOI: 10.5281/zenodo.22118753</span>
+              <span class="card-tag">React Three Fiber</span>
+              <span class="card-tag">WebGL</span>
+            </div>
+            <div style="display:flex;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;">
+              <a href="https://rudra496.github.io/science/" target="_blank" rel="noopener noreferrer" class="cta-button-small" style="text-decoration:none;">Live Demo &rarr;</a>
+              <a href="./blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html" class="cta-button-small btn-ghost" style="text-decoration:none;">Deep-Dive &rarr;</a>
             </div>
           </article>
-        </a>
 
-        <!-- Project 3: Dual-Axis Solar Tracker -->
-        <a href="./projects/dual-axis-solar-tracker.html" class="project-card-link">
-          <article class="card project-card reveal">
-            <div class="card-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-              <i class="fas fa-solar-panel"></i>
-            </div>
-            <h3 class="card-title">Automatic Dual-Axis Solar Tracking System</h3>
-            <p class="card-description">Servo-Based Optimized Solar Panel Positioning with LDR Sensing</p>
-            <div class="card-meta">
-              <span class="card-tag">Renewable Energy</span>
-              <span class="card-tag">Automation</span>
-              <span class="card-tag">Arduino</span>
-            </div>
-          </article>
-        </a>
-
-        <!-- Project 4: Smart Door Security -->
-        <a href="./projects/smart-door-security.html" class="project-card-link">
-          <article class="card project-card reveal">
-            <div class="card-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-              <i class="fas fa-lock"></i>
-            </div>
-            <h3 class="card-title">Multi-Layered Smart Door Security System</h3>
-            <p class="card-description">Biometric, RFID, and PIN-Based Access Control for Enhanced Safety</p>
-            <div class="card-meta">
-              <span class="card-tag">IoT</span>
-              <span class="card-tag">Security</span>
-              <span class="card-tag">Biometrics</span>
-            </div>
-          </article>
-        </a>
-
-        <!-- Project 5: WiFi Control Car -->
-        <a href="./projects/wifi-control-car.html" class="project-card-link">
-          <article class="card project-card reveal">
-            <div class="card-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); display: flex; align-items: center; justify-content: center; color: #333; font-size: 3rem;">
-              <i class="fas fa-car"></i>
-            </div>
-            <h3 class="card-title">Advanced Wifi Control Car</h3>
-            <p class="card-description">IOT based Advanced WiFi Control Car</p>
-            <div class="card-meta">
-              <span class="card-tag">IoT</span>
-              <span class="card-tag">Robotics</span>
-              <span class="card-tag">Web Control</span>
-            </div>
-          </article>
-        </a>
-
-        <!-- Project 6: LED Matrix Notice Board -->
-        <a href="./projects/led-matrix-notice-board.html" class="project-card-link">
-          <article class="card project-card reveal">
-            <div class="card-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); display: flex; align-items: center; justify-content: center; color: #333; font-size: 3rem;">
-              <i class="fas fa-display"></i>
-            </div>
-            <h3 class="card-title">LED Dot Matrix Smart Notice Board</h3>
-            <p class="card-description">LED Dot Matrix Smart Notice Board – Your Messages, Anytime, Anywhere.</p>
-            <div class="card-meta">
-              <span class="card-tag">IoT</span>
-              <span class="card-tag">Display Tech</span>
-              <span class="card-tag">Mobile App</span>
-            </div>
-          </article>
-        </a>
-
-        <!-- Project 7: Team ESB4 -->
-        <a href="./projects/team-esb4-bacteria-detection.html" class="project-card-link">
-          <article class="card project-card reveal">
-            <div class="card-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-              <i class="fas fa-microscope"></i>
-            </div>
-            <h3 class="card-title">Team ESB4</h3>
-            <p class="card-description">Bacteria Detection Device in Food Items (Prototype)</p>
-            <div class="card-meta">
-              <span class="card-tag">AI/ML</span>
-              <span class="card-tag">Health Tech</span>
-              <span class="card-tag">Innovation</span>
-            </div>
-          </article>
-        </a>
-
-        <!-- Project 8: Line Following Robot -->
-        <a href="./projects/line-following-robot.html" class="project-card-link">
-          <article class="card project-card reveal">
-            <div class="card-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-              <i class="fas fa-robot"></i>
-            </div>
-            <h3 class="card-title">Advanced Line Following Robot</h3>
-            <p class="card-description">High-performance line tracking robot with advanced sensors and control systems</p>
-            <div class="card-meta">
-              <span class="card-tag">Robotics</span>
-              <span class="card-tag">PID Control</span>
-              <span class="card-tag">Automation</span>
-            </div>
-          </article>
-        </a>
-
-        <!-- FLAGSHIP PROJECT 1: SightlineAI (NEW) -->
-        <a href="https://rudra496.github.io/sightlineai" class="project-card-link" target="_blank" rel="noopener noreferrer">
-          <article class="card project-card reveal" id="sightlineai">
-            <div class="card-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-              <i class="fas fa-eye"></i>
-            </div>
-            <h3 class="card-title">SightlineAI</h3>
-            <p class="card-description">AI-powered assistive eyewear for visually impaired individuals, providing real-time environment awareness through computer vision and machine learning</p>
-            <div class="card-meta">
-              <span class="card-tag">AI</span>
-              <span class="card-tag">Assistive Technology</span>
-              <span class="card-tag">Accessibility</span>
-              <span class="card-tag" style="background: rgba(0, 255, 0, 0.15); border-color: var(--tertiary-color); color: var(--tertiary-color);">Prototype</span>
-            </div>
-          </article>
-        </a>
-
-        <!-- FLAGSHIP PROJECT 2: MindWell (NEW) -->
-        <a href="https://mindwell-navy.vercel.app/" class="project-card-link" target="_blank" rel="noopener noreferrer">
-          <article class="card project-card reveal" id="mindwell">
-            <div class="card-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+          <!-- Software 9: MindWell -->
+          <article class="card project-card software-card-highlight reveal" data-category="software">
+            <div class="card-image" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">
               <i class="fas fa-heart"></i>
             </div>
             <h3 class="card-title">MindWell</h3>
-            <p class="card-description">Mental health support platform with peer support and resources, creating safe spaces for mental wellness and community connection</p>
+            <p class="card-description">Open-source, privacy-first mental health architecture featuring peer support networks, encrypted journaling, and clinical assessment resources aligned with UN SDG 3.</p>
             <div class="card-meta">
-              <span class="card-tag">Mental Health</span>
-              <span class="card-tag">Social Impact</span>
+              <span class="card-tag doi-tag">DOI: 10.5281/zenodo.22118774</span>
               <span class="card-tag">Healthcare</span>
-              <span class="card-tag" style="background: rgba(0, 255, 0, 0.15); border-color: var(--tertiary-color); color: var(--tertiary-color);">Live / MVP</span>
+              <span class="card-tag">SDG 3</span>
+            </div>
+            <div style="display:flex;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;">
+              <a href="https://mindwell-navy.vercel.app/" target="_blank" rel="noopener noreferrer" class="cta-button-small" style="text-decoration:none;">Live App &rarr;</a>
+              <a href="./blog/mindwell-mental-health-platform.html" class="cta-button-small btn-ghost" style="text-decoration:none;">Deep-Dive &rarr;</a>
             </div>
           </article>
-        </a>
 
-        <!-- FLAGSHIP PROJECT 3: 3D Science Lab (NEW) -->
-        <a href="https://rudra496.github.io/science/" class="project-card-link" target="_blank" rel="noopener noreferrer">
-          <article class="card project-card reveal" id="3d-science-lab">
-            <div class="card-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; justify-content: center; color: #333; font-size: 3rem;">
-              <i class="fas fa-flask"></i>
+          <!-- Software 10: SightlineAI Core System -->
+          <article class="card project-card software-card-highlight reveal" data-category="software">
+            <div class="card-image" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">
+              <i class="fas fa-eye"></i>
             </div>
-            <h3 class="card-title">3D Science Lab</h3>
-            <p class="card-description">Interactive 3D science laboratory for immersive STEM education, enabling students to explore complex scientific concepts through engaging visualizations</p>
+            <h3 class="card-title">SightlineAI Software Core</h3>
+            <p class="card-description">Computer vision pipeline for assistive eyewear, featuring on-device edge object classification, distance ranging, and low-latency text-to-speech audio feedback.</p>
             <div class="card-meta">
-              <span class="card-tag">EdTech</span>
-              <span class="card-tag">3D</span>
-              <span class="card-tag">STEM</span>
-              <span class="card-tag" style="background: rgba(0, 255, 0, 0.15); border-color: var(--tertiary-color); color: var(--tertiary-color);">Demo</span>
+              <span class="card-tag doi-tag">DOI: 10.5281/zenodo.22118742</span>
+              <span class="card-tag">OpenCV</span>
+              <span class="card-tag">Edge AI</span>
+            </div>
+            <div style="display:flex;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;">
+              <a href="https://rudra496.github.io/sightlineai" target="_blank" rel="noopener noreferrer" class="cta-button-small" style="text-decoration:none;">Project Portal &rarr;</a>
+              <a href="./blog/sightlineai-assistive-eyewear-visually-impaired.html" class="cta-button-small btn-ghost" style="text-decoration:none;">Deep-Dive &rarr;</a>
             </div>
           </article>
-        </a>
+        </div>
+      </div>
+
+      <!-- ================================================================= -->
+      <!-- CATEGORY 2: Robotics, Embedded Systems & Hardware Lab (6)         -->
+      <!-- ================================================================= -->
+      <div id="section-hardware" class="project-category-group reveal" style="max-width:1240px;margin:2rem auto 3.5rem;padding:0 1rem;">
+        <div style="border-bottom:2px solid #f59e0b;padding-bottom:0.75rem;margin-bottom:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;">
+          <div>
+            <h2 style="font-size:1.6rem;font-weight:800;display:flex;align-items:center;gap:0.6rem;letter-spacing:-0.01em;margin-bottom:0.25rem;">
+              <i class="fas fa-robot" style="color:#f59e0b;"></i> Hardware, Robotics &amp; Embedded Systems
+            </h2>
+            <p style="font-size:0.92rem;color:var(--text-muted);margin:0;">
+              Microcontroller firmware, sensor fusion arrays, servo mechanical kinematics, and embedded assistive devices
+            </p>
+          </div>
+          <span class="hardware-spec-badge" style="font-size:0.82rem;padding:5px 14px;">6 Physical Prototypes</span>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Hardware 1: Team SignTalk -->
+          <article class="card project-card hardware-card-highlight reveal" data-category="hardware">
+            <div class="card-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+              <i class="fas fa-hand-paper"></i>
+            </div>
+            <h3 class="card-title">Team SignTalk Smart Sensory Glove</h3>
+            <p class="card-description">Assistive communication smart glove utilizing flex sensor arrays, MPU6050 6-DOF IMU, and Arduino/Bluetooth to translate American Sign Language gestures into real-time speech and mobile display text.</p>
+            <div class="card-meta">
+              <span class="hardware-spec-badge">Arduino Nano</span>
+              <span class="hardware-spec-badge">Flex Sensors</span>
+              <span class="hardware-spec-badge">MPU-6050</span>
+              <span class="hardware-spec-badge">Bluetooth HC-05</span>
+            </div>
+            <div style="display:flex;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;">
+              <a href="./projects/team-signtalk.html" class="cta-button-small" style="text-decoration:none;">Hardware Specs &rarr;</a>
+              <a href="./blog/sign-talk-smart-glove-sign-language-translation.html" class="cta-button-small btn-ghost" style="text-decoration:none;">Story Deep-Dive &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Hardware 2: Assistive Smart Eyewear -->
+          <article class="card project-card hardware-card-highlight reveal" data-category="hardware">
+            <div class="card-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+              <i class="fas fa-glasses"></i>
+            </div>
+            <h3 class="card-title">SightlineAI Assistive Wearable Eyewear</h3>
+            <p class="card-description">Embedded vision-assisted headset equipped with wide-angle camera module and bone-conduction audio transducer. Detects obstacles and reads printed signage in real-time for visually impaired users.</p>
+            <div class="card-meta">
+              <span class="hardware-spec-badge">Raspberry Pi</span>
+              <span class="hardware-spec-badge">Camera Module</span>
+              <span class="hardware-spec-badge">Ultrasonic Ranging</span>
+              <span class="hardware-spec-badge">Bone Conduction</span>
+            </div>
+            <div style="display:flex;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;">
+              <a href="./projects/assistive-smart-eyeglass.html" class="cta-button-small" style="text-decoration:none;">Hardware Specs &rarr;</a>
+              <a href="./blog/sightlineai-assistive-eyewear-visually-impaired.html" class="cta-button-small btn-ghost" style="text-decoration:none;">Article &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Hardware 3: Dual-Axis Solar Tracker -->
+          <article class="card project-card hardware-card-highlight reveal" data-category="hardware">
+            <div class="card-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; justify-content: center; color: #333; font-size: 3rem;">
+              <i class="fas fa-solar-panel"></i>
+            </div>
+            <h3 class="card-title">Dual-Axis Intelligent Solar Tracking System</h3>
+            <p class="card-description">Microcontroller-driven solar tracker featuring a cross-quadrant LDR light-dependent sensor array with dual MG996R metal-gear servo actuators, achieving +38% energy harvesting efficiency.</p>
+            <div class="card-meta">
+              <span class="hardware-spec-badge">Arduino Uno</span>
+              <span class="hardware-spec-badge">4x LDR Array</span>
+              <span class="hardware-spec-badge">Dual Servos (Pan/Tilt)</span>
+              <span class="hardware-spec-badge">PV Telemetry</span>
+            </div>
+            <div style="display:flex;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;">
+              <a href="./projects/dual-axis-solar-tracker.html" class="cta-button-small" style="text-decoration:none;">Hardware Specs &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Hardware 4: Autonomous Line Following Robot -->
+          <article class="card project-card hardware-card-highlight reveal" data-category="hardware">
+            <div class="card-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="card-title">Autonomous PID Line Following Mobile Robot</h3>
+            <p class="card-description">High-speed ground robotic rover equipped with an 8-channel infrared reflectance sensor bar and closed-loop proportional-integral-derivative (PID) differential drive steering control.</p>
+            <div class="card-meta">
+              <span class="hardware-spec-badge">PID Tuning</span>
+              <span class="hardware-spec-badge">8-Ch IR Array</span>
+              <span class="hardware-spec-badge">L298N H-Bridge</span>
+              <span class="hardware-spec-badge">High-RPM Motors</span>
+            </div>
+            <div style="display:flex;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;">
+              <a href="./projects/line-following-robot.html" class="cta-button-small" style="text-decoration:none;">Hardware Specs &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Hardware 5: Multi-Layered Door Security -->
+          <article class="card project-card hardware-card-highlight reveal" data-category="hardware">
+            <div class="card-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3 class="card-title">Multi-Layered Smart Door Access System</h3>
+            <p class="card-description">Triple-factor physical security lock utilizing optical fingerprint authentication, RC522 13.56MHz RFID card reader, and 4x4 matrix numeric keypad with electronic solenoid actuation.</p>
+            <div class="card-meta">
+              <span class="hardware-spec-badge">R307 Optical Biometrics</span>
+              <span class="hardware-spec-badge">RC522 RFID</span>
+              <span class="hardware-spec-badge">12V Solenoid</span>
+              <span class="hardware-spec-badge">LCD Display</span>
+            </div>
+            <div style="display:flex;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;">
+              <a href="./projects/smart-door-security.html" class="cta-button-small" style="text-decoration:none;">Hardware Specs &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Hardware 6: WiFi IoT Rover -->
+          <article class="card project-card hardware-card-highlight reveal" data-category="hardware">
+            <div class="card-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); display: flex; align-items: center; justify-content: center; color: #333; font-size: 3rem;">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3 class="card-title">IoT Telemetry WiFi Robotic Vehicle</h3>
+            <p class="card-description">Remotely operated four-wheel drive mobile rover with ESP8266 Wi-Fi access point, web-socket remote GUI control, and real-time environmental sensor feedback.</p>
+            <div class="card-meta">
+              <span class="hardware-spec-badge">NodeMCU ESP8266</span>
+              <span class="hardware-spec-badge">WebSockets</span>
+              <span class="hardware-spec-badge">4WD Chassis</span>
+              <span class="hardware-spec-badge">Telemetry</span>
+            </div>
+            <div style="display:flex;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;">
+              <a href="./projects/wifi-control-car.html" class="cta-button-small" style="text-decoration:none;">Hardware Specs &rarr;</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="content-section" id="project-stories">
-      <h2 class="section-title reveal">Project Stories &amp; Technical Breakdowns</h2>
+    <!-- Technical Stories & Deep-Dives -->
+    <section class="content-section" id="project-stories" style="padding-top:1rem;">
+      <h2 class="section-title reveal">Featured Engineering Breakdowns</h2>
       <div class="blog-container reveal">
         <article class="card blog-post">
           <div class="blog-post-content">
-            <h3 class="card-title">Team SignTalk: Smart Glove Journey</h3>
-            <p class="blog-excerpt">The full story of how we built a sign language translation smart glove — from SUST to international recognition.</p>
-            <a href="./blog/sign-talk-smart-glove-sign-language-translation.html" class="card-link">Read Story →</a>
+            <h3 class="card-title">Team SignTalk: Smart Glove Engineering Journey</h3>
+            <p class="blog-excerpt">The complete technical progression of our assistive sensor glove—from prototype breadboard to divisional championship at Youth Innovation Challenge.</p>
+            <a href="./blog/sign-talk-smart-glove-sign-language-translation.html" class="card-link">Read Story &rarr;</a>
           </div>
         </article>
         <article class="card blog-post">
           <div class="blog-post-content">
             <h3 class="card-title">SightlineAI: Building AI Assistive Eyewear</h3>
-            <p class="blog-excerpt">A technical deep-dive into building AI-powered assistive eyewear for the visually impaired.</p>
-            <a href="./blog/sightlineai-assistive-eyewear-visually-impaired.html" class="card-link">Read Story →</a>
+            <p class="blog-excerpt">Technical deep-dive into low-latency embedded computer vision pipelines for the visually impaired on single-board edge computers.</p>
+            <a href="./blog/sightlineai-assistive-eyewear-visually-impaired.html" class="card-link">Read Story &rarr;</a>
           </div>
         </article>
         <article class="card blog-post">
           <div class="blog-post-content">
-            <h3 class="card-title">3D Science Lab: Interactive STEM Education</h3>
-            <p class="blog-excerpt">How we built an interactive 3D STEM education platform using Three.js and WebGL.</p>
-            <a href="./blog/3d-science-lab-interactive-stem-education.html" class="card-link">Read Story →</a>
+            <h3 class="card-title">Preserving 10 Flagship AI &amp; Engineering Repositories on CERN Zenodo</h3>
+            <p class="blog-excerpt">How we permanently archived 10 flagship AI and engineering frameworks with CERN Zenodo Concept DOIs for open science.</p>
+            <a href="./blog/open-science-cern-zenodo-10-flagship-ai-repositories.html" class="card-link">Read Story &rarr;</a>
           </div>
         </article>
       </div>
     </section>
   </main>
+
+  <script>
+    // Interactive Project Filter Script
+    function filterProjects(category, btn) {
+      const tabs = document.querySelectorAll('.project-filter-tab');
+      tabs.forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+
+      const softwareSec = document.getElementById('section-software');
+      const hardwareSec = document.getElementById('section-hardware');
+
+      if (category === 'all') {
+        softwareSec.style.display = 'block';
+        hardwareSec.style.display = 'block';
+      } else if (category === 'software') {
+        softwareSec.style.display = 'block';
+        hardwareSec.style.display = 'none';
+        softwareSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else if (category === 'hardware') {
+        softwareSec.style.display = 'none';
+        hardwareSec.style.display = 'block';
+        hardwareSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  </script>
+
 
   <!-- Footer -->
   <footer class="footer">
