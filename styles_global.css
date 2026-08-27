@@ -118,7 +118,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 { color: var(--heading-color); }
-[data-theme="light"] h1, [data-theme="light"] h2, [data-theme="light"] h3, [data-theme="light"] h4, [data-theme="light"] h5, [data-theme="light"] h6 {
+[data-theme="light"] h1:not(.hero-name-animate), [data-theme="light"] h2, [data-theme="light"] h3, [data-theme="light"] h4, [data-theme="light"] h5, [data-theme="light"] h6 {
   color: var(--heading-color); text-shadow: none;
 }
 a { color: var(--link-color); text-decoration: none; transition: color 0.3s ease; }
@@ -258,12 +258,23 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
 /* --- About Me Section (Shared) --- */
 .about-container { display: flex; align-items: center; gap: 3rem; }
 .profile-pic {
-  width: 300px; height: 300px; object-fit: cover; border-radius: 50%; border: 4px solid var(--primary-color);
+  width: 280px; height: 280px; min-width: 280px; min-height: 280px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover; object-position: center;
+  border-radius: 50% !important;
+  border: 4px solid var(--primary-color);
   box-shadow: 0 0 25px var(--primary-color);
+  flex-shrink: 0;
 }
 [data-theme="light"] .profile-pic {
-  border: 3px solid var(--primary-color);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 280px !important; height: 280px !important;
+  min-width: 280px !important; min-height: 280px !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important; object-position: center !important;
+  border-radius: 50% !important;
+  border: 3px solid var(--primary-color) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  flex-shrink: 0 !important;
 }
 .about-text { flex: 1; }
 .about-text h3 { font-size: 1.8rem; color: var(--primary-color); margin-bottom: 1rem; }
@@ -767,7 +778,7 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
   color: var(--text-color);
 }
 
-[data-theme="light"] h1,
+[data-theme="light"] h1:not(.hero-name-animate),
 [data-theme="light"] h2,
 [data-theme="light"] h3,
 [data-theme="light"] h4,
@@ -812,8 +823,14 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
 }
 
 [data-theme="light"] .profile-pic {
+  width: 280px !important; height: 280px !important;
+  min-width: 280px !important; min-height: 280px !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important; object-position: center !important;
+  border-radius: 50% !important;
   border-color: rgba(2, 132, 199, 0.4) !important;
   box-shadow: 0 0 20px rgba(2, 132, 199, 0.15) !important;
+  flex-shrink: 0 !important;
 }
 
 /* Hero Badge Pills */
@@ -1674,7 +1691,7 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
    Zero washed-out text, solid readable headings, WCAG AAA contrast
    ========================================================================== */
 
-[data-theme="light"] h1,
+[data-theme="light"] h1:not(.hero-name-animate),
 [data-theme="light"] h2,
 [data-theme="light"] h3,
 [data-theme="light"] h4,
