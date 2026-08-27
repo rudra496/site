@@ -219,6 +219,40 @@
       transform: translateY(-3px);
       box-shadow: 0 10px 28px rgba(217, 119, 6, 0.16);
     }
+  
+    .icon-ai { color: #00ffff; }
+    .icon-robotics { color: #38ef7d; }
+    .icon-web { color: #f59e0b; }
+    .icon-industrial { color: #a855f7; }
+
+    [data-theme="light"] .icon-ai { color: #0284c7 !important; }
+    [data-theme="light"] .icon-robotics { color: #059669 !important; }
+    [data-theme="light"] .icon-web { color: #d97706 !important; }
+    [data-theme="light"] .icon-industrial { color: #7c3aed !important; }
+
+    [data-theme="light"] .stat-label {
+      color: #020617 !important;
+      font-weight: 800 !important;
+    }
+    [data-theme="light"] .stat-sub {
+      color: #334155 !important;
+      font-weight: 600 !important;
+    }
+    [data-theme="light"] .pillar-card h3 {
+      color: #020617 !important;
+      font-weight: 800 !important;
+    }
+    [data-theme="light"] .pillar-card p {
+      color: #1e293b !important;
+      line-height: 1.65 !important;
+    }
+    [data-theme="light"] .tech-badge {
+      background: #f1f5f9 !important;
+      border: 1px solid #cbd5e1 !important;
+      color: #0f172a !important;
+      font-weight: 600 !important;
+    }
+
   </style>
 
   <!-- Structured Data (JSON-LD) for Global SEO -->
@@ -661,7 +695,7 @@
       <div class="grid-container reveal" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
         <!-- Pillar 1 -->
         <div class="pillar-card">
-          <span class="pillar-icon" style="color: #00ffff;"><i class="fas fa-brain"></i></span>
+          <span class="pillar-icon icon-ai"><i class="fas fa-brain"></i></span>
           <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.6rem;">Autonomous AI &amp; Test-Time Reasoning</h3>
           <p style="font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;">
             Architecting Monte Carlo Tree Search (MCTS) reasoning engines, dynamic KV-cache sparsification (-65% VRAM), GraphRAG knowledge structures, and local LLM deployment on consumer hardware.
@@ -677,7 +711,7 @@
 
         <!-- Pillar 2 -->
         <div class="pillar-card">
-          <span class="pillar-icon" style="color: #38ef7d;"><i class="fas fa-microchip"></i></span>
+          <span class="pillar-icon icon-robotics"><i class="fas fa-microchip"></i></span>
           <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.6rem;">Robotics, IoT &amp; Embedded Systems</h3>
           <p style="font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;">
             Designing assistive wearables, smart sensory gloves, dual-axis solar servos, line-following robots with PID algorithms, ESP32 networks, and on-device computer vision.
@@ -693,7 +727,7 @@
 
         <!-- Pillar 3 -->
         <div class="pillar-card">
-          <span class="pillar-icon" style="color: #f59e0b;"><i class="fas fa-cube"></i></span>
+          <span class="pillar-icon icon-web"><i class="fas fa-cube"></i></span>
           <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.6rem;">Full-Stack &amp; 3D Interactive Web</h3>
           <p style="font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;">
             Building performant web applications with Next.js 15, React Three Fiber for WebGL 3D simulations, offline-first Progressive Web Apps (PWAs), and Python/FastAPI microservices.
@@ -709,7 +743,7 @@
 
         <!-- Pillar 4 -->
         <div class="pillar-card">
-          <span class="pillar-icon" style="color: #a855f7;"><i class="fas fa-industry"></i></span>
+          <span class="pillar-icon icon-industrial"><i class="fas fa-industry"></i></span>
           <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.6rem;">Industrial Engineering &amp; Data Science</h3>
           <p style="font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;">
             Applying operations research, statistical process control, lean manufacturing, multi-district cross-sectional epidemiology, and multivariate data modeling at SUST.

@@ -46,8 +46,8 @@
   --bg-surface: #f8fafc;            /* Clean Slate Surface */
   --bg-card: #ffffff;               /* Pure White Card */
   --text-color: #0f172a;            /* Deep Slate-900 (High contrast) */
-  --text-muted: #334155;            /* Slate-700 (Very legible) */
-  --text-dim: #475569;              /* Slate-600 */
+  --text-muted: #1e293b;            /* Deep Slate-800 (High contrast) */
+  --text-dim: #334155;              /* Crisp Slate-700 */
   --heading-color: #020617;         /* Deepest Slate-950 */
   --primary-color: #0284c7;         /* Sky-600 */
   --secondary-color: #7c3aed;       /* Violet-600 */
@@ -55,7 +55,7 @@
   --link-color: #0284c7;
   --link-hover-color: #be185d;
   --card-bg-color: #ffffff;
-  --card-border-color: #e2e8f0;
+  --card-border-color: #cbd5e1;     /* Crisp Slate-300 border */
 
   /* Semantic Accents (Light Mode) */
   --accent-cyan: #0284c7;           /* Deep readable blue */
@@ -73,7 +73,7 @@
   --spotlight-badge-text: #047857;
   --btn-ghost-bg: #f8fafc;
   --btn-ghost-border: #cbd5e1;
-  --btn-ghost-text: #0f172a;
+  --btn-ghost-text: #020617;
 }
 
 *,
@@ -1672,4 +1672,119 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
   .dropdown-desc {
     padding-left: 1.25rem;
   }
+}
+
+
+/* ==========================================================================
+   MASTER BULLETPROOF LIGHT-MODE HIGH-CONTRAST TYPOGRAPHY SYSTEM
+   Zero washed-out text, solid readable headings, WCAG AAA contrast
+   ========================================================================== */
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6,
+[data-theme="light"] .section-title,
+[data-theme="light"] .card-title,
+[data-theme="light"] .card-title-text,
+[data-theme="light"] .spotlight-banner-title,
+[data-theme="light"] .pillar-card h3,
+[data-theme="light"] .featured-project-card h3,
+[data-theme="light"] .award-card h3,
+[data-theme="light"] .blog-hub-title,
+[data-theme="light"] .category-heading,
+[data-theme="light"] .gallery-intro h1,
+[data-theme="light"] .project-header h1,
+[data-theme="light"] .project-content h1,
+[data-theme="light"] .project-content h2,
+[data-theme="light"] .project-content h3 {
+  color: #020617 !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: initial !important;
+  background: none !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] p,
+[data-theme="light"] li,
+[data-theme="light"] .section-subtitle,
+[data-theme="light"] .card-description,
+[data-theme="light"] .blog-excerpt,
+[data-theme="light"] .pillar-card p,
+[data-theme="light"] .featured-project-card p,
+[data-theme="light"] .award-card p,
+[data-theme="light"] .spotlight-banner-desc,
+[data-theme="light"] .about-text p,
+[data-theme="light"] .gallery-intro p,
+[data-theme="light"] .project-content p,
+[data-theme="light"] .project-content li {
+  color: #1e293b !important;
+}
+
+[data-theme="light"] strong,
+[data-theme="light"] b {
+  color: #020617 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .card-date,
+[data-theme="light"] .card-meta-row,
+[data-theme="light"] .stat-sub,
+[data-theme="light"] .category-subtext,
+[data-theme="light"] .category-count,
+[data-theme="light"] .topic-btn-desc,
+[data-theme="light"] .footer p,
+[data-theme="light"] .dropdown-desc,
+[data-theme="light"] .info-label,
+[data-theme="light"] .stat-label {
+  color: #334155 !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] .stat-label {
+  color: #020617 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .tech-badge,
+[data-theme="light"] .card-tag,
+[data-theme="light"] .card-tag-pill,
+[data-theme="light"] .filter-pill,
+[data-theme="light"] .quick-chip {
+  background: #f1f5f9 !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] .doi-tag {
+  background: #f0f9ff !important;
+  border: 1px solid #0284c7 !important;
+  color: #0369a1 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] a.card-link,
+[data-theme="light"] a.card-action-link,
+[data-theme="light"] .cta-button-small.btn-ghost {
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] div[style*="background: rgba(255,255,255"],
+[data-theme="light"] div[style*="background:rgba(255,255,255"] {
+  background: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  color: #1e293b !important;
+}
+[data-theme="light"] div[style*="background: rgba(255,255,255"] *,
+[data-theme="light"] div[style*="background:rgba(255,255,255"] * {
+  color: #1e293b !important;
+}
+[data-theme="light"] div[style*="background: rgba(255,255,255"] h3,
+[data-theme="light"] div[style*="background:rgba(255,255,255"] h3 {
+  color: #020617 !important;
+  font-weight: 800 !important;
 }

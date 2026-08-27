@@ -278,3 +278,39 @@
     font-size: 0.9rem;
   }
 }
+
+/* Light Mode Overrides for Reorganized Structure */
+[data-theme="light"] .gallery-intro h1 {
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  color: #020617 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .gallery-intro p {
+  color: #1e293b !important;
+}
+
+[data-theme="light"] .project-header h1 {
+  color: #020617 !important;
+}
+
+[data-theme="light"] .project-content h2,
+[data-theme="light"] .project-content h3 {
+  color: #020617 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .project-content p,
+[data-theme="light"] .project-content li {
+  color: #1e293b !important;
+}
+
+[data-theme="light"] .project-card .card-title {
+  color: #020617 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .project-card .card-description {
+  color: #1e293b !important;
+}
