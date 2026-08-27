@@ -75,13 +75,86 @@
       <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
         <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="../index.html" class="nav-link">Home</a></li>
-        <li><a href="../projects.html" class="nav-link">Projects</a></li>
-        <li><a href="../gallery.html" class="nav-link">Gallery</a></li>
-        <li><a href="../blog.html" class="nav-link">Blog</a></li>
-        <li><a href="../blog/media-coverage-achievements-rudra-sarker.html" class="nav-link">In The Press</a></li>
-        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            <ul class="nav-links" id="nav-links">
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link">Home</a>
+        </li>
+        
+        <li class="nav-item has-dropdown">
+          <a href="../projects.html" class="nav-link">Projects <i class="fas fa-chevron-down nav-arrow"></i></a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="../projects.html#section-software" class="dropdown-link">
+                <span class="dropdown-title"><i class="fas fa-code-branch" style="color:var(--primary-color)"></i> Software Repositories</span>
+                <span class="dropdown-desc">10 CERN Zenodo Concept DOIs</span>
+              </a>
+            </li>
+            <li>
+              <a href="../projects.html#section-hardware" class="dropdown-link">
+                <span class="dropdown-title"><i class="fas fa-microchip" style="color:#f59e0b"></i> Hardware &amp; Robotics</span>
+                <span class="dropdown-desc">Prototypes &amp; Assistive Devices</span>
+              </a>
+            </li>
+            <li>
+              <a href="../projects.html" class="dropdown-link">
+                <span class="dropdown-title"><i class="fas fa-layer-group" style="color:var(--primary-color)"></i> All Engineering Projects</span>
+                <span class="dropdown-desc">Interactive Category Filter Hub</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="../blog.html" class="nav-link">Research &amp; Articles <i class="fas fa-chevron-down nav-arrow"></i></a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="../blog.html" class="dropdown-link">
+                <span class="dropdown-title"><i class="fas fa-search" style="color:var(--primary-color)"></i> Grand Blog Hub</span>
+                <span class="dropdown-desc">31 Inverted-Search Articles</span>
+              </a>
+            </li>
+            <li>
+              <a href="../blog/ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html" class="dropdown-link">
+                <span class="dropdown-title"><i class="fas fa-book-open" style="color:#10b981"></i> Elsevier Q1 Study</span>
+                <span class="dropdown-desc">J. Ethnopharmacology (IF 4.8)</span>
+              </a>
+            </li>
+            <li>
+              <a href="../blog/open-science-cern-zenodo-10-flagship-ai-repositories.html" class="dropdown-link">
+                <span class="dropdown-title"><i class="fas fa-archive" style="color:var(--primary-color)"></i> CERN Zenodo Archiving</span>
+                <span class="dropdown-desc">Open-Science Preservation Guide</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="../gallery.html" class="nav-link">Honors &amp; Press <i class="fas fa-chevron-down nav-arrow"></i></a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="../achievements.html" class="dropdown-link">
+                <span class="dropdown-title"><i class="fas fa-trophy" style="color:#ffd700"></i> Awards &amp; Recognitions</span>
+                <span class="dropdown-desc">Rice360, SUST Hub, YIC Champion</span>
+              </a>
+            </li>
+            <li>
+              <a href="../blog/media-coverage-achievements-rudra-sarker.html" class="dropdown-link">
+                <span class="dropdown-title"><i class="fas fa-newspaper" style="color:var(--primary-color)"></i> In The Press</span>
+                <span class="dropdown-desc">Prothom Alo &amp; Daily Star Features</span>
+              </a>
+            </li>
+            <li>
+              <a href="../gallery.html" class="dropdown-link">
+                <span class="dropdown-title"><i class="fas fa-certificate" style="color:#ffd700"></i> Gallery &amp; Certificates</span>
+                <span class="dropdown-desc">Credentials &amp; Milestones</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="../contact.html" class="nav-link">Contact</a>
+        </li>
       </ul>
     </nav>
   </header>

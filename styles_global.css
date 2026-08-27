@@ -1505,3 +1505,171 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
   border: 1px solid #cbd5e1 !important;
   color: #0f172a !important;
 }
+
+
+/* ==========================================================================
+   TREE-LIKE DROPDOWN NAVIGATION HIERARCHY
+   High-contrast, keyboard-accessible, smooth animations
+   ========================================================================== */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.nav-item {
+  position: relative;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.2rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.nav-arrow {
+  font-size: 0.65rem;
+  margin-left: 3px;
+  color: var(--text-muted);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+}
+.nav-item.has-dropdown:hover .nav-arrow,
+.nav-item.has-dropdown:focus-within .nav-arrow {
+  transform: rotate(180deg);
+  color: var(--primary-color);
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: -20px;
+  min-width: 270px;
+  background: var(--bg-card);
+  border: 1px solid var(--card-border-color);
+  border-radius: 14px;
+  padding: 0.65rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(16px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.22s;
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+}
+[data-theme="light"] .nav-dropdown {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08) !important;
+}
+.nav-item.has-dropdown:hover .nav-dropdown,
+.nav-item.has-dropdown:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.dropdown-link {
+  display: flex;
+  flex-direction: column;
+  padding: 0.55rem 0.85rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.dropdown-link:hover {
+  background: rgba(2, 132, 199, 0.08);
+  transform: translateX(3px);
+}
+:root:not([data-theme="light"]) .dropdown-link:hover {
+  background: rgba(56, 189, 248, 0.12);
+}
+.dropdown-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.dropdown-link:hover .dropdown-title {
+  color: var(--primary-color);
+}
+.dropdown-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 2px;
+  padding-left: 1.45rem;
+}
+
+/* Mobile Drawer Styles */
+@media (max-width: 820px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 380px;
+    height: 100vh;
+    background: #172033;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 5rem 1.8rem 2rem;
+    transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 105;
+    overflow-y: auto;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.2);
+  }
+  [data-theme="light"] .nav-links {
+    background: #ffffff !important;
+    border-left: 1px solid #e2e8f0;
+  }
+  .nav-links.active {
+    right: 0;
+  }
+  .nav-item {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-link {
+    font-size: 1.15rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav-dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0.3rem 0 0.5rem 1rem;
+    min-width: unset;
+    width: 100%;
+    border-left: 2px solid var(--card-border-color) !important;
+    margin-top: 0.2rem;
+  }
+  .dropdown-link {
+    padding: 0.4rem 0;
+  }
+  .dropdown-desc {
+    padding-left: 1.25rem;
+  }
+}
