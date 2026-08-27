@@ -59,18 +59,19 @@
       margin: 2.5rem 0 1.5rem;
     }
     .stat-card {
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(0, 255, 255, 0.2);
+      background: var(--card-bg-color);
+      border: 1px solid var(--card-border-color);
       border-radius: 12px;
       padding: 1.25rem 1rem;
       text-align: center;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       backdrop-filter: blur(8px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
     .stat-card:hover {
       transform: translateY(-4px);
-      border-color: #00ffff;
-      box-shadow: 0 8px 24px rgba(0, 255, 255, 0.15);
+      border-color: var(--primary-color);
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.15);
     }
     .stat-num {
       font-family: 'Exo 2', sans-serif;
@@ -78,16 +79,24 @@
       font-weight: 800;
       line-height: 1;
       margin-bottom: 0.35rem;
-      background: linear-gradient(135deg, #00ffff, #38ef7d);
+      background: var(--stat-num-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      color: var(--primary-color); /* Reliable Fallback */
     }
     .stat-label {
       font-size: 0.82rem;
-      color: #94a3b8;
-      font-weight: 600;
+      color: var(--text-color);
+      font-weight: 700;
       letter-spacing: 0.03em;
       text-transform: uppercase;
+    }
+    .stat-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      display: block;
+      margin-top: 2px;
     }
     .hero-badges-row {
       display: flex;
@@ -110,39 +119,40 @@
       transform: translateY(-2px);
     }
     .pill-green {
-      background: rgba(19, 78, 94, 0.4);
-      border: 1.5px solid #71b280;
-      color: #71b280;
+      background: rgba(16, 185, 129, 0.14);
+      border: 1.5px solid var(--accent-green);
+      color: var(--accent-green);
     }
     .pill-cyan {
-      background: rgba(10, 37, 64, 0.65);
-      border: 1.5px solid #00d2ff;
-      color: #00d2ff;
+      background: rgba(2, 132, 199, 0.14);
+      border: 1.5px solid var(--accent-cyan);
+      color: var(--accent-cyan);
     }
     .pill-orcid {
-      background: rgba(166, 206, 57, 0.18);
-      border: 1.5px solid #a6ce39;
-      color: #a6ce39;
+      background: rgba(132, 204, 22, 0.16);
+      border: 1.5px solid var(--accent-orcid);
+      color: var(--accent-orcid);
     }
     .pill-purple {
-      background: rgba(118, 75, 162, 0.25);
-      border: 1.5px solid #a855f7;
-      color: #c084fc;
+      background: rgba(168, 85, 247, 0.14);
+      border: 1.5px solid var(--accent-purple);
+      color: var(--accent-purple);
     }
     .pillar-card {
-      background: rgba(15, 23, 42, 0.75);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: var(--card-bg-color);
+      border: 1px solid var(--card-border-color);
       border-radius: 14px;
       padding: 1.6rem;
       transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
       height: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
     .pillar-card:hover {
-      border-color: #00ffff;
+      border-color: var(--primary-color);
       transform: translateY(-4px);
-      box-shadow: 0 10px 30px rgba(0, 255, 255, 0.12);
+      box-shadow: 0 10px 30px rgba(2, 132, 199, 0.12);
     }
     .pillar-icon {
       font-size: 2.2rem;
@@ -157,16 +167,17 @@
       padding-top: 1rem;
     }
     .award-card {
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(255, 215, 0, 0.25);
+      background: var(--card-bg-color);
+      border: 1px solid rgba(217, 119, 6, 0.35);
       border-radius: 12px;
       padding: 1.4rem;
       transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
     .award-card:hover {
-      border-color: #ffd700;
+      border-color: var(--accent-amber);
       transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(255, 215, 0, 0.15);
+      box-shadow: 0 8px 24px rgba(217, 119, 6, 0.15);
     }
   </style>
 
@@ -337,62 +348,62 @@
         <div class="stat-card">
           <div class="stat-num">1</div>
           <div class="stat-label">Elsevier Q1 Paper</div>
-          <span style="font-size: 0.72rem; color: #64748b;">J. Ethnopharmacology</span>
+          <span class="stat-sub">J. Ethnopharmacology</span>
         </div>
         <div class="stat-card">
           <div class="stat-num">10</div>
           <div class="stat-label">CERN Zenodo DOIs</div>
-          <span style="font-size: 0.72rem; color: #64748b;">Persistent Software DOIs</span>
+          <span class="stat-sub">Persistent Software DOIs</span>
         </div>
         <div class="stat-card">
           <div class="stat-num">31</div>
           <div class="stat-label">Articles Published</div>
-          <span style="font-size: 0.72rem; color: #64748b;">Indexed &amp; Searchable</span>
+          <span class="stat-sub">Indexed &amp; Searchable</span>
         </div>
         <div class="stat-card">
           <div class="stat-num">40+</div>
           <div class="stat-label">3D Simulations</div>
-          <span style="font-size: 0.72rem; color: #64748b;">ScienceLab 3D STEM</span>
+          <span class="stat-sub">ScienceLab 3D STEM</span>
         </div>
         <div class="stat-card">
           <div class="stat-num">5+</div>
           <div class="stat-label">Global &amp; Nat. Awards</div>
-          <span style="font-size: 0.72rem; color: #64748b;">Rice360, SUST Hub, YIC</span>
+          <span class="stat-sub">Rice360, SUST Hub, YIC</span>
         </div>
       </div>
     </section>
 
     <!-- SECTION 1: Academic Research & Open Science Highlight Banner -->
     <section id="research-spotlight" class="content-section" style="padding-top: 1rem;">
-      <div style="background: linear-gradient(135deg, rgba(10, 37, 64, 0.88), rgba(19, 78, 94, 0.65)); border: 1.5px solid rgba(0, 255, 255, 0.35); border-radius: 16px; padding: 2.2rem; max-width: 1100px; margin: 0 auto; box-shadow: 0 16px 40px rgba(0, 255, 255, 0.1); backdrop-filter: blur(14px);" class="reveal">
+      <div class="spotlight-banner-box reveal">
         <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
-          <span style="font-size: 0.85rem; font-weight: 800; letter-spacing: 0.08em; color: #00ffff; text-transform: uppercase;">
+          <span class="spotlight-banner-tag">
             <i class="fas fa-microscope" style="margin-right: 0.4rem;"></i> Peer-Reviewed Academic Research &amp; Open Science
           </span>
-          <span style="font-size: 0.82rem; background: rgba(113, 178, 128, 0.25); border: 1px solid #71b280; color: #71b280; padding: 3px 12px; border-radius: 14px; font-weight: 700;">
+          <span class="spotlight-banner-badge">
             Elsevier Q1 · Impact Factor: 4.8 · CiteScore: 9.3
           </span>
         </div>
         
-        <h3 style="font-size: 1.45rem; color: #ffffff; line-height: 1.4; margin-bottom: 0.85rem; font-weight: 700;">
+        <h3 class="spotlight-banner-title">
           Ethnoveterinary Herbal Practices in Commercial Poultry in Bangladesh: A Multi-District Cross-Sectional Study
         </h3>
         
-        <p style="color: #cbd5e0; font-size: 0.98rem; line-height: 1.65; margin-bottom: 1.5rem;">
+        <p class="spotlight-banner-desc">
           Nationwide empirical field investigation across <strong>795 commercial poultry farms in 35 districts of Bangladesh</strong> published in Elsevier's <em>Journal of Ethnopharmacology</em>. Revealed a verified <strong>43.6% within-group reduction in synthetic antimicrobial dependence</strong> and improved Feed Conversion Ratio (FCR) through scientifically validated phytotherapy protocols.
         </p>
 
-        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 1.25rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid var(--card-border-color); padding-top: 1.25rem;">
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-            <a href="./blog/ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html" class="cta-button-small" style="background: linear-gradient(135deg, #134e5e, #71b280); color: #fff; text-decoration: none; padding: 8px 18px; font-weight: 700; border-radius: 8px;">
+            <a href="./blog/ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html" class="cta-button-small" style="text-decoration: none; padding: 8px 18px; font-weight: 700; border-radius: 8px;">
               Read Study Deep-Dive &rarr;
             </a>
-            <a href="./blog/open-science-cern-zenodo-10-flagship-ai-repositories.html" class="cta-button-small" style="background: rgba(0, 210, 255, 0.15); border: 1px solid #00d2ff; color: #00d2ff; text-decoration: none; padding: 8px 18px; font-weight: 700; border-radius: 8px;">
+            <a href="./blog/open-science-cern-zenodo-10-flagship-ai-repositories.html" class="cta-button-small btn-ghost" style="text-decoration: none; padding: 8px 18px; font-weight: 700; border-radius: 8px;">
               10 CERN Zenodo Repositories &rarr;
             </a>
           </div>
-          <span style="color: #94a3b8; font-size: 0.85rem; font-family: 'JetBrains Mono', monospace;">
-            ORCID: <a href="https://orcid.org/0009-0001-4545-0932" target="_blank" rel="noopener noreferrer" style="color: #a6ce39; text-decoration: underline;">0009-0001-4545-0932</a>
+          <span style="color: var(--text-muted); font-size: 0.85rem; font-family: 'JetBrains Mono', monospace;">
+            ORCID: <a href="https://orcid.org/0009-0001-4545-0932" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 700; text-decoration: underline;">0009-0001-4545-0932</a>
           </span>
         </div>
       </div>
@@ -478,7 +489,7 @@
       <div class="featured-work-grid">
         <!-- Flagship 1: HyperReason -->
         <article class="featured-project-card reveal">
-          <span class="project-status" style="background: rgba(0, 210, 255, 0.2); border-color: #00d2ff; color: #00d2ff;">
+          <span class=\"project-status\">
             CERN Zenodo DOI: 10.5281/zenodo.22118810
           </span>
           <h3>HyperReason</h3>
@@ -502,7 +513,7 @@
             <a href="https://github.com/rudra496/hyper-reason" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View HyperReason on GitHub">
               GitHub Repo <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href="./blog/hyper-reason-autonomous-test-time-compute-kv-cache.html" class="featured-cta" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2);" aria-label="Read HyperReason deep-dive">
+            <a href=\"./blog/hyper-reason-autonomous-test-time-compute-kv-cache.html\" class=\"featured-cta btn-ghost\" aria-label="Read HyperReason deep-dive">
               Deep-Dive &rarr;
             </a>
           </div>
@@ -510,7 +521,7 @@
 
         <!-- Flagship 2: WorldSim AI -->
         <article class="featured-project-card reveal">
-          <span class="project-status" style="background: rgba(0, 210, 255, 0.2); border-color: #00d2ff; color: #00d2ff;">
+          <span class=\"project-status\">
             CERN Zenodo DOI: 10.5281/zenodo.22118796
           </span>
           <h3>WorldSim AI</h3>
@@ -534,7 +545,7 @@
             <a href="https://github.com/rudra496/worldsim-ai" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View WorldSim AI on GitHub">
               GitHub Repo <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href="./blog/worldsim-ai-digital-twin-simulation-platform.html" class="featured-cta" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2);" aria-label="Read WorldSim AI article">
+            <a href=\"./blog/worldsim-ai-digital-twin-simulation-platform.html\" class=\"featured-cta btn-ghost\" aria-label="Read WorldSim AI article">
               Architecture &rarr;
             </a>
           </div>
@@ -542,7 +553,7 @@
 
         <!-- Flagship 3: SightlineAI -->
         <article class="featured-project-card reveal">
-          <span class="project-status" style="background: rgba(0, 210, 255, 0.2); border-color: #00d2ff; color: #00d2ff;">
+          <span class=\"project-status\">
             CERN Zenodo DOI: 10.5281/zenodo.22118700
           </span>
           <h3>SightlineAI</h3>
@@ -566,7 +577,7 @@
             <a href="https://rudra496.github.io/sightlineai" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View SightlineAI demo">
               Live Demo <i class="fas fa-external-link-alt" aria-hidden="true"></i>
             </a>
-            <a href="./blog/sightlineai-assistive-eyewear-visually-impaired.html" class="featured-cta" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2);" aria-label="Read SightlineAI deep-dive">
+            <a href=\"./blog/sightlineai-assistive-eyewear-visually-impaired.html\" class=\"featured-cta btn-ghost\" aria-label="Read SightlineAI deep-dive">
               Read Story &rarr;
             </a>
           </div>
@@ -574,7 +585,7 @@
 
         <!-- Flagship 4: MindWell -->
         <article class="featured-project-card reveal">
-          <span class="project-status" style="background: rgba(0, 210, 255, 0.2); border-color: #00d2ff; color: #00d2ff;">
+          <span class=\"project-status\">
             CERN Zenodo DOI: 10.5281/zenodo.22118681
           </span>
           <h3>MindWell</h3>
@@ -598,7 +609,7 @@
             <a href="https://mindwell-navy.vercel.app/" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="Visit MindWell platform">
               Live Platform <i class="fas fa-external-link-alt" aria-hidden="true"></i>
             </a>
-            <a href="./blog/mindwell-mental-health-platform.html" class="featured-cta" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2);" aria-label="Read MindWell article">
+            <a href=\"./blog/mindwell-mental-health-platform.html\" class=\"featured-cta btn-ghost\" aria-label="Read MindWell article">
               Design &rarr;
             </a>
           </div>
@@ -606,7 +617,7 @@
 
         <!-- Flagship 5: ScienceLab 3D -->
         <article class="featured-project-card reveal">
-          <span class="project-status" style="background: rgba(0, 210, 255, 0.2); border-color: #00d2ff; color: #00d2ff;">
+          <span class=\"project-status\">
             CERN Zenodo DOI: 10.5281/zenodo.22118690
           </span>
           <h3>ScienceLab 3D</h3>
@@ -630,7 +641,7 @@
             <a href="https://rudra496.github.io/science" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View 3D Science Lab demo">
               Live Lab <i class="fas fa-external-link-alt" aria-hidden="true"></i>
             </a>
-            <a href="./blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html" class="featured-cta" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2);" aria-label="Read ScienceLab 3D breakdown">
+            <a href=\"./blog/sciencelab3d-nextjs-interactive-3d-science-experiments.html\" class=\"featured-cta btn-ghost\" aria-label="Read ScienceLab 3D breakdown">
               Breakdown &rarr;
             </a>
           </div>
@@ -638,7 +649,7 @@
 
         <!-- Flagship 6: DevRoadmaps -->
         <article class="featured-project-card reveal">
-          <span class="project-status" style="background: rgba(0, 210, 255, 0.2); border-color: #00d2ff; color: #00d2ff;">
+          <span class=\"project-status\">
             CERN Zenodo DOI: 10.5281/zenodo.22118838
           </span>
           <h3>DevRoadmaps</h3>
@@ -662,7 +673,7 @@
             <a href="https://github.com/rudra496/devroadmaps" class="featured-cta" target="_blank" rel="noopener noreferrer" aria-label="View DevRoadmaps on GitHub">
               GitHub Repo <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href="./blog/devroadmaps-free-developer-roadmaps.html" class="featured-cta" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2);" aria-label="Read DevRoadmaps article">
+            <a href=\"./blog/devroadmaps-free-developer-roadmaps.html\" class=\"featured-cta btn-ghost\" aria-label="Read DevRoadmaps article">
               Curriculum &rarr;
             </a>
           </div>
