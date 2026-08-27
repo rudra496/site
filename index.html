@@ -291,6 +291,43 @@
       font-weight: 800 !important;
     }
 
+  
+    .post-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .badge-q1 { background: linear-gradient(135deg, #134e5e, #71b280); color: #ffffff; }
+    .badge-uav { background: linear-gradient(135deg, #0A2540, #00d2ff); color: #ffffff; }
+    .badge-clinical { background: linear-gradient(135deg, #1e3c72, #2a5298); color: #ffffff; }
+    .badge-openscience { background: linear-gradient(135deg, #667eea, #764ba2); color: #ffffff; }
+
+    [data-theme="light"] .badge-q1 {
+      background: #ecfdf5 !important;
+      border: 1.5px solid #059669 !important;
+      color: #047857 !important;
+    }
+    [data-theme="light"] .badge-uav {
+      background: #eff6ff !important;
+      border: 1.5px solid #0284c7 !important;
+      color: #0369a1 !important;
+    }
+    [data-theme="light"] .badge-clinical {
+      background: #f5f3ff !important;
+      border: 1.5px solid #7c3aed !important;
+      color: #6d28d9 !important;
+    }
+    [data-theme="light"] .badge-openscience {
+      background: #fffbeb !important;
+      border: 1.5px solid #d97706 !important;
+      color: #b45309 !important;
+    }
+
   </style>
 
   <!-- Structured Data (JSON-LD) for Global SEO -->
@@ -1102,9 +1139,7 @@
         <!-- Post 1: Q1 Study -->
         <article class="card blog-post">
           <div class="blog-post-content">
-            <span style="display: inline-block; padding: 3px 10px; background: linear-gradient(135deg, #134e5e, #71b280); color: #fff; border-radius: 12px; font-size: 0.75rem; margin-bottom: 0.5rem; font-weight: 700;">
-              Elsevier Q1 Study
-            </span>
+            <span class="post-badge badge-q1">Elsevier Q1 Study</span>
             <h3 class="card-title" style="font-size: 1.15rem; line-height: 1.4; color: var(--heading-color); font-weight: 700;">Ethnoveterinary Herbal Practices in Poultry</h3>
             <p class="blog-excerpt" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Our published field study covering 795 farms in 35 districts, demonstrating synthetic antimicrobial reduction in poultry production.</p>
             <a href="./blog/ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html" class="card-link">Read Paper Breakdown &rarr;</a>
@@ -1114,9 +1149,7 @@
         <!-- Post 2: Omnicopter -->
         <article class="card blog-post">
           <div class="blog-post-content">
-            <span style="display: inline-block; padding: 3px 10px; background: linear-gradient(135deg, #0A2540, #00d2ff); color: #fff; border-radius: 12px; font-size: 0.75rem; margin-bottom: 0.5rem; font-weight: 700;">
-              UAV Robotics
-            </span>
+            <span class="post-badge badge-uav">UAV Robotics</span>
             <h3 class="card-title" style="font-size: 1.15rem; line-height: 1.4; color: var(--heading-color); font-weight: 700;">Omnicopter: Energy-Aware UAV Control</h3>
             <p class="blog-excerpt" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Distilling complex nonlinear aerodynamic drone simulation dynamics into a real-time edge embedded control oracle.</p>
             <a href="./blog/omnicopter-energy-aware-uav-control.html" class="card-link">Read Technical Breakdown &rarr;</a>
@@ -1126,9 +1159,7 @@
         <!-- Post 3: Stroke Rehab -->
         <article class="card blog-post">
           <div class="blog-post-content">
-            <span style="display: inline-block; padding: 3px 10px; background: linear-gradient(135deg, #1e3c72, #2a5298); color: #fff; border-radius: 12px; font-size: 0.75rem; margin-bottom: 0.5rem; font-weight: 700;">
-              Clinical AI / ML
-            </span>
+            <span class="post-badge badge-clinical">Clinical AI / ML</span>
             <h3 class="card-title" style="font-size: 1.15rem; line-height: 1.4; color: var(--heading-color); font-weight: 700;">Stroke Rehabilitation Activity Classification</h3>
             <p class="blog-excerpt" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Evaluating wearable sensory accelerometry data with Random Forest and LSTM architectures for stroke patient recovery tracking.</p>
             <a href="./blog/stroke-rehabilitation-activity-classification.html" class="card-link">Read Clinical Model &rarr;</a>
@@ -1138,9 +1169,7 @@
         <!-- Post 4: CERN Zenodo -->
         <article class="card blog-post">
           <div class="blog-post-content">
-            <span style="display: inline-block; padding: 3px 10px; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; border-radius: 12px; font-size: 0.75rem; margin-bottom: 0.5rem; font-weight: 700;">
-              Open Science
-            </span>
+            <span class="post-badge badge-openscience">Open Science</span>
             <h3 class="card-title" style="font-size: 1.15rem; line-height: 1.4; color: var(--heading-color); font-weight: 700;">Preserving 10 Repositories on CERN Zenodo</h3>
             <p class="blog-excerpt" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Comprehensive overview of minting Concept DOIs and archiving software frameworks on CERN Zenodo for research reproducibility.</p>
             <a href="./blog/open-science-cern-zenodo-10-flagship-ai-repositories.html" class="card-link">Read Open Science Guide &rarr;</a>

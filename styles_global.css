@@ -1837,3 +1837,237 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
 }
+
+/* ==========================================================================
+   TARGETED LIGHT MODE HIGH-CONTRAST FIXES: TABLES, POST BADGES & ACTION CTAS
+   ========================================================================== */
+
+/* 1. Universal Table System */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+.table-header-row th {
+  background: rgba(10, 37, 64, 0.85);
+  color: #ffffff;
+  padding: 12px 14px;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="light"] table {
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+}
+[data-theme="light"] thead,
+[data-theme="light"] thead tr,
+[data-theme="light"] .table-header-row,
+[data-theme="light"] tr[style*="rgba(10,37,64"],
+[data-theme="light"] tr[style*="rgba(10, 37, 64"],
+[data-theme="light"] tr[style*="border-bottom: 2px solid rgba(255,255,255"] {
+  background: #f1f5f9 !important;
+  border-bottom: 2px solid #cbd5e1 !important;
+  color: #020617 !important;
+}
+[data-theme="light"] th {
+  background: #f1f5f9 !important;
+  color: #020617 !important;
+  border: 1px solid #cbd5e1 !important;
+  font-weight: 800 !important;
+  padding: 12px 14px !important;
+}
+[data-theme="light"] td {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #e2e8f0 !important;
+  padding: 10px 14px !important;
+}
+[data-theme="light"] td strong {
+  color: #020617 !important;
+  font-weight: 800 !important;
+}
+[data-theme="light"] td a {
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
+[data-theme="light"] tbody tr:hover td {
+  background: #f8fafc !important;
+}
+
+/* 2. Homepage Featured Post Badges */
+.post-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.badge-q1 { background: linear-gradient(135deg, #134e5e, #71b280); color: #ffffff; }
+.badge-uav { background: linear-gradient(135deg, #0A2540, #00d2ff); color: #ffffff; }
+.badge-clinical { background: linear-gradient(135deg, #1e3c72, #2a5298); color: #ffffff; }
+.badge-openscience { background: linear-gradient(135deg, #667eea, #764ba2); color: #ffffff; }
+
+[data-theme="light"] .badge-q1 {
+  background: #ecfdf5 !important;
+  border: 1.5px solid #059669 !important;
+  color: #047857 !important;
+}
+[data-theme="light"] .badge-uav {
+  background: #eff6ff !important;
+  border: 1.5px solid #0284c7 !important;
+  color: #0369a1 !important;
+}
+[data-theme="light"] .badge-clinical {
+  background: #f5f3ff !important;
+  border: 1.5px solid #7c3aed !important;
+  color: #6d28d9 !important;
+}
+[data-theme="light"] .badge-openscience {
+  background: #fffbeb !important;
+  border: 1.5px solid #d97706 !important;
+  color: #b45309 !important;
+}
+
+/* 3. Article Publication Action Buttons (ScienceDirect, PubMed, ORCID) */
+.article-cta-btn {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-right: 1rem;
+  margin-bottom: 0.75rem;
+  transition: all 0.25s ease;
+}
+.article-cta-primary {
+  background: linear-gradient(135deg, #134e5e, #71b280);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(19, 78, 94, 0.3);
+}
+.article-cta-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+}
+
+[data-theme="light"] .article-cta-primary,
+[data-theme="light"] a[href*="sciencedirect"],
+[data-theme="light"] a[href*="doi.org/10.1016"] {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+  border: 1.5px solid #0284c7 !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25) !important;
+}
+[data-theme="light"] .article-cta-primary:hover,
+[data-theme="light"] a[href*="sciencedirect"]:hover,
+[data-theme="light"] a[href*="doi.org/10.1016"]:hover {
+  background: #0369a1 !important;
+  border-color: #0369a1 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .article-cta-secondary,
+[data-theme="light"] a[href*="pubmed.ncbi.nlm.nih.gov"] {
+  background: #f8fafc !important;
+  border: 1.5px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+[data-theme="light"] .article-cta-secondary:hover,
+[data-theme="light"] a[href*="pubmed.ncbi.nlm.nih.gov"]:hover {
+  background: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+
+/* 4. Pre & Code Blocks */
+pre {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  color: #f1f5f9;
+}
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--primary-color);
+}
+pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+[data-theme="light"] pre {
+  background: #f8fafc !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+[data-theme="light"] code {
+  background: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0284c7 !important;
+}
+[data-theme="light"] pre code {
+  background: transparent !important;
+  border: none !important;
+  color: #0f172a !important;
+}
+
+/* Universal Card Badges in Light Mode */
+[data-theme="light"] .badge-q1 {
+  background: #ecfdf5 !important;
+  border: 1.5px solid #059669 !important;
+  color: #047857 !important;
+}
+[data-theme="light"] .badge-zenodo {
+  background: #eff6ff !important;
+  border: 1.5px solid #0284c7 !important;
+  color: #0369a1 !important;
+}
+[data-theme="light"] .badge-doi {
+  background: #f0f9ff !important;
+  border: 1.5px solid #0284c7 !important;
+  color: #0369a1 !important;
+}
+[data-theme="light"] .badge-research {
+  background: #f5f3ff !important;
+  border: 1.5px solid #7c3aed !important;
+  color: #6d28d9 !important;
+}
+[data-theme="light"] .badge-award {
+  background: #fff1f2 !important;
+  border: 1.5px solid #e11d48 !important;
+  color: #be123c !important;
+}
+[data-theme="light"] .badge-opensource {
+  background: #f0fdf4 !important;
+  border: 1.5px solid #16a34a !important;
+  color: #15803d !important;
+}
+[data-theme="light"] .badge-tech {
+  background: #f8fafc !important;
+  border: 1.5px solid #64748b !important;
+  color: #334155 !important;
+}
