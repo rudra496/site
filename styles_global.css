@@ -858,6 +858,12 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
   color: #7e22ce !important;
 }
 
+[data-theme="light"] .pill-blue {
+  background: rgba(37, 99, 235, 0.12) !important;
+  border-color: #2563eb !important;
+  color: #1d4ed8 !important;
+}
+
 /* 3. Stat Matrix in Light Mode */
 [data-theme="light"] .stat-card {
   background: #ffffff !important;
