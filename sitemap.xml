@@ -11,8 +11,8 @@
     <priority>1.00</priority>
     <image:image>
       <image:loc>https://rudra496.github.io/site/Profile.webp</image:loc>
-      <image:title>Rudra Sarker — AI & Robotics Engineer Portfolio</image:title>
-      <image:caption>Rudra Sarker, AI & Robotics Researcher and Open-Science Contributor at SUST, Bangladesh.</image:caption>
+      <image:title>Rudra Sarker — AI &amp; Robotics Engineer Portfolio</image:title>
+      <image:caption>Rudra Sarker, AI &amp; Robotics Researcher and Open-Science Contributor at SUST, Bangladesh.</image:caption>
     </image:image>
   </url>
   <url>
@@ -34,7 +34,7 @@
     <priority>0.85</priority>
     <image:image>
       <image:loc>https://rudra496.github.io/site/Profile.webp</image:loc>
-      <image:title>Rudra Sarker Academic & Engineering Biography</image:title>
+      <image:title>Rudra Sarker Academic &amp; Engineering Biography</image:title>
       <image:caption>Biography, research pillars, and academic achievements of Rudra Sarker.</image:caption>
     </image:image>
   </url>
@@ -45,7 +45,7 @@
     <priority>0.85</priority>
     <image:image>
       <image:loc>https://rudra496.github.io/site/achievement1.webp</image:loc>
-      <image:title>Rudra Sarker Awards & Verified Credentials Gallery</image:title>
+      <image:title>Rudra Sarker Awards &amp; Verified Credentials Gallery</image:title>
       <image:caption>Global and national engineering awards, hackathon championships, and certifications.</image:caption>
     </image:image>
   </url>
@@ -125,6 +125,12 @@
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/nosian-magazine-talks-to-zai-ambassador-rudra-sarker.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://rudra496.github.io/site/blog/media-coverage-achievements-rudra-sarker.html</loc>
