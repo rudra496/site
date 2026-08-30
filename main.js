@@ -180,4 +180,48 @@ document.addEventListener('DOMContentLoaded', () => {
     s.textContent = JSON.stringify(ld);
     document.head.appendChild(s);
   }
+
+  // --- 6) Slow Typing & Dynamic Interaction for "Rudra Sarker" ---
+  const typingName = document.getElementById('hero-typing-name');
+  if (typingName) {
+    const textSpan = typingName.querySelector('.typed-text');
+    const cursor = typingName.querySelector('.typing-cursor');
+    const fullName = "Rudra Sarker";
+    let isTyping = false;
+
+    const runTypewriter = (speed = 120) => {
+      if (isTyping) return;
+      isTyping = true;
+      if (textSpan) textSpan.textContent = '';
+      if (cursor) {
+        cursor.style.opacity = '1';
+        cursor.style.display = 'inline-block';
+      }
+      let i = 0;
+      const typeChar = () => {
+        if (i < fullName.length) {
+          textSpan.textContent += fullName.charAt(i);
+          i++;
+          setTimeout(typeChar, speed);
+        } else {
+          isTyping = false;
+          // Keep cursor blinking gently for 4s, then fade to subtle accent
+          if (cursor) {
+            setTimeout(() => {
+              if (!isTyping) cursor.style.opacity = '0.35';
+            }, 4000);
+          }
+        }
+      };
+      typeChar();
+    };
+
+    // Trigger typing smoothly 280ms after DOM is ready
+    setTimeout(() => runTypewriter(120), 280);
+
+    // Re-type on click for interactive delight
+    typingName.addEventListener('click', () => {
+      runTypewriter(85);
+    });
+  }
 });

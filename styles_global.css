@@ -2110,58 +2110,66 @@ pre code {
 }
 
 /* Ultra-Refined Dynamic Aurora Shimmer Animation for Name */
+/* Ultra-Vibrant Colorful Moving Liquid Gradient & Typing Effect for "Rudra Sarker" */
 .hero-name-animate {
   font-family: 'Exo 2', sans-serif;
-  font-size: clamp(2.3rem, 5.5vw, 3.4rem);
+  font-size: clamp(2.4rem, 5.8vw, 3.6rem);
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.15;
   margin-bottom: 0.65rem;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-height: 1.25em;
   background: linear-gradient(
-    120deg,
-    #ffffff 0%,
-    #00ffff 25%,
-    #c084fc 50%,
-    #38ef7d 75%,
-    #ffffff 100%
+    135deg,
+    #00f2fe 0%,
+    #4facfe 20%,
+    #ec4899 40%,
+    #8b5cf6 60%,
+    #10b981 80%,
+    #00f2fe 100%
   );
-  background-size: 260% 100%;
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: heroNameShimmer 7s ease-in-out infinite;
-  text-shadow: 0 0 32px rgba(0, 255, 255, 0.28);
+  animation: dynamicNameFlow 4s linear infinite;
+  text-shadow: 0 0 35px rgba(0, 242, 254, 0.45);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), letter-spacing 0.35s ease;
   will-change: background-position;
+  cursor: pointer;
 }
 .hero-name-animate:hover {
   transform: translateY(-2px) scale(1.02);
   letter-spacing: -0.005em;
+  filter: drop-shadow(0 0 25px rgba(0, 242, 254, 0.6));
 }
 
 [data-theme="light"] .hero-name-animate {
   background: linear-gradient(
-    120deg,
-    #020617 0%,
-    #0284c7 25%,
-    #6d28d9 50%,
-    #059669 75%,
-    #020617 100%
+    135deg,
+    #1d4ed8 0%,
+    #7c3aed 25%,
+    #db2777 50%,
+    #0284c7 75%,
+    #059669 90%,
+    #1d4ed8 100%
   ) !important;
-  background-size: 260% 100% !important;
+  background-size: 300% 300% !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
-  animation: heroNameShimmer 7s ease-in-out infinite !important;
+  animation: dynamicNameFlow 4s linear infinite !important;
   text-shadow: none !important;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.08));
+  filter: drop-shadow(0 2px 10px rgba(37, 99, 235, 0.25));
 }
 [data-theme="light"] .hero-name-animate:hover {
-  filter: drop-shadow(0 4px 12px rgba(2, 132, 199, 0.22));
+  filter: drop-shadow(0 4px 16px rgba(37, 99, 235, 0.35));
 }
 
-@keyframes heroNameShimmer {
+@keyframes dynamicNameFlow {
   0% {
     background-position: 0% 50%;
   }
@@ -2171,6 +2179,24 @@ pre code {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.typing-cursor {
+  display: inline-block;
+  margin-left: 3px;
+  font-weight: 300;
+  -webkit-text-fill-color: #00ffff;
+  color: #00ffff;
+  animation: cursorBlink 0.85s infinite ease-in-out;
+  transition: opacity 0.5s ease;
+}
+[data-theme="light"] .typing-cursor {
+  -webkit-text-fill-color: #2563eb !important;
+  color: #2563eb !important;
+}
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50% { opacity: 0; transform: scaleY(0.75); }
 }
 
 @media (prefers-reduced-motion: reduce) {
