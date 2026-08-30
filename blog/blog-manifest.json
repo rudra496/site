@@ -1,0 +1,262 @@
+{
+  "count": 32,
+  "lastSync": "2026-08-30T13:42:12Z",
+  "articles": [
+    {
+      "id": "ethnoveterinary",
+      "title": "Ethnoveterinary Herbal Practices in Commercial Poultry: Our Q1 Study in the Journal of Ethnopharmacology",
+      "file": "ethnoveterinary-herbal-practices-poultry-journal-of-ethnopharmacology.html",
+      "date": "Aug 24, 2026",
+      "cat": "peer-reviewed",
+      "badge": "Q1 Journal · Elsevier"
+    },
+    {
+      "id": "omnicopter",
+      "title": "Omnicopter: Distilling Energy-Aware UAV Control into a Real-Time Oracle",
+      "file": "omnicopter-energy-aware-uav-control.html",
+      "date": "May 9, 2026",
+      "cat": "peer-reviewed",
+      "badge": "Research Study · Robotics & RL"
+    },
+    {
+      "id": "stroke-rehab",
+      "title": "Stroke Rehabilitation Activity Classification with Random Forest and LSTM",
+      "file": "stroke-rehabilitation-activity-classification.html",
+      "date": "May 9, 2026",
+      "cat": "peer-reviewed",
+      "badge": "Research Study · Healthcare ML"
+    },
+    {
+      "id": "zenodo-portfolio",
+      "title": "Open Science in Action: Preserving 10 Flagship AI & Engineering Repositories on CERN Zenodo",
+      "file": "open-science-cern-zenodo-10-flagship-ai-repositories.html",
+      "date": "Aug 26, 2026",
+      "cat": "zenodo",
+      "badge": "CERN Zenodo · Open Science Master Portfolio"
+    },
+    {
+      "id": "hyper-reason",
+      "title": "HyperReason: Autonomous Test-Time Compute Scaling & Dynamic KV-Cache Sparsification",
+      "file": "hyper-reason-autonomous-test-time-compute-kv-cache.html",
+      "date": "Aug 26, 2026",
+      "cat": "zenodo",
+      "badge": "DOI: 10.5281/zenodo.22118810"
+    },
+    {
+      "id": "worldsim-ai",
+      "title": "WorldSim AI: Building a Full Digital Twin Simulation Platform from Scratch",
+      "file": "worldsim-ai-digital-twin-simulation-platform.html",
+      "date": "Mar 31, 2026",
+      "cat": "zenodo",
+      "badge": "DOI: 10.5281/zenodo.22118796"
+    },
+    {
+      "id": "nexus-agent",
+      "title": "NexusAgent: The Zero-Config, Self-Evolving Local AI Agent Framework",
+      "file": "nexus-agent-self-evolving-local-ai-framework.html",
+      "date": "Apr 18, 2026",
+      "cat": "zenodo",
+      "badge": "DOI: 10.5281/zenodo.22118830"
+    },
+    {
+      "id": "ai-code-trust",
+      "title": "AI Code Trust Validator: Security & Hallucination Auditing for AI-Generated Code",
+      "file": "ai-code-trust-validator-security-tool.html",
+      "date": "Apr 18, 2026",
+      "cat": "zenodo",
+      "badge": "DOI: 10.5281/zenodo.22118819"
+    },
+    {
+      "id": "devroadmaps",
+      "title": "DevRoadmaps: Free Open-Source Developer Roadmaps with 20 Career Paths",
+      "file": "devroadmaps-free-developer-roadmaps.html",
+      "date": "Apr 18, 2026",
+      "cat": "zenodo",
+      "badge": "DOI: 10.5281/zenodo.22118838"
+    },
+    {
+      "id": "stealthhumanizer",
+      "title": "StealthHumanizer: Free Open-Source AI Text Humanizer with 13 AI Providers",
+      "file": "stealthhumanizer-free-ai-text-humanizer.html",
+      "date": "May 9, 2026",
+      "cat": "zenodo",
+      "badge": "DOI: 10.5281/zenodo.22118705"
+    },
+    {
+      "id": "mindwell",
+      "title": "MindWell: Building an Open-Source, Privacy-First Mental Health Platform",
+      "file": "mindwell-mental-health-platform.html",
+      "date": "Mar 20, 2026",
+      "cat": "zenodo",
+      "badge": "DOI: 10.5281/zenodo.22118681"
+    },
+    {
+      "id": "mindwell-update",
+      "title": "MindWell: Scaling Open-Source Mental Health Architecture & Global Access",
+      "file": "mindwell-open-source-mental-health-platform-update.html",
+      "date": "Apr 18, 2026",
+      "cat": "zenodo",
+      "badge": "Open Source Update · Health Tech"
+    },
+    {
+      "id": "edgebrain",
+      "title": "EdgeBrain: Free Open-Source AI-Powered Edge Intelligence Platform",
+      "file": "edgebrain-ai-edge-intelligence-platform.html",
+      "date": "Mar 31, 2026",
+      "cat": "zenodo",
+      "badge": "DOI: 10.5281/zenodo.22118683"
+    },
+    {
+      "id": "sciencelab3d-experiments",
+      "title": "ScienceLab 3D: 40+ Interactive Science Experiments with Next.js 15 & React Three Fiber",
+      "file": "sciencelab3d-nextjs-interactive-3d-science-experiments.html",
+      "date": "Mar 23, 2026",
+      "cat": "zenodo",
+      "badge": "DOI: 10.5281/zenodo.22118690"
+    },
+    {
+      "id": "sightlineai",
+      "title": "SightlineAI: Building AI-Powered Assistive Eyewear for the Visually Impaired",
+      "file": "sightlineai-assistive-eyewear-visually-impaired.html",
+      "date": "Mar 20, 2026",
+      "cat": "zenodo",
+      "badge": "DOI: 10.5281/zenodo.22118700"
+    },
+    {
+      "id": "signtalk",
+      "title": "Team SignTalk: Translating Sign Language to Speech with a Smart Glove",
+      "file": "sign-talk-smart-glove-sign-language-translation.html",
+      "date": "Mar 20, 2026",
+      "cat": "assistive",
+      "badge": "Assistive Tech · Award Winner"
+    },
+    {
+      "id": "sciencelab-stem",
+      "title": "3D Science Lab: Building an Interactive STEM Education Platform",
+      "file": "3d-science-lab-interactive-stem-education.html",
+      "date": "Mar 20, 2026",
+      "cat": "assistive",
+      "badge": "STEM Pedagogy · WebGL"
+    },
+    {
+      "id": "pid-controllers",
+      "title": "The Unsung Hero of Automation: Why PID Controllers Are the 'Magic' Inside Every Robot",
+      "file": "pid-controllers-robotics-magic.html",
+      "date": "Mar 20, 2026",
+      "cat": "assistive",
+      "badge": "Control Systems · Robotics"
+    },
+    {
+      "id": "sign-dataset-hub",
+      "title": "Sign Language Dataset Hub: 73+ Verified Datasets for Global Sign Recognition",
+      "file": "sign-language-dataset-hub.html",
+      "date": "May 9, 2026",
+      "cat": "assistive",
+      "badge": "Data Science · Open Dataset"
+    },
+    {
+      "id": "termmind",
+      "title": "TermMind: Open-Source AI Terminal Assistant with 7 LLM Providers",
+      "file": "termmind-ai-terminal-assistant.html",
+      "date": "May 9, 2026",
+      "cat": "tools",
+      "badge": "Developer Tools · CLI"
+    },
+    {
+      "id": "codevista",
+      "title": "CodeVista: Lightweight Code Quality & Static Security Scanner",
+      "file": "codevista-code-analysis-scanner.html",
+      "date": "May 9, 2026",
+      "cat": "tools",
+      "badge": "Security · Static Analysis"
+    },
+    {
+      "id": "spark-oss",
+      "title": "Spark: The All-in-One Open-Source Repository Automation Toolkit",
+      "file": "spark-oss-repository-toolkit.html",
+      "date": "May 9, 2026",
+      "cat": "tools",
+      "badge": "DevOps · Repository Health"
+    },
+    {
+      "id": "trafficstudy-py",
+      "title": "TrafficStudy: Understanding Network Traffic Behavior Through Python Analysis",
+      "file": "trafficstudy-network-traffic-education.html",
+      "date": "May 9, 2026",
+      "cat": "tools",
+      "badge": "Networking · Python"
+    },
+    {
+      "id": "trafficstudy-go",
+      "title": "TrafficStudyGo: High-Throughput Network Traffic Simulation in Go",
+      "file": "trafficstudygo-go-traffic-simulation.html",
+      "date": "May 9, 2026",
+      "cat": "tools",
+      "badge": "Concurrency · Golang"
+    },
+    {
+      "id": "github-showcase",
+      "title": "Full Open-Source Portfolio Showcase: From Assistive Devices to AI Engines",
+      "file": "github-projects-showcase.html",
+      "date": "May 9, 2026",
+      "cat": "tools",
+      "badge": "Portfolio · Open Source"
+    },
+    {
+      "id": "glm5-review",
+      "title": "GLM-5 Turbo Coding Plan Review: Evaluating Next-Gen Code Synthesis in 2026",
+      "file": "glm-5-turbo-coding-plan-review-2026.html",
+      "date": "Mar 27, 2026",
+      "cat": "tools",
+      "badge": "LLM Evaluation · Benchmark"
+    },
+    {
+      "id": "glm-plan-eval",
+      "title": "Evaluating GLM Coding Plans: Practical Tests Across Real-World Python Repos",
+      "file": "glm-coding-plan-evaluation.html",
+      "date": "Mar 27, 2026",
+      "cat": "tools",
+      "badge": "AI Analysis · Code Generation"
+    },
+    {
+      "id": "media-coverage",
+      "title": "Media Coverage & National Press Features: The Journey of Team SignTalk",
+      "file": "media-coverage-achievements-rudra-sarker.html",
+      "date": "Mar 20, 2026",
+      "cat": "media",
+      "badge": "Media Coverage · National Press"
+    },
+    {
+      "id": "rice360",
+      "title": "Rice360 Global Health Tech Design Competition: Our International Journey",
+      "file": "rice360-global-health-tech-design-competition.html",
+      "date": "Mar 20, 2026",
+      "cat": "media",
+      "badge": "International Competition · Semifinalist"
+    },
+    {
+      "id": "sust-hub",
+      "title": "Securing Pre-Seed Innovation Funding from SUST Innovation Hub for SignTalk",
+      "file": "sust-innovation-hub-pre-seed-funding-sign-talk.html",
+      "date": "Mar 20, 2026",
+      "cat": "media",
+      "badge": "Grant Funding · SUST Hub"
+    },
+    {
+      "id": "90s-sticker",
+      "title": "The Magic of 90s Bling Phone Stickers: Early Wireless Energy Harvesting",
+      "file": "the-magic-of-90s-bling-phone-sticker.html",
+      "date": "Mar 20, 2026",
+      "cat": "media",
+      "badge": "Retro Tech · Hardware Nostalgia"
+    },
+    {
+      "id": "nosian-interview",
+      "title": "Nosian Talks to a Z.ai Ambassador: How Frontier AI Models Are Winning Developers in the Global South",
+      "file": "nosian-magazine-talks-to-zai-ambassador-rudra-sarker.html",
+      "date": "Jul 22, 2026",
+      "cat": "media",
+      "badge": "International Press · Spotlight"
+    }
+  ]
+}

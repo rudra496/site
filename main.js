@@ -224,4 +224,29 @@ document.addEventListener('DOMContentLoaded', () => {
       runTypewriter(85);
     });
   }
+
+  // --- 7) Dynamic Blog Count Synchronizer ---
+  const applyBlogCount = (count) => {
+    if (!count) return;
+    document.querySelectorAll('.dynamic-blog-count').forEach(el => {
+      el.textContent = count;
+    });
+    document.querySelectorAll('[data-blog-count="num"]').forEach(el => {
+      el.textContent = count;
+    });
+  };
+
+  const isSubdir = window.location.pathname.includes('/blog/') || window.location.pathname.includes('/projects/');
+  const manifestUrl = isSubdir ? '../blog/blog-manifest.json' : './blog/blog-manifest.json';
+
+  fetch(manifestUrl)
+    .then(res => (res.ok ? res.json() : null))
+    .then(data => {
+      if (data && typeof data.count === 'number') {
+        applyBlogCount(data.count);
+      }
+    })
+    .catch(() => {
+      // Graceful offline / static fallback
+    });
 });
