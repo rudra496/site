@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SightlineAI: Helping Blind People Navigate the World with Google Gemini</title>
+  <meta name="description" content="SightlineAI is an open-source AI accessibility companion for the visually impaired: Google Gemini multimodal scene understanding, OCR, hazard alerts and conversational guidance — real-time, on devices people already own. Built by Rudra Sarker (SUST, Bangladesh) for the Google Cloud Meet the Builders campaign." />
+  <meta name="keywords" content="SightlineAI, Google Gemini, Meet the Builders, Gen AI Academy APAC, accessibility, assistive technology, blind navigation, computer vision, OCR, FastAPI, WebSocket, open source, Rudra Sarker" />
+  <link rel="canonical" href="https://rudra496.github.io/site/blog/sightlineai-gemini-accessibility-meet-the-builders.html" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Rudra Sarker" />
+  <meta name="generator" content="GitHub Pages" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rudra Sarker Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="SightlineAI: Helping Blind People Navigate the World with Google Gemini" />
+  <meta property="og:description" content="An open-source AI accessibility companion that turns an ordinary device into real-time environmental awareness for the visually impaired — powered by Google Gemini. Built in Bangladesh for the Meet the Builders campaign." />
+  <meta property="og:url" content="https://rudra496.github.io/site/blog/sightlineai-gemini-accessibility-meet-the-builders.html" />
+  <meta property="og:image" content="https://rudra496.github.io/site/Profile.webp" />
+  <meta property="article:published_time" content="2026-09-18" />
+  <meta property="article:author" content="Rudra Sarker" />
+  <meta property="article:tag" content="Google Gemini" />
+  <meta property="article:tag" content="accessibility" />
+  <meta property="article:tag" content="assistive technology" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SightlineAI: Helping Blind People Navigate the World with Google Gemini" />
+  <meta name="twitter:description" content="Real-time scene understanding, OCR and spoken guidance for the visually impaired — powered by Google Gemini. Open source." />
+  <meta name="twitter:image" content="https://rudra496.github.io/site/Profile.webp" />
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="../styles_global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../favicon.ico" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "SightlineAI: Helping Blind People Navigate the World with Google Gemini",
+    "description": "An open-source AI accessibility companion that turns an ordinary device into real-time environmental awareness for the visually impaired — powered by Google Gemini.",
+    "url": "https://rudra496.github.io/site/blog/sightlineai-gemini-accessibility-meet-the-builders.html",
+    "image": "https://rudra496.github.io/site/Profile.webp",
+    "datePublished": "2026-09-18",
+    "dateModified": "2026-09-18",
+    "author": {
+      "@type": "Person",
+      "name": "Rudra Sarker",
+      "url": "https://rudra496.github.io/site/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Rudra Sarker",
+      "url": "https://rudra496.github.io/site/"
+    },
+    "keywords": ["SightlineAI", "Google Gemini", "Meet the Builders", "Gen AI Academy APAC", "accessibility", "assistive technology", "blind navigation", "computer vision", "OCR"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rudra496.github.io/site/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rudra496.github.io/site/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "SightlineAI Google Gemini Accessibility", "item": "https://rudra496.github.io/site/blog/sightlineai-gemini-accessibility-meet-the-builders.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="header">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="../index.html" class="nav-brand">RUDRA SARKER</a>
+      <button id="menu-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../projects.html" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="../achievements.html" class="nav-link">Achievements</a></li>
+        <li class="nav-item"><a href="../gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="../blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article class="project-detail">
+      <header class="project-header">
+        <h1>SightlineAI: Helping Blind People Navigate the World with Google Gemini</h1>
+        <p style="font-size: 1rem; color: var(--text-color); margin-top: .5rem;">
+          By Rudra Sarker &bull; Published September 18, 2026 &bull; Meet the Builders &mdash; Gen AI Academy APAC
+        </p>
+      </header>
+
+      <section class="project-content">
+        <div style="background: rgba(10,37,64,0.45); border: 1px solid rgba(0,210,255,0.35); border-left: 5px solid #00d2ff; padding: 1.15rem 1.25rem; border-radius: 8px; margin-bottom: 2rem;">
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #00d2ff; letter-spacing: 0.05em;">Open Source &middot; MIT License &middot; Research Archived</span>
+          <h4 style="margin: 0.4rem 0 0.2rem; color: #ffffff;">SightlineAI — AI-Powered Accessibility for the Visually Impaired</h4>
+          <p style="margin: 0; font-size: 0.9rem; color: #cbd5e0;">
+            🌐 <a href="https://rudra496.github.io/sightlineai" target="_blank" rel="noopener noreferrer" style="color:#7dd3fc;">Live demo</a> &nbsp;·&nbsp;
+            💻 <a href="https://github.com/rudra496/sightlineai" target="_blank" rel="noopener noreferrer" style="color:#7dd3fc;">Source on GitHub</a> &nbsp;·&nbsp;
+            📄 <a href="https://doi.org/10.5281/zenodo.22118700" target="_blank" rel="noopener noreferrer" style="color:#7dd3fc;">Zenodo DOI: 10.5281/zenodo.22118700</a>
+          </p>
+        </div>
+
+        <h2>The problem I couldn't ignore</h2>
+        <p>I grew up in Sylhet, Bangladesh. Here — like across much of South Asia — visual impairment is not a rare condition. The WHO estimates that more than <strong>285 million people worldwide</strong> live with severe visual impairment, and a disproportionate share live in low-income regions where a guide dog, a $3,000 smart cane, or a commercial accessibility wearable is simply out of reach.</p>
+        <p>The gap is not intelligence or willingness — it is access. The smartphone in a blind person's pocket already has a camera, a microphone, and a speaker. The only missing piece was the intelligence layer that turns those sensors into a pair of eyes. That thought became <strong>SightlineAI</strong>: an open-source, AI-powered accessibility companion that transforms an ordinary device into real-time environmental awareness for the visually impaired.</p>
+
+        <h2>What SightlineAI does</h2>
+        <p>Point a camera at the world, and SightlineAI speaks the parts that matter:</p>
+        <ul>
+          <li><strong>Real-time scene understanding</strong> — what's around you, described in natural language</li>
+          <li><strong>OCR &amp; document reading</strong> — signs, labels, menus and printed text read aloud</li>
+          <li><strong>Obstacle &amp; hazard awareness</strong> — risk-weighted alerts before you reach the hazard</li>
+          <li><strong>Context-aware navigation support</strong> — guidance layered on OpenStreetMap data</li>
+          <li><strong>Conversational assistance</strong> — ask follow-up questions about your surroundings</li>
+          <li><strong>Multi-language support &amp; offline fallback</strong> — because connectivity in a developing region is a "when it works", not an "always"</li>
+        </ul>
+        <p>Everything streams over WebSockets so guidance arrives in near real time — not after a loading spinner.</p>
+
+        <h2>The build story</h2>
+        <p>I'm a final-year Industrial &amp; Production Engineering student at Shahjalal University of Science and Technology (SUST). I didn't come to this problem from a medical-device background — I came to it as a builder who kept meeting blind students and street vendors navigating my city without any assistive technology at all.</p>
+        <p>The hard architectural lesson was that <strong>you cannot run heavy multimodal models on the devices people actually own</strong>. So SightlineAI decouples the system: the edge device handles what it's good at — camera capture, voice input, speech playback — while heavy cognition runs in the cloud, bridged by a <strong>FastAPI</strong> backend with WebSocket streaming, Redis for session state, and Docker for deployment. React powers the companion interface.</p>
+        <p>That "end-cloud collaborative" split is what makes the system viable on low-end hardware — and it is also what makes it genuinely responsive.</p>
+
+        <h2>Powered by Google AI</h2>
+        <p>The intelligence layer is where <strong>Google Gemini</strong> earns its place:</p>
+        <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+          <tr style="background: rgba(0,210,255,0.08);">
+            <th style="text-align:left; padding: 0.6rem 0.8rem; border: 1px solid rgba(148,163,184,0.3);">Capability</th>
+            <th style="text-align:left; padding: 0.6rem 0.8rem; border: 1px solid rgba(148,163,184,0.3);">What Gemini does in SightlineAI</th>
+          </tr>
+          <tr><td style="padding: 0.6rem 0.8rem; border: 1px solid rgba(148,163,184,0.3);"><strong>Multimodal reasoning</strong></td><td style="padding: 0.6rem 0.8rem; border: 1px solid rgba(148,163,184,0.3);">Fuses camera frames + user context into a coherent scene description</td></tr>
+          <tr><td style="padding: 0.6rem 0.8rem; border: 1px solid rgba(148,163,184,0.3);"><strong>Scene understanding</strong></td><td style="padding: 0.6rem 0.8rem; border: 1px solid rgba(148,163,184,0.3);">Identifies objects, obstacles, signage and spatial relations</td></tr>
+          <tr><td style="padding: 0.6rem 0.8rem; border: 1px solid rgba(148,163,184,0.3);"><strong>Accessibility guidance</strong></td><td style="padding: 0.6rem 0.8rem; border: 1px solid rgba(148,163,184,0.3);">Converts raw perception into safe, actionable voice guidance</td></tr>
+          <tr><td style="padding: 0.6rem 0.8rem; border: 1px solid rgba(148,163,184,0.3);"><strong>Conversational Q&amp;A</strong></td><td style="padding: 0.6rem 0.8rem; border: 1px solid rgba(148,163,184,0.3);">Lets the user ask "what's in front of me?" and get grounded answers</td></tr>
+        </table>
+        <p>Gemini's multimodal nature was decisive. A classical CV pipeline needs a separate model per task — detection, OCR, captioning, dialogue — each with its own latency and failure modes. With Gemini, a single multimodal reasoning call covers the full chain from pixels to spoken guidance, which cut pipeline complexity dramatically and kept response times practical for real-time use. The system is provider-agnostic by design (Qwen is supported as an alternative), but Gemini is the default brain — and the Google AI stack is what the primary experience is built and tested on.</p>
+
+        <h2>Watch the demo</h2>
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 1.25rem 0;">
+          <iframe src="https://www.youtube.com/embed/JQ796Gq9xMc" title="SightlineAI — an AI Powered Vision Assistance System for Visually Impaired People" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+
+        <h2>Impact &amp; what's next</h2>
+        <p>SightlineAI maps to UN SDG 3 (Good Health &amp; Well-Being), SDG 10 (Reduced Inequalities) and SDG 11 (Sustainable Cities &amp; Communities). The next milestones: Bangla-first voice UX, low-cost phone-only deployment kits for local blind schools, and community localization of the guidance layer.</p>
+        <p>If you're building for accessibility — or want to bring SightlineAI to your city — my inbox is open. This project is my entry for <strong>Meet the Builders</strong>, a Google Cloud × Hack2skill campaign celebrating 1,000 builders across Asia Pacific who use Google AI to solve real, local problems.</p>
+
+        <h2>Links</h2>
+        <ul>
+          <li><strong>Live demo</strong>: <a href="https://rudra496.github.io/sightlineai" target="_blank" rel="noopener noreferrer">rudra496.github.io/sightlineai</a></li>
+          <li><strong>Source (MIT)</strong>: <a href="https://github.com/rudra496/sightlineai" target="_blank" rel="noopener noreferrer">github.com/rudra496/sightlineai</a></li>
+          <li><strong>Research archive</strong>: <a href="https://doi.org/10.5281/zenodo.22118700" target="_blank" rel="noopener noreferrer">DOI 10.5281/zenodo.22118700</a></li>
+          <li><strong>Demo video</strong>: <a href="https://www.youtube.com/watch?v=JQ796Gq9xMc" target="_blank" rel="noopener noreferrer">SightlineAI on YouTube</a></li>
+        </ul>
+
+        <p style="font-style: italic; margin-top: 2rem;">The hardware is already in people's pockets. The intelligence is now too. Built for accessibility. Built for independence. Built for impact.</p>
+      </section>
+
+      <a href="../blog.html" class="back-to-gallery" aria-label="Back to Blog Index">
+        <i class="fas fa-arrow-left"></i> Back to Blog
+      </a>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Rudra Sarker. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://github.com/rudra496" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rudrasarker" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/Rudra496" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>
