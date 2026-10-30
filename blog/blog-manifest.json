@@ -1,15 +1,7 @@
 {
-  "count": 33,
-  "lastSync": "2026-09-18T05:30:00Z",
+  "count": 34,
+  "lastSync": "2026-10-30T08:17:16Z",
   "articles": [
-    {
-      "id": "sightlineai-builders",
-      "title": "SightlineAI: Helping Blind People Navigate the World with Google Gemini",
-      "file": "sightlineai-gemini-accessibility-meet-the-builders.html",
-      "date": "Sep 18, 2026",
-      "cat": "google-cloud",
-      "badge": "Meet the Builders · Google Gemini"
-    },
     {
       "id": "ethnoveterinary",
       "title": "Ethnoveterinary Herbal Practices in Commercial Poultry: Our Q1 Study in the Journal of Ethnopharmacology",
@@ -265,6 +257,22 @@
       "date": "Jul 22, 2026",
       "cat": "media",
       "badge": "International Press · Spotlight"
+    },
+    {
+      "id": "how-to-become-ai-engineer-road",
+      "title": "How to Become an AI Engineer in 2026: The Verified Roadmap from 1,484 Job Posts",
+      "file": "how-to-become-ai-engineer-roadmap-job-market-data.html",
+      "date": "October 30, 2026",
+      "cat": "tools",
+      "badge": "CERN Zenodo · Open Science"
+    },
+    {
+      "id": "sightlineai-gemini-accessibili",
+      "title": "SightlineAI: Helping Blind People Navigate the World with Google Gemini",
+      "file": "sightlineai-gemini-accessibility-meet-the-builders.html",
+      "date": "Oct 30, 2026",
+      "cat": "tools",
+      "badge": "CERN Zenodo · Open Science"
     }
   ]
 }

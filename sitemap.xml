@@ -312,4 +312,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/how-to-become-ai-engineer-roadmap-job-market-data.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rudra496.github.io/site/blog/sightlineai-gemini-accessibility-meet-the-builders.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
