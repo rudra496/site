@@ -264,15 +264,15 @@
       "file": "how-to-become-ai-engineer-roadmap-job-market-data.html",
       "date": "October 30, 2026",
       "cat": "tools",
-      "badge": "CERN Zenodo · Open Science"
+      "badge": "Career Engineering · Industry Data"
     },
     {
       "id": "sightlineai-gemini-accessibili",
       "title": "SightlineAI: Helping Blind People Navigate the World with Google Gemini",
       "file": "sightlineai-gemini-accessibility-meet-the-builders.html",
       "date": "Oct 30, 2026",
-      "cat": "tools",
-      "badge": "CERN Zenodo · Open Science"
+      "cat": "assistive",
+      "badge": "Google Cloud · Meet the Builders"
     }
   ]
 }
